@@ -1,0 +1,226 @@
+@charset "UTF-8";
+/* CSS Document "index" */
+
+
+.tematic-freguesia{
+	padding-top:5px; 
+	margin-left:0px; 
+	padding-left:0px;
+}
+
+.icon-freguesia{
+	padding:0px;
+	text-align:center;
+	color: #A9A9A9;
+}
+
+/* Images */
+#image_draw{
+	width: auto;
+	height: 200px;
+}
+#image_finish{
+	width: auto;
+	height: 70px;
+}
+#image_slider{
+	width: auto;
+	height: 100px;
+}
+#logo_geoc{
+	width: 200px;
+	margin-bottom: 20px;
+	margin-right: 40px;
+	margin-left: 40px;
+}
+#logo_marie{
+	width: 200px;
+	margin-bottom: 20px;
+	margin-right: 40px;
+	margin-left: 40px;
+}
+#logo_nova{
+	width: 100px;
+	margin-bottom: 20px;
+	margin-right: 40px;
+	margin-left: 40px;
+}
+#logo_munster{
+	width: 200px;
+	margin-bottom: 20px;
+	margin-right: 40px;
+	margin-left: 40px;
+}
+#logo_uji{
+	width: 100px;
+	margin-bottom: 20px;
+	margin-right: 40px;
+	margin-left: 40px;
+}
+/* Modal change position */
+.modal_draw{
+	position: absolute;
+	top: 319px;
+	right: 270px;
+	bottom: 0;
+	left: 0;
+	z-index: 10040;
+	/* overflow: auto;
+	overflow-y: auto; */
+}
+.modal_finish{
+	position: absolute;
+   	top: 600px;
+   	right: 0;
+   	bottom: 0;
+   	left: 565px;
+   	height: 370px;
+   	z-index: 10040;
+   	/*overflow: auto;
+	overflow-y: auto;*/
+}
+
+/* Triangle & rectangle modal draw */
+.triangle_draw {
+	width:0px; 
+	height:0px; 
+	border-top:20px solid transparent;  /* left arrow slant */
+	border-bottom:20px solid transparent; /* right arrow slant */
+	border-right:20px solid #fff; /* top, add background color here */
+	position: absolute;
+	top: 25px;
+	right: 0;
+	bottom: 0;
+	left: -20px;
+	z-index: 10040;
+}
+#rectangle_draw{
+	width: 36px; 
+	height: 66px; 
+	background: transparent;
+	border: 2px solid #6DBFCE;
+	position: absolute;
+	top: 12px;
+	right: 0px;
+	bottom: 0;
+	left: -67px;
+	z-index: 10040;
+}
+
+/* Triangle & rectangle modal finish */
+.triangle_finish {
+	width:0px; 
+	height:0px; 
+	border-top:20px solid #fff;  /* left arrow slant */
+	border-right:20px solid transparent; /* top, add background color here */
+	border-left:20px solid transparent; /* top, add background color here */
+	position: absolute;
+	top: 240px;
+	right: 0;
+	bottom: 0;
+	left: 520px;
+	z-index: 10040;
+}
+#rectangle_finish{
+	width: 90px; 
+	height: 50px; 
+	background: transparent;
+	border: 2px solid #6DBFCE;
+	position: absolute;
+	top: 277px;
+	right: 0;
+	bottom: 0;
+	left: 508px;
+	z-index: 10040;
+}
+
+/* MEDIAS */
+
+@media (max-width:360px){
+	.modal_draw{
+		top: 0;
+		right: 0;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	.triangle_draw{
+		display: none;
+	}
+	.rectangle_draw{
+		display: none;
+	}
+	#image_draw{
+		width: 250px;
+		height: auto;
+		margin-bottom: 15px;
+	}
+	#image_slider{
+		width: 290px;
+		height: auto;
+		padding-right: 30px;
+		margin-bottom: 15px;
+	}
+	.modal_finish{
+   		top: 0;
+   		left: 0;
+   		height: auto;
+   		width: 320px;
+   		margin-left: -75px;
+	}
+}
+@media (max-width:768px){
+	.modal_draw{
+		left: 4%;
+	}
+
+	#rectangle_draw{
+		display: none;
+	}
+	#rectangle_finish{
+		display: none;
+	}	
+}
+@media (max-width:800px){
+	.modal_draw{
+		right: 3.5%;
+	}
+	.modal_finish{
+		left: 22%;
+	}
+	#rectangle_finish{
+		width: 92px;
+	}
+}
+@media (min-width:980px){
+	.modal_draw{
+		right: 21.3%;
+		top: 299px;
+	}
+	.modal_finish{
+		left: 36.3%;
+		top: 580px;
+	}
+	#rectangle_finish{
+		width: 93px;
+	}
+}
+@media (min-width:1280px){
+	.modal_draw{
+		right: 21.1%;
+		height: 500px;
+		top: 319px;
+	}
+	.modal_finish{
+		left: 34.5%;
+		top: 600px;
+	}
+}
+@media (min-width:1920px){
+	.modal_draw{
+		right: 803px;
+		top: 279px;
+	}
+	.modal_finish{
+		left: 51.3%;
+	}
+}
