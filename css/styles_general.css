@@ -3,7 +3,7 @@
 
 /* Navbar */
 .name_navbar{
-	padding-top: 18px;
+	padding-top: 5px;
 	font: arial;
 	color: #6DBFCE;
 	font-size: 18px;
@@ -37,6 +37,9 @@
 .name_link{
 	text-decoration: none;
 	color: #6DBFCE; 
+}
+#logo_phd{
+	width: 45px;
 }
 .name_link:hover{
 	text-decoration: none;
@@ -121,12 +124,17 @@ hr{
 /* End Floats */
 
 
+
+
 /* MEDIAS */
 
 @media (max-width:767px){
 	.name_navbar{
-		padding-top: 10px;
+		padding-top: 5px;
 		font-size: 14px;
+	}
+	#logo_phd{
+	width: 40px;
 	}
 }
 
