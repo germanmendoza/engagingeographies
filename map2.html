@@ -68,10 +68,23 @@
     <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
   </div>
   <!-- ------------------------------- End Header --------------------------------------------------------------------------- -->
+  <!-- ------------------------------- Buttons maps ------------------------------------------------------------------------- -->
+  <div class="row col-xs-12 col-md-10 col-md-offset-1 col-sm-12" style="margin-bottom: 10px">
+    <div class="float-left" style="margin-right: 10px">
+      <a class="btn btn-primary" href="#">Lorem ipsum</a>
+    </div>
+    <div class="float-left">
+      <a class="btn btn-primary" href="#">Lorem ipsum</a>
+    </div>
+  </div>
+  <!-- ------------------------------- End Buttons maps --------------------------------------------------------------------- -->
   <!-- ------------------------------- Map ---------------------------------------------------------------------------------- -->
   <div class="row col-xs-12 col-md-10 col-md-offset-1 col-sm-12">
+    <button class="btn btn-default btn-md" id="draw_poly" onclick="drawPolygon()">
+      <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing
+    </button>
     <div id="map"></div>
-  </div>
+    </div>
   <!-- ------------------------------- End map ------------------------------------------------------------------------------ -->
   <!-- ------------------------------- Button finalizar --------------------------------------------------------------------- -->
   <div class="row" style="margin-bottom: 20px">
@@ -84,9 +97,14 @@
     <a class="btn link-primary" href="#" data-toggle="modal" data-target="#myModal6">Pop up questions</a>
   </div>
   <!--  End Pop up questions -->
+  <!--  Pop up drag&drop - Delete after -->
+  <div class="float-left" style="margin-left: 100px">
+    <a class="btn link-primary" href="#" data-toggle="modal" data-target="#myModal8">Pop up drag&drop</a>
+  </div>
+  <!--  End Pop up drag&drop -->
   <!-- ------------------------------- End button finalizar ----------------------------------------------------------------- -->
 </div> <!-- .container fluid -->
-<!-- ------------------------------- Modal 2 -------------------------------------------------------------------------- -->
+<!-- ------------------------------- Modal 2 Introduction ------------------------------------------------------------------- -->
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -106,7 +124,7 @@
   </div> <!--/.modal-dialog -->
 </div> <!--/.modal fade -->
 <!-- ------------------------------- End Modal 2 ---------------------------------------------------------------------- -->
-<!-- ------------------------------- Modal 3 -------------------------------------------------------------------------- -->
+<!-- ------------------------------- Modal 3 Learn draw --------------------------------------------------------------- -->
 <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -153,7 +171,7 @@
   </div> <!--/.modal-dialog -->
 </div> <!--/.modal fade -->
 <!-- ------------------------------- End Modal 3 ---------------------------------------------------------------------- -->
-<!-- ------------------------------- Modal 4 -------------------------------------------------------------------------- -->
+<!-- ------------------------------- Modal 4 Learn sliders ------------------------------------------------------------ -->
 <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -187,7 +205,7 @@
   </div> <!--/.modal-dialog -->
 </div> <!--/.modal fade -->
 <!-- ------------------------------- End Modal 4 ---------------------------------------------------------------------- -->
-<!-- ------------------------------- Modal 5 -------------------------------------------------------------------------- -->
+<!-- ------------------------------- Modal 5 Learn finish ------------------------------------------------------------- -->
 <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -217,7 +235,7 @@
   </div> <!--/.modal-dialog -->
 </div> <!--/.modal fade -->
 <!-- ------------------------------- End Modal 5 ---------------------------------------------------------------------- -->
-<!-- ------------------------------- Modal 6 -------------------------------------------------------------------------- -->
+<!-- ------------------------------- Modal 6 Sliders ------------------------------------------------------------------ -->
 <div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -239,6 +257,63 @@
   </div> <!--/.modal-dialog -->
 </div> <!--/.modal fade -->
 <!-- ------------------------------- End Modal 6 ---------------------------------------------------------------------- -->
+<!-- ------------------------------- Modal 8 drag&drop ---------------------------------------------------------------- -->
+<div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        Lorem ipsum dolor sit amet consectetur adipiscing elit
+        <button type="button" class="close" id="icon-link" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <ul clas="media-list" style="list-style:none; padding:0px">
+          <li class="media">
+            <button type="button" class="btn btn-lg float-left" style="margin-right: 10px">
+              <span class="glyphicon glyphicon-road" style="color: #A9A9A9" aria-hidden="true"></span>
+            </button>
+            <a type="button" class="float-left link-secondary" data-toggle="popover" title="Lorem Ipsum" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac lectus vehicula, ultrices arcu sed, varius nisl. Ut consequat justo quam." style="padding-top: 13px; cursor: pointer;">Lorem ipsum</a>
+          </li>
+          <li class="media">
+            <button type="button" class="btn btn-lg float-left" style="margin-right: 10px">
+              <span class="glyphicon glyphicon-flag" style="color: #A9A9A9" aria-hidden="true"></span>
+            </button>
+            <a type="button" class="float-left link-secondary" data-toggle="popover" title="Lorem Ipsum" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac lectus vehicula, ultrices arcu sed, varius nisl. Ut consequat justo quam." style="padding-top: 13px; cursor: pointer;">Lorem ipsum</a>
+          </li>
+          <li class="media">
+            <button type="button" class="btn btn-lg float-left" style="margin-right: 10px">
+              <span class="glyphicon glyphicon-warning-sign" style="color: #A9A9A9" aria-hidden="true"></span>
+            </button>
+            <a type="button" class="float-left link-secondary" data-toggle="popover" title="Lorem Ipsum" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac lectus vehicula, ultrices arcu sed, varius nisl. Ut consequat justo quam." style="padding-top: 13px; cursor: pointer;">Lorem ipsum</a>
+          </li>
+          <li class="media">
+            <button type="button" class="btn btn-lg float-left" style="margin-right: 10px">
+              <span class="glyphicon glyphicon-trash" style="color: #A9A9A9" aria-hidden="true"></span>
+            </button>
+            <a type="button" class="float-left link-secondary" data-toggle="popover" title="Lorem Ipsum" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac lectus vehicula, ultrices arcu sed, varius nisl. Ut consequat justo quam." style="padding-top: 13px; cursor: pointer;">Lorem ipsum</a>
+          </li>
+          <li class="media">
+            <button type="button" class="btn btn-lg float-left" style="margin-right: 10px">
+              <span class="glyphicon glyphicon-bullhorn" style="color: #A9A9A9" aria-hidden="true"></span>
+            </button>
+            <a type="button" class="float-left link-secondary" data-toggle="popover" title="Lorem Ipsum" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac lectus vehicula, ultrices arcu sed, varius nisl. Ut consequat justo quam." style="padding-top: 13px; cursor: pointer;">Lorem ipsum</a>
+          </li>
+          <li class="media">
+            <button type="button" class="btn btn-lg float-left" style="margin-right: 10px">
+              <span class="glyphicon glyphicon-plane" style="color: #A9A9A9" aria-hidden="true"></span>
+            </button>
+            <a type="button" class="float-left link-secondary" data-toggle="popover" title="Lorem Ipsum" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac lectus vehicula, ultrices arcu sed, varius nisl. Ut consequat justo quam." style="padding-top: 13px; cursor: pointer;">Lorem ipsum</a>
+          </li>
+        </ul>
+      </div> <!--/.modal-body -->
+      <div class="modal-footer" style="border:none;">
+        <div class="float-right" style="margin-right:38px">
+          <a type="button" class="btn btn-primary" href="#" data-dismiss="modal">Lorem ipsum</a>
+        </div>
+      </div>
+    </div> <!--/.modal-content -->
+  </div> <!--/.modal-dialog -->
+</div> <!--/.modal fade -->
+<!-- ------------------------------- End Modal 8 ---------------------------------------------------------------------- -->
 
 
 
@@ -298,6 +373,8 @@ var map = L.map('map').setView([38.7500, -9.1500], 12);
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
+// Customize button polygon
+var polygonDrawer = new L.Draw.Polyline(map);
 
 // Initialise the FeatureGroup to store editable layers
 var drawnItems = new L.FeatureGroup();
@@ -305,12 +382,13 @@ map.addLayer(drawnItems);
 
 // Initialise the draw control and pass it the FeatureGroup of editable layers
 var drawControl = new L.Control.Draw({
+    //position: 'topright',
     draw: {
                 polyline: false,
-                polygon: true,
+                polygon: false,
                 rectangle: false,
                 circle: false,
-                marker: true
+                marker: false
     },
     edit: {
         featureGroup: drawnItems,
@@ -340,7 +418,21 @@ map.on('draw:edited', function (e) {
             console.log("Edited " + countOfEditedLayers + " layers");
         });
 
+// Customize button polygon
+function drawPolygon(){
+  var polygonDrawer = new L.Draw.Polygon(map, drawControl);
+  polygonDrawer.enable();
+}
+// Customize button polygon
+$('#draw_poly').click(function() {
+    drawControl.enable();
+});
 
+// POPOVER
+
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
 
 
 </script>

@@ -75,7 +75,10 @@
   <!-- ------------------------------- End Header --------------------------------------------------------------------------- -->
   <!-- ------------------------------- Map ---------------------------------------------------------------------------------- -->
     <div class="row col-xs-12 col-md-10 col-md-offset-1 col-sm-12">
-      <div id="map"></div>
+        <button class="btn btn-default btn-md" id="draw_poly" onclick="drawPolygon()">
+          <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing
+        </button>
+        <div id="map"></div>
     </div>
   <!-- ------------------------------- End map ------------------------------------------------------------------------------ -->
   <!-- ------------------------------- Button siguiente --------------------------------------------------------------------- -->
@@ -113,37 +116,37 @@
       </div>
       <div class="modal-body">
         <ul clas="media-list" style="list-style:none; padding:0px">
-                <li class="media">
-                    <span class="glyphicon glyphicon-road btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-freguesia"></span>
-                    <div class="tematic-freguesia col-lg-3 col-md-3 col-sm-3 col-xs-5">Lorem ipsum</div>
-                    <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7" value="">
-                </li>
-                <li class="media">
-                    <span class="glyphicon glyphicon-flag btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-freguesia"></span>
-                    <p class="tematic-freguesia col-lg-3 col-md-3 col-sm-3 col-xs-5">Lorem ipsum</p>
-                    <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7" value="">
-                </li>
-                <li class="media">
-                    <span class="glyphicon glyphicon-warning-sign btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-freguesia" style="text-align:center"></span>
-                    <p class="tematic-freguesia col-lg-3 col-md-3 col-sm-3 col-xs-5">Lorem ipsum</p>
-                    <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7" value="">
-                </li>
-                <li class="media">
-                    <span class="glyphicon glyphicon-trash btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-freguesia" style="text-align:center"></span>
-                    <p class="tematic-freguesia col-lg-3 col-md-3 col-sm-3 col-xs-5">Lorem ipsum</p>
-                    <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7" value="">
-                </li>
-                <li class="media">
-                    <span class="glyphicon glyphicon-bullhorn btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-freguesia" style="text-align:center"></span>
-                    <p class="tematic-freguesia col-lg-3 col-md-3 col-sm-3 col-xs-5">Lorem ipsum</p>
-                    <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7" value="">
-                </li>
-                <li class="media">
-                    <span class="glyphicon glyphicon-plane btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-freguesia" style="text-align:center"></span>
-                    <p class="tematic-freguesia col-lg-3 col-md-3 col-sm-3 col-xs-5">Lorem ipsum</p>
-                    <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7" value="">
-                </li>
-             </ul>
+          <li class="media">
+            <span class="glyphicon glyphicon-road btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-freguesia"></span>
+            <div class="tematic-freguesia col-lg-3 col-md-3 col-sm-3 col-xs-5">Lorem ipsum</div>
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7" value="">
+          </li>
+          <li class="media">
+            <span class="glyphicon glyphicon-flag btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-freguesia"></span>
+            <p class="tematic-freguesia col-lg-3 col-md-3 col-sm-3 col-xs-5">Lorem ipsum</p>
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7" value="">
+          </li>
+          <li class="media">
+            <span class="glyphicon glyphicon-warning-sign btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-freguesia" style="text-align:center"></span>
+            <p class="tematic-freguesia col-lg-3 col-md-3 col-sm-3 col-xs-5">Lorem ipsum</p>
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7" value="">
+          </li>
+          <li class="media">
+            <span class="glyphicon glyphicon-trash btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-freguesia" style="text-align:center"></span>
+            <p class="tematic-freguesia col-lg-3 col-md-3 col-sm-3 col-xs-5">Lorem ipsum</p>
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7" value="">
+          </li>
+          <li class="media">
+            <span class="glyphicon glyphicon-bullhorn btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-freguesia" style="text-align:center"></span>
+            <p class="tematic-freguesia col-lg-3 col-md-3 col-sm-3 col-xs-5">Lorem ipsum</p>
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7" value="">
+          </li>
+          <li class="media">
+            <span class="glyphicon glyphicon-plane btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-freguesia" style="text-align:center"></span>
+            <p class="tematic-freguesia col-lg-3 col-md-3 col-sm-3 col-xs-5">Lorem ipsum</p>
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7" value="">
+          </li>
+        </ul>
       </div> <!--/.modal-body -->
       <div class="modal-footer" style="border:none;">
         <div class="float-right" style="margin-right:38px">
@@ -353,12 +356,16 @@
 
 <script>
 
+// LEAFLET MAP + DRAW
+
 // create a map in the "map" div, set the view to a given place and zoom
 var map = L.map('map').setView([38.7500, -9.1500], 12);
 // add an OpenStreetMap tile layer
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
+// Customize button polygon
+var polygonDrawer = new L.Draw.Polyline(map);
 
 // Initialise the FeatureGroup to store editable layers
 var drawnItems = new L.FeatureGroup();
@@ -366,12 +373,13 @@ map.addLayer(drawnItems);
 
 // Initialise the draw control and pass it the FeatureGroup of editable layers
 var drawControl = new L.Control.Draw({
+    //position: 'topright',
     draw: {
                 polyline: false,
-                polygon: true,
+                polygon: false,
                 rectangle: false,
                 circle: false,
-                marker: true
+                marker: false
     },
     edit: {
         featureGroup: drawnItems,
@@ -400,6 +408,16 @@ map.on('draw:edited', function (e) {
             });
             console.log("Edited " + countOfEditedLayers + " layers");
         });
+
+// Customize button polygon
+function drawPolygon(){
+  var polygonDrawer = new L.Draw.Polygon(map, drawControl);
+  polygonDrawer.enable();
+}
+// Customize button polygon
+$('#draw_poly').click(function() {
+    drawControl.enable();
+});
 </script>
 
 </body>

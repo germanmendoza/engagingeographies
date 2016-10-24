@@ -90,6 +90,27 @@
 }
 /* End link-primary */
 
+/* Link-secondary */
+.link-secondary{
+	color: #666666;
+}
+
+.link-secondary:hover{
+	color: #6DBFCE;
+	text-decoration: none;
+}
+
+.link-secondary:active{
+	color: #6DBFCE;
+	text-decoration: none;
+}
+
+.link-secondary:focus{
+	color: #6DBFCE;
+	text-decoration: none;
+}
+/* End link-secundary */
+
 hr{
 	width: 80%;
 }
@@ -104,11 +125,19 @@ hr{
 .icon_normal{
 	color: #A9A9A9
 }
+/* Map */
 #map{ 
 	height: 600px;
 	width: auto;
 	margin-bottom: 20px; 
 }
+#draw_poly{
+	position: absolute;
+	top: 10px;
+    left: 30%;
+    z-index: 1000;
+}
+/* End Map */
 
 /* Floats */
 .no-float{

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* CSS Document "map1" */
 
-
+/* Images */
 #image_draw{
 	width: auto;
 	height: 200px;
@@ -14,7 +14,6 @@
 	width: auto;
 	height: 100px;
 }
-
 
 /* Slider */
 #ex1Slider .slider-selection {
