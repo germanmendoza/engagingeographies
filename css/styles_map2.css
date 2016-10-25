@@ -25,6 +25,12 @@
 
 }
 
+/* Button drag&drop */
+.button_drag{
+	background-color: #f2f2f2;
+	margin-right: 10px;
+}
+
 /* MEDIAS */
 
 @media (max-width:360px){

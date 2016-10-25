@@ -22,7 +22,12 @@
 
 .slider-handle.round{
 	background: #6DBFCE !important;
+}
 
+/* Button drag&drop */
+.button_drag{
+	background-color: #f2f2f2;
+	margin-right: 10px;
 }
 
 /* MEDIAS */
