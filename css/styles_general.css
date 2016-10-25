@@ -131,17 +131,12 @@ hr{
 	width: auto;
 	margin-bottom: 20px; 
 }
-#draw_poly{
-	position: absolute;
-	top: 10px;
-    left: 30%;
-    z-index: 1000;
-}
-#edit_poly{
-	position: absolute;
-	top: 10px;
-    left: 45%;
-    z-index: 1000;
+
+.custom_buttons_leaflet{
+	position: absolute; 
+	top: 1.5%; 
+	left: 30%; 
+	z-index: 999
 }
 /* End Map */
 
@@ -159,8 +154,6 @@ hr{
 /* End Floats */
 
 
-
-
 /* MEDIAS */
 
 @media (max-width:767px){
@@ -169,9 +162,19 @@ hr{
 		font-size: 14px;
 	}
 	#logo_phd{
-	width: 40px;
+		width: 40px;
+	}
+	.custom_buttons_leaflet{
+		left: 20%; 
 	}
 }
+@media (max-width:330px){
+	.custom_buttons_leaflet{
+		left: 18.5%; 
+	}
+}
+
+
 
 
 

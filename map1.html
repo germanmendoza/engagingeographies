@@ -80,9 +80,23 @@
   <!-- ------------------------------- End Buttons maps --------------------------------------------------------------------- -->
   <!-- ------------------------------- Map ---------------------------------------------------------------------------------- -->
   <div class="row col-xs-12 col-md-10 col-md-offset-1 col-sm-12">
-    <button class="btn btn-default btn-md" id="draw_poly" onclick="drawPolygon()">
-      <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing
-    </button>
+    <div class="custom_buttons_leaflet visible-lg visible-md visible-sm">
+      <button class="btn btn-default btn-md" id="draw_poly" onclick="drawPolygon()">
+        <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing
+      </button>
+      <button class="btn btn-default btn-md" id="delete_poly">
+        <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Delete polygon
+      </button>
+    </div>
+    <!--  Visible only xs -->
+    <div class="custom_buttons_leaflet visible-xs">
+      <button class="btn btn-default btn-xs" id="draw_poly" onclick="drawPolygon()">
+        <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing
+      </button>
+      <button class="btn btn-default btn-xs" id="delete_poly">
+        <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Delete polygon
+      </button>
+    </div>
     <div id="map"></div>
   </div>
   <!-- ------------------------------- End map ------------------------------------------------------------------------------ -->
@@ -392,7 +406,7 @@ var map = L.map('map').setView([38.7500, -9.1500], 12);
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
-// Customize button polygon
+// Customize button draw polygon - personal contribution
 var polygonDrawer = new L.Draw.Polyline(map);
 
 // Initialise the FeatureGroup to store editable layers
@@ -411,7 +425,10 @@ var drawControl = new L.Control.Draw({
     },
     edit: {
         featureGroup: drawnItems,
-        remove: true
+        // Customize button delete polygon - personal contribution
+        remove: false,
+        // Edit polygon when you draw it - personal contribution
+        edit: false
     }
 });
 
@@ -424,8 +441,11 @@ map.on('draw:created', function (e) {
             if (type === 'marker') {
                 layer.bindPopup('A popup!');
             }
+            // Edit polygon when you draw it - personal contribution
+            e.layer.editing.enable();
 
             drawnItems.addLayer(layer);
+
         });
 
 map.on('draw:edited', function (e) {
@@ -437,15 +457,20 @@ map.on('draw:edited', function (e) {
             console.log("Edited " + countOfEditedLayers + " layers");
         });
 
-// Customize button polygon
+// Customize button draw polygon - personal contribution
 function drawPolygon(){
   var polygonDrawer = new L.Draw.Polygon(map, drawControl);
   polygonDrawer.enable();
 }
-// Customize button polygon
-$('#draw_poly').click(function() {
+// Customize button draw polygon - personal contribution
+$('#draw_poly').on('click',function() {
     drawControl.enable();
 });
+
+// Customize button delete polygon - personal contribution
+$('#delete_poly').on('click',function(){
+    drawnItems.clearLayers();
+  });
 
 // POPOVER
 
