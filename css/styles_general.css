@@ -137,6 +137,12 @@ hr{
     left: 30%;
     z-index: 1000;
 }
+#edit_poly{
+	position: absolute;
+	top: 10px;
+    left: 45%;
+    z-index: 1000;
+}
 /* End Map */
 
 /* Floats */
