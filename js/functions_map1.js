@@ -1,7 +1,14 @@
  // JavaScript Document "map1"
+
 // Modal when load page
 
 $('#myModal2').modal('show');
+
+// POPOVER
+
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
 
 // MODAL prev and next
 
@@ -30,5 +37,32 @@ $('#ex1').slider({
   }
 });
 $("#ex1").on("slide", function(slideEvt) {
-	$("#ex6SliderVal").text(slideEvt.value);
+	$("#ex1SliderVal").text(slideEvt.value);
 });
+
+$('#ex2').slider({
+  formatter: function(value) {
+    return 'Current value: ' + value;
+  }
+});
+$("#ex2").on("slide", function(slideEvt) {
+  $("#ex2SliderVal").text(slideEvt.value);
+});
+
+$('#ex3').slider({
+  formatter: function(value) {
+    return 'Current value: ' + value;
+  }
+});
+$("#ex3").on("slide", function(slideEvt) {
+  $("#ex3SliderVal").text(slideEvt.value);
+});
+
+
+ // Only for the mockups.  Show&hidden map image. Delete after.
+function toggler(divId) {
+    //$("#" + divId).toggle();
+    $("#secondimage").addClass('show');
+    $("#firstimage").addClass('hidden');
+}
+// Finish Show&hidden map image
