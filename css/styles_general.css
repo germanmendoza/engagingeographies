@@ -129,13 +129,14 @@ hr{
 #map{ 
 	height: 600px;
 	width: auto;
-	margin-bottom: 20px; 
+	margin-bottom: 20px;
+	margin-left: 20px;
 }
 
 .custom_buttons_leaflet{
 	position: absolute; 
 	top: 1.5%; 
-	left: 30%; 
+	left: 40%; 
 	z-index: 999
 }
 /* End Map */
@@ -167,6 +168,10 @@ hr{
 	.custom_buttons_leaflet{
 		left: 20%; 
 	}
+	#map{ 
+	margin-left: 0px;
+	}
+
 }
 @media (max-width:330px){
 	.custom_buttons_leaflet{

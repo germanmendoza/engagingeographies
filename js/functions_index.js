@@ -1,7 +1,10 @@
  // JavaScript Document "index"
 
- // MODAL prev and next
+// Modal when load page
+$('#myModal9').modal('show');
 
+
+ // MODAL prev and next
 $("div[id^='myModal']").each(function(){
   
   var currentModal = $(this);

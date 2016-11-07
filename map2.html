@@ -79,30 +79,30 @@
   </div>
   <!-- ------------------------------- End Buttons maps --------------------------------------------------------------------- -->
   <!-- ------------------------------- Map ---------------------------------------------------------------------------------- -->
-  <div class="row col-xs-12 col-md-10 col-md-offset-1 col-sm-12">
-    <div class="custom_buttons_leaflet visible-lg visible-md visible-sm">
-      <button class="btn btn-default btn-md" id="draw_poly" onclick="drawPolygon()">
-        <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing
-      </button>
-      <button class="btn btn-default btn-md" id="delete_poly">
-        <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Delete polygon
-      </button>
+  <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-right: 0px">
+      <div class="custom_buttons_leaflet visible-lg visible-md visible-sm">
+        <button class="btn btn-default btn-md" id="draw_poly" onclick="drawPolygon()">
+          <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing
+        </button>
+        <button class="btn btn-default btn-md" id="delete_poly">
+          <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Delete polygon
+        </button>
+      </div>
+      <!--  Visible only xs -->
+      <div class="custom_buttons_leaflet visible-xs">
+        <button class="btn btn-default btn-xs" id="draw_poly" onclick="drawPolygon()">
+          <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing
+        </button>
+        <button class="btn btn-default btn-xs" id="delete_poly">
+          <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Delete polygon
+        </button>
+      </div>
+      <div id="map"></div>
     </div>
-    <!--  Visible only xs -->
-    <div class="custom_buttons_leaflet visible-xs">
-      <button class="btn btn-default btn-xs" id="draw_poly" onclick="drawPolygon()">
-        <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing
-      </button>
-      <button class="btn btn-default btn-xs" id="delete_poly">
-        <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Delete polygon
-      </button>
-    </div>
-    <div id="map"></div>
-  </div>
   <!-- ------------------------------- End map ------------------------------------------------------------------------------ -->
   <!-- ------------------------------- Button finalizar --------------------------------------------------------------------- -->
-  <div class="row" style="margin-bottom: 20px">
-    <div class="col-xs-12 col-md-10 col-md-offset-1 col-sm-12" style="text-align: right">
+  <div class="row" style="margin-bottom: 20px; margin-right: 3px">
+    <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12" style="text-align: right">
       <a class="btn btn-primary" href="finish.html">Lorem ip</a>
     </div>
   </div>
