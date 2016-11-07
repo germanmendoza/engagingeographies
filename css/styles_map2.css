@@ -4,7 +4,10 @@
 /* Images */
 #image_draw{
 	width: auto;
-	height: 200px;
+	height: 60px;
+	margin-bottom: 20px;
+	margin-top: 15px;
+	margin-left: 30px;
 }
 #image_finish{
 	width: auto;
@@ -12,11 +15,17 @@
 }
 #image_slider{
 	width: auto;
-	height: 100px;
+	height: 180px;
 }
 
 /* Slider */
 #ex1Slider .slider-selection {
+	background: #A9A9A9;
+}
+#ex2Slider .slider-selection {
+	background: #A9A9A9;
+}
+#ex3Slider .slider-selection {
 	background: #A9A9A9;
 }
 
@@ -31,6 +40,17 @@
 	margin-right: 10px;
 }
 
+/* Only for the mockups.  Show&hidden map image. Delete after. */
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+/*  End Show&hidden map image  */
+
+.personal_modal{
+	width: 700px;
+}
+
 /* MEDIAS */
 
 @media (max-width:360px){
@@ -39,6 +59,7 @@
 		width: 250px;
 		height: auto;
 		margin-bottom: 15px;
+		margin-left: 10px;
 	}
 	#image_slider{
 		width: 290px;
@@ -46,11 +67,11 @@
 		padding-right: 30px;
 		margin-bottom: 15px;
 	}
-	.modal_finish{
-   		top: 0;
-   		left: 0;
-   		height: auto;
-   		width: 320px;
-   		margin-left: -75px;
+}
+
+@media (max-width:768px){
+	.personal_modal{
+		width: auto;
 	}
+
 }

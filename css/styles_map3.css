@@ -1,13 +1,10 @@
 @charset "UTF-8";
-/* CSS Document "map1" */
+/* CSS Document "map3" */
 
 /* Images */
 #image_draw{
 	width: auto;
-	height: 60px;
-	margin-bottom: 20px;
-	margin-top: 15px;
-	margin-left: 30px;
+	height: 200px;
 }
 #image_finish{
 	width: auto;
@@ -15,7 +12,7 @@
 }
 #image_slider{
 	width: auto;
-	height: 180px;
+	height: 100px;
 }
 
 /* Slider */
@@ -23,15 +20,9 @@
 	background: #A9A9A9;
 }
 
-#ex2Slider .slider-selection {
-	background: #A9A9A9;
-}
-#ex3Slider .slider-selection {
-	background: #A9A9A9;
-}
-
 .slider-handle.round{
 	background: #6DBFCE !important;
+
 }
 
 /* Button drag&drop */
@@ -59,13 +50,19 @@
 		width: 250px;
 		height: auto;
 		margin-bottom: 15px;
-		margin-left: 10px;
 	}
 	#image_slider{
 		width: 290px;
 		height: auto;
 		padding-right: 30px;
 		margin-bottom: 15px;
+	}
+	.modal_finish{
+   		top: 0;
+   		left: 0;
+   		height: auto;
+   		width: 320px;
+   		margin-left: -75px;
 	}
 }
 
@@ -75,8 +72,3 @@
 	}
 
 }
-
-
-
-
-
