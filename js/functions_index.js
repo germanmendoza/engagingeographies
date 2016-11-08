@@ -29,24 +29,13 @@ $('#ex1').slider({
     return 'Current value: ' + value;
   }
 });
-$("#ex1").on("slide", function(slideEvt) {
-  $("#ex1SliderVal").text(slideEvt.value);
-});
-
 $('#ex2').slider({
   formatter: function(value) {
     return 'Current value: ' + value;
   }
 });
-$("#ex2").on("slide", function(slideEvt) {
-  $("#ex2SliderVal").text(slideEvt.value);
-});
-
 $('#ex3').slider({
   formatter: function(value) {
     return 'Current value: ' + value;
   }
-});
-$("#ex3").on("slide", function(slideEvt) {
-  $("#ex3SliderVal").text(slideEvt.value);
 });

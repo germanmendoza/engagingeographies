@@ -47,8 +47,9 @@
 }
 /*  End Show&hidden map image  */
 
-.personal_modal{
-	width: 700px;
+/* Radios */
+.radio-inline input[type="radio"]{
+	position: relative;
 }
 
 /* MEDIAS */

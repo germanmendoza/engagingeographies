@@ -33,6 +33,18 @@
 .slider-handle.round{
 	background: #6DBFCE !important;
 }
+ /* Images sliders */
+.tematic-slider{
+	padding-top:5px; 
+	margin-left:0px; 
+	padding-left:0px;
+}
+
+.icon-slider{
+	padding:0px;
+	text-align:center;
+	color: #A9A9A9;
+}
 
 /* Button drag&drop */
 .button_drag{
@@ -47,9 +59,13 @@
 }
 /*  End Show&hidden map image  */
 
-.personal_modal{
-	width: 700px;
+
+/* Radios */
+.radio-inline input[type="radio"]{
+	position: relative;
 }
+
+
 
 /* MEDIAS */
 
