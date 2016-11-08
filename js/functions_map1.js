@@ -46,7 +46,31 @@ $('#ex3').slider({
     return 'Current value: ' + value;
   }
 });
-
+$('#ex4').slider({
+  formatter: function(value) {
+    return 'Current value: ' + value;
+  }
+});
+$('#ex5').slider({
+  formatter: function(value) {
+    return 'Current value: ' + value;
+  }
+});
+$('#ex6').slider({
+  formatter: function(value) {
+    return 'Current value: ' + value;
+  }
+});
+$('#ex7').slider({
+  formatter: function(value) {
+    return 'Current value: ' + value;
+  }
+});
+$('#ex8').slider({
+  formatter: function(value) {
+    return 'Current value: ' + value;
+  }
+});
 
  // Only for the mockups.  Show&hidden map image. Delete after.
 function toggler(divId) {

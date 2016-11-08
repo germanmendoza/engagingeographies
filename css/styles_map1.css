@@ -29,6 +29,21 @@
 #ex3Slider .slider-selection {
 	background: #A9A9A9;
 }
+#ex4Slider .slider-selection {
+	background: #A9A9A9;
+}
+#ex5Slider .slider-selection {
+	background: #A9A9A9;
+}
+#ex6Slider .slider-selection {
+	background: #A9A9A9;
+}
+#ex7Slider .slider-selection {
+	background: #A9A9A9;
+}
+#ex8Slider .slider-selection {
+	background: #A9A9A9;
+}
 
 .slider-handle.round{
 	background: #6DBFCE !important;
@@ -44,6 +59,7 @@
 	padding:0px;
 	text-align:center;
 	color: #A9A9A9;
+	margin-right: 10px
 }
 
 /* Button drag&drop */

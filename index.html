@@ -62,13 +62,6 @@
 </nav>
 <!-- ------------------------------- End Navbar --------------------------------------------------------------------------- -->
 <div class="container-fluid">
-  <!-- ------------------------------- Explanation -------------------------------------------------------------------------- -->
-  <!-- <div class="row">
-    <p class="col-xs-12 col-md-8 col-md-offset-2 col-sm-12">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac lectus vehicula, ultrices arcu sed, varius nisl. Ut consequat justo quam, vel maximus velit dictum eu. Donec mattis erat est, in eleifend nibh luctus id. Duis a magna ligula. Pellentesque ex odio, placerat ac vulputate in, interdum varius tellus. Aliquam lacinia faucibus turpis nec porta. Donec fringilla iaculis felis ut ornare. Nullam id efficitur enim. Pellentesque imperdiet consectetur orci, vitae pharetra sem congue sit amet. Nulla imperdiet lectus non lacinia viverra. Proin quam orci, luctus facilisis tempus quis, pretium vitae tellus. 
-    </p>
-  </div> -->
-  <!-- ------------------------------- End Explanation ---------------------------------------------------------------------- -->
   <!-- ------------------------------- Header ------------------------------------------------------------------------------- -->
   <div class="page-header" style="text-align:center; padding-top: 0px; margin-top: 0px">
       <h4 style="padding-top: 0px; margin-top: 0px">Select the freguesia where you live</h4>
@@ -95,22 +88,15 @@
       </div>
       <div id="map"></div>
     </div> -->
-    <!--  Ony for mockup. Remove when you have the map with freguesias. The good code is upstair -->
+    <!--  Ony for mockup. Remove when you have the map with freguesias. The good code is below -->
     <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-right: 0px; text-align: center">
       <a class="btn" href="#" data-toggle="modal" data-target="#myModal10">
         <img src="img/freguesias.png">
       </a>
     </div>
   <!-- ------------------------------- End map ------------------------------------------------------------------------------ -->
-  <!-- ------------------------------- Button next -------------------------------------------------------------------------- -->
-  <!-- <div class="row" style="margin-bottom: 20px; margin-right: 3px">
-         <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12" style="text-align: right">
-          <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#myModal1">Lorem ip</a>
-         </div>
-  </div> -->
-  <!-- ------------------------------- End button next ---------------------------------------------------------------------- -->
   <!-- ------------------------------- Logos -------------------------------------------------------------------------------- -->
-  <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center;">
   <hr style="width: 100%">
     <img src="img/geoc.png" id="logo_geoc" alt="Geo-c">
     <img src="img/mariecurie.png" id="logo_marie" alt="Marie Curie">
@@ -118,197 +104,9 @@
     <img src="img/munster.png" id="logo_munster" alt="Münster">
     <img src="img/uji.png" id="logo_uji" alt="UJI">
   </div>
-  <!-- ------------------------------- Firts version logos and text  -------------------------------------------------------- -->
-  <!-- <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12" style="font-size: 14px; color: #666666">
-  <hr>
-      The author gratefully acknowledges the support from Geoinformatics: Enabling Open Cities (GEO-C), a project funded by the European Commission within the Marie Skłodowska-Curie Actions, International Training Networks (ITN), and European Joint Doctorates (EJD). Grant Agreement number 642332 — GEO-C — H2020-MSCA-ITN-2014.
-  </div> -->
-  <!-- <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12" style="font-size: 14px; color: #666666">
-  <hr>
-    <img src="img/geoc.png" id="logo_geoc">
-    <img src="img/mariecurie.png" id="logo_marie">
-    <img src="img/nova.png" id="logo_nova">
-    <img src="img/munster.png" id="logo_munster">
-    <img src="img/uji.png" id="logo_uji"> 
-  </div> -->
   <!-- ------------------------------- End logos ---------------------------------------------------------------------------- -->
 </div> <!-- .container fluid -->
 <!-- ------------------------------- End page ------------------------------------------------------------------------------- -->
-<!-- ------------------------------- Modal 2 Introduction (unused in this screen) ------------------------------------------- -->
-<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header" style="text-align: center; border:none">
-        <span class="glyphicon glyphicon-education btn-lg icon_normal"></span>
-        <h4 class="row">Let's start!</h4>
-      </div>
-      <div class="modal-body">
-        <p style="text-align: center">Then we will see how to draw on the map.</p>
-      </div> <!--/.modal-body -->
-      <div class="modal-footer" style="border:none;">
-        <div class="float-right" style="margin-right:38px">
-          <button type="button" class="btn btn-primary btn-next" href="#">Start</button>
-        </div>
-      </div>
-    </div> <!--/.modal-content -->
-  </div> <!--/.modal-dialog -->
-</div> <!--/.modal fade -->
-<!-- ------------------------------- End Modal 2 ---------------------------------------------------------------------------- -->
-<!-- ------------------------------- Modal 3 Learn draw (unused in this screen)  -------------------------------------------- -->
-<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <!-- <div class="triangle_draw"></div>
-      <div id="rectangle_draw"></div> -->
-      <div class="modal-header">
-        Draws & removes the polygon
-        <button type="button" class="close" id="icon-link" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      </div>
-      <div class="modal-body">
-        <!--  Explanation of the process of drawing  -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac lectus vehicula, ultrices arcu sed, varius nisl.</p>
-        <img src="img/draw_tools.png" id="image_draw">
-        <ul class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          <li>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </li>
-          <li>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </li>
-        </ul>
-      </div> <!--/.modal-body -->
-      <div class="no-float"></div>
-      <div class="modal-footer" style="border:none;">
-        <div class="float-left" style="color: #A9A9A9; padding-top: 8px">
-          1/3
-        </div>
-        <div class="float-right">
-          <button type="button" class="btn btn-primary btn-next" href="#">Next</button>
-        </div>
-      </div>
-    </div> <!--/.modal-content -->
-  </div> <!--/.modal-dialog -->
-</div> <!--/.modal fade -->
-<!-- ------------------------------- End Modal 3 ---------------------------------------------------------------------------- -->
-<!-- ------------------------------- Modal 4 Learn sliders (unused in this screen)  ----------------------------------------- -->
-<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header visible-sm visible-md visible-lg">
-        Sliders
-        <button type="button" class="close" id="icon-link" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      </div>
-      <!--  Visible only xs -->
-      <div class="modal-header visible-xs">
-        <button type="button" class="close" id="icon-link" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        Sliders
-      </div>
-      <div class="modal-body">
-        <!--  Explanation as sliders are used  -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac lectus vehicula.</p>
-        <h4 style="text-align: center; margin-top: 40px">
-          Lorem ipsum dolor sit amet?
-        </h4>
-        <img src="img/slider.png" id="image_slider" class="col-xs-12 col-sm-10 col-md-10 col-lg-10 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
-      </div> <!--/.modal-body -->
-      <div class="no-float"></div>
-      <div class="modal-footer" style="border:none;">
-        <div class="float-left" style="color: #A9A9A9; padding-top: 8px">
-          2/3
-        </div>
-        <div class="float-right">
-          <button type="button" class="btn btn-primary btn-next" href="#">Next</button>
-        </div>
-        <div class="float-right" style="padding-top: 8px; margin-right: 20px">
-          <a type="button" class="link-primary btn-prev" href="#">Prev</a>
-        </div>
-      </div>
-    </div> <!--/.modal-content -->
-  </div> <!--/.modal-dialog -->
-</div> <!--/.modal fade -->
-<!-- ------------------------------- End Modal 4 ---------------------------------------------------------------------------- -->
-<!-- ------------------------------- Modal 5 Learn finish (unused in this screen)  ------------------------------------------ -->
-<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <!-- <div class="triangle_finish"></div>
-      <div id="rectangle_finish"></div> -->
-      <div class="modal-header">
-        Finish
-        <button type="button" class="close" id="icon-link" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      </div>
-      <div class="modal-body">
-        <!--  Explanation finish  -->
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac lectus vehicula.</p>
-        <img src="img/finish.png" class="col-xs-offset-3 col-sm-offset-4 col-md-offset-4 col-lg-offset-4" id="image_finish">
-      </div> <!--/.modal-body -->
-      <div class="no-float"></div>
-      <div class="modal-footer" style="border:none;">
-        <div class="float-left" style="color: #A9A9A9; padding-top: 8px">
-          3/3
-        </div>
-        <div class="float-right">
-          <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close" href="#">Done</button>
-        </div>
-        <div class="float-right" style="padding-top: 8px; margin-right: 20px">
-          <a type="button" class="link-primary btn-prev" href="#">Prev</a>
-        </div>
-      </div>
-    </div> <!--/.modal-content -->
-  </div> <!--/.modal-dialog -->
-</div> <!--/.modal fade -->
-<!-- ------------------------------- End Modal 5 ---------------------------------------------------------------------------- -->
-<!-- ------------------------------- Modal 6 Sliders (unused in this screen)  ----------------------------------------------- -->
-<div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        Lorem ipsum dolor sit amet
-        <button type="button" class="close" id="icon-link" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      </div>
-      <div class="modal-body">
-        <!--  Question 1  -->
-        <ul style="list-style:none; padding:0px">
-          <li style="margin-bottom: 60px; margin-top: 20px">
-            <span class="glyphicon glyphicon-cutlery btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-slider" style="text-align:center"></span>
-            <p class="tematic-slider col-lg-5 col-md-5 col-sm-5 col-xs-5">Lorem ipsum</p>
-            <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5"/>
-          </li>
-        <!--  Question 2  -->
-          <li style="margin-bottom: 60px; margin-top: 20px">
-            <span class="glyphicon glyphicon glyphicon-heart btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-slider" style="text-align:center"></span>
-            <p class="tematic-slider col-lg-5 col-md-5 col-sm-5 col-xs-5">Lorem ipsum</p>
-            <input id="ex2" data-slider-id='ex2Slider' type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5"/>
-          </li>
-        <!--  Question 3  -->
-          <li style="margin-bottom: 20px; margin-top: 20px">
-            <span class="glyphicon glyphicon glyphicon-home btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-slider" style="text-align:center"></span>
-            <p class="tematic-slider col-lg-5 col-md-5 col-sm-5 col-xs-5">Lorem ipsum</p>
-            <input id="ex3" data-slider-id='ex3Slider' type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5"/>
-          </li>
-        </ul>
-      </div> <!--/.modal-body -->
-      <div class="modal-footer" style="border:none;">
-        <div class="float-right">
-          <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close" href="#">Done</button>
-        </div>
-      </div>
-    </div> <!--/.modal-content -->
-  </div> <!--/.modal-dialog -->
-</div> <!--/.modal fade -->
-<!-- ------------------------------- End Modal 6 ---------------------------------------------------------------------------- -->
 <!-- ------------------------------- Modal 9 Project's explanation  --------------------------------------------------------- -->
 <div class="modal fade" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -331,7 +129,7 @@
         </div>
       </div> <!--/.modal-body -->
       <div class="modal-footer" style="border:none;">
-        <div class="float-right" style="margin-right:38px">
+        <div class="float-right">
           <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close" href="#">Done</button>
         </div>
       </div>
@@ -371,9 +169,9 @@
       <div class="no-float"></div>
       <div class="modal-footer" style="border:none;">
         <div class="float-left" style="color: #A9A9A9; padding-top: 8px">
-          1/3
+          1/2
         </div>
-        <div class="float-right" style="margin-right:38px;">
+        <div class="float-right">
           <button type="button" class="btn btn-primary btn-next" href="#">Next</button>
         </div>
       </div>
@@ -382,11 +180,99 @@
 </div> <!--/.modal fade -->
 <!-- ------------------------------- End Modal 10 --------------------------------------------------------------------------- -->
 <!-- ------------------------------- Modal 1  Problems in freguesia  -------------------------------------------------------- -->
-<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="overflow-y: auto;">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         Select the 3 most significant problems in your freguesia
+      </div>
+      <div class="modal-body">
+        <ul class="media-list col-lg-6 col-md-6 col-sm-6 col-xs-12" style="list-style:none; padding:0px">
+          <li class="media">
+            <span class="glyphicon glyphicon-road btn-lg col-lg-2 col-md-2 col-sm-2 col-xs-2 icon-freguesia"></span>
+            <p class="tematic-freguesia col-lg-8 col-md-8 col-sm-8 col-xs-6">Street paving problems</p>
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" value="">
+          </li>
+          <li class="media">
+            <span class="glyphicon glyphicon-flag btn-lg col-lg-2 col-md-2 col-sm-2 col-xs-2 icon-freguesia"></span>
+            <p class="tematic-freguesia col-lg-8 col-md-8 col-sm-8 col-xs-6">Parking problems</p>
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" value="">
+          </li>
+          <li class="media">
+            <span class="glyphicon glyphicon-warning-sign btn-lg col-lg-2 col-md-2 col-sm-2 col-xs-2 icon-freguesia" style="text-align:center"></span>
+            <p class="tematic-freguesia col-lg-8 col-md-8 col-sm-8 col-xs-6">Accessibility problems</p>
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" value="">
+          </li>
+          <li class="media">
+            <span class="glyphicon glyphicon-trash btn-lg col-lg-2 col-md-2 col-sm-2 col-xs-2 icon-freguesia" style="text-align:center"></span>
+            <p class="tematic-freguesia col-lg-8 col-md-8 col-sm-8 col-xs-6">Urban Hygiene problems</p>
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" value="">
+          </li>
+          <li class="media">
+            <span class="glyphicon glyphicon-bullhorn btn-lg col-lg-2 col-md-2 col-sm-2 col-xs-2 icon-freguesia" style="text-align:center"></span>
+            <p class="tematic-freguesia col-lg-8 col-md-8 col-sm-8 col-xs-6">Noise problems</p>
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" value="">
+          </li>
+          <li class="media">
+            <span class="glyphicon glyphicon-home btn-lg col-lg-2 col-md-2 col-sm-2 col-xs-2 icon-freguesia" style="text-align:center"></span>
+            <p class="tematic-freguesia col-lg-8 col-md-8 col-sm-8 col-xs-6">Renovate buildings problem</p>
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" value="">
+          </li>
+        </ul>
+        <ul class="media-list col-lg-6 col-md-6 col-sm-6 col-xs-12" style="list-style:none; padding:0px">
+          <li class="media">
+            <span class="glyphicon glyphicon-road btn-lg col-lg-2 col-md-2 col-sm-2 col-xs-2 icon-freguesia"></span>
+            <p class="tematic-freguesia col-lg-8 col-md-8 col-sm-8 col-xs-6">Street paving problems</p>
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" value="">
+          </li>
+          <li class="media">
+            <span class="glyphicon glyphicon-flag btn-lg col-lg-2 col-md-2 col-sm-2 col-xs-2 icon-freguesia"></span>
+            <p class="tematic-freguesia col-lg-8 col-md-8 col-sm-8 col-xs-6">Parking problems</p>
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" value="">
+          </li>
+          <li class="media">
+            <span class="glyphicon glyphicon-warning-sign btn-lg col-lg-2 col-md-2 col-sm-2 col-xs-2 icon-freguesia" style="text-align:center"></span>
+            <p class="tematic-freguesia col-lg-8 col-md-8 col-sm-8 col-xs-6">Accessibility problems</p>
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" value="">
+          </li>
+          <li class="media">
+            <span class="glyphicon glyphicon-trash btn-lg col-lg-2 col-md-2 col-sm-2 col-xs-2 icon-freguesia" style="text-align:center"></span>
+            <p class="tematic-freguesia col-lg-8 col-md-8 col-sm-8 col-xs-6">Urban Hygiene problems</p>
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" value="">
+          </li>
+          <li class="media">
+            <span class="glyphicon glyphicon-bullhorn btn-lg col-lg-2 col-md-2 col-sm-2 col-xs-2 icon-freguesia" style="text-align:center"></span>
+            <p class="tematic-freguesia col-lg-8 col-md-8 col-sm-8 col-xs-6">Noise problems</p>
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" value="">
+          </li>
+          <li class="media">
+            <span class="glyphicon glyphicon-home btn-lg col-lg-2 col-md-2 col-sm-2 col-xs-2 icon-freguesia" style="text-align:center"></span>
+            <p class="tematic-freguesia col-lg-8 col-md-8 col-sm-8 col-xs-6">Renovate buildings problem</p>
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" value="">
+          </li>
+        </ul>
+      </div> <!--/.modal-body -->
+      <div class="modal-footer" style="border:none;">
+        <div class="float-left" style="color: #A9A9A9; padding-top: 8px">
+          2/2
+        </div>
+        <div class="float-right">
+          <a type="button" class="btn btn-primary" href="map1.html">Done</a>
+        </div>
+        <div class="float-right" style="padding-top: 8px; margin-right: 20px">
+          <a type="button" class="link-primary btn-prev" href="#">Prev</a>
+        </div>
+      </div>
+    </div> <!--/.modal-content -->
+  </div> <!--/.modal-dialog -->
+</div> <!--/.modal fade -->
+<!-- ------------------------------- End Modal 1 ---------------------------------------------------------------------------- -->
+<!-- ------------------------------- Modal 17  Best things in freguesia (unused in this screen) ----------------------------- -->
+<div class="modal fade" id="myModal17" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        Select the 3 best things in your freguesia
       </div>
       <div class="modal-body">
         <ul class="media-list" style="list-style:none; padding:0px">
@@ -424,65 +310,9 @@
       </div> <!--/.modal-body -->
       <div class="modal-footer" style="border:none;">
         <div class="float-left" style="color: #A9A9A9; padding-top: 8px">
-          2/3
-        </div>
-        <div class="float-right" style="margin-right:38px">
-          <button type="button" class="btn btn-primary btn-next" href="#">Next</button>
-        </div>
-        <div class="float-right" style="padding-top: 8px; margin-right: 20px">
-          <a type="button" class="link-primary btn-prev" href="#">Prev</a>
-        </div>
-      </div>
-    </div> <!--/.modal-content -->
-  </div> <!--/.modal-dialog -->
-</div> <!--/.modal fade -->
-<!-- ------------------------------- End Modal 1 ---------------------------------------------------------------------------- -->
-<!-- ------------------------------- Modal 17  Best things in freguesia  ---------------------------------------------------- -->
-<div class="modal fade" id="myModal17" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        Select the 3 best things in your freguesia
-      </div>
-      <div class="modal-body">
-        <ul clas="media-list" style="list-style:none; padding:0px">
-          <li class="media">
-            <span class="glyphicon glyphicon-road btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-freguesia"></span>
-            <p class="tematic-freguesia col-lg-5 col-md-5 col-sm-5 col-xs-6">Street paving problems</p>
-            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7" value="">
-          </li>
-          <li class="media">
-            <span class="glyphicon glyphicon-flag btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-freguesia"></span>
-            <p class="tematic-freguesia col-lg-5 col-md-5 col-sm-5 col-xs-6">Parking problems</p>
-            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7" value="">
-          </li>
-          <li class="media">
-            <span class="glyphicon glyphicon-warning-sign btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-freguesia" style="text-align:center"></span>
-            <p class="tematic-freguesia col-lg-5 col-md-5 col-sm-5 col-xs-6">Accessibility problems</p>
-            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7" value="">
-          </li>
-          <li class="media">
-            <span class="glyphicon glyphicon-trash btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-freguesia" style="text-align:center"></span>
-            <p class="tematic-freguesia col-lg-5 col-md-5 col-sm-5 col-xs-6">Urban Hygiene problems</p>
-            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7" value="">
-          </li>
-          <li class="media">
-            <span class="glyphicon glyphicon-bullhorn btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-freguesia" style="text-align:center"></span>
-            <p class="tematic-freguesia col-lg-5 col-md-5 col-sm-5 col-xs-6">Noise problems</p>
-            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7" value="">
-          </li>
-          <li class="media">
-            <span class="glyphicon glyphicon-home btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-freguesia" style="text-align:center"></span>
-            <p class="tematic-freguesia col-lg-5 col-md-5 col-sm-5 col-xs-6">Renovate buildings problem</p>
-            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7" value="">
-          </li>
-        </ul>
-      </div> <!--/.modal-body -->
-      <div class="modal-footer" style="border:none;">
-        <div class="float-left" style="color: #A9A9A9; padding-top: 8px">
           3/3
         </div>
-        <div class="float-right" style="margin-right:38px">
+        <div class="float-right">
           <a type="button" class="btn btn-primary" href="map1.html">Done</a>
         </div>
         <div class="float-right" style="padding-top: 8px; margin-right: 20px">

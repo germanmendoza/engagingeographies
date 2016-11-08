@@ -18,21 +18,6 @@
 	height: 180px;
 }
 
-/* Slider */
-#ex1Slider .slider-selection {
-	background: #A9A9A9;
-}
-#ex2Slider .slider-selection {
-	background: #A9A9A9;
-}
-#ex3Slider .slider-selection {
-	background: #A9A9A9;
-}
-
-.slider-handle.round{
-	background: #6DBFCE !important;
-
-}
 
 /* Button drag&drop */
 .button_drag{
