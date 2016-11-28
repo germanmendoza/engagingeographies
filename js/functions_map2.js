@@ -95,16 +95,6 @@ $('.display_sliders').click(function() {
     $(sliders_done).toggleClass('show');
 });
 
-$('.display_title').click(function() {
-    $(title_done).toggleClass('hidden');
-    $(title_done).toggleClass('show');
-});
-
-$('.display_title2').click(function() {
-    $(title2_done).toggleClass('hidden');
-    $(title2_done).toggleClass('show');
-});
-
 
 $('.display_area').click(function() {
     $(area_done).toggleClass('hidden');
