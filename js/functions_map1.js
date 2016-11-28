@@ -72,3 +72,23 @@ function toggler(divId) {
     $("#firstimage").addClass('hidden');
 }
 // Finish Show&hidden map image
+
+
+$('.display_sliders').click(function() {
+    $(sliders_done).toggleClass('hidden');
+    $(sliders_done).toggleClass('show');
+});
+
+$('.display_questions').click(function() {
+    $(questions_done).toggleClass('hidden');
+    $(questions_done).toggleClass('show');
+});
+
+
+$('.showhide').click(function() {
+    $(sliders_done).toggleClass('hidden');
+    $(sliders_done).toggleClass('show');
+});
+
+
+

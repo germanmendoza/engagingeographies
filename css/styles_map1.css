@@ -81,7 +81,9 @@
 	position: relative;
 }
 
-
+.hidden {
+  display: none;
+}
 
 /* MEDIAS */
 
