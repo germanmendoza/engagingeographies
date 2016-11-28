@@ -89,14 +89,11 @@
 
   <!--  Only for mockups. Remove when you have finish the mockup. The good code is upstair -->
   <div class="col-lg-6 col-md-6 col-sm-6 visible-lg visible-md visible-sm" style="position: fixed; right: 0px; height: 83vh">
-    <!-- <a class="btn display_sliders" id="firstimage" href="#"  style="padding-top: 0px;">
-    </a> -->
-    <div style="padding-top: 0px;">
-      <img id="firstimage" src="img/map_col6.png" style="height: 100%;">
-     <!--  <a type="button" class="btn btn-primary finish-map" data-toggle="popover" data-placement="top" title="Before finish" data-content="Areas that have drawn, chooses the most important to you." onclick="toggler('secondimage');" style="bottom: -2%; left: 10%">Finish</a>
-    </a> -->
-    </div>
-    <a class="btn display_area display_title" href="#" id="secondimage" style="display: none; padding-top: 0px">
+    <a class="btn display_questions display_title" id="firstimage" href="#"  style="padding-top: 0px;">
+      <img src="img/map_col6.png" style="height: 100%;">
+      <a type="button" class="btn btn-primary finish-map" data-toggle="popover" data-placement="top" title="Before finish" data-content="Areas that have drawn, chooses the most important to you." onclick="toggler('secondimage');" style="bottom: -2%; left: 10%">Finish</a>
+    </a>
+    <a class="btn display_title display_area" href="#" id="secondimage" style="display: none; padding-top: 0px">
       <img src="img/map_col6.png" style="height: 100%">
       <a type="button" class="btn btn-primary finish-map" data-toggle="popover" data-placement="top" title="Before finish" data-content="Areas that have drawn, chooses the most important to you." onclick="toggler('secondimage');" style="bottom: -2%; left: 10%">Finish</a>
     </a>
@@ -128,7 +125,290 @@
     <a type="button" class="btn btn-primary float-right display_title display_communities"  onclick="changeclass();">Done</a>
   </div> 
 <!-- -------------------------------  End Communities ----------------------------------------------- -->
-
+<!-- ------------------------------- Questions ----------------------------------------------------- -->
+  <div class="hidden" id="questions_done">
+    <h5>Now we'll ask you questions about the area you selected, the X Strongly agree</h5>
+        <div class="visible-lg">
+          <div class="col-lg-1" style="font-size: 12px; float:right; margin-right: 30px;">
+            Strongly Agree
+          </div>
+          <div class="col-lg-1" style="font-size: 12px; float:right; margin-right: 0px;">
+            4
+          </div>
+          <div class="col-lg-1" style="font-size: 12px; float:right; margin-right: 0px;">
+            3
+          </div>
+          <div class="col-lg-1" style="font-size: 12px; float:right; margin-right: 10px;">
+            2
+          </div>
+          <div class="col-lg-1" style="font-size: 12px; float:right; margin-right: 30px;">
+            Strongly Disagree
+          </div>
+        </div>
+        <h5 style="margin-bottom: 20px; padding-top: 0px">
+          Title 1
+        </h5>
+        <div class="no-float">
+        <div>
+          <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Question 1</p>
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 visible-lg">
+            <label class="radio-inline personal_radio" style="margin-top: -10px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" >
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 30px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 30px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 30px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 30px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+            </label>
+          </div>
+          <!--  Visible only xs  -->
+          <div class="col-md-12 col-sm-12 col-xs-12 visible-md visible-sm visible-xs" style="padding-left: 5px; padding-right: 5px">
+            <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1 Disagree
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4"> 4
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5"> 5 Agree
+            </label>
+          </div>
+        </div>
+        <div class="no-float"></div>
+        <div>
+          <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Question 2</p>
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 visible-lg">
+            <label class="radio-inline personal_radio" style="margin-top: -10px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" >
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 30px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 30px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 30px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 30px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+            </label>
+          </div>
+          <!--  Visible only xs  -->
+          <div class="col-md-12 col-sm-12 col-xs-12 visible-md visible-sm visible-xs" style="padding-left: 5px; padding-right: 5px">
+            <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1 Disagree
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4"> 4
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5"> 5 Agree
+            </label>
+          </div>
+        </div>
+        <div class="no-float"></div>
+        <div>
+          <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Question 3</p>
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 visible-lg">
+            <label class="radio-inline personal_radio" style="margin-top: -10px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" >
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 30px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 30px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 30px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 30px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+            </label>
+          </div>
+          <!--  Visible only xs  -->
+          <div class="col-md-12 col-sm-12 col-xs-12 visible-md visible-sm visible-xs" style="padding-left: 5px; padding-right: 5px">
+            <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1 Disagree
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4"> 4
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5"> 5 Agree
+            </label>
+          </div>
+        </div>
+        <div class="no-float"></div>
+        <div class="visible-lg" style="margin-top: 40px">
+          <div class="col-lg-1" style="font-size: 12px; float:right; margin-right: 30px;">
+            Strongly Agree
+          </div>
+          <div class="col-lg-1" style="font-size: 12px; float:right; margin-right: 0px;">
+            4
+          </div>
+          <div class="col-lg-1" style="font-size: 12px; float:right; margin-right: 0px;">
+            3
+          </div>
+          <div class="col-lg-1" style="font-size: 12px; float:right; margin-right: 10px;">
+            2
+          </div>
+          <div class="col-lg-1" style="font-size: 12px; float:right; margin-right: 30px;">
+            Strongly Disagree
+          </div>
+        </div>
+        <h5 style="margin-bottom: 20px; padding-top: 0px;">
+          Title 2
+        </h5>
+        <div class="no-float">
+        <div>
+          <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Question 4</p>
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 visible-lg">
+            <label class="radio-inline personal_radio" style="margin-top: -10px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" >
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 30px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 30px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 30px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 30px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+            </label>
+          </div>
+          <!--  Visible only xs  -->
+          <div class="col-md-12 col-sm-12 col-xs-12 visible-md visible-sm visible-xs" style="padding-left: 5px; padding-right: 5px">
+            <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1 Disagree
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4"> 4
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5"> 5 Agree
+            </label>
+          </div>
+        </div>
+        <div class="no-float"></div>
+        <div>
+          <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Question 5</p>
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 visible-lg">
+            <label class="radio-inline personal_radio" style="margin-top: -10px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" >
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 30px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 30px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 30px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 30px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+            </label>
+          </div>
+          <!--  Visible only xs  -->
+          <div class="col-md-12 col-sm-12 col-xs-12 visible-md visible-sm visible-xs" style="padding-left: 5px; padding-right: 5px">
+            <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1 Disagree
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4"> 4
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5"> 5 Agree
+            </label>
+          </div>
+        </div>
+        <div class="no-float"></div>
+        <div>
+          <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Question 6</p>
+          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 visible-lg">
+            <label class="radio-inline personal_radio" style="margin-top: -10px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" >
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 30px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 30px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 30px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 30px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5">
+            </label>
+          </div>
+          <!--  Visible only xs  -->
+          <div class="col-md-12 col-sm-12 col-xs-12 visible-md visible-sm visible-xs" style="padding-left: 5px; padding-right: 5px">
+            <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1 Disagree
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4"> 4
+            </label>
+            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5"> 5 Agree
+            </label>
+          </div>
+        </div>
+        <div class="no-float"></div>
+      <a type="button" class="btn btn-primary float-right display_questions  display_title"  onclick="changeclass();">Done</a>
+  </div> 
+  </div>
+  </div>
+<!-- -------------------------------  End questions ----------------------------------------------------- -->
 <!-- ------------------------------- Do you live in that area?  -------------------------------------- -->
   <div class="hidden" id="area_done">
     <h5 style="margin-top: 20px">
@@ -149,15 +429,14 @@
       <textarea class="form-control" rows="1"></textarea>
     </div>
     <div class="no-float"></div>
-    <a type="button" class="btn btn-primary float-right display_questions"  onclick="changeclass();">Done</a>
+    <a type="button" class="btn btn-primary float-right display_sc"  onclick="changeclass();">Done</a>
     <div class="no-float"></div>
   </div>
 <!-- ------------------------------- End Do you live in that area? ----------------------------------- -->
 <!-- ------------------------------- SC questions  -------------------------------------------------- -->
-    <div class="hidden" id="questions_done">
+  <div class="hidden" id="sc_done">
   <hr style="width: 100%">
     <h5>Now we'll ask you questions about the area you selected, the X Strongly agree</h5>
-
         <div class="visible-lg">
           <div class="col-lg-1" style="font-size: 12px; float:right; margin-right: 30px;">
             Strongly Agree

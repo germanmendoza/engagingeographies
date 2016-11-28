@@ -78,7 +78,7 @@ function toggler(divId) {
     //$("#" + divId).toggle();
     $("#secondimage").addClass('show');
     $("#firstimage").addClass('hidden');
-}
+};
 
 $('.display_communities').click(function() {
   $(communities_done).toggleClass('hidden');
@@ -90,15 +90,15 @@ $('.display_title').click(function() {
   $(title_done).toggleClass('show');
 });
 
-$('.display_sliders').click(function() {
-    $(sliders_done).toggleClass('hidden');
-    $(sliders_done).toggleClass('show');
-});
-
-
 $('.display_area').click(function() {
     $(area_done).toggleClass('hidden');
     $(area_done).toggleClass('show');
+});
+
+
+$('.display_sc').click(function() {
+    $(sc_done).toggleClass('hidden');
+    $(sc_done).toggleClass('show');
 });
 
 $('.display_questions').click(function() {
