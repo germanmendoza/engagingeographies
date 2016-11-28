@@ -1,6 +1,10 @@
 @charset "UTF-8";
 /* CSS Document "general" */
 
+body{
+	padding-top: 70px;
+}
+
 /* Navbar */
 .name_navbar{
 	padding-top: 5px;
@@ -126,17 +130,18 @@ hr{
 	color: #A9A9A9
 }
 /* Map */
-#map{ 
-	height: 470px;
-	width: auto;
-	margin-bottom: 20px;
-	margin-left: 20px;
-}
+
 
 .custom_buttons_leaflet{
 	position: absolute; 
-	top: 1.5%; 
-	left: 40%; 
+	top: 4%; 
+	left: 30%; 
+	z-index: 999
+}
+.finish-map{
+	position: absolute; 
+	bottom: 6%; 
+	left: 7%; 
 	z-index: 999
 }
 /* End Map */
@@ -157,6 +162,20 @@ hr{
 
 /* MEDIAS */
 
+@media (max-width:980px){
+	.custom_buttons_leaflet{
+		left: 25%;
+		top: 2%; 
+	}
+}
+
+@media (max-width:768px){
+	.custom_buttons_leaflet{
+		left: 24%;
+		top: 3%; 
+	}
+}
+
 @media (max-width:767px){
 	.name_navbar{
 		padding-top: 5px;
@@ -165,18 +184,21 @@ hr{
 	#logo_phd{
 		width: 40px;
 	}
-	.custom_buttons_leaflet{
-		left: 20%; 
-	}
-	#map{ 
-	margin-left: 0px;
-	}
+	
 
+}
+
+@media (max-width:360px){
+	.custom_buttons_leaflet{
+		top: 4%; 
+	}
 }
 @media (max-width:330px){
 	.custom_buttons_leaflet{
-		left: 18.5%; 
+		left: 20%; 
 	}
+
+
 }
 
 
