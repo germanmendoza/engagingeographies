@@ -2,7 +2,7 @@
 
 // Modal when load page
 
-$('#myModal13').modal('show');
+// $('#myModal13').modal('show');
 
 // POPOVER
 
@@ -79,4 +79,47 @@ function toggler(divId) {
     $("#secondimage").addClass('show');
     $("#firstimage").addClass('hidden');
 }
+
+$('.display_communities').click(function() {
+  $(communities_done).toggleClass('hidden');
+  $(communities_done).toggleClass('show');
+});
+
+$('.display_title').click(function() {
+  $(title_done).toggleClass('hidden');
+  $(title_done).toggleClass('show');
+});
+
+$('.display_sliders').click(function() {
+    $(sliders_done).toggleClass('hidden');
+    $(sliders_done).toggleClass('show');
+});
+
+$('.display_title').click(function() {
+    $(title_done).toggleClass('hidden');
+    $(title_done).toggleClass('show');
+});
+
+$('.display_title2').click(function() {
+    $(title2_done).toggleClass('hidden');
+    $(title2_done).toggleClass('show');
+});
+
+
+$('.display_area').click(function() {
+    $(area_done).toggleClass('hidden');
+    $(area_done).toggleClass('show');
+});
+
+$('.display_questions').click(function() {
+    $(questions_done).toggleClass('hidden');
+    $(question_done).toggleClass('show');
+});
+
+$('.showhide').click(function() {
+    $(sliders_done).toggleClass('hidden');
+    $(sliders_done).toggleClass('show');
+});
+
+
 // Finish Show&hidden map image

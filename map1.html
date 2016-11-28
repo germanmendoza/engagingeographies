@@ -89,11 +89,11 @@
 
   <!--  Only for mockups. Remove when you have finish the mockup. The good code is upstair -->
   <div class="col-lg-6 col-md-6 col-sm-6 visible-lg visible-md visible-sm" style="position: fixed; right: 0px; height: 83vh">
-    <a class="btn display_sliders" id="firstimage" href="#"  style="padding-top: 0px;">
+    <a class="btn display_sliders display_title" id="firstimage" href="#"  style="padding-top: 0px;">
       <img src="img/map_col6.png" style="height: 100%">
       <a type="button" class="btn btn-primary finish-map" data-toggle="popover" data-placement="top" title="Before finish" data-content="Areas that have drawn, chooses the most important to you." onclick="toggler('secondimage');" style="bottom: -2%; left: 10%">Finish</a>
     </a>
-    <a class="btn display_questions" href="#" id="secondimage" style="display: none; padding-top: 0px">
+    <a class="btn display_area display_title " href="#" id="secondimage" style="display: none; padding-top: 0px">
       <img src="img/map_col6.png" style="height: 100%">
       <a type="button" class="btn btn-primary finish-map" data-toggle="popover" data-placement="top" title="Before finish" data-content="Areas that have drawn, chooses the most important to you." onclick="toggler('secondimage');" style="bottom: -2%; left: 10%">Finish</a>
     </a>
@@ -104,14 +104,14 @@
   <div class="panel panel-default">
     <div class="panel-body">
     <!--  Header  -->
-      <h4 style="margin-bottom: 20px">Please draw as many polygons as you like on the areas where you feel more identified</h4>
-      <hr style="width: 100%">
-  
+      <h4 style="margin-bottom: 20px" class="show" id="title_done">Please draw as many polygons as you like on the areas where you feel more identified</h4>
+
+     <!--  <h4 style="margin-bottom: 20px" class="hidden" id="title2_done">Good Job! Now Draw another time if you want. Please draw as many polygons as you like on the areas where you feel more identified</h4> -->
   <!-- ------------------------------- Sliders ----------------------------------------------------- -->
   <div class="hidden" id="sliders_done">
     <h5>Lorem ipsum dolor sit amet</h5>
     <div class="no-float"></div>
-    <hr style="width: 90%">
+    <hr style="width: 100%">
     <!--  Question 1  -->
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="margin-top: 20px">
       <span class="glyphicon glyphicon-cutlery btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-1 icon-slider" style="text-align:center;"></span>
@@ -192,12 +192,12 @@
       <span id="ex8CurrentSliderValLabel" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Current Slider Value: <span id="ex8SliderVal">0</span></span>
     </div>
     <div class="no-float"></div>
-    <a type="button" class="btn btn-primary float-right showhide"  onclick="changeclass();">Done</a>
+    <a type="button" class="btn btn-primary float-right display_sliders  display_title display_title2"  onclick="changeclass();">Done</a>
   </div> 
 <!-- -------------------------------  End Slider ----------------------------------------------------- -->
 
 <!-- ------------------------------- Do you live in that area?  -------------------------------------- -->
-  <div class="hidden" id="questions_done">
+  <div class="hidden" id="area_done">
     <h5 style="margin-top: 20px">
       Do you live in that area?
     </h5>
@@ -216,9 +216,15 @@
       <textarea class="form-control" rows="1"></textarea>
     </div>
     <div class="no-float"></div>
-    <hr style="width: 100%">
+    <a type="button" class="btn btn-primary float-right display_questions"  onclick="changeclass();">Done</a>
+    <div class="no-float"></div>
+  </div>
+  
+    
 <!-- ------------------------------- End Do you live in that area? ----------------------------------- -->
 <!-- ------------------------------- SOP questions  -------------------------------------------------- -->
+  <div class="hidden" id="questions_done">
+  <hr style="width: 100%">
     <h5>Now we'll ask you questions about the area you selected, the X Strongly agree</h5>
 
         <div class="visible-lg">
