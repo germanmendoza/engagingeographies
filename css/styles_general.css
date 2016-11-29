@@ -129,9 +129,8 @@ hr{
 .icon_normal{
 	color: #A9A9A9
 }
+
 /* Map */
-
-
 .custom_buttons_leaflet{
 	position: absolute; 
 	top: 4%; 
@@ -158,6 +157,7 @@ hr{
 	float:left;
 }
 /* End Floats */
+
 
 
 /* MEDIAS */

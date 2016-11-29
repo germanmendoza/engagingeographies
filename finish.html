@@ -13,7 +13,7 @@
 
 <body>
 <!-- ------------------------------- Navbar ----------------------------------------------------------------------------- -->
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header name_navbar col-xs-4 col-sm-5 col-md-5 col-lg-5 visible-lg visible-md visible-sm">
       <a href="index.html" class="name_link"><img src="img/logo_engaging.svg" id="logo_phd">Engaging Geographies</a>
@@ -62,13 +62,40 @@
 <!-- ------------------------------- End Navbar --------------------------------------------------------------------------- -->
 <div class="container-fluid">
   <!-- ------------------------------- Header ----------------------------------------------------------------- -->
-  <div class="row">
     <div class="col-xs-12 col-md-8 col-md-offset-2 col-sm-12">
+      <div class="col-xs-12 col-sm-10 col-md-10 col-lg-9 col-sm-offset-2 col-md-offset-2 col-lg-offset-3">
+        <h4>To know a little about you ;)</h4>
+        <div style="margin-bottom: 20px">
+          <h5>Gender</h5>
+          <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Male
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Female
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Undefined
+          </label>
+        </div>
+        <div style="margin-bottom: 20px">
+          <h5>Age</h5>
+          <textarea class="form-control" rows="1" style="width: 100px"></textarea>
+        </div>
+        <div style="margin-bottom: 20px">
+          <h5>Study level</h5>
+          <textarea class="form-control" rows="1" style="max-width: 500px"></textarea>
+        </div>
+        <div style="margin-bottom: 20px">
+          <h5>Profession</h5>
+          <textarea class="form-control" rows="1" style="max-width: 500px"></textarea>
+        </div>
+      </div>
+
       <div class="page-header" style="text-align:center; border: none">
         <span class="glyphicon glyphicon-check btn-lg icon_normal"></span>
         <h3>Thank you for participating!!</h3>
         <p>We appreciate all the effort. If you want to know both where are the areas of your close fellow citizen please or contained in Lisbon city, please, press the correspondent button.</p>
-        <p>Buttons x 2</p>
+        <p><a type="button" class="btn btn-primary" href="finish.html">Finish</a> <a type="button" class="btn btn-primary" href="finish.html">Finish</a></p>
         <p>We are going to create dynamic areas to connect you with people that share you places and groups!! In case you are interested in be part of these new areas of engagement or have more information about the project, please provide us with your email and twitter username. Together, we are going  to improve Lisbon boundaries!!! </p>
         <form  class="form-inline" style="margin-top: 30px">
           <div class="form-group">
@@ -90,7 +117,6 @@
     <img src="img/nova.png" id="logo_nova">
     <img src="img/munster.png" id="logo_munster">
     <img src="img/uji.png" id="logo_uji"> 
-  </div>
   <!-- ------------------------------- End Header  -------------------------------------------------------------- -->
 </div> <!-- .container fluid -->
 

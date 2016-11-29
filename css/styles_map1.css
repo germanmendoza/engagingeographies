@@ -85,6 +85,52 @@
   display: none;
 }
 
+/* Images & logos */
+/*#image_draw{
+	width: auto;
+	height: 200px;
+}
+#image_finish{
+	width: auto;
+	height: 70px;
+}
+#image_slider{
+	width: auto;
+	height: 100px;
+}
+#logo_geoc{
+	width: 50px;
+	margin-bottom: 20px;
+	margin-right: 40px;
+	margin-left: 40px;
+}
+#logo_marie{
+	width: 120px;
+	margin-bottom: 20px;
+	margin-right: 40px;
+	margin-left: 40px;
+}
+#logo_nova{
+	width: 30px;
+	margin-bottom: 20px;
+	margin-right: 40px;
+	margin-left: 40px;
+}
+#logo_munster{
+	width: 100px;
+	margin-bottom: 20px;
+	margin-right: 40px;
+	margin-left: 40px;
+}
+#logo_uji{
+	width: 30px;
+	margin-bottom: 20px;
+	margin-right: 40px;
+	margin-left: 40px;
+}*/
+
+/* End images logos*/
+
 /* MEDIAS */
 
 @media (max-width:360px){
