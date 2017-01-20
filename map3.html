@@ -67,22 +67,18 @@
   <div class="col-lg-6 col-md-6 col-sm-6 visible-lg visible-md visible-sm" style="position: fixed; right: 0px;">
     <div class="panel panel-default">
       <div class="panel-body">
-        <div class="custom_buttons_leaflet visible-lg visible-md visible-sm">
-          <button class="btn btn-default btn-md" id="draw_poly" onclick="drawPolygon()">
-            <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing
-          </button>
-          <button class="btn btn-default btn-md" id="delete_poly">
-            <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Delete area
-          </button>
-        </div>
-        <div id="map" style="height:84vh"></div>
+        <div id="map" style="height:84vh; position: relative;">
+          <div class="visible-lg visible-md visible-sm" style="position: absolute; top: 10px; left: 65px; z-index: 998">
+            <button class="btn btn-default btn-md" id="draw_poly" onclick="drawPolygon()">
+              <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing
+            </button>
+            <button class="btn btn-default btn-md" id="delete_poly">
+              <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Delete area
+            </button>
+          </div>
         <!-- Button finish -->
-        <!-- <div class="row" style="margin-bottom: 20px; margin-right: 3px">
-          <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12" style="text-align: right">
-            <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#myModal7">Finish</a> -->
-          <a type="button" class="btn btn-primary finish-map" href="finish.html">Finish</a>
-          <!-- </div>
-        </div> -->
+          <a type="button" class="btn btn-primary finish-map" style="position: absolute; bottom: 10px; left: 10px">Next</a>
+        </div>
       </div> <!-- /.panel-body -->
     </div>  <!-- /.panel-default -->
   </div>  <!-- /.col6 -->
@@ -180,8 +176,6 @@
         <div class="no-float"></div>
         <a type="button" class="btn btn-primary float-right display_questions  display_title"  onclick="changeclass();">Done</a>
   </div> 
-  </div>
-  </div>
 <!-- -------------------------------  End questions ----------------------------------------------------- -->
   </div> <!-- .col-6 -->
 </div> <!-- .panel-default -->
@@ -189,26 +183,27 @@
 <div class="no-float"></div>
 <!-- ------------------------------- End Panel left ------------------------------------------------------------------------ -->
 <!-- ------------------------------- Map visible xs ---------------------------------------------------------------------------------- -->
-  <!-- <div class="visible-xs col-xs-12" style="padding: 0px; padding-top: 30px">
+  <div class="visible-xs col-xs-12" style="padding: 0px; padding-top: 30px">
     <div class="panel panel-default">
       <div class="panel-body">
-        <div class="custom_buttons_leaflet">
-          <button class="btn btn-default btn-xs" id="draw_poly" onclick="drawPolygon()">
-            <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing
-          </button>
-          <button class="btn btn-default btn-xs" id="delete_poly">
-            <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Delete area
-          </button>
-        </div>
-        <div id="map2" style="height:83vh"></div> -->
+        <div id="map2" style="height:83vh; position: relative;">
+          <div style="position: absolute; top: 10px; left: 40px; z-index: 998">
+            <button class="btn btn-default btn-xs" id="draw_poly" onclick="drawPolygon()" >
+              <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing
+            </button>
+            <button class="btn btn-default btn-xs" id="delete_poly">
+              <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Delete area
+            </button>
+          </div>
         <!-- Button finish -->
-      <!--   <a type="button" class="btn btn-primary finish-map" data-toggle="popover" data-placement="top" title="Before finish" data-content="Areas that have drawn, chooses the most important to you." onclick="toggler('secondimage');">Finish</a>
+          <a type="button" class="btn btn-primary finish-map" style="position: absolute; bottom: 20px; left: 8px">Finish</a>
+        </div>
       </div> 
     </div>
-  </div>  -->    
+  </div>  
 
   <!--  Only for mockups. Remove when you have finish the mockup. The good code is upstair -->
-  <div class="col-xs-12 visible-xs" style="padding: 0px; margin-top: 30px">
+  <!-- <div class="col-xs-12 visible-xs" style="padding: 0px; margin-top: 30px">
     <a class="btn" id="firstimage" href="#" data-toggle="modal" data-target="#myModal6" style="padding: 0px; width: 100%">
       <img src="img/map_col6.png" style="width: 100%">
        <a type="button" class="btn btn-primary finish-map" data-toggle="popover" data-placement="top" title="Before finish" data-content="Areas that have drawn, chooses the most important to you." onclick="toggler('secondimage');" style="bottom: 5%">Finish</a>
@@ -217,7 +212,7 @@
       <img src="img/map_col6.png" style="width: 100%">
        <a type="button" class="btn btn-primary finish-map" data-toggle="popover" data-placement="top" title="Before finish" data-content="Areas that have drawn, chooses the most important to you." onclick="toggler('secondimage');" style="bottom: 5%">Finish</a>
     </a>
-  </div>
+  </div> -->
   <!-- ------------------------------- End map ------------------------------------------------------------------------------ -->
 </div> <!-- .container fluid -->
 <!-- ------------------------------- Modal 3 Learn draw --------------------------------------------------------------------- -->
