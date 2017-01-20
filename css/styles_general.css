@@ -55,6 +55,7 @@ body{
 .btn-primary{
 	background-color:#6DBFCE !important;
 	border-color:#68B7C8 !important;
+	color: #ffffff !important;
 }
 
 .btn-primary:hover{
@@ -190,7 +191,7 @@ hr{
 
 @media (max-width:360px){
 	.custom_buttons_leaflet{
-		top: 4%; 
+		top: 6%; 
 	}
 }
 @media (max-width:330px){
