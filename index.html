@@ -54,16 +54,23 @@
 
         <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center;">
           <hr style="width: 100%">
-          <img src="img/geoc.png" id="logo_geoc" alt="Geo-c">
-          <img src="img/mariecurie.png" id="logo_marie" alt="Marie Curie">
+          <div style="max-width: 100%">
+            <img src="img/geoc.png" id="logo_geoc" alt="Geo-c">
+            <img src="img/mariecurie.png" id="logo_marie" alt="Marie Curie">
+          </div>
+          <div style="max-width: 100%">
           <img src="img/nova.png" id="logo_nova" alt="Nova IMS">
           <img src="img/munster.png" id="logo_munster" alt="Münster">
           <img src="img/uji.png" id="logo_uji" alt="UJI">
+          </div>
         </div>
       </div>
       <div class="modal-footer" style="border:none;">
+        <div class="float-left" style="color: #A9A9A9; padding-top: 8px">
+          1/4
+        </div>
         <div class="float-right">
-          <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close" href="#" id="home_button">Done</button>
+          <button type="button" class="btn btn-primary btn-next" data-dismiss="modal" aria-label="Close" href="#" id="home_button" disabled>Next</button>
         </div>
       </div>
     </div> <!--/.modal-content -->
@@ -80,89 +87,95 @@
           <h4 style="padding-top: 0px; margin-top: 0px">Please, select the parish where do you live?
           </h4>
         </div>
-        <ul class="col-lg-5 col-md-5 col-sm-5 col-xs-12" style="list-style:none; margin-bottom: 0px">
-          <label class="radio-inline">
+        <ul class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="list-style:none; margin-bottom: 0px">
+          <li class="">
             <input type="radio" name="freguesia" value="1" > Ajuda
-          </label>
-          <label class="radio-inline">
+          </li>
+          <li class="">
             <input type="radio" name="freguesia" value="2" > Alcântara
-          </label>
-          <label class="radio-inline">
+          </li>
+          <li class="">
             <input type="radio" name="freguesia" value="3" > Alvalade
-          </label>
-          <label class="radio-inline">
+          </li>
+          <li class="">
             <input type="radio" name="freguesia" value="4" > Areeiro
-          </label>
-          <label class="radio-inline">
+          </li>
+          <li class="">
             <input type="radio" name="freguesia" value="5" > Arroios
-          </label>
-          <label class="radio-inline">
+          </li>
+          <li class="">
             <input type="radio" name="freguesia" value="6" > Avenidas Novas
-          </label>
-          <label class="radio-inline">
+          </li>
+          <li class="">
             <input type="radio" name="freguesia" value="7" > Beato
-          </label>
-          <label class="radio-inline">
+          </li>
+          <li class="">
             <input type="radio" name="freguesia" value="8" > Belém
-          </label>
-          <label class="radio-inline">
+          </li>
+          <li class="">
             <input type="radio" name="freguesia" value="9" > Benfica
-          </label>
-          <label class="radio-inline">
+          </li>
+          <li class="">
             <input type="radio" name="freguesia" value="10" > Campo de Ourique
-          </label>
-          <label class="radio-inline">
+          </li>
+          <li class="">
             <input type="radio" name="freguesia" value="11" > Campolide
-          </label>
-          <label class="radio-inline">
+          </li>
+          <li class="">
             <input type="radio" name="freguesia" value="12" > Carnide
-          </label>
+          </li>
         </ul>
-        <ul class="col-lg-5 col-md-5 col-sm-5 col-xs-12" style="list-style:none; padding-top: 0px">
-          <label class="radio-inline">
+        <ul class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="list-style:none; padding-top: 0px">
+          <li class="">
             <input type="radio" name="freguesia" value="13" > Estrela
-          </label>
-          <label class="radio-inline">
+          </li>
+          <li class="">
             <input type="radio" name="freguesia" value="14" > Lumiar
-          </label>
-          <label class="radio-inline">
+          </li>
+          <li class="">
             <input type="radio" name="freguesia" value="15" > Marvila
-          </label>
-          <label class="radio-inline">
+          </li>
+          <li class="">
             <input type="radio" name="freguesia" value="16" > Misericórdia
-          </label>
-          <label class="radio-inline">
+          </li>
+          <li class="">
             <input type="radio" name="freguesia" value="17" > Olivais
-          </label>
-          <label class="radio-inline">
+          </li>
+          <li class="">
             <input type="radio" name="freguesia" value="18" > Parque das Nações
-          </label>
-          <label class="radio-inline">
+          </li>
+          <li class="">
             <input type="radio" name="freguesia" value="19" > Penha de França
-          </label>
-          <label class="radio-inline">
+          </li>
+          <li class="">
             <input type="radio" name="freguesia" value="20" > Santa Clara
-          </label>
-          <label class="radio-inline">
+          </li>
+          <li class="">
             <input type="radio" name="freguesia" value="21" > Santa Maria Maior
-          </label>
-          <label class="radio-inline">
+          </li>
+          <li class="">
             <input type="radio" name="freguesia" value="22" > Santo António
-          </label>
-          <label class="radio-inline">
+          </li>
+          <li class="">
             <input type="radio" name="freguesia" value="23" > São Domingos de Benfica
-          </label>
-          <label class="radio-inline">
+          </li>
+          <li class="">
             <input type="radio" name="freguesia" value="24" > São Vicente
-          </label>
-          <label class="radio-inline">
+          </li>
+          <li class="">
             <input type="radio" name="freguesia" value="25" > None of theme
-          </label>
+          </li>
         </ul>
       </div> <!--/.modal-body -->
       <div class="modal-footer" style="border:none;">
+        <div class="float-left" style="color: #A9A9A9; padding-top: 8px">
+          2/4
+        </div>
         <div class="float-right">
-          <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close" href="#" id="freguesia_button">Done</button>
+          <button type="button" class="btn btn-primary btn-next" data-dismiss="modal" aria-label="Close" href="#" id="freguesia_button" disabled>Next</button>
+        </div>
+        <div class="float-right" style="padding-top: 8px; margin-right: 20px">
+          <a type="button" class="link-primary btn-prev" href="#">Prev</a>
         </div>
       </div>
     </div> <!--/.modal-content -->
@@ -203,10 +216,13 @@
       <div class="no-float"></div>
       <div class="modal-footer" style="border:none;">
         <div class="float-left" style="color: #A9A9A9; padding-top: 8px">
-          1/2
+          3/4
         </div>
         <div class="float-right">
-          <button type="button" class="btn btn-primary btn-next" id="how_long" href="#">Next</button>
+          <button type="button" class="btn btn-primary btn-next" data-dismiss="modal" aria-label="Close" id="how_long" href="#" disabled>Next</button>
+        </div>
+        <div class="float-right" style="padding-top: 8px; margin-right: 20px">
+          <a type="button" class="link-primary btn-prev" href="#">Prev</a>
         </div>
       </div>
     </div> <!--/.modal-content -->
@@ -224,77 +240,77 @@
         <!--  ------------- Column 1 ------------ -->
         <ul class="media-list col-lg-6 col-md-6 col-sm-6 col-xs-12" style="list-style:none; padding:0px">
           <li class="media">
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" name="problem" value="1">
             <span class="glyphicon glyphicon-road btn-lg col-lg-2 col-md-2 col-sm-2 col-xs-2 icon-freguesia"></span>
             <p class="tematic-freguesia col-lg-8 col-md-8 col-sm-8 col-xs-6">Street paving</p>
-            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" name="problem" value="1">
           </li>
           <li class="media">
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" name="problem" value="2">
             <i class="fa fa-product-hunt fa-lg col-lg-2 col-md-2 col-sm-2 col-xs-2 icon-freguesia_new" aria-hidden="true"></i>
             <p class="tematic-freguesia col-lg-8 col-md-8 col-sm-8 col-xs-6">Parking</p>
-            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" name="problem" value="2">
           </li>
           <li class="media">
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" name="problem" value="3">
             <i class="fa fa-wheelchair fa-lg col-lg-2 col-md-2 col-sm-2 col-xs-2 icon-freguesia_new" aria-hidden="true"></i>
             <p class="tematic-freguesia col-lg-8 col-md-8 col-sm-8 col-xs-6">Accessibility</p>
-            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" name="problem" value="3">
           </li>
           <li class="media">
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" name="problem" value="4">
             <span class="glyphicon glyphicon-trash btn-lg col-lg-2 col-md-2 col-sm-2 col-xs-2 icon-freguesia"></span>
             <p class="tematic-freguesia col-lg-8 col-md-8 col-sm-8 col-xs-6">Urban Hygiene</p>
-            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" name="problem" value="4">
           </li>
           <li class="media">
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" name="problem" value="5">
             <span class="glyphicon glyphicon-bullhorn btn-lg col-lg-2 col-md-2 col-sm-2 col-xs-2 icon-freguesia"></span>
             <p class="tematic-freguesia col-lg-8 col-md-8 col-sm-8 col-xs-6">Noise</p>
-            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" name="problem" value="5">
           </li>
           <li class="media">
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" name="problem" value="6">
             <i class="fa fa-building fa-lg col-lg-2 col-md-2 col-sm-2 col-xs-2 icon-freguesia_new" aria-hidden="true"></i>
             <p class="tematic-freguesia col-lg-8 col-md-8 col-sm-8 col-xs-6">Renovate buildings</p>
-            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" name="problem" value="6">
           </li>
         </ul>
         <!--  ------------- Column 2 ------------ -->
         <ul class="media-list col-lg-6 col-md-6 col-sm-6 col-xs-12" style="list-style:none; padding:0px">
           <li class="media">
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" name="problem" value="7">
             <i class="fa fa-subway fa-lg col-lg-2 col-md-2 col-sm-2 col-xs-2 icon-freguesia_new" aria-hidden="true"></i>
             <p class="tematic-freguesia col-lg-8 col-md-8 col-sm-8 col-xs-6">Public transport</p>
-            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" name="problem" value="7">
           </li>
           <li class="media">
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" name="problem" value="8">
             <i class="fa fa-recycle  fa-lg col-lg-2 col-md-2 col-sm-2 col-xs-2 icon-freguesia_new" aria-hidden="true"></i>
             <p class="tematic-freguesia col-lg-8 col-md-8 col-sm-8 col-xs-6">Litter</p>
-            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" name="problem" value="8">
           </li>
           <li class="media">
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" name="problem" value="9">
             <span class="glyphicon glyphicon-warning-sign btn-lg col-lg-2 col-md-2 col-sm-2 col-xs-2 icon-freguesia"></span>
             <p class="tematic-freguesia col-lg-8 col-md-8 col-sm-8 col-xs-6">Safety</p>
-            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" name="problem" value="9">
           </li>
           <li class="media">
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" name="problem" value="10">
             <i class="fa fa-map-signs fa-lg col-lg-2 col-md-2 col-sm-2 col-xs-2 icon-freguesia_new" aria-hidden="true"></i>
             <p class="tematic-freguesia col-lg-8 col-md-8 col-sm-8 col-xs-6">Construction</p>
-            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" name="problem" value="10">
           </li>
           <li class="media">
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" name="problem" value="11">
             <i class="fa fa-car fa-lg col-lg-2 col-md-2 col-sm-2 col-xs-2 icon-freguesia_new" aria-hidden="true"></i>
             <p class="tematic-freguesia col-lg-8 col-md-8 col-sm-8 col-xs-6">Traffic</p>
-            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" name="problem" value="11">
           </li>
           <li class="media">
+            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" name="problem" value="12">
             <i class="fa fa-lightbulb-o  fa-lg col-lg-2 col-md-2 col-sm-2 col-xs-2 icon-freguesia_new" aria-hidden="true"></i>
             <p class="tematic-freguesia col-lg-8 col-md-8 col-sm-8 col-xs-6">Urban maintenance</p>
-            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-xs-offset-3" name="problem" value="12">
           </li>
         </ul>
       </div> <!--/.modal-body -->
       <div class="no-float"></div>
       <div class="modal-footer" style="border:none;">
         <div class="float-left" style="color: #A9A9A9; padding-top: 8px">
-          2/2
+          4/4
         </div>
         <div class="float-right">
-          <a type="button" class="btn btn-primary" id="done1">Done</a>
+          <a type="button" class="btn btn-primary" id="done1" disabled>Done</a>
         </div>
         <div class="float-right" style="padding-top: 8px; margin-right: 20px">
           <a type="button" class="link-primary btn-prev" href="#">Prev</a>
@@ -304,62 +320,6 @@
   </div> <!--/.modal-dialog -->
 </div> <!--/.modal fade -->
 <!-- ------------------------------- End Modal 12 ---------------------------------------------------------------------------- -->
-<!-- ------------------------------- Modal 17  Best things in freguesia (unused in this screen) ----------------------------- -->
-<!--<div class="modal fade" id="myModal17" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        Select the 3 best things in your freguesia
-      </div>
-      <div class="modal-body">
-        <ul class="media-list" style="list-style:none; padding:0px">
-          <li class="media">
-            <span class="glyphicon glyphicon-road btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-freguesia"></span>
-            <p class="tematic-freguesia col-lg-5 col-md-5 col-sm-5 col-xs-6">Street paving problems</p>
-            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7" value="">
-          </li>
-          <li class="media">
-            <span class="glyphicon glyphicon-flag btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-freguesia"></span>
-            <p class="tematic-freguesia col-lg-5 col-md-5 col-sm-5 col-xs-6">Parking problems</p>
-            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7" value="">
-          </li>
-          <li class="media">
-            <span class="glyphicon glyphicon-warning-sign btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-freguesia" style="text-align:center"></span>
-            <p class="tematic-freguesia col-lg-5 col-md-5 col-sm-5 col-xs-6">Accessibility problems</p>
-            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7" value="">
-          </li>
-          <li class="media">
-            <span class="glyphicon glyphicon-trash btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-freguesia" style="text-align:center"></span>
-            <p class="tematic-freguesia col-lg-5 col-md-5 col-sm-5 col-xs-6">Urban Hygiene problems</p>
-            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7" value="">
-          </li>
-          <li class="media">
-            <span class="glyphicon glyphicon-bullhorn btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-freguesia" style="text-align:center"></span>
-            <p class="tematic-freguesia col-lg-5 col-md-5 col-sm-5 col-xs-6">Noise problems</p>
-            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7" value="">
-          </li>
-          <li class="media">
-            <span class="glyphicon glyphicon-home btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-2 icon-freguesia" style="text-align:center"></span>
-            <p class="tematic-freguesia col-lg-5 col-md-5 col-sm-5 col-xs-6">Renovate buildings problem</p>
-            <input type="checkbox" class="col-lg-1 col-md-1 col-sm-1 col-xs-1 col-lg-offset-7 col-md-offset-7 col-sm-offset-7 col-xs-offset-7" value="">
-          </li>
-        </ul>
-      </div> &lt;!&ndash;/.modal-body &ndash;&gt;
-      <div class="modal-footer" style="border:none;">
-        <div class="float-left" style="color: #A9A9A9; padding-top: 8px">
-          3/3
-        </div>
-        <div class="float-right">
-          <a type="button" class="btn btn-primary" href="map1.html">Done</a>
-        </div>
-        <div class="float-right" style="padding-top: 8px; margin-right: 20px">
-          <a type="button" class="link-primary btn-prev" href="#">Prev</a>
-        </div>
-      </div>
-    </div> &lt;!&ndash;/.modal-content &ndash;&gt;
-  </div> &lt;!&ndash;/.modal-dialog &ndash;&gt;
-</div> &lt;!&ndash;/.modal fade &ndash;&gt;-->
-<!-- ------------------------------- End Modal 17 --------------------------------------------------------------------------- -->
 
 
 

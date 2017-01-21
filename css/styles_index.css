@@ -33,34 +33,34 @@
 	height: 100px;
 }
 #logo_geoc{
-	width: 50px;
-	margin-bottom: 20px;
-	margin-right: 40px;
-	margin-left: 40px;
-}
-#logo_marie{
-	width: 120px;
-	margin-bottom: 20px;
-	margin-right: 40px;
-	margin-left: 40px;
-}
-#logo_nova{
-	width: 30px;
-	margin-bottom: 20px;
-	margin-right: 40px;
-	margin-left: 40px;
-}
-#logo_munster{
 	width: 100px;
 	margin-bottom: 20px;
-	margin-right: 40px;
-	margin-left: 40px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+#logo_marie{
+	width: 240px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+#logo_nova{
+	width: 60px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+#logo_munster{
+	width: 200px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
 }
 #logo_uji{
-	width: 30px;
+	width: 60px;
 	margin-bottom: 20px;
-	margin-right: 40px;
-	margin-left: 40px;
+	margin-right: 20px;
+	margin-left: 20px;
 }
 /* Modal change position */
 /*.modal_draw{
