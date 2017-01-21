@@ -6,6 +6,7 @@
 
  function startall(){
 
+   //Ajax
    uiCoreAPI.instanceUrl = "http://localhost:8080/";
 
    app={
@@ -27,18 +28,15 @@
        );
      }
    };
+   // End Ajax
+
+   //Show modals
 
    $('#myModal9').modal({backdrop: 'static', keyboard: false});
 
    $('#home_button').click(function () {
      $('#myModal10').modal({backdrop: 'static', keyboard: false});
-
-
-
-
-
    });
-
 
    $('#freguesia_button').click(function () {
      $('#myModal11').modal({backdrop: 'static', keyboard: false});
@@ -47,6 +45,31 @@
    $('#how_long').click(function () {
      $('#myModal12').modal({backdrop: 'static', keyboard: false});
    });
+
+
+
+   // validate
+
+     $('input:radio[name=lisbon_home]').click(function() {
+         $('#home_button').prop('disabled', false);
+     });
+
+     $('input:radio[name=freguesia]').click(function() {
+         $('#freguesia_button').prop('disabled', false);
+     });
+
+     $('input:radio[name=howlong]').click(function() {
+         $('#how_long').prop('disabled', false);
+     });
+
+     $("input:checkbox[name='problem']").click(function() {
+         $('#done1').attr('disabled', false);
+     });
+
+
+   // end validate
+
+   // preapare data to send
 
    $('#done1').click(function () {
      var home = ($("input[name=lisbon_home]:checked").val()) === 'true';
@@ -66,6 +89,8 @@
      };
      app.setHome(data);
    });
+
+   // End prepare data to send
  }
 
 
