@@ -30,7 +30,7 @@
    };
    // End Ajax
 
-   //Show modals
+   //Show modals NExt and Prev
 
    $('#myModal9').modal({backdrop: 'static', keyboard: false});
 
@@ -46,9 +46,34 @@
      $('#myModal12').modal({backdrop: 'static', keyboard: false});
    });
 
+     $('#freguesia_button_prev').click(function () {
+         $('#myModal9').modal({backdrop: 'static', keyboard: false});
+         $('#myModal10').modal('hide');
+
+     });
+
+     $('#how_long_pre').click(function () {
+         $('#myModal10').modal({backdrop: 'static', keyboard: false});
+         $('#myModal11').modal('hide');
+
+     });
+
+     $('#done1_pre').click(function () {
+         $('#myModal11').modal({backdrop: 'static', keyboard: false});
+         $('#myModal12').modal('hide');
+
+     });
+
+
+
+
+
+
+     //End show modals
 
 
    // validate
+
 
      $('input:radio[name=lisbon_home]').click(function() {
          $('#home_button').prop('disabled', false);
@@ -62,10 +87,14 @@
          $('#how_long').prop('disabled', false);
      });
 
-     $("input:checkbox[name='problem']").click(function() {
+     var limit = 3;
+     $("input:checkbox[name='problem']").on('change', function(evt) {
          $('#done1').attr('disabled', false);
-     });
-
+         var num_problem = ($("input:checkbox[name='problem']:checked").length);
+         if (num_problem > limit) {
+             this.checked = false;
+         }
+      });
 
    // end validate
 
