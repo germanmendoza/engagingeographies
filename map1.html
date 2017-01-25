@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Engaging Geographies</title>
+    <title>Place and City</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <link href="css/styles_general.css" rel="stylesheet" type="text/css"/>
     <link href="css/styles_map1.css" rel="stylesheet" type="text/css"/>
@@ -18,12 +18,11 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header name_navbar col-xs-4 col-sm-5 col-md-5 col-lg-5 visible-lg visible-md visible-sm">
-            <a href="index.html" class="name_link"><img src="img/logo_engaging.svg" id="logo_phd">Engaging
-                Geographies</a>
+            <img src="img/logo_engaging.svg" id="logo_phd">Place and City
         </div>
         <!--  Visible only xs  -->
         <div class="navbar-header name_navbar col-xs-4 col-sm-5 col-md-5 col-lg-5 visible-xs">
-            <a href="index.html" class="name_link"><img src="img/logo_engaging.svg" id="logo_phd"></a>
+            <img src="img/logo_engaging.svg" id="logo_phd">
         </div>
         <ul class="nav navbar-right float-right col-lg-5 col-md-5 col-sm-5 col-xs-8" style="padding-right: 0px;">
             <li class="float-right visible-lg visible-md visible-sm" id="links-navbar">
@@ -73,7 +72,7 @@
         <div class="panel panel-default">
             <div class="panel-body">
                 <div class="custom_buttons_leaflet visible-lg visible-md visible-sm">
-                    <button class="btn btn-default btn-md" id="draw_poly" onclick="drawPolygon()">
+                    <button class="btn btn-default btn-md" id="draw_poly" onclick="drawPolygon()" disabled>
                         <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span>
                         Start drawing
                     </button>
@@ -84,11 +83,13 @@
                 </div>
                 <div id="map" style="height:84vh"></div>
                   <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12" style="text-align: right;">
-                    <a class="btn btn-primary finish-map" href="#">Next</a>
+                      <a type="button" class="btn btn-primary finish-map pop" data-toggle="popover" data-placement="top" title="Before finish" data-content="Areas that have drawn, chooses the most important to you." onclick="toggler('secondimage');" disabled>Next</a>
                   </div>
             </div>
         </div>
     </div>
+
+
 
     <!-- ------------------------------- Panel left ------------------------------------------------------------------------------ -->
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -103,7 +104,7 @@
                     as you need.
                 </h4>
 
-                <!--  <h4 style="margin-bottom: 20px" class="hidden" id="title2_done">Good Job! Now Draw another time if you want. Please draw as many polygons as you like on the areas where you feel more identified</h4> -->
+                <h4 style="margin-bottom: 20px" class="hidden" id="title2_done">Good Job! Now Draw another time if you want. Please draw as many polygons as you like on the areas where you feel more identified</h4>
                 <!-- ------------------------------- Sliders ----------------------------------------------------- -->
                 <div class="hidden" id="sliders_done">
                     <h5> Please, indicate with the sliders the level of only applicable characteristic that contain the
@@ -193,7 +194,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="margin-top: 20px">
                         <span class="glyphicon glyphicon-cutlery btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-1 icon-slider"
                               style="text-align:center;"></span>
-                        <p class="tematic-slider">Ecnonomic values (job-place, agricultural place...)</p>
+                        <p class="tematic-slider">Econonomic values (job-place, agricultural place...)</p>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="margin-bottom: 20px; margin-top: 20px">
                         <input id="ex7" type="text" data-slider-id='ex7Slider' data-slider-min="0" data-slider-max="10"
@@ -202,10 +203,11 @@
                                 id="ex7SliderVal">0</span></span>
                     </div>
                     <div class="no-float"></div>
-                    <a type="button" class="btn btn-primary float-right display_sliders  display_title display_title2"
-                       onclick="changeclass();">Done</a>
+                    <a type="button" id="sliders_done_button" class="btn btn-primary float-right display_sliders  display_title display_title2">Done</a>
                 </div>
                 <!-- -------------------------------  End Slider ----------------------------------------------------- -->
+
+
 
                 <!-- ------------------------------- Do you live in that area?  -------------------------------------- -->
                 <div class="hidden" id="area_done">
@@ -232,8 +234,8 @@
                     <div class="no-float"></div>
                 </div>
 
-
                 <!-- ------------------------------- End Do you live in that area? ----------------------------------- -->
+
                 <!-- ------------------------------- SOP questions  -------------------------------------------------- -->
                 <div class="hidden" id="questions_done">
                     <hr style="width: 100%; margin-bottom: 50px">
@@ -781,7 +783,12 @@
             e.layer.editing.enable();
             drawnItems.addLayer(layer);
             map.fitBounds(drawnItems.getBounds(), null);
-            showsliders(true);
+            $("#sliders_done").removeClass().addClass("hidden");
+            $("#title_done").removeClass().addClass("show");
+            $("#title2_done").removeClass().addClass("hidden");
+            $("#draw_poly").prop('disabled', true);
+            $(".finish-map").attr('disabled', true);
+            showsliders();
 
         });
 
@@ -792,6 +799,7 @@
                 countOfEditedLayers++;
             });
             console.log("Edited " + countOfEditedLayers + " layers");
+            map.fitBounds(drawnItems.getBounds(), null);
         });
 
 
@@ -804,6 +812,12 @@
         // Customize button delete polygon - personal contribution
         $('#delete_poly').on('click', function () {
             drawnItems.clearLayers();
+            if ($('#title2_done').is(":hidden")) {
+                $("#sliders_done").removeClass().addClass("show");
+                $("#title_done").removeClass().addClass("hidden");
+                $("#draw_poly").prop('disabled', false);
+                showsliders();
+            }
         });
 
 
@@ -857,7 +871,12 @@
             e.layer.editing.enable();
             drawnItemsxs.addLayer(layer);
             mapxs.fitBounds(drawnItemsxs.getBounds(), null);
-            showsliders(true);
+            $("#sliders_done").removeClass().addClass("hidden");
+            $("#title_done").removeClass().addClass("show");
+            $("#title2_done").removeClass().addClass("hidden");
+            $("#draw_poly").prop('disabled', true);
+            $(".finish-map").attr('disabled', true);
+            showsliders();
 
         });
 
@@ -879,7 +898,13 @@
 
         // Customize button delete polygon - personal contribution
         $('#delete_polyxs').on('click', function () {
-            drawnItemsxs.clearLayers();
+            drawnItems.clearLayers();
+            if ($('#title2_done').is(":hidden")) {
+                $("#sliders_done").removeClass().addClass("show");
+                $("#title_done").removeClass().addClass("hidden");
+                $("#draw_poly").prop('disabled', false);
+                showsliders();
+            }
         });
 
 

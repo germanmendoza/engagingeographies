@@ -1,9 +1,6 @@
  // JavaScript Document "index"
 
 
-
-
-
  function startall(){
 
    //Ajax
