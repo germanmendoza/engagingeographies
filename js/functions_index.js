@@ -6,14 +6,30 @@
    //Ajax
    uiCoreAPI.instanceUrl = "http://localhost:8080/";
 
+     util = {
+         interPageDataKey: "interPageDataKey",
+         redirectToPage: function (pageData) {
+             this.putInLocalStorage(this.interPageDataKey, pageData.payload);
+             window.location.href = pageData.url;
+         },
+
+         putInLocalStorage: function (key, value) {
+             sessionStorage.setItem(key, JSON.stringify(value));
+         },
+         getFromLocalStorage: function (key) {
+             return JSON.parse(sessionStorage.getItem(key));
+         },
+         removeFromLocalStorage: function (key) {
+             sessionStorage.removeItem(key);
+         }
+     };
+
    app={
-     setHome:function (data) {
+     setHome:function (data, callback) {
        uiCoreAPI._postRequest(
            uiCoreAPI.instanceUrl + uiCoreWS.home,
            data,
-           function (response) {
-             alert(response);
-           }
+           callback
        );
      },
      getHome:function () {
@@ -113,7 +129,17 @@
        zip:zip,
        problem:problem
      };
-     app.setHome(data);
+     app.setHome(data, function(response){
+         if (response === false){
+             alert("PROBLEMS");
+         }
+         else {
+             util.redirectToPage({
+                 url:"map1.html",
+                 payload:response.id
+             });
+         }
+     });
    });
 
    // End prepare data to send

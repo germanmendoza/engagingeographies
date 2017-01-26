@@ -112,34 +112,49 @@ function showsliders1() {
     $("#title2_done").toggleClass("hidden show");
 }
 
-var AreasShow = [];
-var AreasShowxs = [];
+var SOP = [];
 
 $('#sliders_done_button').click(function () {
     showsliders1();
-    $("#draw_poly").prop('disabled', false);
-    $("#draw_polyxs").prop('disabled', false);
+    buttonDraw.prop('disabled', false);
+    //$("#draw_polyxs").prop('disabled', false);
     $(".finish-map").attr('disabled', false);
     var area = "";
     for (i=1;i<=7;i++) {
         $('input[id=ex' + i +']').slider('setValue', 0);
         $('span[id=ex' + i +'SliderVal]').text(0);
     };
-    if (drawnItems.getLayers().length != 0) {
-        area =     drawnItems.toGeoJSON();
+    /*if (drawnItems.getLayers().length != 0) {
+        area = drawnItems; //.toGeoJSON();
+        realmap = map;
         AreasShow.push(drawnItems);
+
     }
     else {
-        area =     drawnItemsxs.toGeoJSON();
+        area = drawnItemsxs;//.toGeoJSON();
+        realmap = mapxs;
         AreasShowxs.push(drawnItemsxs);
-    }
 
+    }*/
+    var polygondata = {
+        layer:drawnItems,
+        atributtes:{
+            ex1: $("#ex1").slider('getValue'),
+            ex2: $("#ex2").slider('getValue'),
+            ex3: $("#ex3").slider('getValue'),
+            ex4: $("#ex4").slider('getValue'),
+            ex5: $("#ex5").slider('getValue'),
+            ex6: $("#ex6").slider('getValue'),
+            ex7: $("#ex7").slider('getValue')
+        }
+    };
+    SOP.push(polygondata);
     map.removeLayer(drawnItems);
-    mapxs.removeLayer(drawnItemsxs);
+    //mapxs.removeLayer(drawnItemsxs);
     drawnItems = new L.FeatureGroup();
     map.addLayer(drawnItems);
-    drawnItemsxs = new L.FeatureGroup();
-    map.addLayer(drawnItemsxs);
+    //drawnItemsxs = new L.FeatureGroup();
+    //map.addLayer(drawnItemsxs);
 
 });
 
@@ -148,14 +163,14 @@ var group = new L.featureGroup();
 
 $('.finish-map').click(function () {
     map.removeLayer(drawnItems);
-    mapxs.removeLayer(drawnItemsxs);
+    //mapxs.removeLayer(drawnItemsxs);
     $(".finish-map").attr('disabled', true);
 
 
     //bounding total zoom
-    if (AreasShow.length != 0) {
-        $("#draw_poly").prop('disabled', true);
-        $("#delete_poly").prop('disabled', true);
+    /*if (AreasShow.length != 0) {
+        buttonDraw.prop('disabled', true);
+        buttonDelete.prop('disabled', true);
         for (i=0;i<AreasShow.length; i++) {
             group.addLayer(AreasShow[i]);
             map.addLayer(AreasShow[i]);
@@ -170,8 +185,8 @@ $('.finish-map').click(function () {
         map.fitBounds(group.getBounds(), null);
     }
     else {
-        $("#draw_polyxs").prop('disabled', true);
-        $("#delete_polyxs").prop('disabled', true);
+        buttonDelete.prop('disabled', true);
+        //$("#delete_polyxs").prop('disabled', true);
         for (i=0;i<AreasShowxs.length; i++) {
             group.addLayer(AreasShowxs[i]);
             map.addLayer(AreasShowxs[i]);
@@ -182,11 +197,86 @@ $('.finish-map').click(function () {
             });
         }
         map.fitBounds(group.getBounds(), null);
+    }*/
+    buttonDraw.prop('disabled', true);
+    buttonDelete.prop('disabled', true);
+    for (i=0;i<SOP.length; i++) {
+        group.addLayer(SOP[i].layer);
+        map.addLayer(SOP[i].layer);
+        var sopi = SOP[i];
+        SOP[i].layer.on('click', function(e) {
+            $('.popover').remove();
+            map.fitBounds(e.layer.getBounds(), null);
+            $("#title2_done").toggleClass("hidden show");
+            $("#questions_done").toggleClass("hidden show");
+            AreaSelected = sopi;
+        });
     }
+    map.fitBounds(group.getBounds(), null);
+});
+
+$('#questions-sop').click(function () {
+    AreaSelected.PI1 = parseInt($("input[name=PI1]:checked").val());
+    AreaSelected.PI2 = parseInt($("input[name=PI2]:checked").val());
+    AreaSelected.PI3 = parseInt($("input[name=PI3]:checked").val());
+    AreaSelected.PA1 = parseInt($("input[name=PA1]:checked").val());
+    AreaSelected.PA2 = parseInt($("input[name=PA2]:checked").val());
+    AreaSelected.PA3 = parseInt($("input[name=PA3]:checked").val());
+    AreaSelected.PD1 = parseInt($("input[name=PD1]:checked").val());
+    AreaSelected.PD2 = parseInt($("input[name=PD2]:checked").val());
+    AreaSelected.PD3 = parseInt($("input[name=PD3]:checked").val());
+
+
+    /*app.setSOP(SOP, function(response){
+        if (response === false){
+            alert("PROBLEMS");
+        }
+        else {
+            util.redirectToPage({
+                url:"map1.html",
+                payload:response.id
+            });
+        }
+    });*/
+
+
 });
 
 
+/*
+uiCoreAPI.instanceUrl = "http://localhost:8080/";
 
+util = {
+    interPageDataKey: "interPageDataKey",
+    redirectToPage: function (pageData) {
+        this.putInLocalStorage(this.interPageDataKey, pageData.payload);
+        window.location.href = pageData.url;
+    },
+
+    putInLocalStorage: function (key, value) {
+        sessionStorage.setItem(key, JSON.stringify(value));
+    },
+    getFromLocalStorage: function (key) {
+        return JSON.parse(sessionStorage.getItem(key));
+    },
+    removeFromLocalStorage: function (key) {
+        sessionStorage.removeItem(key);
+    }
+};
+
+var id = util.getFromLocalStorage();
+
+app={
+    setSOP:function (SOP, id, callback) {
+        uiCoreAPI._postRequest(
+            uiCoreAPI.instanceUrl + uiCoreWS.home,
+            data,
+            id,
+            callback
+        );
+    }
+};
+*/
 
 
 
