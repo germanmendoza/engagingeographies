@@ -82,6 +82,10 @@
           <textarea class="form-control" rows="1" style="width: 100px"></textarea>
         </div>
         <div style="margin-bottom: 20px">
+          <h5>Where are you from?</h5>
+          <textarea class="form-control" rows="1" style="width: 100px"></textarea>
+        </div>
+        <div style="margin-bottom: 20px">
           <h5>Study level</h5>
           <textarea class="form-control" rows="1" style="max-width: 500px"></textarea>
         </div>
@@ -89,11 +93,16 @@
           <h5>Profession</h5>
           <textarea class="form-control" rows="1" style="max-width: 500px"></textarea>
         </div>
+        <div style="margin-bottom: 20px">
+          <h5>Income</h5>
+          <textarea class="form-control" rows="1" style="width: 100px"></textarea>
+        </div>
       </div>
 
       <div class="page-header" style="text-align:center; border: none">
         <span class="glyphicon glyphicon-check btn-lg icon_normal"></span>
         <h3>Thank you for participating!!</h3>
+        <div id="map" style="height: 500px; margin-bottom: 20px; margin-top: 20px"></div>
         <p>We appreciate all the effort. If you want to know both where are the areas of your close fellow citizen please or contained in Lisbon city, please, press the correspondent button.</p>
         <p><a type="button" class="btn btn-primary" href="finish.html">Finish</a> <a type="button" class="btn btn-primary" href="finish.html">Finish</a></p>
         <p>We are going to create dynamic areas to connect you with people that share you places and groups!! In case you are interested in be part of these new areas of engagement or have more information about the project, please provide us with your email and twitter username. Together, we are going  to improve Lisbon boundaries!!! </p>
@@ -124,9 +133,207 @@
 
 <script src="js/jquery-3.1.1.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/leaflet.js"></script>
+<script src="js/leaflet-src.js"></script>
+<script src="js/leaflet.draw.js"></script>
+<script src="js/bootstrap-slider.js"></script>
 <script src="js/functions_finish.js"></script>
 
+
+
+
+
+<script src="src/edit/handler/Edit.Poly.js"></script>
+<script src="src/edit/handler/Edit.SimpleShape.js"></script>
+<script src="src/edit/handler/Edit.Circle.js"></script>
+<script src="src/edit/handler/Edit.Rectangle.js"></script>
+
+<script src="src/draw/handler/Draw.Feature.js"></script>
+<script src="src/draw/handler/Draw.Polyline.js"></script>
+<script src="src/draw/handler/Draw.Polygon.js"></script>
+<script src="src/draw/handler/Draw.SimpleShape.js"></script>
+<script src="src/draw/handler/Draw.Rectangle.js"></script>
+<script src="src/draw/handler/Draw.Circle.js"></script>
+<script src="src/draw/handler/Draw.Marker.js"></script>
+
+<script src="src/ext/TouchEvents.js"></script>
+<script src="src/ext/LatLngUtil.js"></script>
+<script src="src/ext/GeometryUtil.js"></script>
+<script src="src/ext/LineUtil.Intersect.js"></script>
+<script src="src/ext/Polyline.Intersect.js"></script>
+<script src="src/ext/Polygon.Intersect.js"></script>
+
+<script src="src/Control.Draw.js"></script>
+<script src="src/Tooltip.js"></script>
+<script src="src/Toolbar.js"></script>
+
+<script src="src/draw/DrawToolbar.js"></script>
+<script src="src/edit/EditToolbar.js"></script>
+<script src="src/edit/handler/EditToolbar.Edit.js"></script>
+<script src="src/edit/handler/EditToolbar.Delete.js"></script>
+
+
+
+
+
+
 <script>
+
+
+// LEAFLET MAP + DRAW
+
+// create a map in the "map" div, set the view to a given place and zoom
+var map = L.map('map', {
+    center: [38.7500, -9.1500],
+    zoom: 12,
+    scrollWheelZoom: false,
+});
+// add an OpenStreetMap tile layer
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    // attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+// Customize button draw polygon - personal contribution
+var polygonDrawer = new L.Draw.Polyline(map);
+
+// Initialise the FeatureGroup to store editable layers
+var drawnItems = new L.FeatureGroup();
+map.addLayer(drawnItems);
+
+// Initialise the draw control and pass it the FeatureGroup of editable layers
+var drawControl = new L.Control.Draw({
+    //position: 'topright',
+    draw: {
+                polyline: false,
+                polygon: false,
+                rectangle: false,
+                circle: false,
+                marker: false
+    },
+    edit: {
+        featureGroup: drawnItems,
+        // Customize button delete polygon - personal contribution
+        remove: false,
+        // Edit polygon when you draw it - personal contribution
+        edit: false
+    }
+});
+
+map.addControl(drawControl);
+
+map.on('draw:created', function (e) {
+            var type = e.layerType,
+                layer = e.layer;
+
+            if (type === 'marker') {
+                layer.bindPopup('A popup!');
+            }
+            // Edit polygon when you draw it - personal contribution
+            e.layer.editing.enable();
+
+            drawnItems.addLayer(layer);
+
+        });
+
+map.on('draw:edited', function (e) {
+            var layers = e.layers;
+            var countOfEditedLayers = 0;
+            layers.eachLayer(function(layer) {
+                countOfEditedLayers++;
+            });
+            console.log("Edited " + countOfEditedLayers + " layers");
+        });
+
+// Customize button draw polygon - personal contribution
+function drawPolygon(){
+  var polygonDrawer = new L.Draw.Polygon(map, drawControl);
+  polygonDrawer.enable();
+}
+// Customize button draw polygon - personal contribution
+$('#draw_poly').on('click',function() {
+    drawControl.enable();
+});
+
+// Customize button delete polygon - personal contribution
+$('#delete_poly').on('click',function(){
+    drawnItems.clearLayers();
+  });
+
+// LEAFLET MAP 2 + DRAW
+
+// create a map in the "map" div, set the view to a given place and zoom
+var map = L.map('map2').setView([38.7500, -9.1500], 12);
+// add an OpenStreetMap tile layer
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    // attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+// Customize button draw polygon - personal contribution
+var polygonDrawer = new L.Draw.Polyline(map);
+
+// Initialise the FeatureGroup to store editable layers
+var drawnItems = new L.FeatureGroup();
+map.addLayer(drawnItems);
+
+// Initialise the draw control and pass it the FeatureGroup of editable layers
+var drawControl = new L.Control.Draw({
+    //position: 'topright',
+    draw: {
+                polyline: false,
+                polygon: false,
+                rectangle: false,
+                circle: false,
+                marker: false
+    },
+    edit: {
+        featureGroup: drawnItems,
+        // Customize button delete polygon - personal contribution
+        remove: false,
+        // Edit polygon when you draw it - personal contribution
+        edit: false
+    }
+});
+
+map.addControl(drawControl);
+
+map.on('draw:created', function (e) {
+            var type = e.layerType,
+                layer = e.layer;
+
+            if (type === 'marker') {
+                layer.bindPopup('A popup!');
+            }
+            // Edit polygon when you draw it - personal contribution
+            e.layer.editing.enable();
+
+            drawnItems.addLayer(layer);
+
+        });
+
+map.on('draw:edited', function (e) {
+            var layers = e.layers;
+            var countOfEditedLayers = 0;
+            layers.eachLayer(function(layer) {
+                countOfEditedLayers++;
+            });
+            console.log("Edited " + countOfEditedLayers + " layers");
+        });
+
+// Customize button draw polygon - personal contribution
+function drawPolygon(){
+  var polygonDrawer = new L.Draw.Polygon(map, drawControl);
+  polygonDrawer.enable();
+}
+// Customize button draw polygon - personal contribution
+$('#draw_poly').on('click',function() {
+    drawControl.enable();
+});
+
+// Customize button delete polygon - personal contribution
+$('#delete_poly').on('click',function(){
+    drawnItems.clearLayers();
+  });
+
+
+
 </script>
 
 </body>
