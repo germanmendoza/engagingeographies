@@ -2,7 +2,7 @@
  * Created by albertacedosanchez on 18/1/17.
  */
 
-$.aas_util = {
+util = {
     interPageDataKey : "interPageDataKey",
     redirectToPage: function (pageData) {
         this.putInLocalStorage(this.interPageDataKey, pageData.payload);
@@ -95,6 +95,7 @@ uiCoreAPI = {
 uiCoreWS = {
     home : 'home/lisbon_citizen',
     home2 : 'home',
+    SOP: 'home/SOP_data',
     logout : '/sec/logout',
     campaigns : '/campaigns/'
 };
