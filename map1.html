@@ -74,7 +74,7 @@
             <div class="panel-body">
               <div id="map" style="height:84vh; position: relative;">
                 <div class="visible-lg visible-md visible-sm" style="position: absolute; top: 10px; left: 65px; z-index: 998">
-                  <button class="btn btn-default btn-md" id="draw_poly" onclick="drawPolygon()" disabled>
+                  <button class="btn btn-default btn-md" id="draw_poly" disabled>
                     <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing
                   </button>
                   <button class="btn btn-default btn-md" id="delete_poly">
@@ -536,7 +536,7 @@
                     <div class="panel-body">
                       <div id="map2" style="height:83vh; position: relative;">
                         <div style="position: absolute; top: 10px; left: 40px; z-index: 998">
-                          <button class="btn btn-default btn-xs" id="draw_polyxs" onclick="drawPolygon()" >
+                          <button class="btn btn-default btn-xs" id="draw_polyxs">
                             <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing
                           </button>
                           <button class="btn btn-default btn-xs" id="delete_polyxs">
@@ -725,238 +725,126 @@
     <script src="js/API/lib.js"></script>
 
     <script>
-
         $( document ).ready(function() {
-
-
-
-            startall();
-
+            startMapComponents();
+            startAll();
         });
-
-
-
     </script>
 
     <script>
-
-
-        function isElementInViewport (el) {
-
-            //special bonus for those using jQuery
-            if (typeof jQuery === "function" && el instanceof jQuery) {
-                el = el[0];
-            }
-
-            var rect = el.getBoundingClientRect();
-
-            return !((rect.top==0)&&(rect.left==0)&&(rect.bottom==0)&&(rect.right==0));
-        }
-
-
-        // LEAFLET MAP + DRAW
-
-        // create a map in the "map" div, set the view to a given place and zoom
-        var map1 = L.map('map', {
-            scrollWheelZoom: false,
-        });
-
-
-        map1.on('load', function (e) {
-            if(isElementInViewport($('#map'))){
-                createAll(map1, $("#draw_poly"), $("#delete_poly"));
-            }
-        });
-
-        map1.setView([38.7500, -9.1500], 12);
-
-
-        // LEAFLET MAP 2 + DRAW
-
-        // create a map in the "map" div, set the view to a given place and zoom
-        var mapxs = L.map('map2');
-
-        mapxs.on('load', function (e) {
-            if(isElementInViewport($('#map2'))){
-                createAll(mapxs, $("#draw_polyxs"), $("#delete_polyxs"));
-            }
-        });
-
-        mapxs.setView([38.7500, -9.1500], 12);
-
         var map, drawnItems,drawControl;
         var buttonDraw, buttonDelete;
 
-        function createAll(rmap, bdraw, bdelete){
-            map = rmap;
-            buttonDraw = bdraw;
-            buttonDelete = bdelete;
-            // add an OpenStreetMap tile layer
-            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-                // attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-            // Customize button draw polygon - personal contribution
-            var polygonDrawer = new L.Draw.Polyline(map);
+        function startMapComponents(){
+            function isElementInViewport (el) {
+                if (typeof jQuery === "function" && el instanceof jQuery) {
+                    el = el[0];
+                }
+                var rect = el.getBoundingClientRect();
+                return !((rect.top==0)&&(rect.left==0)&&(rect.bottom==0)&&(rect.right==0));
+            }
 
-            // Initialise the FeatureGroup to store editable layers
-            drawnItems = new L.FeatureGroup();
-            map.addLayer(drawnItems);
-
-            // Initialise the draw control and pass it the FeatureGroup of editable layers
-            drawControl = new L.Control.Draw({
-                //position: 'topright',
-                draw: {
-                    polyline: false,
-                    polygon: false,
-                    rectangle: false,
-                    circle: false,
-                    marker: false
-                },
-                edit: {
-                    featureGroup: drawnItems,
-                    // Customize button delete polygon - personal contribution
-                    remove: false,
-                    // Edit polygon when you draw it - personal contribution
-                    edit: false
+            // Big Map
+            var map1 = L.map('map', {
+                scrollWheelZoom: false,
+            });
+            map1.on('load', function (e) {
+                if(isElementInViewport($('#map'))){
+                    createAll(map1, $("#draw_poly"), $("#delete_poly"));
                 }
             });
-            map.addControl(drawControl);
+            map1.setView([38.7500, -9.1500], 12);
 
-            map.on('draw:created', function (e) {
-                var type = e.layerType,
+            // Small Map
+            var mapxs = L.map('map2');
+            mapxs.on('load', function (e) {
+                if(isElementInViewport($('#map2'))){
+                    createAll(mapxs, $("#draw_polyxs"), $("#delete_polyxs"));
+                }
+            });
+            mapxs.setView([38.7500, -9.1500], 12);
+
+            function createAll(rmap, bdraw, bdelete){
+                map = rmap;
+                buttonDraw = bdraw;
+                buttonDelete = bdelete;
+                // add an OpenStreetMap tile layer
+                L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                    // attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+                // Customize button draw polygon - personal contribution
+                var polygonDrawer = new L.Draw.Polyline(map);
+
+                // Initialise the FeatureGroup to store editable layers
+                drawnItems = new L.FeatureGroup();
+                map.addLayer(drawnItems);
+
+                // Initialise the draw control and pass it the FeatureGroup of editable layers
+                drawControl = new L.Control.Draw({
+                    //position: 'topright',
+                    draw: {
+                        polyline: false,
+                        polygon: false,
+                        rectangle: false,
+                        circle: false,
+                        marker: false
+                    },
+                    edit: {
+                        featureGroup: drawnItems,
+                        // Customize button delete polygon - personal contribution
+                        remove: false,
+                        // Edit polygon when you draw it - personal contribution
+                        edit: false
+                    }
+                });
+                map.addControl(drawControl);
+
+                map.on('draw:created', function (e) {
+                    var type = e.layerType,
                         layer = e.layer;
 
-                if (type === 'marker') {
-                    layer.bindPopup('A popup!');
-                }
-                // Edit polygon when you draw it - personal contribution
-                e.layer.editing.enable();
-                drawnItems.addLayer(layer);
-                map.fitBounds(drawnItems.getBounds(), null);
-                $("#sliders_done").removeClass().addClass("hidden");
-                $("#title_done").removeClass().addClass("show");
-                $("#title2_done").removeClass().addClass("hidden");
-                $("#draw_poly").prop('disabled', true);
-                $(".finish-map").attr('disabled', true);
-                showsliders();
-            });
-
-            map.on('draw:edited', function (e) {
-                var layers = e.layers;
-                var countOfEditedLayers = 0;
-                layers.eachLayer(function (layer) {
-                    countOfEditedLayers++;
+                    if (type === 'marker') {
+                        layer.bindPopup('A popup!');
+                    }
+                    // Edit polygon when you draw it - personal contribution
+                    e.layer.editing.enable();
+                    drawnItems.addLayer(layer);
+                    map.fitBounds(drawnItems.getBounds(), null);
+                    $("#sliders_done").removeClass().addClass("hidden");
+                    $("#title_done").removeClass().addClass("show");
+                    $("#title2_done").removeClass().addClass("hidden");
+                    $("#draw_poly").prop('disabled', true);
+                    $(".finish-map").attr('disabled', true);
+                    showsliders();
                 });
-                console.log("Edited " + countOfEditedLayers + " layers");
-                map.fitBounds(drawnItems.getBounds(), null);
-            });
+
+                map.on('draw:edited', function (e) {
+                    var layers = e.layers;
+                    var countOfEditedLayers = 0;
+                    layers.eachLayer(function (layer) {
+                        countOfEditedLayers++;
+                    });
+                    console.log("Edited " + countOfEditedLayers + " layers");
+                    map.fitBounds(drawnItems.getBounds(), null);
+                });
+
+                bdelete.on('click', function () {
+                    drawnItems.clearLayers();
+                    if ($('#title2_done').is(":hidden")) {
+                        $("#sliders_done").removeClass().addClass("show");
+                        $("#title_done").removeClass().addClass("hidden");
+                        $("#draw_poly").prop('disabled', false);
+                        showsliders();
+                    }
+                });
+
+                bdraw.on('click', function () {
+                    var polygonDrawer = new L.Draw.Polygon(map, drawControl);
+                    polygonDrawer.enable();
+                });
+
+            }
         }
-
-        // Customize button draw polygon - personal contribution
-        function drawPolygon() {
-            var polygonDrawer = new L.Draw.Polygon(map, drawControl);
-            polygonDrawer.enable();
-        }
-
-        // Customize button delete polygon - personal contribution
-        $('#delete_poly').on('click', function () {
-            drawnItems.clearLayers();
-            if ($('#title2_done').is(":hidden")) {
-                $("#sliders_done").removeClass().addClass("show");
-                $("#title_done").removeClass().addClass("hidden");
-                $("#draw_poly").prop('disabled', false);
-                showsliders();
-            }
-        });
-
-
-
-
-        /*// add an OpenStreetMap tile layer
-        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(mapxs);
-
-
-
-        // Customize button draw polygon - personal contribution
-        var polygonDrawer = new L.Draw.Polyline(mapxs);
-
-        // Initialise the FeatureGroup to store editable layers
-        var drawnItemsxs = new L.FeatureGroup();
-        mapxs.addLayer(drawnItemsxs);
-
-        //----
-
-        // Initialise the draw control and pass it the FeatureGroup of editable layers
-        var drawControlxs = new L.Control.Draw({
-            //position: 'topright',
-            draw: {
-                polyline: false,
-                polygon: false,
-                rectangle: false,
-                circle: false,
-                marker: false
-            },
-            edit: {
-                featureGroup: drawnItemsxs,
-                // Customize button delete polygon - personal contribution
-                remove: false,
-                // Edit polygon when you draw it - personal contribution
-                edit: false
-            }
-        });
-
-        mapxs.addControl(drawControlxs);
-
-        mapxs.on('draw:created', function (e) {
-            var type = e.layerType,
-                    layer = e.layer;
-
-            if (type === 'marker') {
-                layer.bindPopup('A popup!');
-            }
-            // Edit polygon when you draw it - personal contribution
-            e.layer.editing.enable();
-            drawnItemsxs.addLayer(layer);
-            mapxs.fitBounds(drawnItemsxs.getBounds(), null);
-            $("#sliders_done").removeClass().addClass("hidden");
-            $("#title_done").removeClass().addClass("show");
-            $("#title2_done").removeClass().addClass("hidden");
-            $("#draw_poly").prop('disabled', true);
-            $(".finish-map").attr('disabled', true);
-            showsliders();
-
-        });
-
-        mapxs.on('draw:edited', function (e) {
-            var layers = e.layers;
-            var countOfEditedLayers = 0;
-            layers.eachLayer(function (layer) {
-                countOfEditedLayers++;
-            });
-            console.log("Edited " + countOfEditedLayers + " layers");
-        });
-
-
-        // Customize button draw polygon - personal contribution
-        function drawPolygonxs() {
-            var polygonDrawer = new L.Draw.Polygon(mapxs, drawControlxs);
-            polygonDrawer.enable();
-        }
-
-        // Customize button delete polygon - personal contribution
-        $('#delete_polyxs').on('click', function () {
-            drawnItems.clearLayers();
-            if ($('#title2_done').is(":hidden")) {
-                $("#sliders_done").removeClass().addClass("show");
-                $("#title_done").removeClass().addClass("hidden");
-                $("#draw_poly").prop('disabled', false);
-                showsliders();
-            }
-        });*/
-
-
     </script>
 
 </body>

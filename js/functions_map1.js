@@ -3,9 +3,7 @@
 // Modal when load page
 
 
-function startall() {
-
-
+function startAll() {
     $('#myModal3').modal('show');
     $("#draw_poly").prop('disabled', false);
 
@@ -136,6 +134,7 @@ function startall() {
 
          }*/
         var polygondata = {
+            type:"sop",
             layer: drawnItems,
             predictors: {
                 ex1: $("#ex1").slider('getValue'),
@@ -231,8 +230,8 @@ function startall() {
         }
     });
 
-    uiCoreAPI.instanceUrl = "http://localhost:8080/";
 
+    uiCoreAPI.instanceUrl = "http://localhost:8080/";
 
     app = {
         setSOP: function (data2, callback) {
@@ -263,14 +262,13 @@ function startall() {
         for (i = 0; i < SOP.length; i++) {
             SOP[i].layer = JSON.stringify(SOP[i].layer.toGeoJSON());
         }
-        ;
 
         var id = util.getFromLocalStorage(util.interPageDataKey);
 
         var data2 = {
             id: id,
-            sops: SOP
-        }
+            factors: SOP
+        };
 
 
         app.setSOP(data2, function (response) {
@@ -279,8 +277,8 @@ function startall() {
             }
             else {
              util.redirectToPage({
-             url:"map2.html",
-             payload:response.id
+                 url:"map2.html",
+                 payload:response.id
              });
             }
         });

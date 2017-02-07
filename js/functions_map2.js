@@ -6,7 +6,7 @@
 
 // POPOVER
 
- function startall() {
+ function startAll() {
 
      var number_groups;
      $('#submit_number_group').click(function () {
@@ -37,16 +37,13 @@
      }
 
      $('#bonding_done').click(function () {
-
-
-
-
          buttonDraw.prop('disabled', false);
          $(".finish-map").attr('disabled', false);
 
          var polygondata = {
+             type:"sc",
              layer: drawnItems,
-             socialcapital: {
+             socialCapital: {
                  bosc1: parseInt($("input[name=bosc1]:checked").val()),
                  bosc2: parseInt($("input[name=bosc2]:checked").val()),
                  bosc3: parseInt($("input[name=bosc3]:checked").val()),
@@ -68,8 +65,7 @@
 
          drawnItems = new L.FeatureGroup();
          map.addLayer(drawnItems);
-
-     })
+     });
 
 
      var AreaSelected;
@@ -80,38 +76,6 @@
          //mapxs.removeLayer(drawnItemsxs);
          $(".finish-map").attr('disabled', true);
 
-
-         //bounding total zoom
-         /*if (AreasShow.length != 0) {
-          buttonDraw.prop('disabled', true);
-          buttonDelete.prop('disabled', true);
-          for (i=0;i<AreasShow.length; i++) {
-          group.addLayer(AreasShow[i]);
-          map.addLayer(AreasShow[i]);
-          AreasShow[i].on('click', function(e) {
-          $('.popover').remove();
-          map.fitBounds(e.layer.getBounds(), null);
-          $("#title2_done").toggleClass("hidden show");
-          $("#questions_done").toggleClass("hidden show");
-
-          });
-          }
-          map.fitBounds(group.getBounds(), null);
-          }
-          else {
-          buttonDelete.prop('disabled', true);
-          //$("#delete_polyxs").prop('disabled', true);
-          for (i=0;i<AreasShowxs.length; i++) {
-          group.addLayer(AreasShowxs[i]);
-          map.addLayer(AreasShowxs[i]);
-          AreasShowxs[i].on('click', function(e) {
-          map.fitBounds(e.layer.getBounds(), null);
-          $("#title2_done").toggleClass("hidden show");
-          $("#questions_done").toggleClass("hidden show");
-          });
-          }
-          map.fitBounds(group.getBounds(), null);
-          }*/
          buttonDraw.prop('disabled', true);
          buttonDelete.prop('disabled', true);
          for (i = 0; i < SC.length; i++) {
@@ -125,7 +89,7 @@
                  $("#area_done").toggleClass("hidden show");
                  $("input:radio[name=live]:first").attr('checked', true);
                  $('#name_area').attr('disabled', false);
-                 AreaSelected = sopi;
+                 AreaSelected = sci;
              });
          }
          map.fitBounds(group.getBounds(), null);
@@ -134,7 +98,7 @@
 
      $('#name_area').click(function () {
          if (!$("#text_area").val()) {
-             alert("tonto")
+             alert("tonto");
          }
          else {
              namearea = $("#text_area").val();
@@ -145,13 +109,13 @@
          }
      });
 
-     uiCoreAPI.instanceUrl = "http://localhost:8080/";
 
+     uiCoreAPI.instanceUrl = "http://localhost:8080/";
 
      app = {
          setSC: function (data2, callback) {
              uiCoreAPI._postRequest(
-                 uiCoreAPI.instanceUrl + uiCoreWS.SOP,
+                 uiCoreAPI.instanceUrl + uiCoreWS.SC,
                  data2,
                  callback
              );
@@ -160,7 +124,6 @@
 
 
      $('#questions-sc').click(function () {
-
          AreaSelected.dimensions = {
              liveArea: ($("input[name=live]:checked").val()) === 'true',
              sc1: parseInt($("input[name=sc1]:checked").val()),
@@ -174,21 +137,19 @@
              cee3: parseInt($("input[name=cee3]:checked").val()),
              cp1: parseInt($("input[name=cp1]:checked").val()),
              cp2: parseInt($("input[name=cp2]:checked").val()),
-             cp3: parseInt($("input[name=cp3]:checked").val()),
-
-         }
+             cp3: parseInt($("input[name=cp3]:checked").val())
+         };
 
          for (i = 0; i < SC.length; i++) {
-             SC[i].layer = JSON.stringify(SOP[i].layer.toGeoJSON());
+             SC[i].layer = JSON.stringify(SC[i].layer.toGeoJSON());
          }
-         ;
 
          var id = util.getFromLocalStorage(util.interPageDataKey);
 
          var data2 = {
              id: id,
-             scs: SC
-         }
+             factors: SC
+         };
 
 
          app.setSC(data2, function (response) {
@@ -202,8 +163,6 @@
                  });
              }
          });
-
-
      });
 
 

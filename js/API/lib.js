@@ -96,7 +96,7 @@ uiCoreWS = {
     home : 'home/lisbon_citizen',
     home2 : 'home',
     SOP: 'home/SOP_data',
-    logout : '/sec/logout',
-    campaigns : '/campaigns/'
+    SC: 'home/SC_data',
+    CE: 'home/CE_data'
 };
 

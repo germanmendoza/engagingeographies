@@ -76,7 +76,7 @@
                 <div id="map" style="height:84vh; position: relative;">
                     <div class="visible-lg visible-md visible-sm"
                          style="position: absolute; top: 10px; left: 65px; z-index: 998">
-                        <button class="btn btn-default btn-md" id="draw_poly" onclick="drawPolygon()" disabled>
+                        <button class="btn btn-default btn-md" id="draw_poly">
                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"
                                   style="margin-right: 5px"></span> Start drawing
                         </button>
@@ -97,9 +97,13 @@
                     </div>
                     <div id="map" style="height:84vh"></div> -->
                     <!-- <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12" style="text-align: right;"> -->
-                    <a type="button" class="btn btn-primary finish-map pop" data-toggle="popover" data-placement="top"
-                       title="Before finish" data-content="Areas that have drawn, chooses the most important to you."
-                       onclick="toggler('secondimage');" disabled>Next</a>
+                    <!--<a type="button" class="btn btn-primary finish-map pop" data-toggle="popover" data-placement="top"-->
+                       <!--title="Before finish" data-content="Areas that have drawn, chooses the most important to you."-->
+                       <!--onclick="toggler('secondimage');" disabled>Next</a>-->
+                    <!--GERMAN-->
+                    <a type="button" id="questions-ce" class="btn btn-primary finish-map pop" disabled>Done</a>
+                    <!--GERMAN-->
+
                     <!-- </div> -->
                 </div>
             </div> <!-- /.panel-body -->
@@ -129,24 +133,24 @@
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
-                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                                    <input type="radio" name="ce1" value="1"> 1
                                     Disagree
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                                    <input type="radio" name="ce1" value="2"> 2
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                                    <input type="radio" name="ce1" value="3"> 3
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4"> 4
+                                    <input type="radio" name="ce1" id="inlineRadio4" value="4"> 4
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5"> 5
+                                    <input type="radio" name="ce1" id="inlineRadio5" value="5"> 5
                                     Agree
                                 </label>
                             </div>
@@ -159,24 +163,20 @@
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
-                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                                    <input type="radio" name="ce2" value="1"> 1
                                     Disagree
                                 </label>
-                                <label class="radio-inline"
-                                       style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                                <label class="radio-inline"style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                    <input type="radio" name="ce2" value="2"> 2
                                 </label>
-                                <label class="radio-inline"
-                                       style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                                <label class="radio-inline"style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                    <input type="radio" name="ce2" value="3"> 3
                                 </label>
-                                <label class="radio-inline"
-                                       style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4"> 4
+                                <label class="radio-inline"style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                    <input type="radio" name="ce2" value="4"> 4
                                 </label>
-                                <label class="radio-inline"
-                                       style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5"> 5
+                                <label class="radio-inline"style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                    <input type="radio" name="ce2" value="5"> 5
                                     Agree
                                 </label>
                             </div>
@@ -189,30 +189,26 @@
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
-                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+                                    <input type="radio" name="ce3" value="1"> 1
                                     Disagree
                                 </label>
-                                <label class="radio-inline"
-                                       style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+                                <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                    <input type="radio" name="ce3" value="2"> 2
                                 </label>
-                                <label class="radio-inline"
-                                       style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+                                <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                    <input type="radio" name="ce3" value="3"> 3
                                 </label>
-                                <label class="radio-inline"
-                                       style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4"> 4
+                                <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                    <input type="radio" name="ce3" value="4"> 4
                                 </label>
-                                <label class="radio-inline"
-                                       style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="option5"> 5
+                                <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                    <input type="radio" name="ce3" value="5"> 5
                                     Agree
                                 </label>
                             </div>
                         </div>
                         <div class="no-float"></div>
-                        <a type="button" class="btn btn-primary float-right display_questions  display_title"
+                        <a type="button" class="btn btn-primary float-right display_questions  display_title" id="bonding_done"
                            onclick="changeclass();">Done</a>
                     </div>
                     <!-- -------------------------------  End questions ----------------------------------------------------- -->
@@ -233,7 +229,7 @@
                 <div class="panel-body">
                     <div id="map2" style="height:83vh; position: relative;">
                         <div style="position: absolute; top: 10px; left: 40px; z-index: 998">
-                            <button class="btn btn-default btn-xs" id="draw_polyxs" onclick="drawPolygon()">
+                            <button class="btn btn-default btn-xs" id="draw_polyxs">
                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"
                                   style="margin-right: 5px"></span> Start drawing
                             </button>
@@ -308,163 +304,127 @@
     <script src="src/edit/handler/EditToolbar.Edit.js"></script>
     <script src="src/edit/handler/EditToolbar.Delete.js"></script>
 
+    <script src="js/API/lib.js"></script>
+
     <script>
-
-        $(document).ready(function () {
-
-
-            startall();
-
+        $( document ).ready(function() {
+            startMapComponents();
+            startAll();
         });
-
-
     </script>
 
 
     <script>
-
-
-        function isElementInViewport(el) {
-
-            //special bonus for those using jQuery
-            if (typeof jQuery === "function" && el instanceof jQuery) {
-                el = el[0];
-            }
-
-            var rect = el.getBoundingClientRect();
-
-            return !((rect.top == 0) && (rect.left == 0) && (rect.bottom == 0) && (rect.right == 0));
-        }
-
-
-        // LEAFLET MAP + DRAW
-
-        // create a map in the "map" div, set the view to a given place and zoom
-        var map1 = L.map('map', {
-            scrollWheelZoom: false,
-        });
-
-
-        map1.on('load', function (e) {
-            if (isElementInViewport($('#map'))) {
-                createAll(map1, $("#draw_poly"), $("#delete_poly"));
-            }
-        });
-
-        map1.setView([38.7500, -9.1500], 12);
-
-
-        // LEAFLET MAP 2 + DRAW
-
-        // create a map in the "map" div, set the view to a given place and zoom
-        var mapxs = L.map('map2');
-
-        mapxs.on('load', function (e) {
-            if (isElementInViewport($('#map2'))) {
-                createAll(mapxs, $("#draw_polyxs"), $("#delete_polyxs"));
-            }
-        });
-
-        mapxs.setView([38.7500, -9.1500], 12);
-
         var map, drawnItems, drawControl;
         var buttonDraw, buttonDelete;
 
-        function createAll(rmap, bdraw, bdelete) {
-            map = rmap;
-            buttonDraw = bdraw;
-            buttonDelete = bdelete;
-            // add an OpenStreetMap tile layer
-            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-                // attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-            // Customize button draw polygon - personal contribution
-            var polygonDrawer = new L.Draw.Polyline(map);
+        function startMapComponents() {
 
-            // Initialise the FeatureGroup to store editable layers
-            drawnItems = new L.FeatureGroup();
-            map.addLayer(drawnItems);
-
-            // Initialise the draw control and pass it the FeatureGroup of editable layers
-            drawControl = new L.Control.Draw({
-                //position: 'topright',
-                draw: {
-                    polyline: false,
-                    polygon: false,
-                    rectangle: false,
-                    circle: false,
-                    marker: false
-                },
-                edit: {
-                    featureGroup: drawnItems,
-                    // Customize button delete polygon - personal contribution
-                    remove: false,
-                    // Edit polygon when you draw it - personal contribution
-                    edit: false
+            function isElementInViewport(el) {
+                if (typeof jQuery === "function" && el instanceof jQuery) {
+                    el = el[0];
                 }
-            });
-            map.addControl(drawControl);
-
-            map.on('draw:created', function (e) {
-                var type = e.layerType,
-                        layer = e.layer;
-
-                if (type === 'marker') {
-                    layer.bindPopup('A popup!');
-                }
-                // Edit polygon when you draw it - personal contribution
-                e.layer.editing.enable();
-                drawnItems.addLayer(layer);
-                map.fitBounds(drawnItems.getBounds(), null);
-                $("#questions_done").removeClass().addClass("hidden");
-                $("#communities_done").removeClass().addClass("show");
-                $("#second_part_SC").removeClass().addClass("show");
-                $("#title2_done").removeClass().addClass("hidden");
-                $("#draw_poly").prop('disabled', true);
-                $(".finish-map").attr('disabled', true);
-                showsliders();
-
-
-                /*$("#sliders_done").removeClass().addClass("hidden");
-                 $("#title_done").removeClass().addClass("show");
-                 $("#title2_done").removeClass().addClass("hidden");
-                 $("#draw_poly").prop('disabled', true);
-                 $(".finish-map").attr('disabled', true);
-                 showsliders();*/
-
-
-            });
-
-            map.on('draw:edited', function (e) {
-                var layers = e.layers;
-                var countOfEditedLayers = 0;
-                layers.eachLayer(function (layer) {
-                    countOfEditedLayers++;
-                });
-                console.log("Edited " + countOfEditedLayers + " layers");
-                //map.fitBounds(drawnItems.getBounds(), null);
-            });
-        }
-
-        // Customize button draw polygon - personal contribution
-        function drawPolygon() {
-            var polygonDrawer = new L.Draw.Polygon(map, drawControl);
-            polygonDrawer.enable();
-        }
-
-        // Customize button delete polygon - personal contribution
-        $('#delete_poly').on('click', function () {
-            drawnItems.clearLayers();
-            if ($('#title2_done').is(":hidden")) {
-                $("#communities_done").removeClass().addClass("show");
-                $("#second_part_SC").removeClass().addClass("show");
-                $("#draw_poly").prop('disabled', false);
-                $("#questions_done").removeClass().addClass("hidden");
-
-
+                var rect = el.getBoundingClientRect();
+                return !((rect.top == 0) && (rect.left == 0) && (rect.bottom == 0) && (rect.right == 0));
             }
-        });
 
+
+            // Big Map
+            var map1 = L.map('map', {
+                scrollWheelZoom: false,
+            });
+            map1.on('load', function (e) {
+                if (isElementInViewport($('#map'))) {
+                    createAll(map1, $("#draw_poly"), $("#delete_poly"));
+                }
+            });
+            map1.setView([38.7500, -9.1500], 12);
+
+            // Small Map
+            var mapxs = L.map('map2');
+            mapxs.on('load', function (e) {
+                if (isElementInViewport($('#map2'))) {
+                    createAll(mapxs, $("#draw_polyxs"), $("#delete_polyxs"));
+                }
+            });
+            mapxs.setView([38.7500, -9.1500], 12);
+
+            function createAll(rmap, bdraw, bdelete) {
+                map = rmap;
+                buttonDraw = bdraw;
+                buttonDelete = bdelete;
+                // add an OpenStreetMap tile layer
+                L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                    // attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+                // Customize button draw polygon - personal contribution
+                var polygonDrawer = new L.Draw.Polyline(map);
+
+                // Initialise the FeatureGroup to store editable layers
+                drawnItems = new L.FeatureGroup();
+                map.addLayer(drawnItems);
+
+                // Initialise the draw control and pass it the FeatureGroup of editable layers
+                drawControl = new L.Control.Draw({
+                    //position: 'topright',
+                    draw: {
+                        polyline: false,
+                        polygon: false,
+                        rectangle: false,
+                        circle: false,
+                        marker: false
+                    },
+                    edit: {
+                        featureGroup: drawnItems,
+                        // Customize button delete polygon - personal contribution
+                        remove: false,
+                        // Edit polygon when you draw it - personal contribution
+                        edit: false
+                    }
+                });
+                map.addControl(drawControl);
+
+                map.on('draw:created', function (e) {
+                    var type = e.layerType, layer = e.layer;
+                    if (type === 'marker') {
+                        layer.bindPopup('A popup!');
+                    }
+                    // Edit polygon when you draw it - personal contribution
+                    e.layer.editing.enable();
+                    drawnItems.addLayer(layer);
+                    map.fitBounds(drawnItems.getBounds(), null);
+                    $("#questions_done").removeClass().addClass("hidden");
+                    $("#title2_done").removeClass().addClass("hidden");
+                    buttonDraw.prop('disabled', true);
+                    $(".finish-map").attr('disabled', true);
+                    showsliders();
+                });
+
+                map.on('draw:edited', function (e) {
+                    var layers = e.layers;
+                    var countOfEditedLayers = 0;
+                    layers.eachLayer(function (layer) {
+                        countOfEditedLayers++;
+                    });
+                    console.log("Edited " + countOfEditedLayers + " layers");
+                    //map.fitBounds(drawnItems.getBounds(), null);
+                });
+
+                // Customize button delete polygon - personal contribution
+                buttonDelete.on('click', function () {
+                    drawnItems.clearLayers();
+                    if ($('#title2_done').is(":hidden")) {
+                        buttonDraw.prop('disabled', false);
+                        $("#questions_done").removeClass().addClass("hidden");
+                    }
+                });
+
+                buttonDraw.on('click', function () {
+                    var polygonDrawer = new L.Draw.Polygon(map, drawControl);
+                    polygonDrawer.enable();
+                });
+            }
+        }
     </script>
 
 </body>
