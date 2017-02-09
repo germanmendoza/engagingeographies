@@ -97,6 +97,7 @@ uiCoreWS = {
     home2 : 'home',
     SOP: 'home/SOP_data',
     SC: 'home/SC_data',
-    CE: 'home/CE_data'
+    CE: 'home/CE_data',
+    finish: 'home/finish'
 };
 

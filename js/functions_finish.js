@@ -1,11 +1,66 @@
 var map;
 var testGeoJson;
 var overPassOPs;
-
 function startAll(){
     uiCoreAPI.instanceUrl = "http://localhost:8080/";
+    app = {
+        getSOP: function (id, callback) {
+            uiCoreAPI._getRequest(
+                uiCoreAPI.instanceUrl + uiCoreWS.SOP + "/" + id,
+                callback
+            );
+        },
+        getSC: function (id, callback) {
+            uiCoreAPI._getRequest(
+                uiCoreAPI.instanceUrl + uiCoreWS.SC + "/" + id,
+                callback
+            );
+        },
+        getCE: function (id, callback) {
+            uiCoreAPI._getRequest(
+                uiCoreAPI.instanceUrl + uiCoreWS.CE + "/" + id,
+                callback
+            );
+        },
+        finish: function (data, callback) {
+            uiCoreAPI._postRequest(
+                uiCoreAPI.instanceUrl + uiCoreWS.finish,
+                data,
+                callback
+            );
+        }
+    };
     startMapComponents();
     areasLoading();
+    startOthers();
+}
+
+function startOthers() {
+    uiCoreAPI.instanceUrl = "http://localhost:8080/";
+
+    $('#finishBtn').click(function () {
+        var data = {
+            id : util.getFromLocalStorage(util.interPageDataKey),
+            gender : parseInt($("input[name=gender]:checked").val()),
+            age : parseInt($( "#age" ).val()),
+            country : $( "#country" ).val(),
+            study : parseInt($( "#study" ).val()),
+            profession : parseInt($( "#profession" ).val()),
+            income : parseInt($( "#income" ).val())
+        };
+        app.finish(data,function (response) {
+            if (response === false) {
+                alert("PROBLEMS");
+            }
+            else {
+                // util.redirectToPage({
+                //     url:"finish.html",
+                //     payload:response.id
+                // });
+                alert("You are fucking master");
+            }
+        })
+    });
 }
 
 function startMapComponents(){
@@ -216,28 +271,6 @@ function startOverpassComponents() {
 }
 
 function areasLoading() {
-
-    app = {
-        getSOP: function (id, callback) {
-            uiCoreAPI._getRequest(
-                uiCoreAPI.instanceUrl + uiCoreWS.SOP + "/" + id,
-                callback
-            );
-        },
-        getSC: function (id, callback) {
-            uiCoreAPI._getRequest(
-                uiCoreAPI.instanceUrl + uiCoreWS.SC + "/" + id,
-                callback
-            );
-        },
-        getCE: function (id, callback) {
-            uiCoreAPI._getRequest(
-                uiCoreAPI.instanceUrl + uiCoreWS.CE + "/" + id,
-                callback
-            );
-        }
-    };
-
     var id = util.getFromLocalStorage(util.interPageDataKey);
     //var id = "589888c01c0856701818e512";
     var SOPLayers, SCLayers, CELayers;
