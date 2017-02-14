@@ -6,58 +6,96 @@
 
 // POPOVER
 
+var SC = [];
+var currGroup;
+var areasdrawn = 0;
+var name_groups;
+var number = 0;
+
 function startAll() {
 
-    var SC = [];
-    var number_of_group;
-    var number_groups;
-    var numbergroupnumber;
 
-    $('#submit_number_group').click(function () {
-        number_groups = $('#number_group').val();
-        //$('#submit_number_group').attr('disabled', true);
-        if ($.isNumeric(number_groups)) {
+    buttonDelete.prop('disabled', true);
+    buttonDraw.prop('disabled', true);
+
+    $("#name_actual_group").select2({
+        tags: [],
+        tokenSeparators: [",", " "]
+    });
+
+    $('#submit_name_group').click(function () {
+        name_groups = $('#name_actual_group').val();
+        if (name_groups.length > 0) {
             $("#SC_group").toggleClass("hidden show");
-            $("#communities_done").toggleClass("hidden show");
-            numbergroupnumber = parseInt($("#number_group").val());
-            number_of_group=SC.length + 1;
-            textnumbers();
-            function textnumbers() {
-                var replaced = $("#textchange").html().replace('X', number_of_group);
-                replaced = replaced.replace('L', numbergroupnumber);
-                //replaced = replaced.replace('Z', numbergroup - SC.length + 1);
-                $("#textchange").html(replaced);
-                //$("#draw_poly").prop('disabled', false);
+            $("#groups_done").toggleClass("hidden show");
+            namegroup();
+            currGroup = {
+                areas: [],
+                layergroup: new L.featureGroup()
             };
-
         }
         else {
-            alert("Please, insert a number");
+            alert("Please, insert at least a group name");
         }
     });
+
+
+    function namegroup() {
+        $("#group_name").html("Group hola");
+        var replaced = $("#group_name").html().replace('hola', name_groups[number]);
+        $("#group_name").html(replaced);
+        $("#textchange").html("Now, think about the Group X that you have.");
+        var replaced1 = $("#textchange").html().replace('X', name_groups[number]);
+        $("#textchange").html(replaced1);
+    };
 
 
     $('#spatial_dimension').click(function () {
         if ($("input[name=spatial]:checked").val() == "true") {
-
+            $("#SC_group").toggleClass("hidden show");
+            $("#specifications").toggleClass("hidden show");
         }
         else {
-            alert("Ok, let's go for the next group");
-            number_of_group = number_of_group + 1;
-            textnumbers(number_of_group);
+            if (number == name_groups.length - 1) {
+                alert("Ok, let's go for the next group");
+                showAllGroups();
+            }
+            else {
+                number = number + 1;
+                namegroup();
+                $("#SC_group").removeClass().addClass("show");
+                $("#another_draw").removeClass().addClass("hidden");
+            }
+
         }
     });
 
 
-    function showsliders1() {
+    $('#specifications_done').click(function () {
+        if ($("#nature").val() != "0") {
 
-        $("#questions_done").toggleClass("show hidden");
-        $("#title2_done").toggleClass("hidden show");
-    }
+            $("#draw").toggleClass("hidden show");
+            $("#specifications").toggleClass("hidden show");
+            buttonDraw.prop('disabled', false);
+            buttonDelete.prop('disabled', false);
+            $("#nature").val("0");
 
-    $('#bonding_done').click(function () {
+        }
+        else {
+            alert("Please, choose a kind of group");
+        }
+    });
+
+
+    $('#bonding_bridging_done').click(function () {
+
+        $("#another_draw").toggleClass("hidden show");
+        $("#questions_bonding_bridging").toggleClass("hidden show");
+        areasdrawn = areasdrawn + 1;
+        counterAreasName();
         buttonDraw.prop('disabled', false);
         $(".finish-map").attr('disabled', false);
+
 
         var polygondata = {
             type: "sc",
@@ -72,18 +110,15 @@ function startAll() {
             }
         };
 
-        SC.push(polygondata);
+        currGroup.areas.push(polygondata);
+        currGroup.layergroup.addLayer(drawnItems);
+
+
         map.removeLayer(drawnItems);
-
-        numbergroup = parseInt($("#number_group").val());
-        var replaced = $("#title2_done").html().replace('X', SC.length + 1);
-        replaced = replaced.replace('L', numbergroup);
-        replaced = replaced.replace('Z', numbergroup - SC.length + 1);
-        $("#title2_done").html(replaced);
-        showsliders1();
-
         drawnItems = new L.FeatureGroup();
         map.addLayer(drawnItems);
+        //currGroup.layergroup.addTo(map);
+
     });
 
 
@@ -92,27 +127,69 @@ function startAll() {
 
     $('.finish-map').click(function () {
         map.removeLayer(drawnItems);
-        //mapxs.removeLayer(drawnItemsxs);
-        $(".finish-map").attr('disabled', true);
+        if (currGroup.areas.length > 0) {
+            currGroup.position = number;
+            SC.push(currGroup);
+        }
+        if (number == name_groups.length - 1) {
+            showAllGroups();
+        }
+        else {
+            number = number + 1;
+            namegroup();
+            $("#SC_group").removeClass().addClass("show");
+            $("#another_draw").removeClass().addClass("hidden");
+            buttonDelete.prop('disabled', true);
+            buttonDraw.prop('disabled', true);
+        }
+    });
 
+    function showAllGroups() {
         buttonDraw.prop('disabled', true);
         buttonDelete.prop('disabled', true);
         for (i = 0; i < SC.length; i++) {
-            group.addLayer(SC[i].layer);
-            map.addLayer(SC[i].layer);
-            var sci = SC[i];
-            SC[i].layer.on('click', function (e) {
-                $('.popover').remove();
-                map.fitBounds(e.layer.getBounds(), null);
-                $("#title2_done").toggleClass("hidden show");
-                $("#area_done").toggleClass("hidden show");
-                $("input:radio[name=live]:first").attr('checked', true);
-                $('#name_area').attr('disabled', false);
-                AreaSelected = sci;
-            });
+            var cGroup = SC[i];
+            for (j = 0; j < cGroup.areas.length; j++) {
+                group.addLayer(cGroup.areas[i].layer);
+                map.addLayer(cGroup.areas[i].layer);
+            }
+            /*var sci = SC[i];
+             SC[i].layer.on('click', function (e) {
+             $('.popover').remove();
+             map.fitBounds(e.layer.getBounds(), null);
+             $("#title2_done").toggleClass("hidden show");
+             $("#area_done").toggleClass("hidden show");
+             $("input:radio[name=live]:first").attr('checked', true);
+             $('#name_area').attr('disabled', false);
+             AreaSelected = sci;
+             });*/
         }
         map.fitBounds(group.getBounds(), null);
-    });
+    }
+
+    /*$('.finish-map').click(function () {
+     map.removeLayer(drawnItems);
+     //mapxs.removeLayer(drawnItemsxs);
+     $(".finish-map").attr('disabled', true);
+
+     buttonDraw.prop('disabled', true);
+     buttonDelete.prop('disabled', true);
+     for (i = 0; i < SC.length; i++) {
+     group.addLayer(SC[i].layer);
+     map.addLayer(SC[i].layer);
+     var sci = SC[i];
+     SC[i].layer.on('click', function (e) {
+     $('.popover').remove();
+     map.fitBounds(e.layer.getBounds(), null);
+     $("#title2_done").toggleClass("hidden show");
+     $("#area_done").toggleClass("hidden show");
+     $("input:radio[name=live]:first").attr('checked', true);
+     $('#name_area').attr('disabled', false);
+     AreaSelected = sci;
+     });
+     }
+     map.fitBounds(group.getBounds(), null);
+     });*/
 
 
     $('#name_area').click(function () {
@@ -184,125 +261,31 @@ function startAll() {
         });
     });
 
-
-    /*
-     ----------------------------------------*/
-
-    $(function () {
-        $('[data-toggle="popover"]').popover()
-    })
-
-// MODAL prev and next
-
-    $("div[id^='myModal']").each(function () {
-
-        var currentModal = $(this);
-
-        //click next
-        currentModal.find('.btn-next').click(function () {
-            currentModal.modal('hide');
-            currentModal.closest("div[id^='myModal']").nextAll("div[id^='myModal']").first().modal('show');
-        });
-
-        //click prev
-        currentModal.find('.btn-prev').click(function () {
-            currentModal.modal('hide');
-            currentModal.closest("div[id^='myModal']").prevAll("div[id^='myModal']").first().modal('show');
-        });
-
-    });
-
-// SLIDER
-    $('#ex1').slider({
-        formatter: function (value) {
-            return 'Current value: ' + value;
-        }
-    });
-    $('#ex2').slider({
-        formatter: function (value) {
-            return 'Current value: ' + value;
-        }
-    });
-    $('#ex3').slider({
-        formatter: function (value) {
-            return 'Current value: ' + value;
-        }
-    });
-    $('#ex4').slider({
-        formatter: function (value) {
-            return 'Current value: ' + value;
-        }
-    });
-    $('#ex5').slider({
-        formatter: function (value) {
-            return 'Current value: ' + value;
-        }
-    });
-    $('#ex6').slider({
-        formatter: function (value) {
-            return 'Current value: ' + value;
-        }
-    });
-    $('#ex7').slider({
-        formatter: function (value) {
-            return 'Current value: ' + value;
-        }
-    });
-    $('#ex8').slider({
-        formatter: function (value) {
-            return 'Current value: ' + value;
-        }
-    });
-
-
-// Only for the mockups.  Show&hidden map image. Delete after.
-    /*function toggler(divId) {
-     //$("#" + divId).toggle();
-     $("#secondimage").addClass('show');
-     $("#firstimage").addClass('hidden');
-     };
-
-     $('.display_communities').click(function () {
-     $(communities_done).toggleClass('hidden');
-     $(communities_done).toggleClass('show');
-     });
-
-     $('.display_title').click(function () {
-     $(title_done).toggleClass('hidden');
-     $(title_done).toggleClass('show');
-     });
-
-     $('.display_area').click(function () {
-     $(area_done).toggleClass('hidden');
-     $(area_done).toggleClass('show');
-     });
-
-
-     $('.display_sc').click(function () {
-     $(sc_done).toggleClass('hidden');
-     $(sc_done).toggleClass('show');
-     });
-
-     $('.display_questions').click(function () {
-     $(questions_done).toggleClass('hidden');
-     $(question_done).toggleClass('show');
-     });
-
-     $('.showhide').click(function () {
-     $(sliders_done).toggleClass('hidden');
-     $(sliders_done).toggleClass('show');
-     });*/
-
-
-// Finish Show&hidden map image
-
-
 }
 
 
-function showsliders() {
+function deleteareas() {
+    if (currGroup.areas.length > 0) {
+        counterAreasName();
+        $("#another_draw").removeClass().addClass("show");
+        $("#questions_bonding_bridging").removeClass().addClass("hidden");
+    }
+    else {
+        $("#draw").removeClass().addClass("show");
+        $("#questions_bonding_bridging").removeClass().addClass("hidden");
+    }
+}
 
-    $("#questions_done").toggleClass("show hidden");
-    $("#communities_done").toggleClass("hidden show");
-    $("#second_part_SC").toggleClass("hidden show");
+function counterAreasName() {
+
+
+    $("#counting_areas").html("You have already defined: L areas.");
+    var replaced2 = $("#counting_areas").html().replace('L', areasdrawn);
+    $("#counting_areas").html(replaced2);
+
+
+    $("#change_name_group").html('Now you can draw another area that define the G group, or click the <button type="button" class="btn btn-primary btn-next" href="#" disabled>Next</button> on th map to define the next group.');
+    var replaced3 = $("#change_name_group").html().replace('G', name_groups[number]);
+    $("#change_name_group").html(replaced3);
+
 }

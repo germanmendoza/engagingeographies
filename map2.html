@@ -10,6 +10,7 @@
     <link href="css/leaflet.css" rel="stylesheet" type="text/css"/>
     <link href="css/leaflet.draw.css" rel="stylesheet" type="text/css"/>
     <link href="css/bootstrap-slider.css" rel="stylesheet" type="text/css"/>
+    <link href="css/select2.min.css" rel="stylesheet" type="text/css"/>
 
 </head>
 
@@ -112,7 +113,7 @@
             <div class="panel-body">
 
                 <!-- ------------------------------- Social capital explanation --------------------------------------------- -->
-                <div class="show" id="communities_done">
+                <div class="show" id="groups_done">
                     <p>
                         I would like to start by asking you about the groups of people or
                         organizations, networks, associations to which you belong. These could be formally organized
@@ -120,16 +121,22 @@
                         people who get together regularly to do an activity or talk about things.
                     </p>
                     <h5 style="text-align: center; margin-top: 40px">
-                        How many groups do you have? Take your time :)
+                        Can you write words that define your groups? Write as many words as groups you have. Take your
+                        time :)
                     </h5>
 
                     <!-- <div  class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-lg-9 col-md-9 col-sm-9 col-xs-9"> -->
                     <div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-2 col-lg-6 col-md-6 col-sm-6 col-xs-7 col-xs-offset-2 float-left">
-                        <input class="form-control" id="number_group" style="text-align: center; width: 100%"
-                               rows="1"></input>
+                        <div class="s2-example">
+                            <p>
+                                <select class="form-control" multiple="multiple" id="name_actual_group">
+
+                                </select>
+                            </p>
+                        </div>
                     </div>
                     <div class="float-left col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                        <a type="button" class="btn btn-primary" id="submit_number_group">Done</a>
+                        <a type="button" class="btn btn-primary" id="submit_name_group">Done</a>
                     </div>
                     <!--<div class="no-float"></div>
                     <p style="margin-top: 30px" class="hidden" id="second_part_SC">
@@ -140,16 +147,20 @@
                     <div class="no-float"></div>-->
                 </div>
                 <!-- ------------------------------- Social capital explanation --------------------------------------------- -->
-                <!-- ------------------------------- Social capital specification groups --------------------------------------------- -->
+                <!-- ------------------------------- Social capital spatial  --------------------------------------------- -->
 
                 <div class="hidden" id="SC_group">
+                    <h4 id="group_name">
+                        Group hola
+                    </h4>
+                    <p></p>
                     <p>
                     <h5 style="margin-top: 20px" id="textchange">
-                        Now, think about the Group X from L that you have.
+                        Now, think about the Group X that you have.
                     </h5>
                     </p>
                     <h5 style="margin-top: 20px">
-                        Does it can be related with or based on some place?
+                        Can be related with some place?
                     </h5>
                     <div>
                         <label class="radio-inline">
@@ -159,18 +170,15 @@
                             <input type="radio" name="spatial" value="false"> Not
                         </label>
                     </div>
-                <div class="no-float"></div>
-                <a type="button" class="btn btn-primary float-right" id="spatial_dimension">Done</a>
-                <div class="no-float"></div>
+                    <div class="no-float"></div>
+                    <a type="button" class="btn btn-primary float-right" id="spatial_dimension">Done</a>
+                    <div class="no-float"></div>
                 </div>
 
-                <!--<div class="hidden">
-                    <h5 style="margin-top: 20px">
-                        Please, put a name to this group.
-                    </h5>
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="padding-left: 0px; width: 250px">
-                        <input id="text_area" class="form-control" rows="1"></input>
-                    </div>
+                <!-- ------------------------------- Social capital spatial  --------------------------------------------- -->
+
+                <!-- ------------------------------- Social capital specifications  --------------------------------------------- -->
+                <div class="hidden" id="specifications">
 
                     <div>
 
@@ -179,7 +187,8 @@
                         </h5>
                     </div>
                     <div style="margin-bottom: 20px">
-                        <select id="study">
+                        <select id="nature">
+                            <option value="0"></option>
                             <option value="1">Business</option>
                             <option value="2">Women's</option>
                             <option value="3">Finance</option>
@@ -198,33 +207,75 @@
                             <option value="16">Friend</option>
                             <option value="17">Leisure</option>
                             <option value="18">Ecology</option>
+                            <option value="18">Other</option>
                         </select>
                     </div>
                     <p></p>
                     <div class="no-float"></div>
-                    <a type="button" id="name_area" class="btn btn-primary float-right display_questions"
-                       onclick="changeclass();" disabled>Done</a>
+                    <a type="button" id="specifications_done" class="btn btn-primary float-right display_questions"
+                       onclick="changeclass();">Done</a>
                     <div class="no-float"></div>
 
                 </div>
--->
+                <!-- ------------------------------- Social capital specifications  --------------------------------------------- -->
 
-                <!-- ------------------------------- Social capital specification groups --------------------------------------------- -->
+                <!-- ------------------------------- Social capital spatialization (let's draw)  --------------------------------------------- -->
 
 
-                <div class="hidden" id="title2_done">
-                    <p style="margin-bottom: 20px"><b>Good Job!</b> You have drawn X
-                        from L groups. Can you relate other Z groups with an area? If not press next button.
+                <div class="hidden" id="draw">
+                    <p style="margin-bottom: 20px"><b><h4>Let's draw!</h4></b></p>
+                    Please, draw all the areas that define
+                    the group X using
+                    <button class="btn btn-default btn-xs" disabled>
+                                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"
+                                          style="margin-right: 5px"></span> Start drawing
+                    </button>
+                    button and you can delete the area clicking
+                    <button class="btn btn-default btn-xs" disabled>
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"
+                                          style="margin-right: 5px"></span> Delete area
+                    </button>
+                    button on the map.
                 </div>
+
+                <!-- ------------------------------- Social capital spatialization (let's draw)  --------------------------------------------- -->
+
+
+                <!-- ------------------------------- Social capital spatialization (another area o next)  --------------------------------------------- -->
+
+                <div class="hidden" id="another_draw">
+                    <p style="margin-bottom: 20px"><b><h4>Great job!</h4></b></p>
+                    <div id="change_name_group">Now you can draw another area that define the X group, or click the
+                        <button type="button" class="btn btn-primary btn-next" href="#" disabled>Next</button>
+                        button on th map to define the next group.</div>
+
+                    <p></p>
+                    <div id="counting_areas">
+                        You have already defined: L areas.
+                    </div>
+
+                </div>
+
+
+                <!-- ------------------------------- Social capital spatialization (another area o next)  --------------------------------------------- -->
 
                 <!-- -------------------------------  End Communities ----------------------------------------------- -->
                 <!-- ------------------------------- Questions ----------------------------------------------------- -->
-                <div class="hidden" id="questions_done">
-                    <h5>Please, answer the following questions about the area just drawn.</h5>
-                    <hr style="width: 100%">
-                    <h5 style="margin-bottom: 20px; padding-top: 0px">
-                        Bonding Social Capital
+                <div class="hidden" id="questions_bonding_bridging">
+                    <h5 style="margin-top: 20px">
+                        Do you live in that area?
                     </h5>
+                    <div>
+                        <label class="radio-inline">
+                            <input type="radio" name="live" value="true"> Yes
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="live" value="false" checked="checked"> Not
+                        </label>
+                    </div>
+                    <hr style="width: 100%">
+                    <div class="no-float"></div>
+                    <h5>Please, answer the following questions about the area just drawn.</h5>
                     <div class="no-float">
                         <div>
                             <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">The people I
@@ -307,9 +358,7 @@
                             </div>
                         </div>
                         <div class="no-float"></div>
-                        <h5 style="margin-bottom: 20px; padding-top: 0px;">
-                            Bridging Social Capital
-                        </h5>
+
                         <div class="no-float">
                             <div>
                                 <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Interacting
@@ -397,7 +446,7 @@
                             </div>
                             <div class="no-float"></div>
                             <a type="button" class="btn btn-primary float-right display_questions  display_communities"
-                               id="bonding_done" onclick="changeclass();">Done</a>
+                               id="bonding_bridging_done" onclick="changeclass();">Done</a>
                         </div>
                     </div>
                 </div>
@@ -886,123 +935,11 @@
     </div> <!-- /.col6 -->
     <!-- ------------------------------- End map ------------------------------------------------------------------------------ -->
 </div> <!-- .container fluid -->
-<!-- ------------------------------- Modal 3 Learn draw --------------------------------------------------------------------- -->
-<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <!-- <div class="triangle_draw"></div>
-            <div id="rectangle_draw"></div> -->
-            <div class="modal-header">
-                Let’s start!! – Please, read the following instructions carefully.
-                <button type="button" class="close" id="icon-link" data-dismiss="modal" aria-label="Close"><span
-                        aria-hidden="true">&times;</span></button>
-            </div>
-            <div class="modal-body">
-                <!--  Explanation of the process of drawing  -->
-                <p>This is a web-map survey application for Lisbon city. We invite you to draw whatever size of areas on
-                    the map freely. To start, just press Start Mapping at top left</p>
-                <img src="img/draw.png" id="image_draw">
-                <p>and then click on the map to define your first point and as many points as you need to define your
-                    area. To close the area, click on the first point again. You can edit the polygon moving any point
-                    at any time or delete it pressing the delete area button.</p>
-                <img src="img/delete.png" id="image_draw">
-                <p>You can "pan" the map or zoom in (+ or -) using the map controls and change the base map on top right
-                    corner. You can draw as many areas as you need. The more areas you place, the better! Most people
-                    place at least four areas per each concept.</p>
-            </div> <!--/.modal-body -->
-            <div class="no-float"></div>
-            <div class="modal-footer" style="border:none;">
-                <div class="float-left" style="color: #A9A9A9; padding-top: 8px">
-                    1/3
-                </div>
-                <div class="float-right">
-                    <button type="button" class="btn btn-primary btn-next" href="#">Next</button>
-                </div>
-            </div>
-        </div> <!--/.modal-content -->
-    </div> <!--/.modal-dialog -->
-</div> <!--/.modal fade -->
-<!-- ------------------------------- End Modal 3 ---------------------------------------------------------------------------- -->
-<!-- ------------------------------- Modal 4 Learn sliders ------------------------------------------------------------------ -->
-<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header visible-sm visible-md visible-lg">
-                Questions & Sliders.
-                <button type="button" class="close" id="icon-link" data-dismiss="modal" aria-label="Close"><span
-                        aria-hidden="true">&times;</span></button>
-            </div>
-            <!--  Visible only xs -->
-            <div class="modal-header visible-xs">
-                <button type="button" class="close" id="icon-link" data-dismiss="modal" aria-label="Close"><span
-                        aria-hidden="true">&times;</span></button>
-                Sliders
-            </div>
-            <div class="modal-body">
-                <!--  Explanation as sliders are used  -->
-                <p>We also want to know your perception regarding the drawn areas. So, please answer the questions h h
-                    regarding the areas when is required. We also provide you some tool to characterize the areas </p>
-                <img src="img/slider.png" id="image_slider"
-                     class="col-xs-12 col-sm-10 col-md-10 col-lg-10 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
-                <div class="no-float"></div>
-                <p style="margin-top: 20px">through moving horizontally the circle inside the sliders, you can give us
-                    your opinion (from 0 to 10) about each respective asked item. </p>
-            </div> <!--/.modal-body -->
-            <div class="no-float"></div>
-            <div class="modal-footer" style="border:none;">
-                <div class="float-left" style="color: #A9A9A9; padding-top: 8px">
-                    2/3
-                </div>
-                <div class="float-right">
-                    <button type="button" class="btn btn-primary btn-next" href="#">Next</button>
-                </div>
-                <div class="float-right" style="padding-top: 8px; margin-right: 20px">
-                    <a type="button" class="link-primary btn-prev" href="#">Prev</a>
-                </div>
-            </div>
-        </div> <!--/.modal-content -->
-    </div> <!--/.modal-dialog -->
-</div> <!--/.modal fade -->
-<!-- ------------------------------- End Modal 4 ---------------------------------------------------------------------------- -->
-<!-- ------------------------------- Modal 5 Learn finish ------------------------------------------------------------------- -->
-<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header" style="border: none">
-
-                <button type="button" class="close" id="icon-link" data-dismiss="modal" aria-label="Close"><span
-                        aria-hidden="true">&times;</span></button>
-            </div>
-            <div class="modal-body">
-                <!--  Explanation finish  -->
-                <p>This is all. When you finish to locate your different areas and to move on to the next activity,
-                    press the button next.</p>
-                <img src="img/next.png" class="col-xs-offset-3 col-sm-offset-4 col-md-offset-4 col-lg-offset-4"
-                     id="image_finish" style="text-align: center">
-                <h4>Happy mapping!! </h4>
-            </div> <!--/.modal-body -->
-            <div class="no-float"></div>
-            <div class="modal-footer" style="border:none;">
-                <div class="float-left" style="color: #A9A9A9; padding-top: 8px">
-                    3/3
-                </div>
-                <div class="float-right">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close" href="#">
-                        Done
-                    </button>
-                </div>
-                <div class="float-right" style="padding-top: 8px; margin-right: 20px">
-                    <a type="button" class="link-primary btn-prev" href="#">Prev</a>
-                </div>
-            </div>
-        </div> <!--/.modal-content -->
-    </div> <!--/.modal-dialog -->
-</div> <!--/.modal fade -->
-<!-- ------------------------------- End Modal 5 ---------------------------------------------------------------------------- -->
 
 
 <script src="js/jquery-3.1.1.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/select2.min.js"></script>
 <script src="js/leaflet.js"></script>
 <script src="js/leaflet-src.js"></script>
 <script src="js/leaflet.draw.js"></script>
@@ -1132,19 +1069,26 @@
                 e.layer.editing.enable();
                 drawnItems.addLayer(layer);
                 map.fitBounds(drawnItems.getBounds(), null);
-                $("#questions_done").removeClass().addClass("hidden");
+                $("#draw").toggleClass("hidden show");
+                $("#questions_bonding_bridging").removeClass().addClass("show");
+                buttonDraw.prop('disabled', true);
+                $("#draw").removeClass().addClass("hidden");
+                $("#another_draw").removeClass().addClass("hidden");
+
+
+
+
+
+
+
+                /*$("#questions_done").removeClass().addClass("hidden");
                 $("#communities_done").removeClass().addClass("show");
                 $("#second_part_SC").removeClass().addClass("show");
                 $("#title2_done").removeClass().addClass("hidden");
                 $("#draw_poly").prop('disabled', true);
                 $(".finish-map").attr('disabled', true);
                 showsliders();
-                /*$("#sliders_done").removeClass().addClass("hidden");
-                 $("#title_done").removeClass().addClass("show");
-                 $("#title2_done").removeClass().addClass("hidden");
-                 $("#draw_poly").prop('disabled', true);
-                 $(".finish-map").attr('disabled', true);
-                 showsliders();*/
+                */
 
 
             });
@@ -1164,12 +1108,21 @@
             // Customize button delete polygon - personal contribution
             bdelete.on('click', function () {
                 drawnItems.clearLayers();
-                if ($('#title2_done').is(":hidden")) {
+
+                if ($('#questions_bonding_bridging').is(":visible")) {
+                    buttonDraw.prop('disabled', false);
+                    deleteareas();
+                }
+
+
+
+
+                /*if ($('#title2_done').is(":hidden")) {
                     $("#communities_done").removeClass().addClass("show");
                     $("#second_part_SC").removeClass().addClass("show");
                     $("#draw_poly").prop('disabled', false);
                     $("#questions_done").removeClass().addClass("hidden");
-                }
+                }*/
             });
 
             bdraw.on('click', function () {
