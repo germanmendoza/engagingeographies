@@ -70,9 +70,6 @@
    // validate
 
 
-     $('input:radio[name=lisbon_home]').click(function() {
-         $('#home_button').prop('disabled', false);
-     });
 
      $('input:radio[name=freguesia]').click(function() {
          $('#freguesia_button').prop('disabled', false);
@@ -84,7 +81,7 @@
 
      var limit = 3;
      $("input:checkbox[name='problem']").on('change', function(evt) {
-         $('#done1').attr('disabled', false);
+         //$('#done1').attr('disabled', false);
          var num_problem = ($("input:checkbox[name='problem']:checked").length);
          if (num_problem > limit) {
              this.checked = false;

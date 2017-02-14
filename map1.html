@@ -10,7 +10,7 @@
     <link href="css/leaflet.css" rel="stylesheet" type="text/css"/>
     <link href="css/leaflet.draw.css" rel="stylesheet" type="text/css"/>
     <link href="css/bootstrap-slider.css" rel="stylesheet" type="text/css"/>
-    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css"/>
 
 </head>
 
@@ -69,37 +69,42 @@
 <!-- ------------------------------- End Navbar ----------------------------------------------------------------------------- -->
 <div class="container-fluid">
     <!-- ------------------------------- Map visible lg md sm  -------------------------------------------------------------------- -->
-    <div id="pepe" class="col-lg-6 col-md-6 col-sm-6 visible-lg visible-md visible-sm" style="position: fixed; right: 0px;">
+    <div id="pepe" class="col-lg-6 col-md-6 col-sm-6 visible-lg visible-md visible-sm"
+         style="position: fixed; right: 0px;">
         <div class="panel panel-default">
             <div class="panel-body">
-              <div id="map" style="height:84vh; position: relative;">
-                <div class="visible-lg visible-md visible-sm" style="position: absolute; top: 10px; left: 65px; z-index: 998">
-                  <button class="btn btn-default btn-md" id="draw_poly" disabled>
-                    <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing
-                  </button>
-                  <button class="btn btn-default btn-md" id="delete_poly">
-                    <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Delete area
-                  </button>
-                </div>
-                <!-- <div class="custom_buttons_leaflet visible-lg visible-md visible-sm">
-                    <button class="btn btn-default btn-md" id="draw_poly" onclick="drawPolygon()" disabled>
-                        <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span>
-                        Start drawing
-                    </button>
-                    <button class="btn btn-default btn-md" id="delete_poly">
-                        <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span>
-                        Delete area
-                    </button>
-                </div>
-                <div id="map" style="height:84vh"></div> -->
-                  <!-- <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12" style="text-align: right;"> -->
-                      <a type="button" class="btn btn-primary finish-map pop" data-toggle="popover" data-placement="top" title="Before finish" data-content="Areas that have drawn, chooses the most important to you." onclick="toggler('secondimage');" disabled>Next</a>
-                  <!-- </div> -->
+                <div id="map" style="height:84vh; position: relative;">
+                    <div class="visible-lg visible-md visible-sm"
+                         style="position: absolute; top: 10px; left: 65px; z-index: 998">
+                        <button class="btn btn-default btn-md" id="draw_poly" disabled>
+                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"
+                                  style="margin-right: 5px"></span> Start drawing
+                        </button>
+                        <button class="btn btn-default btn-md" id="delete_poly">
+                            <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span>
+                            Delete area
+                        </button>
+                    </div>
+                    <!-- <div class="custom_buttons_leaflet visible-lg visible-md visible-sm">
+                        <button class="btn btn-default btn-md" id="draw_poly" onclick="drawPolygon()" disabled>
+                            <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span>
+                            Start drawing
+                        </button>
+                        <button class="btn btn-default btn-md" id="delete_poly">
+                            <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span>
+                            Delete area
+                        </button>
+                    </div>
+                    <div id="map" style="height:84vh"></div> -->
+                    <!-- <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12" style="text-align: right;"> -->
+                    <a type="button" class="btn btn-primary finish-map pop" data-toggle="popover" data-placement="top"
+                       title="Before finish" data-content="Areas that have drawn, chooses the most important to you."
+                       onclick="toggler('secondimage');" disabled>Next</a>
+                    <!-- </div> -->
                 </div>
             </div> <!-- /.panel-body -->
         </div> <!-- /.panel-default -->
     </div> <!-- /.col6 -->
-
 
 
     <!-- ------------------------------- Panel left ------------------------------------------------------------------------------ -->
@@ -107,17 +112,65 @@
         <div class="panel panel-default">
             <div class="panel-body">
                 <!--  Header  -->
-                <p style="margin-bottom: 20px" class="show" id="title_done">
-                    We want to know where are the areas that your significance (for some reason/s) are significant areas for you. Please, draw the area/s in which you most identify the most with (e.g., this place represents me) and/or feel attached to (e.g., I love this place) and/or depend on (e.g., it is the most suitable place for doing the things that I enjoy the most, this is the most suitable place) for your livelihood. Please draw as many areas as you need.
-                </p>
+                <div style="margin-bottom: 20px" class="show" id="title_done">
+                    We want to know where are the areas that, for some reason/s, are significant for you. 
+                    <p></p>
+                    Please, draw the area/s in which you most:
+                    <p></p>
+                    <ul>
+                        <li>identify the most with (e.g., this place represents me)</li>
+                        <li>and/or feel attached to (e.g., I love this place)</li>
+                        <li>and/or depend on (e.g., it is the most suitable place for doing the things that I enjoy the
+                            most, this is the most suitable place)
+                        </li>
+                    </ul>
+                    <p></p>
+                    for your livelihood. 
+                    <p>
+                    <p>
+                        <b>Please draw as many areas as you need using the <button class="btn btn-default btn-xs" disabled>
+                                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"
+                                          style="margin-right: 5px"></span> Start drawing
+                        </button> button in the map.</b>
+                    <p></p>
 
-                <p style="margin-bottom: 20px" class="hidden" id="title2_done"><b>Good Job!</b> Now Draw another time if you want. Please draw as many polygons as you like on the areas where you feel more identified</p>
+                            <b>If you need, you can delete an area pressing <button class="btn btn-default btn-xs" disabled>
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"
+                                          style="margin-right: 5px"></span> Delete area
+                            </button> button also in the map.</b>
+                        <p></p>
+
+
+
+                    </div>
+
+                </div>
+
+
+                <div style="margin-bottom: 20px" class="hidden" id="title2_done"><b>Good Job!</b>
+                    <p></p>Now Draw another time if
+                    you want. Please draw as many polygons as you like on the areas where you feel more identified.
+                    <p></p>If you don't have more areas to draw, just click <button type="button" class="btn btn-primary btn-next" href="#" disabled>Next</button>
+                    on the bottom-right corner in the map.
+                </div>
                 <!-- ------------------------------- Sliders ----------------------------------------------------- -->
                 <div class="hidden" id="sliders_done">
-                    <h5> Please, indicate with the sliders the level of only applicable characteristic that contain the
-                        drawn area. </h5>
+                    <h5 style="margin-top: 20px">
+                        Do you live in that area?
+                    </h5>
+                    <div>
+                        <label class="radio-inline">
+                            <input type="radio" name="live" value="true"> Yes
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="live" value="false" checked="checked"> Not
+                        </label>
+                    </div>
                     <div class="no-float"></div>
                     <hr style="width: 100%">
+                    <h5> Please, indicate with the sliders the level of only applicable characteristic that contain the
+                        drawn area. </h5>
+
                     <!--  Question 1  -->
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="margin-top: 20px">
                         <span class="glyphicon glyphicon-tree-deciduous btn-lg col-lg-1 col-md-1 col-sm-1 col-xs-1 icon-slider"
@@ -210,30 +263,19 @@
                                 id="ex7SliderVal">0</span></span>
                     </div>
                     <div class="no-float"></div>
-                    <a type="button" id="sliders_done_button" class="btn btn-primary float-right display_sliders  display_title display_title2">Done</a>
+                    <a type="button" id="sliders_done_button"
+                       class="btn btn-primary float-right display_sliders  display_title display_title2">Done</a>
                 </div>
                 <!-- -------------------------------  End Slider ----------------------------------------------------- -->
 
 
-
-                <!-- ------------------------------- Do you live in that area?  -------------------------------------- -->
+                <!-- ------------------------------- Put a name to the area?  -------------------------------------- -->
                 <div class="hidden" id="area_done">
-                    <h5 style="margin-top: 20px">
-                        Do you live in that area?
-                    </h5>
-                    <div>
-                        <label class="radio-inline">
-                            <input type="radio" name="live" value="true"> Yes
-                        </label>
-                        <label class="radio-inline">
-                            <input type="radio" name="live" value="false"> Not
-                        </label>
-                    </div>
                     <h5 style="margin-top: 20px">
                         Please, put a name to the selected area
                     </h5>
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="padding-left: 0px; width: 250px">
-                        <textarea id="text_area" class="form-control" rows="1" placeholder="Name area"></textarea>
+                        <input id="text_area" class="form-control" rows="1" placeholder="Name area"></input>
                     </div>
                     <div class="no-float"></div>
                     <a type="button" id="name_area" class="btn btn-primary float-right display_questions"
@@ -257,16 +299,16 @@
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
-                                    <input type="radio" name="PI1"  value="1"> 1
+                                    <input type="radio" name="PI1" value="1"> 1
                                     Disagree
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="PI1"  value="2"> 2
+                                    <input type="radio" name="PI1" value="2"> 2
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="PI1"  value="3"> 3
+                                    <input type="radio" name="PI1" value="3"> 3
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -286,16 +328,16 @@
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
-                                    <input type="radio" name="PI2"  value="1"> 1
+                                    <input type="radio" name="PI2" value="1"> 1
                                     Disagree
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="PI2"  value="2"> 2
+                                    <input type="radio" name="PI2" value="2"> 2
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="PI2"  value="3"> 3
+                                    <input type="radio" name="PI2" value="3"> 3
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -315,16 +357,16 @@
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
-                                    <input type="radio" name="PI3"  value="1"> 1
+                                    <input type="radio" name="PI3" value="1"> 1
                                     Disagree
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="PI3"  value="2"> 2
+                                    <input type="radio" name="PI3" value="2"> 2
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="PI3"  value="3"> 3
+                                    <input type="radio" name="PI3" value="3"> 3
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -347,17 +389,18 @@
                                     relaxed when I’m at this area</p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
-                                    <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
-                                        <input type="radio" name="PA1"  value="1"> 1
+                                    <label class="radio-inline personal_radio"
+                                           style="margin-top: -10px; font-size: 12px;">
+                                        <input type="radio" name="PA1" value="1"> 1
                                         Disagree
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="PA1"  value="2"> 2
+                                        <input type="radio" name="PA1" value="2"> 2
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="PA1"  value="3"> 3
+                                        <input type="radio" name="PA1" value="3"> 3
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -376,17 +419,18 @@
                                     happiest when I’m at this area </p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
-                                    <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
-                                        <input type="radio" name="PA2"  value="1"> 1
+                                    <label class="radio-inline personal_radio"
+                                           style="margin-top: -10px; font-size: 12px;">
+                                        <input type="radio" name="PA2" value="1"> 1
                                         Disagree
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="PA2"  value="2"> 2
+                                        <input type="radio" name="PA2" value="2"> 2
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="PA2"  value="3"> 3
+                                        <input type="radio" name="PA2" value="3"> 3
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -405,17 +449,18 @@
                                     my favorite place to be</p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
-                                    <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
-                                        <input type="radio" name="PA3"  value="1"> 1
+                                    <label class="radio-inline personal_radio"
+                                           style="margin-top: -10px; font-size: 12px;">
+                                        <input type="radio" name="PA3" value="1"> 1
                                         Disagree
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="PA3"  value="2"> 2
+                                        <input type="radio" name="PA3" value="2"> 2
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="PA3"  value="3"> 3
+                                        <input type="radio" name="PA3" value="3"> 3
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -438,17 +483,18 @@
                                         area is the best place for doing the things that I enjoy most</p>
                                     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                          style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
-                                        <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
-                                            <input type="radio" name="PD1"  value="1"> 1
+                                        <label class="radio-inline personal_radio"
+                                               style="margin-top: -10px; font-size: 12px;">
+                                            <input type="radio" name="PD1" value="1"> 1
                                             Disagree
                                         </label>
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                            <input type="radio" name="PD1"  value="2"> 2
+                                            <input type="radio" name="PD1" value="2"> 2
                                         </label>
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                            <input type="radio" name="PD1"  value="3"> 3
+                                            <input type="radio" name="PD1" value="3"> 3
                                         </label>
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -467,17 +513,18 @@
                                         doing the things that I enjoy most, no other place can compare to this area</p>
                                     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                          style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
-                                        <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
-                                            <input type="radio" name="PD1"  value="1"> 1
+                                        <label class="radio-inline personal_radio"
+                                               style="margin-top: -10px; font-size: 12px;">
+                                            <input type="radio" name="PD1" value="1"> 1
                                             Disagree
                                         </label>
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                            <input type="radio" name="PD2"  value="2"> 2
+                                            <input type="radio" name="PD2" value="2"> 2
                                         </label>
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                            <input type="radio" name="PD2"  value="3"> 3
+                                            <input type="radio" name="PD2" value="3"> 3
                                         </label>
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -496,17 +543,18 @@
                                         area is not a good place to do the things I most like to do.</p>
                                     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                          style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
-                                        <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
-                                            <input type="radio" name="PD1"  value="1"> 1
+                                        <label class="radio-inline personal_radio"
+                                               style="margin-top: -10px; font-size: 12px;">
+                                            <input type="radio" name="PD1" value="1"> 1
                                             Disagree
                                         </label>
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                            <input type="radio" name="PD3"  value="2"> 2
+                                            <input type="radio" name="PD3" value="2"> 2
                                         </label>
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                            <input type="radio" name="PD3"  value="3"> 3
+                                            <input type="radio" name="PD3" value="3"> 3
                                         </label>
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -515,11 +563,11 @@
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                             <input type="radio" name="PD3" value="5"> 5
-                                            Agree 33355
+                                            Agree
                                         </label>
                                     </div>
                                     <div class="no-float"></div>
-                                    <a type="button" id="questions-sop" class="btn btn-primary float-right" >Done</a>
+                                    <a type="button" id="questions-sop" class="btn btn-primary float-right">Done</a>
                                 </div>
                             </div>
                         </div> <!-- /questions-panel-left  -->
@@ -534,17 +582,22 @@
             <div class="visible-xs col-xs-12" style="padding: 0px; padding-top: 30px">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                      <div id="map2" style="height:83vh; position: relative;">
-                        <div style="position: absolute; top: 10px; left: 40px; z-index: 998">
-                          <button class="btn btn-default btn-xs" id="draw_polyxs">
-                            <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing
-                          </button>
-                          <button class="btn btn-default btn-xs" id="delete_polyxs">
-                            <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Delete area
-                          </button>
-                        </div>
-                          <a type="button" class="btn btn-primary finish-map pop" data-toggle="popover" data-placement="top" title="Before finish" data-content="Areas that have drawn, chooses the most important to you." onclick="toggler('secondimage');" disabled>Next</a>
-                      </div> <!-- map -->
+                        <div id="map2" style="height:83vh; position: relative;">
+                            <div style="position: absolute; top: 10px; left: 40px; z-index: 998">
+                                <button class="btn btn-default btn-xs" id="draw_polyxs">
+                                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"
+                                          style="margin-right: 5px"></span> Start drawing
+                                </button>
+                                <button class="btn btn-default btn-xs" id="delete_polyxs">
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"
+                                          style="margin-right: 5px"></span> Delete area
+                                </button>
+                            </div>
+                            <a type="button" class="btn btn-primary finish-map pop" data-toggle="popover"
+                               data-placement="top" title="Before finish"
+                               data-content="Areas that have drawn, chooses the most important to you."
+                               onclick="toggler('secondimage');" disabled>Next</a>
+                        </div> <!-- map -->
                         <!-- <div class="custom_buttons_leaflet">
                             <button class="btn btn-default btn-xs" id="draw_polyxs" onclick="drawPolygon()">
                                 <span class="glyphicon glyphicon-pencil" aria-hidden="true"
@@ -582,15 +635,16 @@
                 <div class="modal-body">
                     <!--  Explanation of the process of drawing  -->
                     <p>This is a web-map survey application for Lisbon city. We invite you to draw whatever size of
-                        areas on the map freely. To start, just press Start Mapping at top left</p>
-                    <img src="img/draw.png" id="image_draw">
+                        areas on the map freely. To start, just press Start Mapping button at top-centre in the map
+                        part</p>
+                    <img src="img/draw.png">
                     <p>and then click on the map to define your first point and as many points as you need to define
                         your area. To close the area, click on the first point again. You can edit the polygon moving
                         any point at any time or delete it pressing the delete area button.</p>
-                    <img src="img/delete.png" id="image_draw">
-                    <p>You can "pan" the map or zoom in (+ or -) using the map controls and change the base map on top
-                        right corner. You can draw as many areas as you need. The more areas you place, the better! Most
-                        people place at least four areas per each concept.</p>
+                    <img src="img/delete.png">
+                    <p>You can "pan" the map or zoom in (+ or -) using the map controls.
+                        You can draw as many areas as you need. The more areas you place, the better! Most
+                        people place at least two areas per each .</p>
                 </div> <!--/.modal-body -->
                 <div class="no-float"></div>
                 <div class="modal-footer" style="border:none;">
@@ -622,8 +676,9 @@
                 </div>
                 <div class="modal-body">
                     <!--  Explanation as sliders are used  -->
-                    <p>We also want to know your perception regarding the drawn areas. So, please answer the questions h
-                        h regarding the areas when is required. We also provide you some tool to characterize the
+                    <p>We also want to know your perception regarding the drawn areas. So, please answer the questions
+                        regarding the areas when is required. We also provide you some tool "sliders" to characterize
+                        some
                         areas </p>
                     <img src="img/slider.png" id="image_slider"
                          class="col-xs-12 col-sm-10 col-md-10 col-lg-10 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
@@ -725,23 +780,24 @@
     <script src="js/API/lib.js"></script>
 
     <script>
-        $( document ).ready(function() {
+        $(document).ready(function () {
             startMapComponents();
             startAll();
         });
     </script>
 
     <script>
-        var map, drawnItems,drawControl;
+        var map, drawnItems, drawControl;
         var buttonDraw, buttonDelete;
+        var zoommap;
 
-        function startMapComponents(){
-            function isElementInViewport (el) {
+        function startMapComponents() {
+            function isElementInViewport(el) {
                 if (typeof jQuery === "function" && el instanceof jQuery) {
                     el = el[0];
                 }
                 var rect = el.getBoundingClientRect();
-                return !((rect.top==0)&&(rect.left==0)&&(rect.bottom==0)&&(rect.right==0));
+                return !((rect.top == 0) && (rect.left == 0) && (rect.bottom == 0) && (rect.right == 0));
             }
 
             // Big Map
@@ -749,7 +805,7 @@
                 scrollWheelZoom: false,
             });
             map1.on('load', function (e) {
-                if(isElementInViewport($('#map'))){
+                if (isElementInViewport($('#map'))) {
                     createAll(map1, $("#draw_poly"), $("#delete_poly"));
                 }
             });
@@ -758,13 +814,14 @@
             // Small Map
             var mapxs = L.map('map2');
             mapxs.on('load', function (e) {
-                if(isElementInViewport($('#map2'))){
+                if (isElementInViewport($('#map2'))) {
                     createAll(mapxs, $("#draw_polyxs"), $("#delete_polyxs"));
                 }
             });
             mapxs.setView([38.7500, -9.1500], 12);
 
-            function createAll(rmap, bdraw, bdelete){
+
+            function createAll(rmap, bdraw, bdelete) {
                 map = rmap;
                 buttonDraw = bdraw;
                 buttonDelete = bdelete;
@@ -809,6 +866,8 @@
                     // Edit polygon when you draw it - personal contribution
                     e.layer.editing.enable();
                     drawnItems.addLayer(layer);
+                    drawnItems.setStyle({color: '#ff0000'})
+                    zoommap = map.getZoom();
                     map.fitBounds(drawnItems.getBounds(), null);
                     $("#sliders_done").removeClass().addClass("hidden");
                     $("#title_done").removeClass().addClass("show");

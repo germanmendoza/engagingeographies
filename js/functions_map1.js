@@ -112,6 +112,7 @@ function startAll() {
 
     $('#sliders_done_button').click(function () {
         showsliders1();
+        map.setZoom(zoommap);
         buttonDraw.prop('disabled', false);
         //$("#draw_polyxs").prop('disabled', false);
         $(".finish-map").attr('disabled', false);
@@ -134,8 +135,9 @@ function startAll() {
 
          }*/
         var polygondata = {
-            type:"sop",
+            type: "sop",
             layer: drawnItems,
+            liveArea: ($("input[name=live]:checked").val()) === 'true',
             predictors: {
                 ex1: $("#ex1").slider('getValue'),
                 ex2: $("#ex2").slider('getValue'),
@@ -162,6 +164,7 @@ function startAll() {
     $('.finish-map').click(function () {
         map.removeLayer(drawnItems);
         //mapxs.removeLayer(drawnItemsxs);
+        L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {}).addTo(map);
         $(".finish-map").attr('disabled', true);
 
 
@@ -203,6 +206,7 @@ function startAll() {
             map.addLayer(SOP[i].layer);
             var sopi = SOP[i];
             SOP[i].layer.on('click', function (e) {
+                L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {}).addTo(map);
                 $('.popover').remove();
                 map.fitBounds(e.layer.getBounds(), null);
                 $("#title2_done").toggleClass("hidden show");
@@ -246,8 +250,16 @@ function startAll() {
 
     $('#questions-sop').click(function () {
 
+        // validate
+
+
+        var sopvalidation = $('[name=PI1]:checked,[name=PI2]:checked,[name=PI3]:checked,[name=PA1]:checked,[name=PA2]:checked,[name=PA3]:checked,[name=PD1]:checked,[name=PD2]:checked,[name=PD3]:checked');
+        if (sopvalidation.length < 9) {
+            alert("Please, answer all the questions");
+            return;
+        }
+
         AreaSelected.dimensions = {
-            liveArea: ($("input[name=live]:checked").val()) === 'true',
             pi1: parseInt($("input[name=PI1]:checked").val()),
             pi2: parseInt($("input[name=PI2]:checked").val()),
             pi3: parseInt($("input[name=PI3]:checked").val()),
@@ -276,10 +288,10 @@ function startAll() {
                 alert("PROBLEMS");
             }
             else {
-             util.redirectToPage({
-                 url:"map2.html",
-                 payload:response.id
-             });
+                util.redirectToPage({
+                    url: "map2.html",
+                    payload: response.id
+                });
             }
         });
 

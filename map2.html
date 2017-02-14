@@ -114,9 +114,7 @@
                 <!-- ------------------------------- Social capital explanation --------------------------------------------- -->
                 <div class="show" id="communities_done">
                     <p>
-                        Social capital is built at the “level” of 1) families, communities, firms, associations (groups)
-                        and 2) national or sub-national administrative units and other institutions. If we focus on the
-                        first group. I would like to start by asking you about the online/offline groups or
+                        I would like to start by asking you about the groups of people or
                         organizations, networks, associations to which you belong. These could be formally organized
                         groups (religious groups, familiar groups, sports teams, workplace groups…) or just groups of
                         people who get together regularly to do an activity or talk about things.
@@ -125,22 +123,94 @@
                         How many groups do you have? Take your time :)
                     </h5>
 
-                        <!-- <div  class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-lg-9 col-md-9 col-sm-9 col-xs-9"> -->
+                    <!-- <div  class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-lg-9 col-md-9 col-sm-9 col-xs-9"> -->
                     <div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-2 col-lg-6 col-md-6 col-sm-6 col-xs-7 col-xs-offset-2 float-left">
-                        <textarea class="form-control" id="number_group" style="text-align: center; width: 100%"
-                                  rows="1"></textarea>
+                        <input class="form-control" id="number_group" style="text-align: center; width: 100%"
+                               rows="1"></input>
                     </div>
                     <div class="float-left col-lg-3 col-md-3 col-sm-3 col-xs-3">
                         <a type="button" class="btn btn-primary" id="submit_number_group">Done</a>
                     </div>
-                    <div class="no-float"></div>
+                    <!--<div class="no-float"></div>
                     <p style="margin-top: 30px" class="hidden" id="second_part_SC">
                         Now, think about how many of them you can draw on a map. They can represent area/s, a set of points or a just a
                         point, but for sure many of these groups, organizations, networks, associations that you belong
                         are based on or related with some place. <b>Please, draw their areas.</b>
                     </p>
-                    <div class="no-float"></div>
+                    <div class="no-float"></div>-->
                 </div>
+                <!-- ------------------------------- Social capital explanation --------------------------------------------- -->
+                <!-- ------------------------------- Social capital specification groups --------------------------------------------- -->
+
+                <div class="hidden" id="SC_group">
+                    <p>
+                    <h5 style="margin-top: 20px" id="textchange">
+                        Now, think about the Group X from L that you have.
+                    </h5>
+                    </p>
+                    <h5 style="margin-top: 20px">
+                        Does it can be related with or based on some place?
+                    </h5>
+                    <div>
+                        <label class="radio-inline">
+                            <input type="radio" name="spatial" value="true" checked="checked"> Yes
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="spatial" value="false"> Not
+                        </label>
+                    </div>
+                <div class="no-float"></div>
+                <a type="button" class="btn btn-primary float-right" id="spatial_dimension">Done</a>
+                <div class="no-float"></div>
+                </div>
+
+                <!--<div class="hidden">
+                    <h5 style="margin-top: 20px">
+                        Please, put a name to this group.
+                    </h5>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="padding-left: 0px; width: 250px">
+                        <input id="text_area" class="form-control" rows="1"></input>
+                    </div>
+
+                    <div>
+
+                        <h5 style="margin-top: 20px">
+                            Please, select the nature of this social group.
+                        </h5>
+                    </div>
+                    <div style="margin-bottom: 20px">
+                        <select id="study">
+                            <option value="1">Business</option>
+                            <option value="2">Women's</option>
+                            <option value="3">Finance</option>
+                            <option value="4">Political</option>
+                            <option value="5">Youth</option>
+                            <option value="6">Religious</option>
+                            <option value="7">Cultural</option>
+                            <option value="8">Neighborhood/Village</option>
+                            <option value="9">Family</option>
+                            <option value="10">School</option>
+                            <option value="11">Health</option>
+                            <option value="12">Sports</option>
+                            <option value="13">Civic</option>
+                            <option value="14">NGO</option>
+                            <option value="15">Professional</option>
+                            <option value="16">Friend</option>
+                            <option value="17">Leisure</option>
+                            <option value="18">Ecology</option>
+                        </select>
+                    </div>
+                    <p></p>
+                    <div class="no-float"></div>
+                    <a type="button" id="name_area" class="btn btn-primary float-right display_questions"
+                       onclick="changeclass();" disabled>Done</a>
+                    <div class="no-float"></div>
+
+                </div>
+-->
+
+                <!-- ------------------------------- Social capital specification groups --------------------------------------------- -->
+
 
                 <div class="hidden" id="title2_done">
                     <p style="margin-bottom: 20px"><b>Good Job!</b> You have drawn X
@@ -333,7 +403,7 @@
                 </div>
                 <!-- -------------------------------  End questions ----------------------------------------------------- -->
                 <!-- ------------------------------- Do you live in that area?  -------------------------------------- -->
-                <div class="hidden" id="area_done">
+                <!--<div class="hidden" id="area_done">
                     <h5 style="margin-top: 20px">
                         Do you live in that area?
                     </h5>
@@ -355,7 +425,7 @@
                     <a type="button" id="name_area" class="btn btn-primary float-right display_questions"
                        onclick="changeclass();" disabled>Done</a>
                     <div class="no-float"></div>
-                </div>
+                </div>-->
                 <!-- ------------------------------- End Do you live in that area? ----------------------------------- -->
                 <!-- ------------------------------- SC questions  -------------------------------------------------- -->
                 <div class="hidden" id="sc_done">
@@ -372,7 +442,7 @@
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
-                                    <input type="radio" name="soc1"  value="1"> 1
+                                    <input type="radio" name="soc1" value="1"> 1
                                     Disagree
                                 </label>
                                 <label class="radio-inline"
@@ -381,15 +451,15 @@
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="soc1"  value="3"> 3
+                                    <input type="radio" name="soc1" value="3"> 3
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="soc1"  value="4"> 4
+                                    <input type="radio" name="soc1" value="4"> 4
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="soc1"  value="5"> 5
+                                    <input type="radio" name="soc1" value="5"> 5
                                     Agree
                                 </label>
                             </div>
@@ -430,24 +500,24 @@
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
-                                    <input type="radio" name="soc3"  value="1"> 1
+                                    <input type="radio" name="soc3" value="1"> 1
                                     Disagree
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="soc3"  value="2"> 2
+                                    <input type="radio" name="soc3" value="2"> 2
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="soc3"  value="3"> 3
+                                    <input type="radio" name="soc3" value="3"> 3
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="soc3"  value="4"> 4
+                                    <input type="radio" name="soc3" value="4"> 4
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="soc3"  value="5"> 5
+                                    <input type="radio" name="soc3" value="5"> 5
                                     Agree
                                 </label>
                             </div>
@@ -465,17 +535,17 @@
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                     <label class="radio-inline personal_radio"
                                            style="margin-top: -10px; font-size: 12px;">
-                                        <input type="radio" name="n1"  value="1">
+                                        <input type="radio" name="n1" value="1">
                                         1 Disagree
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="n1"  value="2">
+                                        <input type="radio" name="n1" value="2">
                                         2
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="n1"  value="3">
+                                        <input type="radio" name="n1" value="3">
                                         3
                                     </label>
                                     <label class="radio-inline"
@@ -503,22 +573,22 @@
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="n2"  value="2">
+                                        <input type="radio" name="n2" value="2">
                                         2
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="n2"  value="3">
+                                        <input type="radio" name="n2" value="3">
                                         3
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="n2"  value="4">
+                                        <input type="radio" name="n2" value="4">
                                         4
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="n2"  value="5">
+                                        <input type="radio" name="n2" value="5">
                                         5 Agree
                                     </label>
                                 </div>
@@ -531,27 +601,27 @@
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                     <label class="radio-inline personal_radio"
                                            style="margin-top: -10px; font-size: 12px;">
-                                        <input type="radio" name="n3"  value="1">
+                                        <input type="radio" name="n3" value="1">
                                         1 Disagree
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="n3"  value="2">
+                                        <input type="radio" name="n3" value="2">
                                         2
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="n3"  value="3">
+                                        <input type="radio" name="n3" value="3">
                                         3
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="n3"  value="4">
+                                        <input type="radio" name="n3" value="4">
                                         4
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="n3"  value="5">
+                                        <input type="radio" name="n3" value="5">
                                         5 Agree
                                     </label>
                                 </div>
@@ -763,7 +833,8 @@
                                                            value="5"> 5 Agree
                                                 </label>
                                             </div>
-                                            <a type="button" id="questions-sc" class="btn btn-primary float-right">Done</a>
+                                            <a type="button" id="questions-sc"
+                                               class="btn btn-primary float-right">Done</a>
                                         </div>
                                     </div>
                                 </div> <!-- /questions-panel-left  -->
@@ -791,7 +862,9 @@
                             Delete area
                         </button>
                     </div>
-                    <a type="button" class="btn btn-primary finish-map pop" data-toggle="popover" data-placement="top" title="Before finish" data-content="Areas that have drawn, chooses the most important to you." onclick="toggler('secondimage');" disabled>Next</a>
+                    <a type="button" class="btn btn-primary finish-map pop" data-toggle="popover" data-placement="top"
+                       title="Before finish" data-content="Areas that have drawn, chooses the most important to you."
+                       onclick="toggler('secondimage');" disabled>Next</a>
                 </div> <!-- map -->
                 <!-- <div class="custom_buttons_leaflet">
                     <button class="btn btn-default btn-xs" id="draw_polyxs" onclick="drawPolygon()">
@@ -969,10 +1042,12 @@
 <script src="js/API/lib.js"></script>
 
 <script>
-    $( document ).ready(function() {
+    $(document).ready(function () {
         startMapComponents();
         startAll();
     });
+
+
 </script>
 
 
@@ -1065,42 +1140,42 @@
                 $(".finish-map").attr('disabled', true);
                 showsliders();
                 /*$("#sliders_done").removeClass().addClass("hidden");
-             $("#title_done").removeClass().addClass("show");
-             $("#title2_done").removeClass().addClass("hidden");
-             $("#draw_poly").prop('disabled', true);
-             $(".finish-map").attr('disabled', true);
-             showsliders();*/
+                 $("#title_done").removeClass().addClass("show");
+                 $("#title2_done").removeClass().addClass("hidden");
+                 $("#draw_poly").prop('disabled', true);
+                 $(".finish-map").attr('disabled', true);
+                 showsliders();*/
 
 
-        });
-
-        map.on
-
-        ('draw:edited', function (e) {
-            var layers = e.layers;
-            var countOfEditedLayers = 0;
-            layers.eachLayer(function (layer) {
-                countOfEditedLayers++;
             });
-            console.log("Edited " + countOfEditedLayers + " layers");
-            //map.fitBounds(drawnItems.getBounds(), null);
-        });
 
-        // Customize button delete polygon - personal contribution
-        bdelete.on('click', function () {
-            drawnItems.clearLayers();
-            if ($('#title2_done').is(":hidden")) {
-                $("#communities_done").removeClass().addClass("show");
-                $("#second_part_SC").removeClass().addClass("show");
-                $("#draw_poly").prop('disabled', false);
-                $("#questions_done").removeClass().addClass("hidden");
-            }
-        });
+            map.on
 
-        bdraw.on('click', function () {
-            var polygonDrawer = new L.Draw.Polygon(map, drawControl);
-            polygonDrawer.enable();
-        });
+            ('draw:edited', function (e) {
+                var layers = e.layers;
+                var countOfEditedLayers = 0;
+                layers.eachLayer(function (layer) {
+                    countOfEditedLayers++;
+                });
+                console.log("Edited " + countOfEditedLayers + " layers");
+                //map.fitBounds(drawnItems.getBounds(), null);
+            });
+
+            // Customize button delete polygon - personal contribution
+            bdelete.on('click', function () {
+                drawnItems.clearLayers();
+                if ($('#title2_done').is(":hidden")) {
+                    $("#communities_done").removeClass().addClass("show");
+                    $("#second_part_SC").removeClass().addClass("show");
+                    $("#draw_poly").prop('disabled', false);
+                    $("#questions_done").removeClass().addClass("hidden");
+                }
+            });
+
+            bdraw.on('click', function () {
+                var polygonDrawer = new L.Draw.Polygon(map, drawControl);
+                polygonDrawer.enable();
+            });
         }
     }
 
