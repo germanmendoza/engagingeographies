@@ -95,6 +95,8 @@ function startAll() {
         counterAreasName();
         buttonDraw.prop('disabled', false);
         $(".finish-map").attr('disabled', false);
+        map.setZoom(zoommap);
+
 
 
         var polygondata = {
