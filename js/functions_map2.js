@@ -13,8 +13,6 @@ var name_groups;
 var number = 0;
 
 function startAll() {
-
-
     buttonDelete.prop('disabled', true);
     buttonDraw.prop('disabled', true);
 
@@ -30,6 +28,7 @@ function startAll() {
             $("#groups_done").toggleClass("hidden show");
             namegroup();
             currGroup = {
+                name: name_groups[number],
                 areas: [],
                 layergroup: new L.featureGroup()
             };
@@ -59,6 +58,8 @@ function startAll() {
             if (number == name_groups.length - 1) {
                 alert("Ok, let's go for the next group");
                 showAllGroups();
+                $("#select_group").toggleClass("hidden show");
+                $("#SC_group").toggleClass("hidden show");
             }
             else {
                 number = number + 1;
@@ -97,11 +98,9 @@ function startAll() {
         $(".finish-map").attr('disabled', false);
         map.setZoom(zoommap);
 
-
-
-        var polygondata = {
+        var polygonData = {
             type: "sc",
-            layer: drawnItems,
+            layer: L.geoJson(drawnItems.toGeoJSON()),
             socialCapital: {
                 bosc1: parseInt($("input[name=bosc1]:checked").val()),
                 bosc2: parseInt($("input[name=bosc2]:checked").val()),
@@ -111,16 +110,12 @@ function startAll() {
                 brsc3: parseInt($("input[name=brsc3]:checked").val())
             }
         };
-
-        currGroup.areas.push(polygondata);
-        currGroup.layergroup.addLayer(drawnItems);
-
+        currGroup.areas.push(polygonData);
 
         map.removeLayer(drawnItems);
         drawnItems = new L.FeatureGroup();
         map.addLayer(drawnItems);
-        //currGroup.layergroup.addTo(map);
-
+        map.addLayer(polygonData.layer);
     });
 
 
@@ -129,16 +124,29 @@ function startAll() {
 
     $('.finish-map').click(function () {
         map.removeLayer(drawnItems);
-        if (currGroup.areas.length > 0) {
-            currGroup.position = number;
-            SC.push(currGroup);
+
+        currGroup.position = number;
+        SC.push(currGroup);
+
+        for (var j = 0; j < currGroup.areas.length; j++) {
+            map.removeLayer(currGroup.areas[j].layer);
         }
+
         if (number == name_groups.length - 1) {
             showAllGroups();
+            $("#select_group").toggleClass("hidden show");
+            $("#another_draw").toggleClass("hidden show");
         }
         else {
             number = number + 1;
             namegroup();
+            currGroup = {
+                name: name_groups[number],
+                areas: []
+            };
+            drawnItems = new L.FeatureGroup();
+            map.addLayer(drawnItems);
+
             $("#SC_group").removeClass().addClass("show");
             $("#another_draw").removeClass().addClass("hidden");
             buttonDelete.prop('disabled', true);
@@ -146,66 +154,62 @@ function startAll() {
         }
     });
 
+    var highlightedGroup = null;
+
     function showAllGroups() {
         buttonDraw.prop('disabled', true);
         buttonDelete.prop('disabled', true);
-        for (i = 0; i < SC.length; i++) {
+
+        var group = new L.featureGroup();
+        for (var i = 0; i < SC.length; i++) {
             var cGroup = SC[i];
-            for (j = 0; j < cGroup.areas.length; j++) {
-                group.addLayer(cGroup.areas[i].layer);
-                map.addLayer(cGroup.areas[i].layer);
+            for (var j = 0; j < cGroup.areas.length; j++) {
+                cGroup.areas[j].layer.setStyle({color: '#6000ff'});
+                group.addLayer(cGroup.areas[j].layer);
+                map.addLayer(cGroup.areas[j].layer);
             }
-            /*var sci = SC[i];
-             SC[i].layer.on('click', function (e) {
-             $('.popover').remove();
-             map.fitBounds(e.layer.getBounds(), null);
-             $("#title2_done").toggleClass("hidden show");
-             $("#area_done").toggleClass("hidden show");
-             $("input:radio[name=live]:first").attr('checked', true);
-             $('#name_area').attr('disabled', false);
-             AreaSelected = sci;
-             });*/
+            // Add to radio
+            $('#radios').append('<div class="radio"><label><input type="radio" name="sc_groups" value="' + i + '"/>' + cGroup.name + '</label></div>');
         }
+
+        $("input[name='sc_groups']").change(function(){
+            if (highlightedGroup != null){
+                for (var j = 0; j < highlightedGroup.areas.length; j++) {
+                    highlightedGroup.areas[j].layer.setStyle({color: '#6000ff'});
+                }
+            }
+            var index = parseInt($("input[name=sc_groups]:checked").val());
+            highlightedGroup = SC[index];
+            for (var j = 0; j < highlightedGroup.areas.length; j++) {
+                highlightedGroup.areas[j].layer.setStyle({color: '#FF0000'});
+            }
+        });
+
         map.fitBounds(group.getBounds(), null);
-    }
 
-    /*$('.finish-map').click(function () {
-     map.removeLayer(drawnItems);
-     //mapxs.removeLayer(drawnItemsxs);
-     $(".finish-map").attr('disabled', true);
-
-     buttonDraw.prop('disabled', true);
-     buttonDelete.prop('disabled', true);
-     for (i = 0; i < SC.length; i++) {
-     group.addLayer(SC[i].layer);
-     map.addLayer(SC[i].layer);
-     var sci = SC[i];
-     SC[i].layer.on('click', function (e) {
-     $('.popover').remove();
-     map.fitBounds(e.layer.getBounds(), null);
-     $("#title2_done").toggleClass("hidden show");
-     $("#area_done").toggleClass("hidden show");
-     $("input:radio[name=live]:first").attr('checked', true);
-     $('#name_area').attr('disabled', false);
-     AreaSelected = sci;
-     });
-     }
-     map.fitBounds(group.getBounds(), null);
-     });*/
-
-
-    $('#name_area').click(function () {
-        if (!$("#text_area").val()) {
-            alert("tonto");
-        }
-        else {
-            namearea = $("#text_area").val();
-            $("#area_done").toggleClass("hidden show");
+        $('#choose_group').click(function () {
+            buttonDraw.prop('disabled', true);
+            buttonDelete.prop('disabled', true);
             $("#sc_done").toggleClass("hidden show");
-            var replaced = $("#change").html().replace('X', namearea);
-            $("#change").html(replaced);
-        }
-    });
+            $("#select_group").toggleClass("hidden show");
+
+            for (var i = 0; i < SC.length; i++) {
+                for (var j = 0; j < SC[i].areas.length; j++) {
+                    map.removeLayer(SC[i].areas[j].layer);
+                }
+            }
+
+            var group = new L.featureGroup();
+
+            for (var j = 0; j < highlightedGroup.areas.length; j++) {
+                highlightedGroup.areas[j].layer.setStyle({color: '#FF0000'});
+                group.addLayer(highlightedGroup.areas[j].layer);
+                map.addLayer(highlightedGroup.areas[j].layer);
+            }
+
+            map.fitBounds(group.getBounds(), null);
+        });
+    }
 
 
     uiCoreAPI.instanceUrl = "http://localhost:8080/";
@@ -222,7 +226,7 @@ function startAll() {
 
 
     $('#questions-sc').click(function () {
-        AreaSelected.dimensions = {
+        highlightedGroup.dimensions = {
             liveArea: ($("input[name=live]:checked").val()) === 'true',
             sc1: parseInt($("input[name=sc1]:checked").val()),
             sc2: parseInt($("input[name=sc2]:checked").val()),
@@ -238,8 +242,11 @@ function startAll() {
             cp3: parseInt($("input[name=cp3]:checked").val())
         };
 
-        for (i = 0; i < SC.length; i++) {
-            SC[i].layer = JSON.stringify(SC[i].layer.toGeoJSON());
+        for (var i = 0; i < SC.length; i++) {
+            var cGroup = SC[i];
+            for (var j = 0; j < cGroup.areas.length; j++) {
+                cGroup.areas[j].layer = JSON.stringify(cGroup.areas[j].layer.toGeoJSON());
+            }
         }
 
         var id = util.getFromLocalStorage(util.interPageDataKey);
