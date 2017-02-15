@@ -29,8 +29,7 @@ function startAll() {
             namegroup();
             currGroup = {
                 name: name_groups[number],
-                areas: [],
-                layergroup: new L.featureGroup()
+                areas: []
             };
         }
         else {
@@ -104,10 +103,8 @@ function startAll() {
             socialCapital: {
                 bosc1: parseInt($("input[name=bosc1]:checked").val()),
                 bosc2: parseInt($("input[name=bosc2]:checked").val()),
-                bosc3: parseInt($("input[name=bosc3]:checked").val()),
                 brsc1: parseInt($("input[name=brsc1]:checked").val()),
-                brsc2: parseInt($("input[name=brsc2]:checked").val()),
-                brsc3: parseInt($("input[name=brsc3]:checked").val())
+                brsc2: parseInt($("input[name=brsc2]:checked").val())
             }
         };
         currGroup.areas.push(polygonData);
