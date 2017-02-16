@@ -46,12 +46,8 @@
 
 
          var polygondata = {
-             layer: drawnItems,
-             civicEngagement: {
-                 ce1: parseInt($("input[name=ce1]:checked").val()),
-                 ce2: parseInt($("input[name=ce2]:checked").val()),
-                 ce3: parseInt($("input[name=ce3]:checked").val())
-             }
+             layer: drawnItems
+             //,livingIn = input...
          };
 
          CE.push(polygondata);
@@ -65,6 +61,11 @@
 
          var data = {
              type:"ce",
+             civicEngagement: {
+                 ce1: parseInt($("input[name=ce1]:checked").val()),
+                 ce2: parseInt($("input[name=ce2]:checked").val()),
+                 ce3: parseInt($("input[name=ce3]:checked").val())
+             },
              id: id,
              areas: CE
          };
