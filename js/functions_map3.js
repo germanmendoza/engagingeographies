@@ -46,6 +46,7 @@
 
 
          var polygondata = {
+             type:"cea",
              layer: drawnItems
              //,livingIn = input...
          };

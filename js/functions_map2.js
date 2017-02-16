@@ -126,6 +126,7 @@ function startAll() {
 
 
         var polygonData = {
+            type: "sca",
             layer: L.geoJson(drawnItems.toGeoJSON()),
             livingIn: ($("input[name=live]:checked").val()) === 'true',
             socialCapital: {

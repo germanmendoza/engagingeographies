@@ -102,6 +102,7 @@ function startAll() {
 
 
         var polygondata = {
+            type: "sopa",
             layer: drawnItems,
             livingIn: ($("input[name=live]:checked").val()) === 'true',
             predictors: {
