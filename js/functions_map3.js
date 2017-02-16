@@ -5,24 +5,26 @@
  function startAll() {
      var CE = [];
 
-     $('#bonding_done').click(function () {
+     buttonDraw.prop('disabled', true);
+     buttonDelete.prop('disabled', true);
+
+
+
+     $('#ce_done').click(function () {
+
+
+         /*var cevalidationbondingbridging = $('[name=ce1]:checked,[name=ce2]:checked,[name=ce3]:checked');
+         if (cevalidationbondingbridging.length < 3) {
+             alert("Please, answer all the questions");
+             return;
+         }*/
          buttonDraw.prop('disabled', false);
-         $(".finish-map").attr('disabled', false);
+         buttonDelete.prop('disabled', false);
+         //$(".finish-map").attr('disabled', false);
 
-         var polygondata = {
-             type:"ce",
-             layer: drawnItems,
-             civicEngagement: {
-                 ce1: parseInt($("input[name=ce1]:checked").val()),
-                 ce2: parseInt($("input[name=ce2]:checked").val()),
-                 ce3: parseInt($("input[name=ce3]:checked").val())
-             }
-         };
+         $("#questions_done").toggleClass("hidden show");
+         $("#draw_ce").toggleClass("hidden show");
 
-         CE.push(polygondata);
-         map.removeLayer(drawnItems);
-
-         showsliders1();
 
          drawnItems = new L.FeatureGroup();
          map.addLayer(drawnItems);
@@ -41,6 +43,20 @@
      };
 
      $('#questions-ce').click(function () {
+
+
+         var polygondata = {
+             layer: drawnItems,
+             civicEngagement: {
+                 ce1: parseInt($("input[name=ce1]:checked").val()),
+                 ce2: parseInt($("input[name=ce2]:checked").val()),
+                 ce3: parseInt($("input[name=ce3]:checked").val())
+             }
+         };
+
+         CE.push(polygondata);
+         map.removeLayer(drawnItems);
+
          for (i = 0; i < CE.length; i++) {
              CE[i].layer = JSON.stringify(CE[i].layer.toGeoJSON());
          }
@@ -48,8 +64,9 @@
          var id = util.getFromLocalStorage(util.interPageDataKey);
 
          var data = {
+             type:"ce",
              id: id,
-             factors: CE
+             areas: CE
          };
 
 

@@ -210,11 +210,11 @@
                             <option value="18">Other</option>
                         </select>
                     </div>
-                    <p></p>
+                    <!--<p></p>
                     <div class="no-float"></div>
                     <a type="button" id="specifications_done" class="btn btn-primary float-right display_questions"
                        onclick="changeclass();">Done</a>
-                    <div class="no-float"></div>
+                    <div class="no-float"></div>-->
 
                 </div>
                 <!-- ------------------------------- Social capital specifications  --------------------------------------------- -->
@@ -224,6 +224,7 @@
 
                 <div class="hidden" id="draw">
                     <p style="margin-bottom: 20px"><b><h4>Let's draw!</h4></b></p>
+                    <div id="let_draw">
                     Please, draw all the areas that define
                     the group X using
                     <button class="btn btn-default btn-xs" disabled>
@@ -236,6 +237,7 @@
                                           style="margin-right: 5px"></span> Delete area
                     </button>
                     button on the map.
+                    </div>
                 </div>
 
                 <!-- ------------------------------- Social capital spatialization (let's draw)  --------------------------------------------- -->
@@ -414,7 +416,7 @@
                     </h5>
                     <div class="no-float">
                         <div>
-                            <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">I feel like a
+                            <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc1">I feel like a
                                 member of Y group</p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
@@ -443,7 +445,7 @@
                         </div>
                         <div class="no-float"></div>
                         <div>
-                            <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">I belong to the
+                            <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc2">I belong to the
                                 Y group</p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
@@ -472,7 +474,7 @@
                         </div>
                         <div class="no-float"></div>
                         <div>
-                            <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">I feel connected
+                            <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc3">I feel connected
                                 to the Y group.</p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
@@ -506,7 +508,7 @@
                         </h5>
                         <div class="no-float">
                             <div>
-                                <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Help a Y
+                                <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="n1">Help a Y group
                                     member in an emergency.</p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
@@ -539,8 +541,8 @@
                             </div>
                             <div class="no-float"></div>
                             <div>
-                                <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Offer an
-                                    advice on a personal problem of a Y member</p>
+                                <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="n2">Offer an
+                                    advice on a personal problem of a Y group member</p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                     <label class="radio-inline personal_radio"
@@ -572,8 +574,8 @@
                             </div>
                             <div class="no-float"></div>
                             <div>
-                                <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Discuss a
-                                    problem with a Y member</p>
+                                <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="n3">Discuss a
+                                    problem with a Y group member</p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                     <label class="radio-inline personal_radio"
@@ -609,7 +611,7 @@
                             </h5>
                             <div class="no-float">
                                 <div>
-                                    <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">I think
+                                    <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="cee1">I think
                                         that a collective action from this group (Y) will
                                         increase chances of the government changing their plans?</p>
                                     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
@@ -643,7 +645,7 @@
                                 </div>
                                 <div class="no-float"></div>
                                 <div>
-                                    <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">I think
+                                    <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="cee2">I think
                                         that together we can change a (Y) problem</p>
                                     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                          style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
@@ -676,7 +678,7 @@
                                 </div>
                                 <div class="no-float"></div>
                                 <div>
-                                    <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">I think
+                                    <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="cee3">I think
                                         that is important to get people on the (Y) group to help each other more.</p>
                                     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                          style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
@@ -712,8 +714,8 @@
                                     </h5>
                                     <div class="no-float">
                                         <div>
-                                            <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">
-                                                Have you attended a group meeting in the last 12 months?</p>
+                                            <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="cp1">
+                                                Have you attended a group (Y) meeting in the last 12 months?</p>
                                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                                 <label class="radio-inline personal_radio"
@@ -745,7 +747,7 @@
                                         </div>
                                         <div class="no-float"></div>
                                         <div>
-                                            <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">
+                                            <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="cp2">
                                                 How often do you participate in the activities of (Y) group in the last
                                                 12 months?</p>
                                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
@@ -779,7 +781,7 @@
                                         </div>
                                         <div class="no-float"></div>
                                         <div>
-                                            <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">
+                                            <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="cp3">
                                                 To what extent do you participate in the (Y) group decision-making in
                                                 the last 12 months?</p>
                                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
@@ -920,7 +922,10 @@
     var map, drawnItems, drawControl;
     var buttonDraw, buttonDelete;
 
+
     function startMapComponents() {
+
+        zoommap = -100;
 
         function isElementInViewport(el) {
             if (typeof jQuery === "function" && el instanceof jQuery) {
@@ -1004,6 +1009,10 @@
                 buttonDraw.prop('disabled', true);
                 $("#draw").removeClass().addClass("hidden");
                 $("#another_draw").removeClass().addClass("hidden");
+                $("#specifications").removeClass().addClass("hidden");
+                if (zoommap != -100) {
+                    map.setZoom(zoommap);
+                }
 
 
 
@@ -1060,6 +1069,7 @@
             bdraw.on('click', function () {
                 var polygonDrawer = new L.Draw.Polygon(map, drawControl);
                 polygonDrawer.enable();
+
             });
         }
     }

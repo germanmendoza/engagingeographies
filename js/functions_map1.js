@@ -69,75 +69,41 @@ function startAll() {
         $("#ex8SliderVal").text(slideEvt.value);
     });
 
-    /*
-     $('.display_sliders').click(function () {
-     $(sliders_done).toggleClass('hidden');
-     $(sliders_done).toggleClass('show');
-     });
 
-     $('.display_title').click(function () {
-     $(title_done).toggleClass('hidden');
-     $(title_done).toggleClass('show');
-     });
+    var namearea;
 
-     $('.display_title2').click(function () {
-     $(title2_done).toggleClass('hidden');
-     $(title2_done).toggleClass('show');
-     });
-
-
-     $('.display_area').click(function () {
-     $(area_done).toggleClass('hidden');
-     $(area_done).toggleClass('show');
-     });
-
-     $('.display_questions').click(function () {
-     $(questions_done).toggleClass('hidden');
-     $(question_done).toggleClass('show');
-     });
-
-     $('.showhide').click(function () {
-     $(sliders_done).toggleClass('hidden');
-     $(sliders_done).toggleClass('show');
-     });*/
-
-
-    function showsliders1() {
-
-        $("#sliders_done").toggleClass("show hidden");
-        $("#title2_done").toggleClass("hidden show");
-    }
+    $('#name_area').click(function () {
+        if (!$("#text_area").val()) {
+            alert("tonto")
+        }
+        else {
+            namearea = $("#text_area").val();
+            $("#area_done").toggleClass("hidden show");
+            $("#questions_done").toggleClass("hidden show");
+            var replaced = $("#change").html().replace('X', namearea);
+            $("#change").html(replaced);
+        }
+    });
 
     var SOP = [];
 
     $('#sliders_done_button').click(function () {
-        showsliders1();
         map.setZoom(zoommap);
         buttonDraw.prop('disabled', false);
         //$("#draw_polyxs").prop('disabled', false);
         $(".finish-map").attr('disabled', false);
-        var area = "";
-        for (i = 1; i <= 7; i++) {
-            $('input[id=ex' + i + ']').slider('setValue', 0);
-            $('span[id=ex' + i + 'SliderVal]').text(0);
-        }
-        ;
-        /*if (drawnItems.getLayers().length != 0) {
-         area = drawnItems; //.toGeoJSON();
-         realmap = map;
-         AreasShow.push(drawnItems);
 
-         }
-         else {
-         area = drawnItemsxs;//.toGeoJSON();
-         realmap = mapxs;
-         AreasShowxs.push(drawnItemsxs);
+        $("#sliders_done").toggleClass("hidden show");
+        $("#title2_done").toggleClass("hidden show");
 
-         }*/
+
+
+
+
+
         var polygondata = {
-            type: "sop",
             layer: drawnItems,
-            liveArea: ($("input[name=live]:checked").val()) === 'true',
+            livingIn: ($("input[name=live]:checked").val()) === 'true',
             predictors: {
                 ex1: $("#ex1").slider('getValue'),
                 ex2: $("#ex2").slider('getValue'),
@@ -148,14 +114,17 @@ function startAll() {
                 ex7: $("#ex7").slider('getValue')
             }
         };
+
+        for (i = 1; i <= 7; i++) {
+            $('input[id=ex' + i + ']').slider('setValue', 0);
+            $('span[id=ex' + i + 'SliderVal]').text(0);
+        };
+
+
         SOP.push(polygondata);
         map.removeLayer(drawnItems);
-        //mapxs.removeLayer(drawnItemsxs);
         drawnItems = new L.FeatureGroup();
         map.addLayer(drawnItems);
-        //drawnItemsxs = new L.FeatureGroup();
-        //map.addLayer(drawnItemsxs);
-
     });
 
     var AreaSelected;
@@ -163,42 +132,8 @@ function startAll() {
 
     $('.finish-map').click(function () {
         map.removeLayer(drawnItems);
-        //mapxs.removeLayer(drawnItemsxs);
         L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {}).addTo(map);
         $(".finish-map").attr('disabled', true);
-
-
-        //bounding total zoom
-        /*if (AreasShow.length != 0) {
-         buttonDraw.prop('disabled', true);
-         buttonDelete.prop('disabled', true);
-         for (i=0;i<AreasShow.length; i++) {
-         group.addLayer(AreasShow[i]);
-         map.addLayer(AreasShow[i]);
-         AreasShow[i].on('click', function(e) {
-         $('.popover').remove();
-         map.fitBounds(e.layer.getBounds(), null);
-         $("#title2_done").toggleClass("hidden show");
-         $("#questions_done").toggleClass("hidden show");
-
-         });
-         }
-         map.fitBounds(group.getBounds(), null);
-         }
-         else {
-         buttonDelete.prop('disabled', true);
-         //$("#delete_polyxs").prop('disabled', true);
-         for (i=0;i<AreasShowxs.length; i++) {
-         group.addLayer(AreasShowxs[i]);
-         map.addLayer(AreasShowxs[i]);
-         AreasShowxs[i].on('click', function(e) {
-         map.fitBounds(e.layer.getBounds(), null);
-         $("#title2_done").toggleClass("hidden show");
-         $("#questions_done").toggleClass("hidden show");
-         });
-         }
-         map.fitBounds(group.getBounds(), null);
-         }*/
         buttonDraw.prop('disabled', true);
         buttonDelete.prop('disabled', true);
         for (i = 0; i < SOP.length; i++) {
@@ -219,20 +154,7 @@ function startAll() {
         map.fitBounds(group.getBounds(), null);
     });
 
-    var namearea;
 
-    $('#name_area').click(function () {
-        if (!$("#text_area").val()) {
-            alert("tonto")
-        }
-        else {
-            namearea = $("#text_area").val();
-            $("#area_done").toggleClass("hidden show");
-            $("#questions_done").toggleClass("hidden show");
-            var replaced = $("#change").html().replace('X', namearea);
-            $("#change").html(replaced);
-        }
-    });
 
 
     uiCoreAPI.instanceUrl = "http://localhost:8080/";
@@ -259,6 +181,8 @@ function startAll() {
             return;
         }
 
+        // finish validate
+
         AreaSelected.dimensions = {
             pi1: parseInt($("input[name=PI1]:checked").val()),
             pi2: parseInt($("input[name=PI2]:checked").val()),
@@ -278,8 +202,9 @@ function startAll() {
         var id = util.getFromLocalStorage(util.interPageDataKey);
 
         var data2 = {
+            type: "sop",
             id: id,
-            factors: SOP
+            areas: SOP
         };
 
 
@@ -300,10 +225,5 @@ function startAll() {
 
 }
 
-function showsliders() {
-
-    $("#sliders_done").toggleClass("show hidden");
-    $("#title_done").toggleClass("hidden show");
-}
 
 

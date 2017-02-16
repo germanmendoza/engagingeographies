@@ -54,11 +54,14 @@ function startAll() {
             $("#specifications").toggleClass("hidden show");
         }
         else {
-            if (number == name_groups.length - 1) {
+            if (number == name_groups.length - 1 && number != 0) {
                 alert("Ok, let's go for the next group");
                 showAllGroups();
                 $("#select_group").toggleClass("hidden show");
                 $("#SC_group").toggleClass("hidden show");
+            }
+            else if (number == 0) {
+                window.location.replace("map3.html");
             }
             else {
                 number = number + 1;
@@ -70,8 +73,25 @@ function startAll() {
         }
     });
 
+    $('#nature').change(function () {
+        if ($("#nature").val() != "0") {
 
-    $('#specifications_done').click(function () {
+            $("#let_draw").html('Please, draw all the areas that define the group X using <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="margin-right: 5px"></span> Start drawing </button>button and you can delete the area clicking <button class="btn btn-default btn-xs" disabled> <span class="glyphicon glyphicon-trash" aria-hidden="true"style="margin-right: 5px"></span> Delete area </button>button on the map.');
+            var replaceddraw = $("#let_draw").html().replace('X',name_groups[number]);
+            $("#let_draw").html(replaceddraw);
+
+            $("#draw").toggleClass("hidden show");
+            buttonDraw.prop('disabled', false);
+            buttonDelete.prop('disabled', false);
+
+        }
+        else {
+            alert("Please, choose a kind of group");
+        }
+    });
+
+
+    /*$('#specifications_done').click(function () {
         if ($("#nature").val() != "0") {
 
             $("#draw").toggleClass("hidden show");
@@ -84,10 +104,17 @@ function startAll() {
         else {
             alert("Please, choose a kind of group");
         }
-    });
+    });*/
 
 
     $('#bonding_bridging_done').click(function () {
+
+
+        var scvalidationbondingbridging = $('[name=bosc1]:checked,[name=bosc2]:checked,[name=brsc1]:checked,[name=brsc2]:checked');
+        if (scvalidationbondingbridging.length < 4) {
+            alert("Please, answer all the questions");
+            return;
+        }
 
         $("#another_draw").toggleClass("hidden show");
         $("#questions_bonding_bridging").toggleClass("hidden show");
@@ -97,9 +124,10 @@ function startAll() {
         $(".finish-map").attr('disabled', false);
         map.setZoom(zoommap);
 
+
         var polygonData = {
-            type: "sc",
             layer: L.geoJson(drawnItems.toGeoJSON()),
+            livingIn: ($("input[name=live]:checked").val()) === 'true',
             socialCapital: {
                 bosc1: parseInt($("input[name=bosc1]:checked").val()),
                 bosc2: parseInt($("input[name=bosc2]:checked").val()),
@@ -113,6 +141,10 @@ function startAll() {
         drawnItems = new L.FeatureGroup();
         map.addLayer(drawnItems);
         map.addLayer(polygonData.layer);
+
+
+
+
     });
 
 
@@ -121,6 +153,8 @@ function startAll() {
 
     $('.finish-map').click(function () {
         map.removeLayer(drawnItems);
+        L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {}).addTo(map);
+        $("#nature").val("0");
 
         currGroup.position = number;
         SC.push(currGroup);
@@ -203,8 +237,37 @@ function startAll() {
                 group.addLayer(highlightedGroup.areas[j].layer);
                 map.addLayer(highlightedGroup.areas[j].layer);
             }
-
+            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {}).addTo(map);
             map.fitBounds(group.getBounds(), null);
+
+
+            var title = $("#change").html().replace('X', highlightedGroup.name);
+            $("#change").html(title);
+            var soc1re = $("#soc1").html().replace('Y', highlightedGroup.name);
+            $("#soc1").html(soc1re);
+            var soc2re = $("#soc2").html().replace('Y', highlightedGroup.name);
+            $("#soc2").html(soc2re);
+            var soc3re = $("#soc3").html().replace('Y', highlightedGroup.name);
+            $("#soc3").html(soc3re);
+            var n1re = $("#n1").html().replace('Y', highlightedGroup.name);
+            $("#n1").html(n1re);
+            var n2re = $("#n2").html().replace('Y', highlightedGroup.name);
+            $("#n2").html(n2re);
+            var n3re = $("#n3").html().replace('Y', highlightedGroup.name);
+            $("#n3").html(n3re);
+            var cee1re = $("#cee1").html().replace('Y', highlightedGroup.name);
+            $("#cee1").html(cee1re);
+            var cee2re = $("#cee2").html().replace('Y', highlightedGroup.name);
+            $("#cee2").html(cee2re);
+            var cee3re = $("#cee3").html().replace('Y', highlightedGroup.name);
+            $("#cee3").html(cee3re);
+            var cp1re = $("#cp1").html().replace('Y', highlightedGroup.name);
+            $("#cp1").html(cp1re);
+            var cp2re = $("#cp2").html().replace('Y', highlightedGroup.name);
+            $("#cp2").html(cp2re);
+            var cp3re = $("#cp3").html().replace('Y', highlightedGroup.name);
+            $("#cp3").html(cp3re);
+
         });
     }
 
@@ -223,11 +286,20 @@ function startAll() {
 
 
     $('#questions-sc').click(function () {
+
+
+        var scvalidation = $('[name=soc1]:checked,[name=soc2]:checked,[name=soc3]:checked,[name=n1]:checked,[name=n2]:checked,[name=n3]:checked,[name=cee1]:checked,[name=cee2]:checked,[name=cee3]:checked,[name=cp1]:checked,[name=cp2]:checked,[name=cp3]:checked');
+        if (scvalidation.length < 12) {
+            alert("Please, answer all the questions");
+            return;
+        }
+
+
+
         highlightedGroup.dimensions = {
-            liveArea: ($("input[name=live]:checked").val()) === 'true',
-            sc1: parseInt($("input[name=sc1]:checked").val()),
-            sc2: parseInt($("input[name=sc2]:checked").val()),
-            sc3: parseInt($("input[name=sc3]:checked").val()),
+            sc1: parseInt($("input[name=soc1]:checked").val()),
+            sc2: parseInt($("input[name=soc2]:checked").val()),
+            sc3: parseInt($("input[name=soc3]:checked").val()),
             n1: parseInt($("input[name=n1]:checked").val()),
             n2: parseInt($("input[name=n2]:checked").val()),
             n3: parseInt($("input[name=n3]:checked").val()),
@@ -249,8 +321,9 @@ function startAll() {
         var id = util.getFromLocalStorage(util.interPageDataKey);
 
         var data2 = {
+            type: "sc",
             id: id,
-            factors: SC
+            groups: SC
         };
 
 
