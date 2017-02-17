@@ -142,10 +142,6 @@ function startAll() {
         drawnItems = new L.FeatureGroup();
         map.addLayer(drawnItems);
         map.addLayer(polygonData.layer);
-
-
-
-
     });
 
 

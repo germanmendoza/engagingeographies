@@ -136,6 +136,7 @@
                 <input class="form-control" id="twitter_name" placeholder="@janedoe">
             </div>
         </form>
+        <a type="button" id="finishBtn" class="btn btn-primary float-right">Finish</a>
         <h3 style="margin-top: 50px">Until next time :)</h3>
         <div class="no-float"></div>
         <hr>
@@ -151,6 +152,37 @@
     <!-- </div> -->  <!-- .col-6 -->
     <div class="no-float"></div>
     <!-- ------------------------------- End Panel left ------------------------------------------------------------------------ -->
+    <div class="visible-xs col-xs-12" style="padding: 0px; padding-top: 30px">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div id="map2" style="height:83vh; position: relative;">
+                    <div style="position: absolute; top: 10px; left: 40px; z-index: 998">
+                        <button class="btn btn-default btn-xs" id="draw_polyxs" onclick="drawPolygon()" >
+                            <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing
+                        </button>
+                        <button class="btn btn-default btn-xs" id="delete_polyxs">
+                            <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Delete area
+                        </button>
+                    </div>
+                </div> <!-- map -->
+                <!-- <div class="custom_buttons_leaflet">
+                    <button class="btn btn-default btn-xs" id="draw_polyxs" onclick="drawPolygon()">
+                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"
+                              style="margin-right: 5px;"></span> Drawing
+                    </button>
+                    <button class="btn btn-default btn-xs" id="delete_polyxs">
+                        <span class="glyphicon glyphicon-trash" aria-hidden="true"
+                              style="margin-right: 5px"></span> Delete
+                    </button>
+                </div>
+                <div id="map2" style="height:83vh"></div> -->
+                <!-- Button finish -->
+                <!-- <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12" style="text-align: right;">
+                  <a class="btn btn-primary finish-map" href="#">Next</a>
+                </div> -->
+            </div> <!-- /.panel-body -->
+        </div> <!-- /.panel-default -->
+    </div> <!-- /.col6 -->
 </div> <!-- .container fluid -->
 
 
@@ -160,14 +192,13 @@
 <script src="js/leaflet-src.js"></script>
 <script src="js/leaflet.draw.js"></script>
 <script src="js/bootstrap-slider.js"></script>
-<script src="js/functions_finish.js"></script>
 
 
 <script src="src/edit/handler/Edit.Poly.js"></script>
 <script src="src/edit/handler/Edit.SimpleShape.js"></script>
 <script src="src/edit/handler/Edit.Circle.js"></script>
 <script src="src/edit/handler/Edit.Rectangle.js"></script>
-<script src="js/functions_finish_new.js"></script>
+<script src="js/functions_globalEnd.js"></script>
 
 <script src="src/draw/handler/Draw.Feature.js"></script>
 <script src="src/draw/handler/Draw.Polyline.js"></script>

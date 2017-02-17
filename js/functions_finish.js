@@ -54,7 +54,7 @@ function startOthers() {
             }
             else {
                  util.redirectToPage({
-                     url:"finish_new.html",
+                     url:"globalEnd.html",
                      payload:response.id
                  });
             }

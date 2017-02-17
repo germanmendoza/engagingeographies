@@ -101,9 +101,9 @@ function startAll() {
 
 
 
-        var polygondata = {
+        var polygonData = {
             type: "sopa",
-            layer: drawnItems,
+            layer: L.geoJson(drawnItems.toGeoJSON()),
             livingIn: ($("input[name=live]:checked").val()) === 'true',
             predictors: {
                 ex1: $("#ex1").slider('getValue'),
@@ -122,10 +122,11 @@ function startAll() {
         };
 
 
-        SOP.push(polygondata);
+        SOP.push(polygonData);
         map.removeLayer(drawnItems);
         drawnItems = new L.FeatureGroup();
         map.addLayer(drawnItems);
+        map.addLayer(polygonData.layer);
     });
 
     var AreaSelected;

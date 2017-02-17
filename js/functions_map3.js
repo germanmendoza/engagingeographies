@@ -1,9 +1,9 @@
  // JavaScript Document "map_3"
 
 // Modal when load page
+ var CE = [];
 
  function startAll() {
-     var CE = [];
 
      buttonDraw.prop('disabled', true);
      buttonDelete.prop('disabled', true);
@@ -44,15 +44,14 @@
 
      $('#questions-ce').click(function () {
 
-
-         var polygondata = {
-             type:"cea",
-             layer: drawnItems
-             //,livingIn = input...
-         };
-
-         CE.push(polygondata);
-         map.removeLayer(drawnItems);
+         // var polygondata = {
+         //     type:"cea",
+         //     layer: drawnItems
+         //     //,livingIn = input...
+         // };
+         //
+         // CE.push(polygondata);
+         // map.removeLayer(drawnItems);
 
          for (i = 0; i < CE.length; i++) {
              CE[i].layer = JSON.stringify(CE[i].layer.toGeoJSON());

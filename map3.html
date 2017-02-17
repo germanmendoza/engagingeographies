@@ -122,6 +122,19 @@
                 </div>
                 <!-- ------------------------------- Draw areas ce first end ----------------------------------------------------- -->
                 <!-- ------------------------------- Draw areas ce next ----------------------------------------------------- -->
+               <div class="hidden" id="live_area">
+                <h5 style="margin-top: 20px">
+                    Do you live in that area?
+                </h5>
+                <div>
+                    <label class="radio-inline">
+                        <input type="radio" name="live" value="true"> Yes
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="live" value="false" checked="checked"> Not
+                    </label>
+                </div>
+               </div>
                 <div class="hidden" id="another_draw_ce">
                     <p style="margin-bottom: 20px"><b><h4>Great job!</h4></b></p>
                     <div id="change_name_group">Now you can draw another area where you want to be involve in
@@ -404,12 +417,25 @@
                 e.layer.editing.enable();
                 drawnItems.addLayer(layer);
                 drawnItems.setStyle({color: '#00ff00'})
-                zoommap = map.getZoom();
-                map.fitBounds(drawnItems.getBounds(), null);
+//                zoommap = map.getZoom();
+//                map.fitBounds(drawnItems.getBounds(), null);
                 $(".finish-map").attr('disabled', false);
                 $("#another_draw_ce").removeClass().addClass("show");
                 $("#draw_ce").removeClass().addClass("hidden");
+                $("#live_area").removeClass().addClass("show");
 
+                var polygonData = {
+                    type:"cea",
+                    layer: L.geoJson(drawnItems.toGeoJSON()),
+                    //,livingIn = input...
+                };
+
+                CE.push(polygonData);
+
+                map.removeLayer(drawnItems);
+                drawnItems = new L.FeatureGroup();
+                map.addLayer(drawnItems);
+                map.addLayer(polygonData.layer);
 
             });
 
@@ -428,15 +454,20 @@
                 drawnItems.clearLayers();
                 $("#draw_ce").removeClass().addClass("show");
                 $("#another_draw_ce").removeClass().addClass("hidden");
+                $("#live_area").removeClass().addClass("hidden");
+                if (CE.length > 0){
+                    map.removeLayer(CE[CE.length-1].layer);
+                    CE.pop();
+                }
             });
 
             buttonDraw.on('click', function () {
+                if ($("#live_area").is(":visible")){
+                    CE[CE.length-1].livingIn = (($("input[name=live]:checked").val()) === 'true');
+                }
                 var polygonDrawer = new L.Draw.Polygon(map, drawControl);
                 polygonDrawer.enable();
-
-
-
-
+                $("#live_area").removeClass().addClass("hidden");
             });
         }
     }

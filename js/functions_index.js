@@ -67,7 +67,20 @@ function startall() {
             $('#myModal10').modal({backdrop: 'static', keyboard: false});
         }
         else {
-            window.location.replace("map1.html");
+            var data = {
+                home: false
+            };
+            app.setHome(data, function (response) {
+                if (response === false) {
+                    alert("PROBLEMS");
+                }
+                else {
+                    util.redirectToPage({
+                        url: "map1.html",
+                        payload: response.id
+                    });
+                }
+            });
         }
 
 

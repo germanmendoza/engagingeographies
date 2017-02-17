@@ -98,6 +98,7 @@ uiCoreWS = {
     SOP: 'home/SOP_data',
     SC: 'home/SC_data',
     CE: 'home/CE_data',
-    finish: 'home/finish'
+    finish: 'home/finish',
+    globalEnd: 'final_details'
 };
 

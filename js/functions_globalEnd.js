@@ -28,10 +28,33 @@ function startAll () {
                 callback
             );
         },
+        finish: function (data, callback) {
+            uiCoreAPI._postRequest(
+                uiCoreAPI.instanceUrl + uiCoreWS.globalEnd,
+                data,
+                callback
+            );
+        }
     };
 
     startMapComponents();
     areasLoading();
+
+    $('#finishBtn').click(function () {
+        var data = {
+            id : util.getFromLocalStorage(util.interPageDataKey),
+            mailUser : parseInt($( "#mail_user" ).val()),
+            twitterName : $( "#twitter_name" ).val()
+        };
+        app.finish(data,function (response) {
+            if (response === false) {
+                alert("PROBLEMS");
+            }
+            else {
+                alert("You are the fucking master");
+            }
+        })
+    });
 
 }
 
