@@ -53,11 +53,10 @@ function startOthers() {
                 alert("PROBLEMS");
             }
             else {
-                // util.redirectToPage({
-                //     url:"finish.html",
-                //     payload:response.id
-                // });
-                alert("You are fucking master");
+                 util.redirectToPage({
+                     url:"finish_new.html",
+                     payload:response.id
+                 });
             }
         })
     });
