@@ -99,6 +99,6 @@ uiCoreWS = {
     SC: 'home/SC_data',
     CE: 'home/CE_data',
     finish: 'home/finish',
-    globalEnd: 'final_details'
+    globalEnd: 'home/final_details'
 };
 

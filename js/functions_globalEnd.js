@@ -43,7 +43,7 @@ function startAll () {
     $('#finishBtn').click(function () {
         var data = {
             id : util.getFromLocalStorage(util.interPageDataKey),
-            mailUser : parseInt($( "#mail_user" ).val()),
+            mailUser : $( "#mail_user" ).val(),
             twitterName : $( "#twitter_name" ).val()
         };
         app.finish(data,function (response) {
