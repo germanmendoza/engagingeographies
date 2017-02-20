@@ -29,8 +29,10 @@ function startAll() {
             namegroup();
             currGroup = {
                 name: name_groups[number],
-                areas: []
+                areas: [],
+                nature:-1
             };
+
         }
         else {
             alert("Please, insert at least a group name");
@@ -49,18 +51,49 @@ function startAll() {
 
 
     $('#spatial_dimension').click(function () {
+        var spatialyes = 0;
         if ($("input[name=spatial]:checked").val() == "true") {
             $("#SC_group").toggleClass("hidden show");
             $("#specifications").toggleClass("hidden show");
+            spatialyes= spatialyes + 1;
         }
         else {
-            if (number == name_groups.length - 1 && number != 0) {
-                alert("Ok, let's go for the next group");
-                showAllGroups();
-                $("#select_group").toggleClass("hidden show");
-                $("#SC_group").toggleClass("hidden show");
+
+            SC.push(currGroup);
+
+            if (number == name_groups.length - 1) {
+                if (spatialyes != 0){
+                    showAllGroups();
+                    $("#select_group").toggleClass("hidden show");
+                    $("#SC_group").toggleClass("hidden show");
+                }
+                else{
+
+                    var id = util.getFromLocalStorage(util.interPageDataKey);
+
+                    var data2 = {
+                        type: "sc",
+                        id: id,
+                        groups: SC
+                    };
+
+                    app.setSC(data2, function (response) {
+                        if (response === false) {
+                            alert("PROBLEMS");
+                        }
+                        else {
+                            util.redirectToPage({
+                                url: "map3.html",
+                                payload: response.id
+                            });
+                        }
+                    });
+
+
+
+                }
             }
-            else if (number == 0) {
+            else if (name_groups.length == 1) {
                 window.location.replace("map3.html");
             }
             else {
@@ -83,6 +116,11 @@ function startAll() {
             $("#draw").toggleClass("hidden show");
             buttonDraw.prop('disabled', false);
             buttonDelete.prop('disabled', false);
+
+            currGroup.nature.push($("#nature").val());
+
+
+
 
         }
         else {
