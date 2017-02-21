@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Engaging Geographies</title>
+    <title>Place and City</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <link href="css/styles_general.css" rel="stylesheet" type="text/css"/>
     <link href="css/styles_map2.css" rel="stylesheet" type="text/css"/>
@@ -19,8 +19,7 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header name_navbar col-xs-4 col-sm-5 col-md-5 col-lg-5 visible-lg visible-md visible-sm">
-            <a href="index.html" class="name_link"><img src="img/logo_engaging.svg" id="logo_phd">Engaging
-                Geographies</a>
+            <a href="index.html" class="name_link"><img src="img/logo_engaging.svg" id="logo_phd">Place and City</a>
         </div>
         <!--  Visible only xs  -->
         <div class="navbar-header name_navbar col-xs-4 col-sm-5 col-md-5 col-lg-5 visible-xs">
@@ -126,16 +125,14 @@
                     </h5>
 
                     <!-- <div  class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-lg-9 col-md-9 col-sm-9 col-xs-9"> -->
-                    <div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-2 col-lg-6 col-md-6 col-sm-6 col-xs-7 col-xs-offset-2 float-left">
+                    <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-9 col-md-9 col-sm-9 col-xs-12">
                         <div class="s2-example">
-                            <p>
-                                <select class="form-control" multiple="multiple" id="name_actual_group">
-
-                                </select>
-                            </p>
+                          <select class="form-control" multiple="multiple" id="name_actual_group" style="width: 100%; max-width: 100%"></select>
                         </div>
                     </div>
-                    <div class="float-left col-lg-3 col-md-3 col-sm-3 col-xs-3">
+
+                    <div class="no-float"></div>
+                    <div class="float-right" style="margin-top: 20px">
                         <a type="button" class="btn btn-primary" id="submit_name_group">Done</a>
                     </div>
                     <!--<div class="no-float"></div>
@@ -148,16 +145,13 @@
                 </div>
                 <!-- ------------------------------- Social capital explanation --------------------------------------------- -->
                 <!-- ------------------------------- Social capital spatial  --------------------------------------------- -->
-
                 <div class="hidden" id="SC_group">
-                    <h4 id="group_name">
+                    <h5 id="group_name">
                         Group hola
-                    </h4>
-                    <p></p>
-                    <p>
-                    <h5 style="margin-top: 20px" id="textchange">
-                        Now, think about the Group X that you have.
                     </h5>
+                    <hr style="width: 100%">
+                    <p id="textchange">
+                        Now, think about the Group X that you have.
                     </p>
                     <h5 style="margin-top: 20px">
                         Can be related with some place?
@@ -220,23 +214,10 @@
                 <!-- ------------------------------- Social capital specifications  --------------------------------------------- -->
 
                 <!-- ------------------------------- Social capital spatialization (let's draw)  --------------------------------------------- -->
-
-
                 <div class="hidden" id="draw">
-                    <p style="margin-bottom: 20px"><b><h4>Let's draw!</h4></b></p>
+                  <h4 style="margin-bottom: 20px">Let's draw!</h4>
                     <div id="let_draw">
-                    Please, draw all the areas that define
-                    the group X using
-                    <button class="btn btn-default btn-xs" disabled>
-                                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"
-                                          style="margin-right: 5px"></span> Start drawing
-                    </button>
-                    button and you can delete the area clicking
-                    <button class="btn btn-default btn-xs" disabled>
-                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"
-                                          style="margin-right: 5px"></span> Delete area
-                    </button>
-                    button on the map.
+                      Please, draw all the areas that define the group X using <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing</button> button and you can delete the area clicking <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Delete area</button> button on the map.
                     </div>
                 </div>
 
@@ -246,12 +227,13 @@
                 <!-- ------------------------------- Social capital spatialization (another area o next)  --------------------------------------------- -->
 
                 <div class="hidden" id="another_draw">
-                    <p style="margin-bottom: 20px"><b><h4>Great job!</h4></b></p>
+                    <h5 style="margin-bottom: 20px">Great job!</h5>
+                    <hr style="width: 100%">
                     <div id="change_name_group">Now you can draw another area that define the X group, or click the
                         <button type="button" class="btn btn-primary btn-next" href="#" disabled>Next</button>
-                        button on th map to define the next group.</div>
-
-                    <p></p>
+                        button on th map to define the next group.
+                    </div>
+                    <br>
                     <div id="counting_areas">
                         You have already defined: L areas.
                     </div>
@@ -280,7 +262,7 @@
                     <h5>Please, answer the following questions about the area just drawn.</h5>
                     <div class="no-float">
                         <div>
-                            <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">The people I
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">The people I
                                 interact in that group would put their reputation on the line for me.</p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
@@ -307,7 +289,7 @@
                         </div>
                         <div class="no-float"></div>
                         <div>
-                            <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">I know people in
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">I know people in
                                 that group well enough to get them to do anything important.</p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
@@ -336,7 +318,7 @@
 
                         <div class="no-float">
                             <div>
-                                <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Interacting
+                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Interacting
                                     with people in that group makes me interested in what people unlike me are
                                     thinking.</p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
@@ -365,7 +347,7 @@
                             </div>
                             <div class="no-float"></div>
                             <div>
-                                <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Interacting
+                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Interacting
                                     with people in that group gives me new people to talk to.</p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
@@ -399,16 +381,17 @@
                 </div>
                 <!-- -------------------------------  End questions ----------------------------------------------------- -->
                 <div class="hidden" id="select_group">
+                <h5 style="margin-bottom: 20px">XXXX</h5>
+                <hr style="width: 100%">
                 <div id="radios">
                 </div>
-                <div class="float-left col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="float-right">
                     <a type="button" class="btn btn-primary" id="choose_group">Done</a>
                 </div>
                 </div>
 
                 <!-- ------------------------------- SC questions  -------------------------------------------------- -->
                 <div class="hidden" id="sc_done">
-                    <hr style="width: 100%;margin-bottom: 50px">
                     <h5 id="change">Please, answer the following questions regarding the X group.</h5>
                     <hr style="width:100%">
                     <h5 style="margin-bottom: 20px; padding-top: 0px">
@@ -416,7 +399,7 @@
                     </h5>
                     <div class="no-float">
                         <div>
-                            <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc1">I feel like a
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc1">I feel like a
                                 member of Y group</p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
@@ -445,7 +428,7 @@
                         </div>
                         <div class="no-float"></div>
                         <div>
-                            <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc2">I belong to the
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc2">I belong to the
                                 Y group</p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
@@ -474,7 +457,7 @@
                         </div>
                         <div class="no-float"></div>
                         <div>
-                            <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc3">I feel connected
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc3">I feel connected
                                 to the Y group.</p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
@@ -508,7 +491,7 @@
                         </h5>
                         <div class="no-float">
                             <div>
-                                <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="n1">Help a Y group
+                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="n1">Help a Y group
                                     member in an emergency.</p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
@@ -541,7 +524,7 @@
                             </div>
                             <div class="no-float"></div>
                             <div>
-                                <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="n2">Offer an
+                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="n2">Offer an
                                     advice on a personal problem of a Y group member</p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
@@ -574,7 +557,7 @@
                             </div>
                             <div class="no-float"></div>
                             <div>
-                                <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="n3">Discuss a
+                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="n3">Discuss a
                                     problem with a Y group member</p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
@@ -611,7 +594,7 @@
                             </h5>
                             <div class="no-float">
                                 <div>
-                                    <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="cee1">I think
+                                    <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="cee1">I think
                                         that a collective action from this group (Y) will
                                         increase chances of the government changing their plans?</p>
                                     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
@@ -645,7 +628,7 @@
                                 </div>
                                 <div class="no-float"></div>
                                 <div>
-                                    <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="cee2">I think
+                                    <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="cee2">I think
                                         that together we can change a (Y) problem</p>
                                     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                          style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
@@ -678,7 +661,7 @@
                                 </div>
                                 <div class="no-float"></div>
                                 <div>
-                                    <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="cee3">I think
+                                    <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="cee3">I think
                                         that is important to get people on the (Y) group to help each other more.</p>
                                     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                          style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
@@ -714,7 +697,7 @@
                                     </h5>
                                     <div class="no-float">
                                         <div>
-                                            <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="cp1">
+                                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="cp1">
                                                 Have you attended a group (Y) meeting in the last 12 months?</p>
                                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
@@ -747,7 +730,7 @@
                                         </div>
                                         <div class="no-float"></div>
                                         <div>
-                                            <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="cp2">
+                                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="cp2">
                                                 How often do you participate in the activities of (Y) group in the last
                                                 12 months?</p>
                                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
@@ -781,7 +764,7 @@
                                         </div>
                                         <div class="no-float"></div>
                                         <div>
-                                            <p class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="cp3">
+                                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="cp3">
                                                 To what extent do you participate in the (Y) group decision-making in
                                                 the last 12 months?</p>
                                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
