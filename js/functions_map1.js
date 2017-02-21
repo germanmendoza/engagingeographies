@@ -68,6 +68,10 @@ function startAll() {
     $("#ex8").on("slide", function (slideEvt) {
         $("#ex8SliderVal").text(slideEvt.value);
     });
+     $("#ex9").slider();
+    $("#ex9").on("slide", function (slideEvt) {
+        $("#ex9SliderVal").text(slideEvt.value);
+    });
 
 
     var namearea;
