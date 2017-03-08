@@ -11,6 +11,7 @@ var currGroup;
 var areasdrawn = 0;
 var name_groups;
 var number = 0;
+var spatialyes = 0;
 
 function startAll() {
     buttonDelete.prop('disabled', true);
@@ -24,13 +25,13 @@ function startAll() {
     $('#submit_name_group').click(function () {
         name_groups = $('#name_actual_group').val();
         if (name_groups.length > 0) {
-            $("#SC_group").toggleClass("hidden show");
+            $("#specifications").toggleClass("hidden show");
             $("#groups_done").toggleClass("hidden show");
             namegroup();
             currGroup = {
                 name: name_groups[number],
                 areas: [],
-                nature:-1
+                nature: 0
             };
 
         }
@@ -41,33 +42,49 @@ function startAll() {
 
 
     function namegroup() {
-        $("#group_name").html("Group hola");
-        var replaced = $("#group_name").html().replace('hola', name_groups[number]);
-        $("#group_name").html(replaced);
-        $("#textchange").html("Now, think about the Group X that you have.");
+        $("#group_name_nature").html("Group hola");
+        var replaced = $("#group_name_nature").html().replace('hola', name_groups[number]);
+        $("#group_name_nature").html(replaced);
+        $("#textchange").html("Now, think about the Group X that you belong.");
+        $("#textchange_nature").html("Please, select the nature of this social group X.");
         var replaced1 = $("#textchange").html().replace('X', name_groups[number]);
+        var replaced2 = $("#textchange_nature").html().replace('X', name_groups[number]);
         $("#textchange").html(replaced1);
+        $("#textchange_nature").html(replaced2);
     };
 
 
     $('#spatial_dimension').click(function () {
-        var spatialyes = 0;
+
+
+        currGroup.nature = $('#nature').val();
+        $("#nature").val("0");
+
         if ($("input[name=spatial]:checked").val() == "true") {
+
+            $("#let_draw").html('Please, draw all the areas that define the group X using <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="margin-right: 5px"></span> Start drawing </button>button and you can delete the area clicking <button class="btn btn-default btn-xs" disabled> <span class="glyphicon glyphicon-trash" aria-hidden="true"style="margin-right: 5px"></span> Delete area </button>button on the map.');
+            var replaceddraw = $("#let_draw").html().replace('X', name_groups[number]);
+            $("#let_draw").html(replaceddraw);
+            $("#draw").toggleClass("hidden show");
+            buttonDraw.prop('disabled', false);
+            buttonDelete.prop('disabled', false);
+
+
             $("#SC_group").toggleClass("hidden show");
             $("#specifications").toggleClass("hidden show");
-            spatialyes= spatialyes + 1;
+            spatialyes = spatialyes + 1;
         }
         else {
 
             SC.push(currGroup);
 
             if (number == name_groups.length - 1) {
-                if (spatialyes != 0){
+                if (spatialyes != 0) {
                     showAllGroups();
                     $("#select_group").toggleClass("hidden show");
                     $("#SC_group").toggleClass("hidden show");
                 }
-                else{
+                else {
 
                     var id = util.getFromLocalStorage(util.interPageDataKey);
 
@@ -90,37 +107,53 @@ function startAll() {
                     });
 
 
-
                 }
             }
             else if (name_groups.length == 1) {
-                window.location.replace("map3.html");
+
+                var id = util.getFromLocalStorage(util.interPageDataKey);
+
+                var data2 = {
+                    type: "sc",
+                    id: id,
+                    groups: SC
+                };
+
+                app.setSC(data2, function (response) {
+                    if (response === false) {
+                        alert("PROBLEMS");
+                    }
+                    else {
+                        util.redirectToPage({
+                            url: "map3.html",
+                            payload: response.id
+                        });
+                    }
+                });
             }
             else {
                 number = number + 1;
                 namegroup();
-                $("#SC_group").removeClass().addClass("show");
+                currGroup = {
+                    name: name_groups[number],
+                    areas: [],
+                    nature:0
+                };
+                $("#specifications").removeClass().addClass("show");
                 $("#another_draw").removeClass().addClass("hidden");
+                $("#SC_group").removeClass().addClass("hidden");
             }
 
         }
+
+        $("input[name=spatial][value=true]").prop('checked', true);
+
     });
 
     $('#nature').change(function () {
         if ($("#nature").val() != "0") {
 
-            $("#let_draw").html('Please, draw all the areas that define the group X using <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="margin-right: 5px"></span> Start drawing </button>button and you can delete the area clicking <button class="btn btn-default btn-xs" disabled> <span class="glyphicon glyphicon-trash" aria-hidden="true"style="margin-right: 5px"></span> Delete area </button>button on the map.');
-            var replaceddraw = $("#let_draw").html().replace('X',name_groups[number]);
-            $("#let_draw").html(replaceddraw);
-
-            $("#draw").toggleClass("hidden show");
-            buttonDraw.prop('disabled', false);
-            buttonDelete.prop('disabled', false);
-
-            currGroup.nature.push($("#nature").val());
-
-
-
+            $("#SC_group").removeClass().addClass("show");
 
         }
         else {
@@ -130,19 +163,19 @@ function startAll() {
 
 
     /*$('#specifications_done').click(function () {
-        if ($("#nature").val() != "0") {
+     if ($("#nature").val() != "0") {
 
-            $("#draw").toggleClass("hidden show");
-            $("#specifications").toggleClass("hidden show");
-            buttonDraw.prop('disabled', false);
-            buttonDelete.prop('disabled', false);
-            $("#nature").val("0");
+     $("#draw").toggleClass("hidden show");
+     $("#specifications").toggleClass("hidden show");
+     buttonDraw.prop('disabled', false);
+     buttonDelete.prop('disabled', false);
+     $("#nature").val("0");
 
-        }
-        else {
-            alert("Please, choose a kind of group");
-        }
-    });*/
+     }
+     else {
+     alert("Please, choose a kind of group");
+     }
+     });*/
 
 
     $('#bonding_bridging_done').click(function () {
@@ -174,6 +207,14 @@ function startAll() {
                 brsc2: parseInt($("input[name=brsc2]:checked").val())
             }
         };
+
+        $("input[name=bosc1]").prop('checked', false);
+        $("input[name=bosc2]").prop('checked', false);
+        $("input[name=brsc1]").prop('checked', false);
+        $("input[name=brsc2]").prop('checked', false);
+
+
+
         currGroup.areas.push(polygonData);
 
         map.removeLayer(drawnItems);
@@ -189,7 +230,6 @@ function startAll() {
     $('.finish-map').click(function () {
         map.removeLayer(drawnItems);
         L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {}).addTo(map);
-        $("#nature").val("0");
 
         currGroup.position = number;
         SC.push(currGroup);
@@ -208,12 +248,13 @@ function startAll() {
             namegroup();
             currGroup = {
                 name: name_groups[number],
-                areas: []
+                areas: [],
+                nature:0
             };
             drawnItems = new L.FeatureGroup();
             map.addLayer(drawnItems);
 
-            $("#SC_group").removeClass().addClass("show");
+            $("#specifications").removeClass().addClass("show");
             $("#another_draw").removeClass().addClass("hidden");
             buttonDelete.prop('disabled', true);
             buttonDraw.prop('disabled', true);
@@ -225,6 +266,8 @@ function startAll() {
     function showAllGroups() {
         buttonDraw.prop('disabled', true);
         buttonDelete.prop('disabled', true);
+        $("#specifications").removeClass().addClass("hidden");
+
 
         var group = new L.featureGroup();
         for (var i = 0; i < SC.length; i++) {
@@ -235,11 +278,14 @@ function startAll() {
                 map.addLayer(cGroup.areas[j].layer);
             }
             // Add to radio
-            $('#radios').append('<div class="radio"><label><input type="radio" name="sc_groups" value="' + i + '"/>' + cGroup.name + '</label></div>');
+
+            if (cGroup.areas.length !=0) {
+                $('#radios').append('<div class="radio"><label><input type="radio" name="sc_groups" value="' + i + '"/>Group ' + cGroup.name + '</label></div>');
+            }
         }
 
-        $("input[name='sc_groups']").change(function(){
-            if (highlightedGroup != null){
+        $("input[name='sc_groups']").change(function () {
+            if (highlightedGroup != null) {
                 for (var j = 0; j < highlightedGroup.areas.length; j++) {
                     highlightedGroup.areas[j].layer.setStyle({color: '#6000ff'});
                 }
@@ -328,7 +374,6 @@ function startAll() {
             alert("Please, answer all the questions");
             return;
         }
-
 
 
         highlightedGroup.dimensions = {

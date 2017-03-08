@@ -101,10 +101,6 @@ function startAll() {
         $("#title2_done").toggleClass("hidden show");
 
 
-
-
-
-
         var polygonData = {
             type: "sopa",
             layer: L.geoJson(drawnItems.toGeoJSON()),
