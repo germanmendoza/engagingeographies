@@ -11,6 +11,8 @@
     <link href="css/leaflet.draw.css" rel="stylesheet" type="text/css"/>
     <link href="css/bootstrap-slider.css" rel="stylesheet" type="text/css"/>
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="css/select2.min.css" rel="stylesheet" type="text/css"/>
+
 
 </head>
 
@@ -97,9 +99,7 @@
                     </div>
                     <div id="map" style="height:84vh"></div> -->
                     <!-- <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12" style="text-align: right;"> -->
-                    <a type="button" class="btn btn-primary finish-map pop" data-toggle="popover" data-placement="top"
-                       title="Before finish" data-content="Areas that have drawn, chooses the most important to you."
-                       onclick="toggler('secondimage');" disabled>Next</a>
+                    <a type="button" class="btn btn-primary finish-map" disabled>Next</a>
                     <!-- </div> -->
                 </div>
             </div> <!-- /.panel-body -->
@@ -124,14 +124,40 @@
                             most, this is the most suitable place)</li>
                     </ul>
                     for your livelihood. 
-                    <br>
+                    <br><br>
                     Can you write words that define these areas? Write as many words as areas you have. Take your
                     time :)
                     <br><br><br>
+
+                    <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                        <div class="s2-example">
+                            <select class="form-control" multiple="multiple" id="name_actual_place" style="width: 100%; max-width: 100%"></select>
+                        </div>
+                    </div>
+
+                    <div class="no-float"></div>
+                    <div class="float-right" style="margin-top: 20px">
+                        <a type="button" class="btn btn-primary" id="submit_name_places">Done</a>
+                    </div>
+                </div>
+
+
+                <div class="hidden" id="let_draw">
+
+
+                    <h5 id="group_name_place">
+                        Place hola
+                    </h5>
+                    <hr style="width: 100%">
+
+
                     <b>Please draw as many areas as you need using the <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing</button> button in the map.</b>
                     <br><br>
                     <b>If you need, you can delete an area pressing <button class="btn btn-default btn-xs" disabled> <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Delete area </button> button also in the map.</b>
+
                 </div>
+
+
                 <div style="margin-bottom: 20px" class="hidden" id="title2_done">
                   <h5>Good Job!</h5>
                   <hr style="width: 100%">
@@ -139,6 +165,9 @@
                   <br><br>
                   If you don't have more areas to draw, just click <button type="button" class="btn btn-primary btn-next" href="#" disabled>Next</button> on the bottom-right corner in the map.
                 </div>
+
+
+
                 <!-- ------------------------------- Sliders ----------------------------------------------------- -->
                 <div class="hidden" id="sliders_done">
                     <h5 style="margin-top: 20px">
@@ -270,6 +299,16 @@
                 </div>
 
                 <!-- ------------------------------- End Do you live in that area? ----------------------------------- -->
+
+                <div class="hidden" id="select_place">
+                    <h5 style="margin-bottom: 20px">XXXX</h5>
+                    <hr style="width: 100%">
+                    <div id="radios">
+                    </div>
+                    <div class="float-right">
+                        <a type="button" class="btn btn-primary" id="choose_place">Done</a>
+                    </div>
+                </div>
 
                 <!-- ------------------------------- SOP questions  -------------------------------------------------- -->
                 <div class="hidden" id="questions_done">
@@ -717,6 +756,7 @@
 
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/select2.min.js"></script>
     <script src="js/leaflet.js"></script>
     <script src="js/leaflet-src.js"></script>
     <script src="js/leaflet.draw.js"></script>
@@ -848,12 +888,11 @@
                     zoommap = map.getZoom();
                     map.fitBounds(drawnItems.getBounds(), null);
                     $("#sliders_done").removeClass().addClass("hidden");
-                    $("#title_done").removeClass().addClass("show");
-                    $("#title2_done").removeClass().addClass("hidden");
+                    $("#let_draw").removeClass().addClass("show");
                     $("#draw_poly").prop('disabled', true);
                     $(".finish-map").attr('disabled', true);
                     $("#sliders_done").toggleClass("hidden show");
-                    $("#title_done").toggleClass("hidden show");
+                    $("#let_draw").toggleClass("hidden show");
                     if (zoommap != -100) {
                         map.setZoom(zoommap);
                     }
@@ -875,10 +914,12 @@
 
                 bdelete.on('click', function () {
                     drawnItems.clearLayers();
-                    if ($('#title2_done').is(":hidden")) {
-                        $("#sliders_done").removeClass().addClass("hidden");
-                        $("#title_done").removeClass().addClass("show");
-                        $("#draw_poly").prop('disabled', false);
+                    if ($('#let_draw').is(":hidden")) {
+                        if ($('#title_done').is(":hidden")) {
+                            $("#sliders_done").removeClass().addClass("hidden");
+                            $("#let_draw").removeClass().addClass("show");
+                            $("#draw_poly").prop('disabled', false);
+                        }
                     }
                 });
 

@@ -28,6 +28,10 @@ function startAll() {
             $("#specifications").toggleClass("hidden show");
             $("#groups_done").toggleClass("hidden show");
             namegroup();
+
+            $("#group_name_nature").fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+
+
             currGroup = {
                 name: name_groups[number],
                 areas: [],
@@ -142,6 +146,8 @@ function startAll() {
                 $("#specifications").removeClass().addClass("show");
                 $("#another_draw").removeClass().addClass("hidden");
                 $("#SC_group").removeClass().addClass("hidden");
+                $("#group_name_nature").fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+
             }
 
         }

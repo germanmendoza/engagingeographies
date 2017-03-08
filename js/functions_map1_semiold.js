@@ -5,7 +5,6 @@
 
 var number = 0;
 var name_places;
-var SOP = [];
 
 
 function startAll() {
@@ -57,6 +56,7 @@ function startAll() {
             nameplace();
 
             $("#group_name_nature").fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+
 
             currPlace = {
                 name: name_places[number],
@@ -114,13 +114,13 @@ function startAll() {
     $("#ex8").on("slide", function (slideEvt) {
         $("#ex8SliderVal").text(slideEvt.value);
     });
-     $("#ex9").slider();
+    $("#ex9").slider();
     $("#ex9").on("slide", function (slideEvt) {
         $("#ex9SliderVal").text(slideEvt.value);
     });
 
 
-    /*var namearea;
+    var namearea;
 
     $('#name_area').click(function () {
         if (!$("#text_area").val()) {
@@ -133,25 +133,22 @@ function startAll() {
             var replaced = $("#change").html().replace('X', namearea);
             $("#change").html(replaced);
         }
-    });*/
+    });
 
-
+    var SOP = [];
 
     $('#sliders_done_button').click(function () {
         map.setZoom(zoommap);
         buttonDraw.prop('disabled', false);
-        number = number + 1;
-        nameplace();
         //$("#draw_polyxs").prop('disabled', false);
         $(".finish-map").attr('disabled', false);
 
         $("#sliders_done").toggleClass("hidden show");
-        $("#let_draw").toggleClass("hidden show");
+        $("#title2_done").toggleClass("hidden show");
 
 
         var polygonData = {
             type: "sopa",
-            name: name_places[number],
             layer: L.geoJson(drawnItems.toGeoJSON()),
             livingIn: ($("input[name=live]:checked").val()) === 'true',
             predictors: {
@@ -183,6 +180,7 @@ function startAll() {
 
     $('.finish-map').click(function () {
         map.removeLayer(drawnItems);
+        L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {}).addTo(map);
         $(".finish-map").attr('disabled', true);
         buttonDraw.prop('disabled', true);
         buttonDelete.prop('disabled', true);
@@ -190,18 +188,16 @@ function startAll() {
             group.addLayer(SOP[i].layer);
             map.addLayer(SOP[i].layer);
             var sopi = SOP[i];
-            /*SOP[i].layer.on('click', function (e) {
+            SOP[i].layer.on('click', function (e) {
                 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {}).addTo(map);
+                $('.popover').remove();
                 map.fitBounds(e.layer.getBounds(), null);
                 $("#title2_done").toggleClass("hidden show");
                 $("#area_done").toggleClass("hidden show");
                 $("input:radio[name=live]:first").attr('checked', true);
                 $('#name_area').attr('disabled', false);
                 AreaSelected = sopi;
-            });*/
-            $('#radios').append('<div class="radio"><label><input type="radio" name="sc_groups" value="' + i + '"/>Area ' + cGroup.name + '</label></div>');
-
-
+            });
         }
         map.fitBounds(group.getBounds(), null);
     });
@@ -279,3 +275,6 @@ function startAll() {
 
 
 
+/**
+ * Created by albertacedosanchez on 8/3/17.
+ */
