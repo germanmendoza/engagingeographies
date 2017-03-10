@@ -1,6 +1,8 @@
 var map;
 var testGeoJson;
 var overPassOPs;
+var profession_new;
+
 function startAll(){
     uiCoreAPI.instanceUrl = "http://localhost:8080/";
     app = {
@@ -30,6 +32,18 @@ function startAll(){
             );
         }
     };
+
+    $('#profession').change(function () {
+        if ($("#profession").val() == "7") {
+            $("#other_profession").removeClass().addClass("show");
+        }
+        else{
+            $("#other_profession").removeClass().addClass("hidden");
+        }
+
+    });
+
+
     startMapComponents();
     areasLoading();
     startOthers();
@@ -39,26 +53,40 @@ function startOthers() {
     uiCoreAPI.instanceUrl = "http://localhost:8080/";
 
     $('#finishBtn').click(function () {
-        var data = {
-            id : util.getFromLocalStorage(util.interPageDataKey),
-            gender : parseInt($("input[name=gender]:checked").val()),
-            age : parseInt($( "#age" ).val()),
-            country : $( "#country" ).val(),
-            study : parseInt($( "#study" ).val()),
-            profession : parseInt($( "#profession" ).val()),
-            income : parseInt($( "#income" ).val())
-        };
-        app.finish(data,function (response) {
-            if (response === false) {
-                alert("PROBLEMS");
+
+        if ($("#profession").val() == "7") {
+            if (!$("#other_prof").val()) {
+                alert("Please, introduce a profession.")
             }
             else {
-                 util.redirectToPage({
-                     url:"globalEnd.html",
-                     payload:response.id
-                 });
+                profession_new = parseInt($( "#other_prof" ).val())
             }
-        })
+        }
+        else{
+            profession_new = parseInt($( "#profession" ).val())
+
+            var data = {
+                id : util.getFromLocalStorage(util.interPageDataKey),
+                gender : parseInt($("input[name=gender]:checked").val()),
+                age : parseInt($( "#age" ).val()),
+                country : $( "#country" ).val(),
+                study : parseInt($( "#study" ).val()),
+                profession : profession_new,
+                income : parseInt($( "#income" ).val())
+            };
+            app.finish(data,function (response) {
+                if (response === false) {
+                    alert("PROBLEMS");
+                }
+                else {
+                    util.redirectToPage({
+                        url:"globalEnd.html",
+                        payload:response.id
+                    });
+                }
+            })
+        }
+
     });
 }
 
@@ -276,13 +304,13 @@ function areasLoading() {
 
     var count = 0;
     var SOPStyle = function(feature){return {color: "#ff0000"}; };
-    var SCStyle = function(feature){
-        if (count++ >=   2){
-            return {color: "#6000ff"};
-        }
-        else{
-            return {color: "#4080ff"};
-        }
+    var SCStyle = function(feature){return {color: "#4080ff"};
+        /*if (count++ >=   2){
+         return {color: "#6000ff"};
+         }
+         else{
+         return {color: "#4080ff"};
+         }*/
     };
     var CEStyle = function(feature){return {color: "#00ff00"}; };
 

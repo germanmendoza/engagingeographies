@@ -41,19 +41,37 @@ function startAll () {
     areasLoading();
 
     $('#finishBtn').click(function () {
-        var data = {
-            id : util.getFromLocalStorage(util.interPageDataKey),
-            mailUser : $( "#mail_user" ).val(),
-            twitterName : $( "#twitter_name" ).val()
-        };
-        app.finish(data,function (response) {
-            if (response === false) {
-                alert("PROBLEMS");
+
+        var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+        var mail = $("#mail_user" ).val();
+        var testtwitter = /^@?(\w){1,15}$/;
+        var twitter = $("#twitter_name" ).val();
+
+
+
+
+        if (mail != "" & twitter != "") {
+            if (testEmail.test(mail) & testtwitter.test(twitter)){
+
+                var data = {
+                    id : util.getFromLocalStorage(util.interPageDataKey),
+                    mailUser : mail,
+                    twitterName : twitter
+                };
+                app.finish(data,function (response) {
+                    if (response === false) {
+                        alert("PROBLEMS");
+                    }
+                    else {
+                        alert("You are the fucking master");
+                    }
+                })
+
             }
-            else {
-                alert("You are the fucking master");
+            else{
+               alert("Please introduce a mail and/or twitter username valid structure");
             }
-        })
+        }
     });
 
 }
@@ -107,13 +125,13 @@ function areasLoading() {
 
     var count = 0;
     var SOPStyle = function(feature){return {color: "#ff0000"}; };
-    var SCStyle = function(feature){
-        if (count++ >=   2){
+    var SCStyle = function(feature){return {color: "#4080ff"};
+        /*if (count++ >=   2){
             return {color: "#6000ff"};
         }
         else{
             return {color: "#4080ff"};
-        }
+        }*/
     };
     var CEStyle = function(feature){return {color: "#00ff00"}; };
 

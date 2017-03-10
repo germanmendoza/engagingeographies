@@ -164,24 +164,25 @@
                         <select id="nature">
                             <option value="0"></option>
                             <option value="1">Business</option>
-                            <option value="2">Women's</option>
-                            <option value="3">Finance</option>
-                            <option value="4">Political</option>
-                            <option value="5">Youth</option>
-                            <option value="6">Religious</option>
-                            <option value="7">Cultural</option>
-                            <option value="8">Neighborhood/Village</option>
-                            <option value="9">Family</option>
-                            <option value="10">School</option>
-                            <option value="11">Health</option>
-                            <option value="12">Sports</option>
-                            <option value="13">Civic</option>
-                            <option value="14">NGO</option>
-                            <option value="15">Professional</option>
-                            <option value="16">Friend</option>
-                            <option value="17">Leisure</option>
-                            <option value="18">Ecology</option>
-                            <option value="18">Other</option>
+                            <option value="2">Civic</option>
+                            <option value="3">Cultural</option>
+                            <option value="4">Ecology</option>
+                            <option value="5">Family</option>
+                            <option value="6">Finance</option>
+                            <option value="7">Friend</option>
+                            <option value="8">Health</option>
+                            <option value="9">Leisure</option>
+                            <option value="10">Neighborhood/Village</option>
+                            <option value="11">NGO</option>
+                            <option value="12">Political</option>
+                            <option value="13">Professional</option>
+                            <option value="14">Religious</option>
+                            <option value="15">School</option>
+                            <option value="16">Sports</option>
+                            <option value="17">Women's</option>
+                            <option value="18">Youth</option>
+                            <option value="19">Other</option>
+
                         </select>
                     </div>
                     <!--<p></p>
@@ -192,6 +193,11 @@
 
                 </div>
                 <!-- ------------------------------- Social capital specifications  --------------------------------------------- -->
+
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 hidden" style="padding-left: 0px; width: 250px" id="other_name">
+                    <input id="other" class="form-control" rows="1" placeholder="other name"></input>
+                </div>
+
 
                 <!-- ------------------------------- Social capital spatial  --------------------------------------------- -->
                 <div class="hidden" id="SC_group">
@@ -275,7 +281,7 @@
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
-                                    <input type="radio" name="bosc1" value="1"> 1 Disagree
+                                    <input type="radio" name="bosc1" value="1"> 1 Strongly disagree
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -291,7 +297,7 @@
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="bosc1" value="5"> 5 Agree
+                                    <input type="radio" name="bosc1" value="5"> 5 Strongly agree
                                 </label>
                             </div>
                         </div>
@@ -302,7 +308,7 @@
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
-                                    <input type="radio" name="bosc2" value="1"> 1 Disagree
+                                    <input type="radio" name="bosc2" value="1"> 1 Strongly disagree
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -318,7 +324,7 @@
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="bosc2" value="5"> 5 Agree
+                                    <input type="radio" name="bosc2" value="5"> 5 Strongly agree
                                 </label>
                             </div>
                         </div>
@@ -333,7 +339,7 @@
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                     <label class="radio-inline personal_radio"
                                            style="margin-top: -10px; font-size: 12px;">
-                                        <input type="radio" name="brsc1" value="1"> 1 Disagree
+                                        <input type="radio" name="brsc1" value="1"> 1 Strongly disagree
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -349,7 +355,7 @@
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="brsc1" value="5"> 5 Agree
+                                        <input type="radio" name="brsc1" value="5"> 5 Strongly agree
                                     </label>
                                 </div>
                             </div>
@@ -361,7 +367,7 @@
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                     <label class="radio-inline personal_radio"
                                            style="margin-top: -10px; font-size: 12px;">
-                                        <input type="radio" name="brsc2" value="1"> 1 Disagree
+                                        <input type="radio" name="brsc2" value="1"> 1 Strongly disagree
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -377,7 +383,7 @@
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="brsc2" value="5"> 5 Agree
+                                        <input type="radio" name="brsc2" value="5"> 5 Strongly agree
                                     </label>
                                 </div>
                             </div>
@@ -389,7 +395,7 @@
                 </div>
                 <!-- -------------------------------  End questions ----------------------------------------------------- -->
                 <div class="hidden" id="select_group">
-                <h5 style="margin-bottom: 20px">XXXX</h5>
+                <h5 style="margin-bottom: 20px">Please, choose the group that you better socially identify with.</h5>
                 <hr style="width: 100%">
                 <div id="radios">
                 </div>
@@ -413,7 +419,7 @@
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
                                     <input type="radio" name="soc1" value="1"> 1
-                                    Disagree
+                                    Strongly disagree
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -430,7 +436,7 @@
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                     <input type="radio" name="soc1" value="5"> 5
-                                    Agree
+                                    Strongly agree
                                 </label>
                             </div>
                         </div>
@@ -442,7 +448,7 @@
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
                                     <input type="radio" name="soc2" value="1"> 1
-                                    Disagree
+                                    Strongly disagree
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -459,7 +465,7 @@
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                     <input type="radio" name="soc2" value="5"> 5
-                                    Agree
+                                    Strongly agree
                                 </label>
                             </div>
                         </div>
@@ -471,7 +477,7 @@
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
                                     <input type="radio" name="soc3" value="1"> 1
-                                    Disagree
+                                    Strongly disagree
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -488,7 +494,7 @@
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                     <input type="radio" name="soc3" value="5"> 5
-                                    Agree
+                                    Strongly agree
                                 </label>
                             </div>
                         </div>
@@ -506,7 +512,7 @@
                                     <label class="radio-inline personal_radio"
                                            style="margin-top: -10px; font-size: 12px;">
                                         <input type="radio" name="n1" value="1">
-                                        1 Disagree
+                                        1 Never
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -526,7 +532,7 @@
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                         <input type="radio" name="n1" value="5">
-                                        5 Agree
+                                        5 Every-day
                                     </label>
                                 </div>
                             </div>
@@ -539,7 +545,7 @@
                                     <label class="radio-inline personal_radio"
                                            style="margin-top: -10px; font-size: 12px;">
                                         <input type="radio" name="n2" value="1">
-                                        1 Disagree
+                                        1 Never
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -559,7 +565,7 @@
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                         <input type="radio" name="n2" value="5">
-                                        5 Agree
+                                        5 Every-day
                                     </label>
                                 </div>
                             </div>
@@ -572,7 +578,7 @@
                                     <label class="radio-inline personal_radio"
                                            style="margin-top: -10px; font-size: 12px;">
                                         <input type="radio" name="n3" value="1">
-                                        1 Disagree
+                                        1 Never
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -592,7 +598,7 @@
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                         <input type="radio" name="n3" value="5">
-                                        5 Agree
+                                        5 Every-day
                                     </label>
                                 </div>
                             </div>
@@ -610,7 +616,7 @@
                                         <label class="radio-inline personal_radio"
                                                style="margin-top: -10px; font-size: 12px;">
                                             <input type="radio" name="cee1"
-                                                   value="1"> 1 Disagree
+                                                   value="1"> 1 Strongly disagree
                                         </label>
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -630,7 +636,7 @@
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                             <input type="radio" name="cee1"
-                                                   value="5"> 5 Agree
+                                                   value="5"> 5 Strongly agree
                                         </label>
                                     </div>
                                 </div>
@@ -643,7 +649,7 @@
                                         <label class="radio-inline personal_radio"
                                                style="margin-top: -10px; font-size: 12px;">
                                             <input type="radio" name="cee2"
-                                                   value="1"> 1 Disagree
+                                                   value="1"> 1 Strongly disagree
                                         </label>
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -663,7 +669,7 @@
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                             <input type="radio" name="cee2"
-                                                   value="5"> 5 Agree
+                                                   value="5"> 5 Strongly agree
                                         </label>
                                     </div>
                                 </div>
@@ -676,7 +682,7 @@
                                         <label class="radio-inline personal_radio"
                                                style="margin-top: -10px; font-size: 12px;">
                                             <input type="radio" name="cee3"
-                                                   value="1"> 1 Disagree
+                                                   value="1"> 1 Strongly disagree
                                         </label>
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -696,7 +702,7 @@
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                             <input type="radio" name="cee3"
-                                                   value="5"> 5 Agree
+                                                   value="5"> 5 Strongly agree
                                         </label>
                                     </div>
                                     <div class="no-float"></div>
@@ -712,7 +718,7 @@
                                                 <label class="radio-inline personal_radio"
                                                        style="margin-top: -10px; font-size: 12px;">
                                                     <input type="radio" name="cp1"
-                                                           value="1"> 1 Disagree
+                                                           value="1"> 1 Never
                                                 </label>
                                                 <label class="radio-inline"
                                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -732,7 +738,7 @@
                                                 <label class="radio-inline"
                                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                                     <input type="radio" name="cp1"
-                                                           value="5"> 5 Agree
+                                                           value="5"> 5 Every-day
                                                 </label>
                                             </div>
                                         </div>
@@ -746,7 +752,7 @@
                                                 <label class="radio-inline personal_radio"
                                                        style="margin-top: -10px; font-size: 12px;">
                                                     <input type="radio" name="cp2"
-                                                           value="1"> 1 Disagree
+                                                           value="1"> 1 Never
                                                 </label>
                                                 <label class="radio-inline"
                                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -766,7 +772,7 @@
                                                 <label class="radio-inline"
                                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                                     <input type="radio" name="cp2"
-                                                           value="5"> 5 Agree
+                                                           value="5"> 5 Every-day
                                                 </label>
                                             </div>
                                         </div>
@@ -780,7 +786,7 @@
                                                 <label class="radio-inline personal_radio"
                                                        style="margin-top: -10px; font-size: 12px;">
                                                     <input type="radio" name="cp3"
-                                                           value="1"> 1 Disagree
+                                                           value="1"> 1 Never
                                                 </label>
                                                 <label class="radio-inline"
                                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -800,7 +806,7 @@
                                                 <label class="radio-inline"
                                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                                     <input type="radio" name="cp3"
-                                                           value="5"> 5 Agree
+                                                           value="5"> 5 Every-day
                                                 </label>
                                             </div>
                                             <a type="button" id="questions-sc"

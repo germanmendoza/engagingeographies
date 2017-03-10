@@ -365,26 +365,47 @@
             <div style="margin-bottom: 20px">
               <h5>Study level</h5>
               <select id = "study">
-                <option value="1">PhD</option>
-                <option value="2">Master</option>
-                <option value="3">University</option>
-                <option value="4">High School</option>
+                <option value="0"></option>
+                <option value="1">4ª classe</option>
+                <option value="2">12º ano ou equivalente</option>
+                <option value="3">Licenciatura</option>
+                <option value="4">Pós-Graduação</option>
+                <option value="5">Mestrado</option>
+                <option value="6">Doutoramento</option>
+                <option value="7">NS/NR</option>
               </select>
             </div>
+
             <div style="margin-bottom: 20px">
               <h5>Profession</h5>
               <select id = "profession">
-                <option value="1">Health</option>
-                <option value="2">Academic</option>
-                <option value="3">Industry</option>
+                <option value="0"></option>
+                <option value="1">Estudante</option>
+                <option value="2">Reformado</option>
+                <option value="3">Desempregado</option>
+                <option value="4">Trabalhador por conta de outrem</option>
+                <option value="5">Trabalhador Freelancer</option>
+                <option value="6">Trabalhador por conta própria</option>
+                <option value="7">Outro</option>
               </select>
             </div>
+
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 hidden" style="padding-left: 0px; width: 250px" id="other_profession">
+              <input id="other_prof" class="form-control" rows="1" placeholder="other name"></input>
+            </div>
+
             <div style="margin-bottom: 20px">
-              <h5>Income</h5>
+              <h5>Por favor indique o salário mensal do seu agregado familiar em Euros.</h5>
               <select id = "income">
-                <option value="1">400-800</option>
-                <option value="2">800-1200</option>
-                <option value="3">more than 1200</option>
+                <option value="0"></option>
+                <option value="1">Menos de 1000</option>
+                <option value="2">1000 - 1999</option>
+                <option value="3">2000 - 3999</option>
+                <option value="4">4000 - 5999</option>
+                <option value="5">6000 - 9999</option>
+                <option value="6">10000 - 19999</option>
+                <option value="7">Mas de 20000</option>
+                <option value="8">NS/NR</option>
               </select>
             </div>
             <a type="button" id="finishBtn" class="btn btn-primary float-right">Finish</a>

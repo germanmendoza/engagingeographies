@@ -60,111 +60,136 @@ function startAll() {
 
     $('#spatial_dimension').click(function () {
 
-
-        currGroup.nature = $('#nature').val();
-        $("#nature").val("0");
-
-        if ($("input[name=spatial]:checked").val() == "true") {
-
-            $("#let_draw").html('Please, draw all the areas that define the group X using <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="margin-right: 5px"></span> Start drawing </button>button and you can delete the area clicking <button class="btn btn-default btn-xs" disabled> <span class="glyphicon glyphicon-trash" aria-hidden="true"style="margin-right: 5px"></span> Delete area </button>button on the map.');
-            var replaceddraw = $("#let_draw").html().replace('X', name_groups[number]);
-            $("#let_draw").html(replaceddraw);
-            $("#draw").toggleClass("hidden show");
-            buttonDraw.prop('disabled', false);
-            buttonDelete.prop('disabled', false);
-
-
-            $("#SC_group").toggleClass("hidden show");
-            $("#specifications").toggleClass("hidden show");
-            spatialyes = spatialyes + 1;
+        if ($("#nature").val() == "0") {
+            alert("Please, choose a kind of group");
         }
+
         else {
 
-            SC.push(currGroup);
+            if ($("#nature").val() == "19") {
+                if (!$("#other").val()) {
+                    alert("Please, introduce the nature of the group.")
+                }
+                else {
+                    currGroup.nature = $('#other').val();
+                }
+            }
+            else{
 
-            if (number == name_groups.length - 1) {
-                if (spatialyes != 0) {
-                    showAllGroups();
-                    $("#select_group").toggleClass("hidden show");
+                currGroup.nature = $('#nature').val();
+                $("#nature").val("0");
+
+                if ($("input[name=spatial]:checked").val() == "true") {
+
+                    $("#let_draw").html('Please, draw all the areas that define the group X using <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="margin-right: 5px"></span> Start drawing </button>button and you can delete the area clicking <button class="btn btn-default btn-xs" disabled> <span class="glyphicon glyphicon-trash" aria-hidden="true"style="margin-right: 5px"></span> Delete area </button>button on the map.');
+                    var replaceddraw = $("#let_draw").html().replace('X', name_groups[number]);
+                    $("#let_draw").html(replaceddraw);
+                    $("#draw").toggleClass("hidden show");
+                    buttonDraw.prop('disabled', false);
+                    buttonDelete.prop('disabled', false);
+
+
                     $("#SC_group").toggleClass("hidden show");
+                    $("#specifications").toggleClass("hidden show");
+                    spatialyes = spatialyes + 1;
                 }
                 else {
 
-                    var id = util.getFromLocalStorage(util.interPageDataKey);
+                    SC.push(currGroup);
 
-                    var data2 = {
-                        type: "sc",
-                        id: id,
-                        groups: SC
-                    };
-
-                    app.setSC(data2, function (response) {
-                        if (response === false) {
-                            alert("PROBLEMS");
+                    if (number == name_groups.length - 1) {
+                        if (spatialyes != 0) {
+                            showAllGroups();
+                            $("#select_group").toggleClass("hidden show");
+                            $("#SC_group").toggleClass("hidden show");
                         }
                         else {
-                            util.redirectToPage({
-                                url: "map3.html",
-                                payload: response.id
+
+                            var id = util.getFromLocalStorage(util.interPageDataKey);
+
+                            var data2 = {
+                                type: "sc",
+                                id: id,
+                                groups: SC
+                            };
+
+                            app.setSC(data2, function (response) {
+                                if (response === false) {
+                                    alert("PROBLEMS");
+                                }
+                                else {
+                                    util.redirectToPage({
+                                        url: "map3.html",
+                                        payload: response.id
+                                    });
+                                }
                             });
+
+
                         }
-                    });
-
-
-                }
-            }
-            else if (name_groups.length == 1) {
-
-                var id = util.getFromLocalStorage(util.interPageDataKey);
-
-                var data2 = {
-                    type: "sc",
-                    id: id,
-                    groups: SC
-                };
-
-                app.setSC(data2, function (response) {
-                    if (response === false) {
-                        alert("PROBLEMS");
                     }
-                    else {
-                        util.redirectToPage({
-                            url: "map3.html",
-                            payload: response.id
+                    else if (name_groups.length == 1) {
+
+                        var id = util.getFromLocalStorage(util.interPageDataKey);
+
+                        var data2 = {
+                            type: "sc",
+                            id: id,
+                            groups: SC
+                        };
+
+                        app.setSC(data2, function (response) {
+                            if (response === false) {
+                                alert("PROBLEMS");
+                            }
+                            else {
+                                util.redirectToPage({
+                                    url: "map3.html",
+                                    payload: response.id
+                                });
+                            }
                         });
                     }
-                });
-            }
-            else {
-                number = number + 1;
-                namegroup();
-                currGroup = {
-                    name: name_groups[number],
-                    areas: [],
-                    nature:0
-                };
-                $("#specifications").removeClass().addClass("show");
-                $("#another_draw").removeClass().addClass("hidden");
-                $("#SC_group").removeClass().addClass("hidden");
-                $("#group_name_nature").fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+                    else {
+                        number = number + 1;
+                        namegroup();
+                        currGroup = {
+                            name: name_groups[number],
+                            areas: [],
+                            nature: 0
+                        };
+                        $("#specifications").removeClass().addClass("show");
+                        $("#another_draw").removeClass().addClass("hidden");
+                        $("#SC_group").removeClass().addClass("hidden");
+                        $("#group_name_nature").fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+                        $("input[name=spatial][value=true]").prop('checked', true);
+
+
+                    }
+
+                }
+
 
             }
+
+            //$("input[name=spatial][value=true]").prop('checked', true);
+
 
         }
 
-        $("input[name=spatial][value=true]").prop('checked', true);
 
     });
 
     $('#nature').change(function () {
-        if ($("#nature").val() != "0") {
-
-            $("#SC_group").removeClass().addClass("show");
-
+        if ($("#nature").val() == "19") {
+            $("#other_name").removeClass().addClass("show");
         }
-        else {
-            alert("Please, choose a kind of group");
+        else{
+            $("#other_name").removeClass().addClass("hidden");
         }
+        $("#SC_group").removeClass().addClass("show");
+
+
     });
 
 
@@ -220,7 +245,6 @@ function startAll() {
         $("input[name=brsc2]").prop('checked', false);
 
 
-
         currGroup.areas.push(polygonData);
 
         map.removeLayer(drawnItems);
@@ -230,12 +254,13 @@ function startAll() {
     });
 
 
-    var AreaSelected;
     var group = new L.featureGroup();
 
     $('.finish-map').click(function () {
+        areasdrawn = 0;
+        $(".finish-map").attr('disabled', true);
         map.removeLayer(drawnItems);
-        L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {}).addTo(map);
+        //L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {}).addTo(map);
 
         currGroup.position = number;
         SC.push(currGroup);
@@ -255,7 +280,7 @@ function startAll() {
             currGroup = {
                 name: name_groups[number],
                 areas: [],
-                nature:0
+                nature: 0
             };
             drawnItems = new L.FeatureGroup();
             map.addLayer(drawnItems);
@@ -285,7 +310,7 @@ function startAll() {
             }
             // Add to radio
 
-            if (cGroup.areas.length !=0) {
+            if (cGroup.areas.length != 0) {
                 $('#radios').append('<div class="radio"><label><input type="radio" name="sc_groups" value="' + i + '"/>Group ' + cGroup.name + '</label></div>');
             }
         }
