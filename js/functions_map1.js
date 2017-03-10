@@ -10,7 +10,7 @@ var SOP = [];
 
 function startAll() {
     $('#myModal3').modal('show');
-    $("#draw_poly").prop('disabled', false);
+    $("#draw_poly").prop('disabled', true);
 
 // POPOVER
 
@@ -52,16 +52,12 @@ function startAll() {
     $('#submit_name_places').click(function () {
         name_places = $('#name_actual_place').val();
         if (name_places.length > 0) {
+            $("#draw_poly").prop('disabled', false);
             $("#let_draw").toggleClass("hidden show");
             $("#title_done").toggleClass("hidden show");
             nameplace();
 
-            $("#group_name_nature").fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
-
-            currPlace = {
-                name: name_places[number],
-                areas: []
-            };
+            $("#group_name_place").fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
 
         }
         else {
@@ -70,15 +66,21 @@ function startAll() {
     });
 
 
-
     function nameplace() {
-        $("#group_name_place").html("Group hola");
+        $("#group_name_place").html('Area' + '<h4>' + ' hola ' + '</h4>');
         var replaced = $("#group_name_place").html().replace('hola', name_places[number]);
         $("#group_name_place").html(replaced);
+        $("#draw_places").html('Please draw the area (hola) using the ' + ' <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing</button>' + ' button in the map.');
+        var replaced1 = $("#draw_places").html().replace('hola', name_places[number]);
+        $("#draw_places").html(replaced1);
+        $("#area_name_sliders").html("Area hola");
+        var replaced2 = $("#area_name_sliders").html().replace('hola', name_places[number]);
+        $("#area_name_sliders").html(replaced2);
+        $("#title_sliders_change").html('Please, indicate with the sliders the level of only applicable characteristic that contain the area' + '<b>' + ' Y ' + '</b>' + '.');
+        var replaced3 = $("#title_sliders_change").html().replace('Y', name_places[number]);
+        $("#title_sliders_change").html(replaced3);
+
     };
-
-
-
 
 
 // SLIDER
@@ -114,7 +116,7 @@ function startAll() {
     $("#ex8").on("slide", function (slideEvt) {
         $("#ex8SliderVal").text(slideEvt.value);
     });
-     $("#ex9").slider();
+    $("#ex9").slider();
     $("#ex9").on("slide", function (slideEvt) {
         $("#ex9SliderVal").text(slideEvt.value);
     });
@@ -122,66 +124,106 @@ function startAll() {
 
     /*var namearea;
 
-    $('#name_area').click(function () {
-        if (!$("#text_area").val()) {
-            alert("tonto")
-        }
-        else {
-            namearea = $("#text_area").val();
-            $("#area_done").toggleClass("hidden show");
-            $("#questions_done").toggleClass("hidden show");
-            var replaced = $("#change").html().replace('X', namearea);
-            $("#change").html(replaced);
-        }
-    });*/
-
+     $('#name_area').click(function () {
+     if (!$("#text_area").val()) {
+     alert("tonto")
+     }
+     else {
+     namearea = $("#text_area").val();
+     $("#area_done").toggleClass("hidden show");
+     $("#questions_done").toggleClass("hidden show");
+     var replaced = $("#change").html().replace('X', namearea);
+     $("#change").html(replaced);
+     }
+     });*/
 
 
     $('#sliders_done_button').click(function () {
-        map.setZoom(zoommap);
-        buttonDraw.prop('disabled', false);
-        number = number + 1;
-        nameplace();
-        //$("#draw_polyxs").prop('disabled', false);
-        $(".finish-map").attr('disabled', false);
 
-        $("#sliders_done").toggleClass("hidden show");
-        $("#let_draw").toggleClass("hidden show");
+        if (number == name_places.length - 1) {
+
+            var polygonData = {
+                type: "sopa",
+                name: name_places[number],
+                layer: L.geoJson(drawnItems.toGeoJSON()),
+                livingIn: ($("input[name=live]:checked").val()) === 'true',
+                predictors: {
+                    ex1: $("#ex1").slider('getValue'),
+                    ex2: $("#ex2").slider('getValue'),
+                    ex3: $("#ex3").slider('getValue'),
+                    ex4: $("#ex4").slider('getValue'),
+                    ex5: $("#ex5").slider('getValue'),
+                    ex6: $("#ex6").slider('getValue'),
+                    ex7: $("#ex7").slider('getValue')
+                }
+            };
+
+            SOP.push(polygonData);
+            map.removeLayer(drawnItems);
+            drawnItems = new L.FeatureGroup();
+
+            ShowAllAreas();
+            $("#select_place").toggleClass("hidden show");
+            $("#sliders_done").toggleClass("hidden show");
+        }
+
+        else {
+
+            map.setZoom(zoommap);
+            buttonDraw.prop('disabled', false);
+            //$("#draw_polyxs").prop('disabled', false);
+            $(".finish-map").attr('disabled', false);
+
+            $("#sliders_done").toggleClass("hidden show");
+            $("#let_draw").toggleClass("hidden show");
 
 
-        var polygonData = {
-            type: "sopa",
-            name: name_places[number],
-            layer: L.geoJson(drawnItems.toGeoJSON()),
-            livingIn: ($("input[name=live]:checked").val()) === 'true',
-            predictors: {
-                ex1: $("#ex1").slider('getValue'),
-                ex2: $("#ex2").slider('getValue'),
-                ex3: $("#ex3").slider('getValue'),
-                ex4: $("#ex4").slider('getValue'),
-                ex5: $("#ex5").slider('getValue'),
-                ex6: $("#ex6").slider('getValue'),
-                ex7: $("#ex7").slider('getValue')
+            var polygonData = {
+                type: "sopa",
+                name: name_places[number],
+                layer: L.geoJson(drawnItems.toGeoJSON()),
+                livingIn: ($("input[name=live]:checked").val()) === 'true',
+                predictors: {
+                    ex1: $("#ex1").slider('getValue'),
+                    ex2: $("#ex2").slider('getValue'),
+                    ex3: $("#ex3").slider('getValue'),
+                    ex4: $("#ex4").slider('getValue'),
+                    ex5: $("#ex5").slider('getValue'),
+                    ex6: $("#ex6").slider('getValue'),
+                    ex7: $("#ex7").slider('getValue')
+                }
+            };
+
+            number = number + 1;
+            nameplace();
+            $("#group_name_place").fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+
+
+
+            for (i = 1; i <= 7; i++) {
+                $('input[id=ex' + i + ']').slider('setValue', 0);
+                $('span[id=ex' + i + 'SliderVal]').text(0);
             }
-        };
-
-        for (i = 1; i <= 7; i++) {
-            $('input[id=ex' + i + ']').slider('setValue', 0);
-            $('span[id=ex' + i + 'SliderVal]').text(0);
-        };
+            ;
 
 
-        SOP.push(polygonData);
-        map.removeLayer(drawnItems);
-        drawnItems = new L.FeatureGroup();
-        map.addLayer(drawnItems);
-        map.addLayer(polygonData.layer);
+            SOP.push(polygonData);
+            map.removeLayer(drawnItems);
+            drawnItems = new L.FeatureGroup();
+            map.addLayer(drawnItems);
+            map.addLayer(polygonData.layer);
+
+        }
     });
 
     var AreaSelected;
     var group = new L.featureGroup();
 
-    $('.finish-map').click(function () {
+    var highlightedArea = null;
+
+
+    function ShowAllAreas() {
+
         map.removeLayer(drawnItems);
         $(".finish-map").attr('disabled', true);
         buttonDraw.prop('disabled', true);
@@ -191,22 +233,109 @@ function startAll() {
             map.addLayer(SOP[i].layer);
             var sopi = SOP[i];
             /*SOP[i].layer.on('click', function (e) {
-                L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {}).addTo(map);
-                map.fitBounds(e.layer.getBounds(), null);
-                $("#title2_done").toggleClass("hidden show");
-                $("#area_done").toggleClass("hidden show");
-                $("input:radio[name=live]:first").attr('checked', true);
-                $('#name_area').attr('disabled', false);
-                AreaSelected = sopi;
-            });*/
-            $('#radios').append('<div class="radio"><label><input type="radio" name="sc_groups" value="' + i + '"/>Area ' + cGroup.name + '</label></div>');
+             L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {}).addTo(map);
+             map.fitBounds(e.layer.getBounds(), null);
+             $("#title2_done").toggleClass("hidden show");
+             $("#area_done").toggleClass("hidden show");
+             $("input:radio[name=live]:first").attr('checked', true);
+             $('#name_area').attr('disabled', false);
+             AreaSelected = sopi;
+             });*/
+            $('#radios').append('<div class="radio"><label><input type="radio" name="sc_areas" value="' + i + '"/>Area ' + SOP[i].name + '</label></div>');
 
 
         }
+
+        $("input[name='sc_areas']").change(function () {
+            if (highlightedArea != null) {
+                highlightedArea.layer.setStyle({color: '#6000ff'});
+            }
+            var index = parseInt($("input[name=sc_areas]:checked").val());
+            highlightedArea = SOP[index];
+            highlightedArea.layer.setStyle({color: '#FF0000'});
+
+        });
+
         map.fitBounds(group.getBounds(), null);
-    });
 
 
+        $('#choose_place').click(function () {
+
+            $("#select_place").toggleClass("hidden show");
+            $("#questions_done").toggleClass("hidden show");
+            buttonDraw.prop('disabled', true);
+            buttonDelete.prop('disabled', true);
+
+
+            for (var i = 0; i < SOP.length; i++) {
+                map.removeLayer(SOP[i].layer);
+            }
+
+            var group = new L.featureGroup();
+
+            highlightedArea.layer.setStyle({color: '#FF0000'});
+            group.addLayer(highlightedArea.layer);
+            map.addLayer(highlightedArea.layer);
+
+            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {}).addTo(map);
+            map.fitBounds(group.getBounds(), null);
+
+
+            var title = $("#change").html().replace('X', highlightedArea.name);
+            $("#change").html(title);
+            var pi1re = $("#pi1").html().replace('Y', highlightedArea.name);
+            $("#pi1").html(pi1re);
+            var pi2re = $("#pi2").html().replace('Y', highlightedArea.name);
+            $("#pi2").html(pi2re);
+            var pi3re = $("#pi3").html().replace('Y', highlightedArea.name);
+            $("#pi3").html(pi3re);
+            var pa1re = $("#pa1").html().replace('Y', highlightedArea.name);
+            $("#pa1").html(pa1re);
+            var pa2re = $("#pa2").html().replace('Y', highlightedArea.name);
+            $("#pa2").html(pa2re);
+            var pa3re = $("#pa3").html().replace('Y', highlightedArea.name);
+            $("#pa3").html(pa3re);
+            var pd1re = $("#pd1").html().replace('Y', highlightedArea.name);
+            $("#pd1").html(pd1re);
+            var pd2re = $("#pd2").html().replace('Y', highlightedArea.name);
+            $("#pd2").html(pd2re);
+            var pd3re = $("#pd3").html().replace('Y', highlightedArea.name);
+            $("#pd3").html(pd3re);
+        });
+
+    }
+
+
+
+
+
+        //------
+
+
+    /*$('.finish-map').click(function () {
+     map.removeLayer(drawnItems);
+     $(".finish-map").attr('disabled', true);
+     buttonDraw.prop('disabled', true);
+     buttonDelete.prop('disabled', true);
+     for (i = 0; i < SOP.length; i++) {
+     group.addLayer(SOP[i].layer);
+     map.addLayer(SOP[i].layer);
+     var sopi = SOP[i];
+     /!*SOP[i].layer.on('click', function (e) {
+     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {}).addTo(map);
+     map.fitBounds(e.layer.getBounds(), null);
+     $("#title2_done").toggleClass("hidden show");
+     $("#area_done").toggleClass("hidden show");
+     $("input:radio[name=live]:first").attr('checked', true);
+     $('#name_area').attr('disabled', false);
+     AreaSelected = sopi;
+     });*!/
+     $('#radios').append('<div class="radio"><label><input type="radio" name="sc_groups" value="' + i + '"/>Area ' + cGroup.name + '</label></div>');
+
+
+     }
+     map.fitBounds(group.getBounds(), null);
+     });*/
 
 
     uiCoreAPI.instanceUrl = "http://localhost:8080/";
@@ -235,7 +364,7 @@ function startAll() {
 
         // finish validate
 
-        AreaSelected.dimensions = {
+        highlightedArea.dimensions = {
             pi1: parseInt($("input[name=PI1]:checked").val()),
             pi2: parseInt($("input[name=PI2]:checked").val()),
             pi3: parseInt($("input[name=PI3]:checked").val()),

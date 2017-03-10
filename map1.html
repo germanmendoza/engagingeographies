@@ -151,25 +151,22 @@
                     <hr style="width: 100%">
 
 
-                    <b>Please draw as many areas as you need using the <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing</button> button in the map.</b>
+                    <b id="draw_places">Please draw the area (hola) using the <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing</button> button in the map.</b>
                     <br><br>
-                    <b>If you need, you can delete an area pressing <button class="btn btn-default btn-xs" disabled> <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Delete area </button> button also in the map.</b>
+                    <b>If you need, you can delete the area pressing <button class="btn btn-default btn-xs" disabled> <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Delete area </button> button also in the map.</b>
 
-                </div>
-
-
-                <div style="margin-bottom: 20px" class="hidden" id="title2_done">
-                  <h5>Good Job!</h5>
-                  <hr style="width: 100%">
-                  Now Draw another time if you want. Please draw as many polygons as you like on the areas where you feel more identified/attached or depend on.
-                  <br><br>
-                  If you don't have more areas to draw, just click <button type="button" class="btn btn-primary btn-next" href="#" disabled>Next</button> on the bottom-right corner in the map.
                 </div>
 
 
 
                 <!-- ------------------------------- Sliders ----------------------------------------------------- -->
                 <div class="hidden" id="sliders_done">
+
+                    <h5 id="area_name_sliders">
+                        Area <b>hola</b>
+                    </h5>
+                    <hr style="width: 100%">
+
                     <h5 style="margin-top: 20px">
                         Do you live in that area?
                     </h5>
@@ -183,8 +180,8 @@
                     </div>
                     <div class="no-float"></div>
                     <hr style="width: 100%">
-                    <h5> Please, indicate with the sliders the level of only applicable characteristic that contain the
-                        drawn area. </h5>
+                    <h5 id="title_sliders_change"> Please, indicate with the sliders the level of only applicable characteristic that contain the
+                        area Y. </h5>
 
                     <!--  Question 1  -->
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="margin-top: 20px">
@@ -301,7 +298,7 @@
                 <!-- ------------------------------- End Do you live in that area? ----------------------------------- -->
 
                 <div class="hidden" id="select_place">
-                    <h5 style="margin-bottom: 20px">XXXX</h5>
+                    <h5 style="margin-bottom: 20px">Choose the most important area to you.</h5>
                     <hr style="width: 100%">
                     <div id="radios">
                     </div>
@@ -312,15 +309,15 @@
 
                 <!-- ------------------------------- SOP questions  -------------------------------------------------- -->
                 <div class="hidden" id="questions_done">
-                    <h5 id="change">Please, answer the following questions regarding the X area.</h5>
+                    <h5 id="change">Please, answer the following questions regarding the area X.</h5>
                     <hr style="width: 100%">
                     <h5 style="margin-bottom: 20px; padding-top: 0px">
                         Place Identity
                     </h5>
                     <div class="no-float">
                         <div>
-                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Everything about
-                                this area is a reflection of me.</p>
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="pi1">Everything about
+                                this area (Y) is a reflection of me.</p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
@@ -348,8 +345,8 @@
                         </div>
                         <div class="no-float"></div>
                         <div>
-                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">I feel that I
-                                can really be myself at this area</p>
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="pi2">I feel that I
+                                can really be myself at this area (Y).</p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
@@ -377,7 +374,7 @@
                         </div>
                         <div class="no-float"></div>
                         <div>
-                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">This area
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="pi3">This area (Y)
                                 reflects the type of person I am.</p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
@@ -410,8 +407,8 @@
                         </h5>
                         <div class="no-float">
                             <div>
-                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">I feel
-                                    relaxed when I’m at this area</p>
+                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="pa1">I feel
+                                    relaxed when I’m at this area (Y).</p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                     <label class="radio-inline personal_radio"
@@ -440,8 +437,8 @@
                             </div>
                             <div class="no-float"></div>
                             <div>
-                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">I feel
-                                    happiest when I’m at this area </p>
+                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="pa2">I feel
+                                    happiest when I’m at this area (Y).</p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                     <label class="radio-inline personal_radio"
@@ -470,7 +467,7 @@
                             </div>
                             <div class="no-float"></div>
                             <div>
-                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">This area is
+                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"  id="pa3">This area (Y) is
                                     my favorite place to be</p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
@@ -504,8 +501,8 @@
                             </h5>
                             <div class="no-float">
                                 <div>
-                                    <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">This
-                                        area is the best place for doing the things that I enjoy most</p>
+                                    <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"  id="pd1">This
+                                        area (Y) is the best place for doing the things that I enjoy most</p>
                                     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                          style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                         <label class="radio-inline personal_radio"
@@ -534,8 +531,8 @@
                                 </div>
                                 <div class="no-float"></div>
                                 <div>
-                                    <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">For
-                                        doing the things that I enjoy most, no other place can compare to this area</p>
+                                    <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="pd2">For
+                                        doing the things that I enjoy most, no other place can compare to this area (Y).</p>
                                     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                          style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                         <label class="radio-inline personal_radio"
@@ -564,8 +561,8 @@
                                 </div>
                                 <div class="no-float"></div>
                                 <div>
-                                    <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">This
-                                        area is not a good place to do the things I most like to do.</p>
+                                    <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="pd3">This
+                                        area (Y) is not a good place to do the things I most like to do.</p>
                                     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                          style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                         <label class="radio-inline personal_radio"
@@ -645,8 +642,7 @@
                 </div>
                 <div class="modal-body">
                     <!--  Explanation of the process of drawing  -->
-                    <p>This is a web-map survey application for Lisbon city. We invite you to draw whatever size of
-                        areas on the map freely.
+                    <p>This is a web-map survey application for Lisbon city. We invite you to draw areas on the map freely.
                     <p></p>
                         To start, just press <button class="btn btn-default btn-xs" >
                                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"
@@ -661,8 +657,7 @@
 
                     <p></p>
                     <p>You can "pan" the map or zoom in (+ or -) using the map controls.
-                        You can draw as many areas as you need. The more areas you place, the better! Most
-                        people place at least two areas per each .</p>
+                        You can draw as many areas as you need. The more areas you place, the better! </p>
                 </div> <!--/.modal-body -->
                 <div class="no-float"></div>
                 <div class="modal-footer" style="border:none;">
@@ -731,7 +726,7 @@
                   <!--  Explanation finish  -->
                   <p>This is all. When you finish to locate your different areas and to move on to the next activity,
                       press the button
-                  <button type="button" class="btn btn-primary btn-next" href="#" >Next</button></p>
+                  <button type="button" class="btn btn-primary btn-next" href="#" disabled>Next</button></p>
                   <h3 style="text-align: center; margin-top: 40px">Happy mapping!!</h3>
               </div> <!--/.modal-body -->
               <div class="no-float"></div>

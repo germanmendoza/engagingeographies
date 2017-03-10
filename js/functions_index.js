@@ -30,9 +30,9 @@ function startall() {
     $('#myModal9').modal({backdrop: 'static', keyboard: false});
 
 
-    $('#freguesia_button').click(function () {
+    /*$('#freguesia_button').click(function () {
         $('#myModal11').modal({backdrop: 'static', keyboard: false});
-    });
+    });*/
 
 
     $('#freguesia_button_prev').click(function () {
@@ -87,10 +87,31 @@ function startall() {
     });
 
 
-
-
     $('input:radio[name=freguesia]').click(function () {
         $('#freguesia_button').prop('disabled', false);
+    });
+
+
+    $('#freguesia_button').click(function () {
+        if ($('input[name=freguesia]:checked').val() == "25") {
+            var data = {
+                home: false
+            };
+            app.setHome(data, function (response) {
+                if (response === false) {
+                    alert("PROBLEMS");
+                }
+                else {
+                    util.redirectToPage({
+                        url: "map1.html",
+                        payload: response.id
+                    });
+                }
+            });
+        }
+        else{
+            $('#myModal11').modal({backdrop: 'static', keyboard: false});
+        }
     });
 
 
@@ -100,7 +121,13 @@ function startall() {
         var zipRegex = /(^\d{4}-\d{3}$)/;
 
         if (!zipRegex.test(zip)) {
-            alert("Please, check the zip code");
+            if ($("input:checkbox[name='no_zip']").is(':checked')) {
+
+                $('#myModal12').modal({backdrop: 'static', keyboard: false});
+            }
+            else{
+                alert("Please, write the zip code");
+            }
         }
         else {
 
