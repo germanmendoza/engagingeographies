@@ -67,16 +67,16 @@ function startAll() {
 
 
     function nameplace() {
-        $("#group_name_place").html('Area' + '<h4>' + ' hola ' + '</h4>');
+        $("#group_name_place").html('Area' + '<b style="font-size: 18px">' + ' hola ' + '</b>');
         var replaced = $("#group_name_place").html().replace('hola', name_places[number]);
         $("#group_name_place").html(replaced);
-        $("#draw_places").html('Please draw the area (hola) using the ' + ' <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing</button>' + ' button in the map.');
+        $("#draw_places").html('Please draw the area' + '<b>' + ' (hola) ' + '</b>' + 'using the ' + ' <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing</button>' + ' button in the map.');
         var replaced1 = $("#draw_places").html().replace('hola', name_places[number]);
         $("#draw_places").html(replaced1);
-        $("#area_name_sliders").html("Area hola");
+        $("#area_name_sliders").html('Area' + '<b style="font-size: 18px">' + ' hola ' + '</b>');
         var replaced2 = $("#area_name_sliders").html().replace('hola', name_places[number]);
         $("#area_name_sliders").html(replaced2);
-        $("#title_sliders_change").html('Please, indicate with the sliders the level of only applicable characteristic that contain the area' + '<b>' + ' Y ' + '</b>' + '.');
+        $("#title_sliders_change").html('Please, indicate with the sliders the level of only applicable characteristic that contain the area' + '<b>' + ' Y' + '</b>' + '.');
         var replaced3 = $("#title_sliders_change").html().replace('Y', name_places[number]);
         $("#title_sliders_change").html(replaced3);
 

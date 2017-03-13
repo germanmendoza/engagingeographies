@@ -15,7 +15,7 @@ body{
 .navbar-default{
 	border-radius: 0px !important;
 }
-#links-navbar > a{
+.links-navbar > a{
 	color:#A9A9A9;
 	cursor:pointer;
 	text-align:center;
@@ -25,15 +25,15 @@ body{
 	padding-bottom:0px;
 	margin-bottom:0px;	
 }
-#links-navbar > a:hover{
+.links-navbar > a:hover{
 	color:#6DBFCE;
 	
 }
-#links-navbar > a:active{
+.links-navbar > a:active{
 	color:#6DBFCE;
 	
 }
-#icon-navbar{
+.icon-navbar{
 	margin-top:1px;
 	padding-bottom:0px;
 	margin-bottom:0px;
@@ -42,7 +42,7 @@ body{
 	text-decoration: none;
 	color: #6DBFCE; 
 }
-#logo_phd{
+.logo_phd{
 	width: 45px;
 }
 .name_link:hover{

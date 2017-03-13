@@ -18,48 +18,47 @@
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header name_navbar col-xs-4 col-sm-5 col-md-5 col-lg-5 visible-lg visible-md visible-sm">
-            <a href="index.html" class="name_link"><img src="img/logo_engaging.svg" id="logo_phd">Place and City</a>
+            <img src="img/logo_engaging.svg" class="logo_phd">Place and City
         </div>
         <!--  Visible only xs  -->
         <div class="navbar-header name_navbar col-xs-4 col-sm-5 col-md-5 col-lg-5 visible-xs">
-            <a href="index.html" class="name_link"><img src="img/logo_engaging.svg" id="logo_phd"></a>
+            <img src="img/logo_engaging.svg" class="logo_phd">
         </div>
         <ul class="nav navbar-right float-right col-lg-5 col-md-5 col-sm-5 col-xs-8" style="padding-right: 0px;">
-            <li class="float-right visible-lg visible-md visible-sm" id="links-navbar">
-                <a href="#" style="margin-right:20px" data-toggle="modal" data-target="#myModal2">
-                    <span class="glyphicon glyphicon-info-sign btn-lg" id="icon-navbar"></span><br>Help
+            <li class="float-right visible-lg visible-md visible-sm links-navbar">
+                <a href="#" style="margin-right:20px; padding: 0px" data-toggle="modal" data-target="#myModal3">
+                    <span class="glyphicon glyphicon-info-sign btn-lg icon-navbar"></span><br>Help
                 </a>
             </li>
             <!--  Visible only xs  -->
-            <li class="float-right visible-xs" id="links-navbar">
-                <a href="#" style="margin-right:0px; padding-right: 0px" data-toggle="modal" data-target="#myModal2">
-                    <span class="glyphicon glyphicon-info-sign btn-lg" style="padding-right: 0px"
-                          id="icon-navbar"></span>
+            <li class="float-right visible-xs links-navbar">
+                <a href="#" style="margin-right:0px; padding: 0px" data-toggle="modal" data-target="#myModal2">
+                    <span class="glyphicon glyphicon-info-sign btn-lg icon-navbar" style="padding-right: 0px"
+                          id=""></span>
                 </a>
             </li>
-            <li class="float-right visible-lg visible-md visible-sm" id="links-navbar">
+            <li class="float-right visible-lg visible-md visible-sm links-navbar">
                 <a href="http://www.engagingeographies.com/blog" id="navbar_xs"
-                   style="margin-right:20px; margin-left:0px">
-                    <span class="glyphicon glyphicon-file btn-lg" id="icon-navbar"></span><br>Blog
+                   style="margin-right:20px; margin-left:0px; padding: 0px">
+                    <span class="glyphicon glyphicon-file btn-lg icon-navbar" id=""></span><br>Blog
                 </a>
             </li>
             <!--  Visible only xs  -->
-            <li class="float-right visible-xs" id="links-navbar">
+            <li class="float-right visible-xs links-navbar">
                 <a href="http://www.engagingeographies.com/blog" id="navbar_xs"
-                   style="margin-right:0px; margin-left:0px">
-                    <span class="glyphicon glyphicon-file btn-lg" style="padding-right: 5px" id="icon-navbar"></span>
+                   style="margin-right:0px; margin-left:0px; padding: 0px">
+                    <span class="glyphicon glyphicon-file btn-lg icon-navbar" style="padding-right: 5px" id=""></span>
                 </a>
             </li>
-            <li class="float-right visible-lg visible-md visible-sm" id="links-navbar">
-                <a href="contact.html" style="margin-right:20px; margin-left:0px">
-                    <span class="glyphicon glyphicon-envelope btn-lg" id="icon-navbar"></span><br>Contact
+            <li class="float-right visible-lg visible-md visible-sm links-navbar">
+                <a href="contact.html" style="margin-right:20px; margin-left:0px; padding: 0px">
+                    <span class="glyphicon glyphicon-envelope btn-lg icon-navbar" id=""></span><br>Contact
                 </a>
             </li>
             <!--  Visible only xs  -->
-            <li class="float-right visible-xs" id="links-navbar">
-                <a href="contact.html" style="margin-right:0px; margin-left:0px">
-                    <span class="glyphicon glyphicon-envelope btn-lg" style="padding-right: 5px"
-                          id="icon-navbar"></span>
+            <li class="float-right visible-xs links-navbar">
+                <a href="contact.html" style="margin-right:0px; margin-left:0px; padding: 0px">
+                    <span class="glyphicon glyphicon-envelope btn-lg icon-navbar" style="padding-right: 5px" id=""></span>
                 </a>
             </li>
         </ul>
@@ -68,16 +67,13 @@
 <!-- ------------------------------- End Navbar ----------------------------------------------------------------------------- -->
 <div class="container-fluid">
     <!-- ------------------------------- Map visible lg md sm  -------------------------------------------------------------------- -->
-    <div id="pepe" class="col-lg-6 col-md-6 col-sm-6 visible-lg visible-md visible-sm"
-         style="position: fixed; right: 0px;">
+    <div id="pepe" class="col-lg-6 col-md-6 col-sm-6 visible-lg visible-md visible-sm" style="position: fixed; right: 0px;">
         <div class="panel panel-default">
             <div class="panel-body">
                 <div id="map" style="height:84vh; position: relative;">
-                    <div class="visible-lg visible-md visible-sm"
-                         style="position: absolute; top: 10px; left: 65px; z-index: 998">
+                    <div class="visible-lg visible-md visible-sm" style="position: absolute; top: 10px; left: 65px; z-index: 998">
                         <button class="btn btn-default btn-md" id="draw_poly">
-                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"
-                                  style="margin-right: 5px"></span> Start drawing
+                            <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing
                         </button>
                         <button class="btn btn-default btn-md" id="delete_poly">
                             <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span>
@@ -100,7 +96,7 @@
                     <!--title="Before finish" data-content="Areas that have drawn, chooses the most important to you."-->
                     <!--onclick="toggler('secondimage');" disabled>Next</a>-->
                     <!--GERMAN-->
-                    <a type="button" id="questions-ce" class="btn btn-primary finish-map pop" disabled>Done</a>
+                    <a type="button" id="questions-ce" class="btn btn-primary finish-map pop" disabled>Next</a>
                     <!--GERMAN-->
 
                     <!-- </div> -->

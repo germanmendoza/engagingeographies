@@ -46,11 +46,11 @@ function startAll() {
 
 
     function namegroup() {
-        $("#group_name_nature").html("Group hola");
+        $("#group_name_nature").html('Group' + '<b style="font-size: 18px">' + ' hola ' + '</b>');
         var replaced = $("#group_name_nature").html().replace('hola', name_groups[number]);
         $("#group_name_nature").html(replaced);
-        $("#textchange").html("Now, think about the Group X that you belong.");
-        $("#textchange_nature").html("Please, select the nature of this social group X.");
+        $("#textchange").html('Now, think about the group' + '<b style="font-size: 18px">' + ' X ' + '</b>' + 'that you belong.');
+        $("#textchange_nature").html('Please, select the nature of this social group' + '<b style="font-size: 18px">' + ' X' + '</b>' + '.');
         var replaced1 = $("#textchange").html().replace('X', name_groups[number]);
         var replaced2 = $("#textchange_nature").html().replace('X', name_groups[number]);
         $("#textchange").html(replaced1);
@@ -81,7 +81,7 @@ function startAll() {
 
                 if ($("input[name=spatial]:checked").val() == "true") {
 
-                    $("#let_draw").html('Please, draw all the areas that define the group X using <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="margin-right: 5px"></span> Start drawing </button>button and you can delete the area clicking <button class="btn btn-default btn-xs" disabled> <span class="glyphicon glyphicon-trash" aria-hidden="true"style="margin-right: 5px"></span> Delete area </button>button on the map.');
+                    $("#let_draw").html('Please, draw all the areas that define the group' + '<b style="font-size: 18px">' + ' X ' + '</b>' + 'using <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="margin-right: 5px"></span> Start drawing </button>button and you can delete the area clicking <button class="btn btn-default btn-xs" disabled> <span class="glyphicon glyphicon-trash" aria-hidden="true"style="margin-right: 5px"></span> Delete area </button>button on the map.');
                     var replaceddraw = $("#let_draw").html().replace('X', name_groups[number]);
                     $("#let_draw").html(replaceddraw);
                     $("#draw").toggleClass("hidden show");
@@ -474,7 +474,7 @@ function counterAreasName() {
     $("#counting_areas").html(replaced2);
 
 
-    $("#change_name_group").html('Now you can draw another area that define the G group, or click the <button type="button" class="btn btn-primary btn-next" href="#" disabled>Next</button> on th map to define the next group.');
+    $("#change_name_group").html('Now you can draw another area that define the' + '<b style="font-size: 18px">' + ' G ' + '</b>' + 'group, or click the <button type="button" class="btn btn-primary btn-next" href="#" disabled>Next</button> on the map to define the next group.');
     var replaced3 = $("#change_name_group").html().replace('G', name_groups[number]);
     $("#change_name_group").html(replaced3);
 

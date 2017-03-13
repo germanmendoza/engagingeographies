@@ -14,50 +14,41 @@
 <body>
 <!-- ------------------------------- Navbar ----------------------------------------------------------------------------- -->
 <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header name_navbar col-xs-4 col-sm-5 col-md-5 col-lg-5 visible-lg visible-md visible-sm">
-      <a href="index.html" class="name_link"><img src="img/logo_engaging.svg" id="logo_phd">Place and City</a>
+    <div class="container-fluid">
+        <div class="navbar-header name_navbar col-xs-4 col-sm-5 col-md-5 col-lg-5 visible-lg visible-md visible-sm">
+            <img src="img/logo_engaging.svg" class="logo_phd">Place and City
+        </div>
+        <!--  Visible only xs  -->
+        <div class="navbar-header name_navbar col-xs-4 col-sm-5 col-md-5 col-lg-5 visible-xs">
+            <img src="img/logo_engaging.svg" class="logo_phd">
+        </div>
+        <ul class="nav navbar-right float-right col-lg-5 col-md-5 col-sm-5 col-xs-8" style="padding-right: 0px;">
+            <li class="float-right visible-lg visible-md visible-sm links-navbar">
+                <a href="http://www.engagingeographies.com/blog" id="navbar_xs"
+                   style="margin-right:20px; margin-left:0px; padding: 0px">
+                    <span class="glyphicon glyphicon-file btn-lg icon-navbar" id=""></span><br>Blog
+                </a>
+            </li>
+            <!--  Visible only xs  -->
+            <li class="float-right visible-xs links-navbar">
+                <a href="http://www.engagingeographies.com/blog" id="navbar_xs"
+                   style="margin-right:0px; margin-left:0px; padding: 0px">
+                    <span class="glyphicon glyphicon-file btn-lg icon-navbar" style="padding-right: 5px" id=""></span>
+                </a>
+            </li>
+            <li class="float-right visible-lg visible-md visible-sm links-navbar">
+                <a href="contact.html" style="margin-right:20px; margin-left:0px; padding: 0px">
+                    <span class="glyphicon glyphicon-envelope btn-lg icon-navbar" id=""></span><br>Contact
+                </a>
+            </li>
+            <!--  Visible only xs  -->
+            <li class="float-right visible-xs links-navbar">
+                <a href="contact.html" style="margin-right:0px; margin-left:0px; padding: 0px">
+                    <span class="glyphicon glyphicon-envelope btn-lg icon-navbar" style="padding-right: 5px" id=""></span>
+                </a>
+            </li>
+        </ul>
     </div>
-    <!--  Visible only xs  -->
-    <div class="navbar-header name_navbar col-xs-4 col-sm-5 col-md-5 col-lg-5 visible-xs">
-      <a href="index.html" class="name_link"><img src="img/logo_engaging.svg" id="logo_phd"></a>
-    </div>
-    <ul class="nav navbar-right float-right col-lg-5 col-md-5 col-sm-5 col-xs-8" style="padding-right: 0px;">
-      <!-- <li class="float-right visible-lg visible-md visible-sm" id="links-navbar">
-          <a href="#" style="margin-right:20px" data-toggle="modal" data-target="#myModal2">
-            <span class="glyphicon glyphicon-info-sign btn-lg" id="icon-navbar"></span><br>Help
-          </a>
-      </li> -->
-      <!--  Visible only xs  -->
-      <!-- <li class="float-right visible-xs" id="links-navbar">
-          <a href="#" style="margin-right:0px; padding-right: 0px" data-toggle="modal" data-target="#myModal2">
-            <span class="glyphicon glyphicon-info-sign btn-lg" style="padding-right: 0px" id="icon-navbar"></span>
-          </a>
-      </li> -->
-      <li class="float-right visible-lg visible-md visible-sm" id="links-navbar">
-        <a href="http://www.engagingeographies.com/blog" id="navbar_xs" style="margin-right:20px; margin-left:0px">
-          <span class="glyphicon glyphicon-file btn-lg" id="icon-navbar"></span><br>Blog
-        </a>
-      </li>
-      <!--  Visible only xs  -->
-      <li class="float-right visible-xs" id="links-navbar">
-        <a href="http://www.engagingeographies.com/blog" id="navbar_xs" style="margin-right:0px; margin-left:0px">
-          <span class="glyphicon glyphicon-file btn-lg" style="padding-right: 5px" id="icon-navbar"></span>
-        </a>
-      </li>
-      <li class="float-right visible-lg visible-md visible-sm" id="links-navbar">
-          <a href="contact.html" style="margin-right:20px; margin-left:0px">
-            <span class="glyphicon glyphicon-envelope btn-lg" id="icon-navbar"></span><br>Contact
-          </a>
-      </li>
-      <!--  Visible only xs  -->
-      <li class="float-right visible-xs" id="links-navbar">
-          <a href="contact.html" style="margin-right:0px; margin-left:0px">
-            <span class="glyphicon glyphicon-envelope btn-lg" style="padding-right: 5px" id="icon-navbar"></span>
-          </a>
-      </li>
-    </ul>
-  </div>
 </nav>
 <!-- ------------------------------- End Navbar --------------------------------------------------------------------------- -->
 <div class="container-fluid">
@@ -66,6 +57,9 @@
         <div class="panel panel-default">
             <div class="panel-body">
               <div id="map" style="height:84vh; position: relative;">
+                <div style="position: absolute; top: 10px; left: 210px; z-index: 998">
+                  <h4>Xxxxxx xxxxxx</h4>
+                </div>
                 <!-- <div class="custom_buttons_leaflet visible-lg visible-md visible-sm">
                     <button class="btn btn-default btn-md" id="draw_poly" onclick="drawPolygon()" disabled>
                         <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span>
@@ -79,7 +73,7 @@
                 <div id="map" style="height:84vh"></div> -->
                   <!-- <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12" style="text-align: right;"> -->
                   <!-- </div> -->
-                </div>
+              </div>
             </div> <!-- /.panel-body -->
         </div> <!-- /.panel-default -->
     </div> <!-- /.col6 -->
@@ -110,7 +104,7 @@
             </div>
             <div style="margin-bottom: 20px">
               <h5>Where are you from?</h5>
-              <select id = "country" style="width: 60%; max-width: 100%">
+              <select id = "country" style="width: 67%; max-width: 100%">
                 <option value="AF">Afghanistan</option>
                 <option value="AX">Åland Islands</option>
                 <option value="AL">Albania</option>
@@ -364,7 +358,7 @@
             </div>
             <div style="margin-bottom: 20px">
               <h5>Study level</h5>
-              <select id = "study">
+              <select id = "study" style="width: 67%; max-width: 100%">
                 <option value="0"></option>
                 <option value="1">4ª classe</option>
                 <option value="2">12º ano ou equivalente</option>
@@ -378,7 +372,7 @@
 
             <div style="margin-bottom: 20px">
               <h5>Profession</h5>
-              <select id = "profession">
+              <select id = "profession" style="width: 67%; max-width: 100%">
                 <option value="0"></option>
                 <option value="1">Estudante</option>
                 <option value="2">Reformado</option>
@@ -453,13 +447,8 @@
     <div class="panel panel-default">
       <div class="panel-body">
         <div id="map2" style="height:83vh; position: relative;">
-          <div style="position: absolute; top: 10px; left: 40px; z-index: 998">
-            <button class="btn btn-default btn-xs" id="draw_polyxs" onclick="drawPolygon()" >
-              <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing
-            </button>
-            <button class="btn btn-default btn-xs" id="delete_polyxs">
-              <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Delete area
-            </button>
+          <div style="position: absolute; top: 10px; left: 100px; z-index: 998">
+            <h4>Xxxxxx xxxxxx</h4>
           </div>
         </div> <!-- map -->
         <!-- <div class="custom_buttons_leaflet">
