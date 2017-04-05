@@ -19,7 +19,7 @@ function startAll() {
 
     $("#name_actual_group").select2({
         tags: [],
-        tokenSeparators: [",", " "]
+        tokenSeparators: [","]
     });
 
     $('#submit_name_group').click(function () {

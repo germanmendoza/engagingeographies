@@ -43,7 +43,7 @@ function startAll() {
 
     $("#name_actual_place").select2({
         tags: [],
-        tokenSeparators: [",", " "]
+        tokenSeparators: [","]
     });
 
     //
@@ -76,7 +76,7 @@ function startAll() {
         $("#area_name_sliders").html('Area' + '<b style="font-size: 18px">' + ' hola ' + '</b>');
         var replaced2 = $("#area_name_sliders").html().replace('hola', name_places[number]);
         $("#area_name_sliders").html(replaced2);
-        $("#title_sliders_change").html('Please, indicate with the sliders the level of only applicable characteristic that contain the area' + '<b>' + ' Y' + '</b>' + '.');
+        $("#title_sliders_change").html('Please, indicate with the sliders the level of only applicable characteristic about the area' + '<b>' + ' Y' + '</b>' + '.');
         var replaced3 = $("#title_sliders_change").html().replace('Y', name_places[number]);
         $("#title_sliders_change").html(replaced3);
 
