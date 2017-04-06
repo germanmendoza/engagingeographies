@@ -417,6 +417,8 @@
                 $("#another_draw_ce").removeClass().addClass("show");
                 $("#draw_ce").removeClass().addClass("hidden");
                 $("#live_area").removeClass().addClass("show");
+                buttonDelete.prop('disabled', false);
+
 
                 var polygonData = {
                     type:"cea",
@@ -449,6 +451,7 @@
                 $("#draw_ce").removeClass().addClass("show");
                 $("#another_draw_ce").removeClass().addClass("hidden");
                 $("#live_area").removeClass().addClass("hidden");
+                buttonDelete.prop('disabled', true);
                 if (CE.length > 0){
                     map.removeLayer(CE[CE.length-1].layer);
                     CE.pop();

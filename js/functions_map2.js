@@ -60,75 +60,62 @@ function startAll() {
 
     $('#spatial_dimension').click(function () {
 
+        $("#other_name").removeClass().addClass("hidden");
+
+
         if ($("#nature").val() == "0") {
             alert("Please, choose a kind of group");
         }
 
+
+        if ($("#nature").val() != "19") {
+            currGroup.nature = $('#nature').val();
+            drawAreas();
+        }
         else {
-
-            if ($("#nature").val() == "19") {
-                if (!$("#other").val()) {
-                    alert("Please, introduce the nature of the group.")
-                }
-                else {
-                    currGroup.nature = $('#other').val();
-                }
+            if (!$("#other").val()) {
+                alert("Please, introduce the nature of the group.")
             }
-            else{
+            else {
+                currGroup.nature = $('#other').val();
+                $("#SC_group").removeClass().addClass("show");
+                drawAreas();
+            }
+        }
 
-                currGroup.nature = $('#nature').val();
-                $("#nature").val("0");
+        function drawAreas() {
 
-                if ($("input[name=spatial]:checked").val() == "true") {
+            $("#nature").val("0");
+            $('#other').val("");
 
-                    $("#let_draw").html('Please, draw all the areas that define the group' + '<b style="font-size: 18px">' + ' X ' + '</b>' + 'using <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="margin-right: 5px"></span> Start drawing </button>button and you can delete the area clicking <button class="btn btn-default btn-xs" disabled> <span class="glyphicon glyphicon-trash" aria-hidden="true"style="margin-right: 5px"></span> Delete area </button>button on the map.');
-                    var replaceddraw = $("#let_draw").html().replace('X', name_groups[number]);
-                    $("#let_draw").html(replaceddraw);
-                    $("#draw").toggleClass("hidden show");
-                    buttonDraw.prop('disabled', false);
-                    buttonDelete.prop('disabled', false);
+            if ($("input[name=spatial]:checked").val() == "true") {
 
-
-                    $("#SC_group").toggleClass("hidden show");
-                    $("#specifications").toggleClass("hidden show");
-                    spatialyes = spatialyes + 1;
-                }
-                else {
-
-                    SC.push(currGroup);
-
-                    if (number == name_groups.length - 1) {
-                        if (spatialyes != 0) {
-                            showAllGroups();
-                            $("#select_group").toggleClass("hidden show");
-                            $("#SC_group").toggleClass("hidden show");
-                        }
-                        else {
-
-                            var id = util.getFromLocalStorage(util.interPageDataKey);
-
-                            var data2 = {
-                                type: "sc",
-                                id: id,
-                                groups: SC
-                            };
-
-                            app.setSC(data2, function (response) {
-                                if (response === false) {
-                                    alert("PROBLEMS");
-                                }
-                                else {
-                                    util.redirectToPage({
-                                        url: "map3.html",
-                                        payload: response.id
-                                    });
-                                }
-                            });
+                $("#title_let_draw").html('Lets draw the group X!');
+                var replacetitle = $("#title_let_draw").html().replace('X', name_groups[number]);
+                $("#title_let_draw").html(replacetitle);
+                $("#let_draw").html('Please, draw all the areas that define the group' + '<b style="font-size: 18px">' + ' X ' + '</b>' + 'using <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="margin-right: 5px"></span> Start drawing </button>button and you can delete the area clicking <button class="btn btn-default btn-xs" disabled> <span class="glyphicon glyphicon-trash" aria-hidden="true"style="margin-right: 5px"></span> Delete area </button>button on the map.');
+                var replaceddraw = $("#let_draw").html().replace('X', name_groups[number]);
+                $("#let_draw").html(replaceddraw);
+                $("#draw").toggleClass("hidden show");
+                buttonDraw.prop('disabled', false);
+                //buttonDelete.prop('disabled', false);
 
 
-                        }
+                $("#SC_group").toggleClass("hidden show");
+                $("#specifications").toggleClass("hidden show");
+                spatialyes = spatialyes + 1;
+            }
+            else {
+
+                SC.push(currGroup);
+
+                if (number == name_groups.length - 1) {
+                    if (spatialyes != 0) {
+                        showAllGroups();
+                        $("#select_group").toggleClass("hidden show");
+                        $("#SC_group").toggleClass("hidden show");
                     }
-                    else if (name_groups.length == 1) {
+                    else {
 
                         var id = util.getFromLocalStorage(util.interPageDataKey);
 
@@ -140,7 +127,7 @@ function startAll() {
 
                         app.setSC(data2, function (response) {
                             if (response === false) {
-                                alert("PROBLEMS");
+                                alert("There is a connection problem; please try again later");
                             }
                             else {
                                 util.redirectToPage({
@@ -149,47 +136,82 @@ function startAll() {
                                 });
                             }
                         });
-                    }
-                    else {
-                        number = number + 1;
-                        namegroup();
-                        currGroup = {
-                            name: name_groups[number],
-                            areas: [],
-                            nature: 0
-                        };
-                        $("#specifications").removeClass().addClass("show");
-                        $("#another_draw").removeClass().addClass("hidden");
-                        $("#SC_group").removeClass().addClass("hidden");
-                        $("#group_name_nature").fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
-                        $("input[name=spatial][value=true]").prop('checked', true);
 
 
                     }
+                }
+                else if (name_groups.length == 1) {
+
+                    var id = util.getFromLocalStorage(util.interPageDataKey);
+
+                    var data2 = {
+                        type: "sc",
+                        id: id,
+                        groups: SC
+                    };
+
+                    app.setSC(data2, function (response) {
+                        if (response === false) {
+                            alert("There is a connection problem; please try again later");
+                        }
+                        else {
+                            util.redirectToPage({
+                                url: "map3.html",
+                                payload: response.id
+                            });
+                        }
+                    });
+                }
+                else {
+                    number = number + 1;
+                    namegroup();
+                    currGroup = {
+                        name: name_groups[number],
+                        areas: [],
+                        nature: 0
+                    };
+                    $("#specifications").removeClass().addClass("show");
+                    $("#another_draw").removeClass().addClass("hidden");
+                    $("#SC_group").removeClass().addClass("hidden");
+                    $("#group_name_nature").fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+                    $("input[name=spatial][value=true]").prop('checked', true);
+
 
                 }
 
-
             }
-
-            //$("input[name=spatial][value=true]").prop('checked', true);
-
-
-        }
+        };
 
 
     });
 
     $('#nature').change(function () {
         if ($("#nature").val() == "19") {
+            if (anterior != "19") {
+                $("#SC_group").removeClass().addClass("hidden");
+            }
             $("#other_name").removeClass().addClass("show");
+            var anterior = $('#nature').val();
         }
-        else{
+        else {
+
+
             $("#other_name").removeClass().addClass("hidden");
+            $("#SC_group").removeClass().addClass("show");
+            var anterior = $('#nature').val();
         }
-        $("#SC_group").removeClass().addClass("show");
+    });
 
+    $('#nature_write').click(function () {
 
+        if ($("#nature").val() == "19") {
+            if (!$("#other").val()) {
+                alert("Please, introduce the nature of the group.")
+            }
+            else {
+                $("#SC_group").removeClass().addClass("show");
+            }
+        }
     });
 
 
@@ -223,6 +245,7 @@ function startAll() {
         areasdrawn = areasdrawn + 1;
         counterAreasName();
         buttonDraw.prop('disabled', false);
+        buttonDelete.prop('disabled', true);
         $(".finish-map").attr('disabled', false);
         map.setZoom(zoommap);
 
@@ -251,6 +274,7 @@ function startAll() {
         drawnItems = new L.FeatureGroup();
         map.addLayer(drawnItems);
         map.addLayer(polygonData.layer);
+
     });
 
 
@@ -440,7 +464,7 @@ function startAll() {
 
         app.setSC(data2, function (response) {
             if (response === false) {
-                alert("PROBLEMS");
+                alert("There is a connection problem; please try again later");
             }
             else {
                 util.redirectToPage({
@@ -464,6 +488,11 @@ function deleteareas() {
         $("#draw").removeClass().addClass("show");
         $("#questions_bonding_bridging").removeClass().addClass("hidden");
     }
+    $("input[name=bosc1]").prop('checked', false);
+    $("input[name=bosc2]").prop('checked', false);
+    $("input[name=brsc1]").prop('checked', false);
+    $("input[name=brsc2]").prop('checked', false);
+
 }
 
 function counterAreasName() {

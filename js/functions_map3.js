@@ -19,7 +19,7 @@
              return;
          }*/
          buttonDraw.prop('disabled', false);
-         buttonDelete.prop('disabled', false);
+         //buttonDelete.prop('disabled', false);
          //$(".finish-map").attr('disabled', false);
 
          $("#questions_done").toggleClass("hidden show");
@@ -73,7 +73,7 @@
 
          app.setCE(data, function (response) {
              if (response === false) {
-                 alert("PROBLEMS");
+                 alert("There is a connection problem; please try again later");
              }
              else {
                  util.redirectToPage({

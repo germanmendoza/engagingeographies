@@ -72,7 +72,7 @@ function startall() {
             };
             app.setHome(data, function (response) {
                 if (response === false) {
-                    alert("PROBLEMS");
+                    alert("There is a connection problem; please try again later");
                 }
                 else {
                     util.redirectToPage({
@@ -99,7 +99,7 @@ function startall() {
             };
             app.setHome(data, function (response) {
                 if (response === false) {
-                    alert("PROBLEMS");
+                    alert("There is a connection problem; please try again later");
                 }
                 else {
                     util.redirectToPage({
@@ -167,7 +167,7 @@ function startall() {
         };
         app.setHome(data, function (response) {
             if (response === false) {
-                alert("PROBLEMS");
+                alert("There is a connection problem; please try again later");
             }
             else {
                 util.redirectToPage({

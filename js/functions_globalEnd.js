@@ -60,10 +60,10 @@ function startAll () {
                 };
                 app.finish(data,function (response) {
                     if (response === false) {
-                        alert("PROBLEMS");
+                        alert("There is a connection problem; please try again later");
                     }
                     else {
-                        alert("You are the fucking master");
+                        alert("Thanks");
                     }
                 })
 

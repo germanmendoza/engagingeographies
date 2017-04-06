@@ -214,6 +214,8 @@ function startAll() {
             map.addLayer(polygonData.layer);
 
         }
+        $("#delete_poly").prop('disabled', true);
+        $("#delete_polyxs").prop('disabled', true);
     });
 
     var AreaSelected;
@@ -391,7 +393,7 @@ function startAll() {
 
         app.setSOP(data2, function (response) {
             if (response === false) {
-                alert("PROBLEMS");
+                alert("There is a connection problem; please try again later");
             }
             else {
                 util.redirectToPage({

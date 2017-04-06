@@ -59,7 +59,8 @@
             <!--  Visible only xs  -->
             <li class="float-right visible-xs links-navbar">
                 <a href="contact.html" style="margin-right:0px; margin-left:0px; padding: 0px">
-                    <span class="glyphicon glyphicon-envelope btn-lg icon-navbar" style="padding-right: 5px" id=""></span>
+                    <span class="glyphicon glyphicon-envelope btn-lg icon-navbar" style="padding-right: 5px"
+                          id=""></span>
                 </a>
             </li>
         </ul>
@@ -79,7 +80,7 @@
                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"
                                   style="margin-right: 5px"></span> Start drawing
                         </button>
-                        <button class="btn btn-default btn-md" id="delete_poly">
+                        <button class="btn btn-default btn-md" id="delete_poly" disabled>
                             <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span>
                             Delete area
                         </button>
@@ -126,12 +127,14 @@
                     <!-- <div  class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-lg-9 col-md-9 col-sm-9 col-xs-9"> -->
                     <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-9 col-md-9 col-sm-9 col-xs-12">
                         <div class="s2-example">
-                          <select class="form-control" multiple="multiple" id="name_actual_group" style="width: 100%; max-width: 100%"></select>
+                            <select class="form-control" multiple="multiple" id="name_actual_group"
+                                    style="width: 100%; max-width: 100%"></select>
                         </div>
                     </div>
                     <div class="no-float"></div>
-                    <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-9 col-md-9 col-sm-9 col-xs-12" style="margin-top: 10px">
-                      <p style="font-size: 12px">Note: separate words by commas or enter key.</p>
+                    <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-9 col-md-9 col-sm-9 col-xs-12"
+                         style="margin-top: 10px">
+                        <p style="font-size: 12px">Note: separate words by commas or enter key.</p>
                     </div>
 
                     <div class="no-float"></div>
@@ -197,11 +200,14 @@
                 </div>
                 <!-- ------------------------------- Social capital specifications  --------------------------------------------- -->
 
-                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 hidden" style="padding-left: 0px; width: 250px" id="other_name">
-                    <input id="other" class="form-control" rows="1" placeholder="other name"></input>
+                <div class="hidden" id="other_name">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 " style="padding-left: 0px; width: 250px">
+                        <input id="other" class="form-control" rows="1" placeholder="other name"></input>
+                    </div>
+                    <div class="no-float"></div>
+                    <a type="button" class="btn btn-primary float-right" id="nature_write">Done</a>
+                    <div class="no-float"></div>
                 </div>
-
-
                 <!-- ------------------------------- Social capital spatial  --------------------------------------------- -->
                 <div class="hidden" id="SC_group">
 
@@ -232,9 +238,21 @@
 
                 <!-- ------------------------------- Social capital spatialization (let's draw)  --------------------------------------------- -->
                 <div class="hidden" id="draw">
-                  <h4 style="margin-bottom: 20px">Let's draw the group X!</h4>
+                    <h4 style="margin-bottom: 20px" id="title_let_draw">Let's draw the group X!</h4>
                     <div id="let_draw">
-                      Please, draw all the areas that define the group X using <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing</button> button and you can delete the area clicking <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Delete area</button> button on the map.
+                        Please, draw all the areas that define the group X using
+                        <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil"
+                                                                              aria-hidden="true"
+                                                                              style="margin-right: 5px"></span> Start
+                            drawing
+                        </button>
+                        button and you can delete the area clicking
+                        <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-trash"
+                                                                              aria-hidden="true"
+                                                                              style="margin-right: 5px"></span> Delete
+                            area
+                        </button>
+                        button on the map.
                     </div>
                 </div>
 
@@ -306,7 +324,8 @@
                         </div>
                         <div class="no-float"></div>
                         <div>
-                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">I know people in
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">I know people
+                                in
                                 that group well enough to get them to do anything important.</p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
@@ -398,25 +417,28 @@
                 </div>
                 <!-- -------------------------------  End questions ----------------------------------------------------- -->
                 <div class="hidden" id="select_group">
-                <h5 style="margin-bottom: 20px">Please, choose the group that you better socially identify with.</h5>
-                <hr style="width: 100%">
-                <div id="radios">
-                </div>
-                <div class="float-right">
-                    <a type="button" class="btn btn-primary" id="choose_group">Done</a>
-                </div>
+                    <h5 style="margin-bottom: 20px">Please, choose the group that you better socially identify
+                        with.</h5>
+                    <hr style="width: 100%">
+                    <div id="radios">
+                    </div>
+                    <div class="float-right">
+                        <a type="button" class="btn btn-primary" id="choose_group">Done</a>
+                    </div>
                 </div>
 
                 <!-- ------------------------------- SC questions  -------------------------------------------------- -->
                 <div class="hidden" id="sc_done">
-                    <h5 id="change">Please, answer the following questions regarding the <b style="font-size: 18px">X</b> group.</h5>
+                    <h5 id="change">Please, answer the following questions regarding the <b
+                            style="font-size: 18px">X</b> group.</h5>
                     <hr style="width:100%">
                     <h5 style="margin-bottom: 20px; padding-top: 0px">
                         Sense of community
                     </h5>
                     <div class="no-float">
                         <div>
-                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc1">I feel like a member of <b>Y</b> group.</p>
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc1">I
+                                feel like a member of <b>Y</b> group.</p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
@@ -444,7 +466,8 @@
                         </div>
                         <div class="no-float"></div>
                         <div>
-                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc2">I belong to the <b>Y</b> group.</p>
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc2">I
+                                belong to the <b>Y</b> group.</p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
@@ -472,7 +495,8 @@
                         </div>
                         <div class="no-float"></div>
                         <div>
-                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc3">I feel connected to the <b>Y</b> group.</p>
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc3">I
+                                feel connected to the <b>Y</b> group.</p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
@@ -505,7 +529,8 @@
                         </h5>
                         <div class="no-float">
                             <div>
-                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="n1">Help a <b>Y</b> group member in an emergency.</p>
+                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="n1">
+                                    Help a <b>Y</b> group member in an emergency.</p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                     <label class="radio-inline personal_radio"
@@ -537,7 +562,8 @@
                             </div>
                             <div class="no-float"></div>
                             <div>
-                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="n2">Offer an advice on a personal problem of a <b>Y</b> group member.</p>
+                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="n2">
+                                    Offer an advice on a personal problem of a <b>Y</b> group member.</p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                     <label class="radio-inline personal_radio"
@@ -569,7 +595,8 @@
                             </div>
                             <div class="no-float"></div>
                             <div>
-                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="n3">Discuss a problem with a <b>Y</b> group member.</p>
+                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="n3">
+                                    Discuss a problem with a <b>Y</b> group member.</p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                     <label class="radio-inline personal_radio"
@@ -605,7 +632,9 @@
                             </h5>
                             <div class="no-float">
                                 <div>
-                                    <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="cee1">I think that a collective action from this group <b>(Y)</b> will increase chances of the government changing their plans?</p>
+                                    <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
+                                       id="cee1">I think that a collective action from this group <b>(Y)</b> will
+                                        increase chances of the government changing their plans?</p>
                                     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                          style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                         <label class="radio-inline personal_radio"
@@ -637,7 +666,8 @@
                                 </div>
                                 <div class="no-float"></div>
                                 <div>
-                                    <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="cee2">I think
+                                    <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
+                                       id="cee2">I think
                                         that together we can change a <b>(Y)</b> problem.</p>
                                     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                          style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
@@ -670,7 +700,9 @@
                                 </div>
                                 <div class="no-float"></div>
                                 <div>
-                                    <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="cee3">I think that is important to get people on the <b>(Y)</b> group to help each other more.</p>
+                                    <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
+                                       id="cee3">I think that is important to get people on the <b>(Y)</b> group to help
+                                        each other more.</p>
                                     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                          style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                         <label class="radio-inline personal_radio"
@@ -705,7 +737,8 @@
                                     </h5>
                                     <div class="no-float">
                                         <div>
-                                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="cp1">
+                                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
+                                               id="cp1">
                                                 Have you attended a group <b>(Y)</b> meeting in the last 12 months?</p>
                                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
@@ -738,8 +771,10 @@
                                         </div>
                                         <div class="no-float"></div>
                                         <div>
-                                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="cp2">
-                                                How often do you participate in the activities of <b>(Y)</b> group in the last 12 months?</p>
+                                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
+                                               id="cp2">
+                                                How often do you participate in the activities of <b>(Y)</b> group in
+                                                the last 12 months?</p>
                                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                                 <label class="radio-inline personal_radio"
@@ -771,8 +806,10 @@
                                         </div>
                                         <div class="no-float"></div>
                                         <div>
-                                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="cp3">
-                                                To what extent do you participate in the <b>(Y)</b> group decision-making in the last 12 months?</p>
+                                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
+                                               id="cp3">
+                                                To what extent do you participate in the <b>(Y)</b> group
+                                                decision-making in the last 12 months?</p>
                                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                                 <label class="radio-inline personal_radio"
@@ -821,7 +858,7 @@
             <div class="panel-body">
                 <div id="map2" style="height:83vh; position: relative;">
                     <div style="position: absolute; top: 10px; left: 40px; z-index: 998">
-                        <button class="btn btn-default btn-xs" id="draw_polyxs">
+                        <button class="btn btn-default btn-xs" id="draw_polyxs" disabled>
                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"
                                   style="margin-right: 5px"></span> Start drawing
                         </button>
@@ -856,124 +893,132 @@
 </div> <!-- .container fluid -->
 
 <!-- ------------------------------- Modal 3 Learn draw --------------------------------------------------------------------- -->
-    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <!-- <div class="triangle_draw"></div>
-                <div id="rectangle_draw"></div> -->
-                <button type="button" class="close close-modal" id="icon-link" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-                <div class="modal-header">
-                    <b>Let’s start!! – Please, read the following instructions carefully.</b>
-                </div>
-                <div class="modal-body">
-                    <!--  Explanation of the process of drawing  -->
-                    <p>This is a web-map survey application for Lisbon city. We invite you to draw areas on the map freely.
-                    <p></p>
-                        To start, just press <button class="btn btn-default btn-xs" >
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- <div class="triangle_draw"></div>
+            <div id="rectangle_draw"></div> -->
+            <button type="button" class="close close-modal" id="icon-link" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal-header">
+                <b>Let’s start!! – Please, read the following instructions carefully.</b>
+            </div>
+            <div class="modal-body">
+                <!--  Explanation of the process of drawing  -->
+                <p>This is a web-map survey application for Lisbon city. We invite you to draw areas on the map freely.
+                <p></p>
+                To start, just press
+                <button class="btn btn-default btn-xs">
                                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"
                                           style="margin-right: 5px"></span> Start drawing
-                </button> button at top-centre on the map
-                        part and then click on the map to define your first point and as many points as you need to define
-                        your area. To close the area, click on the first point again. You can edit the polygon moving
-                        any point at any time or delete it pressing <button class="btn btn-default btn-xs" >
+                </button>
+                button at top-centre on the map
+                part and then click on the map to define your first point and as many points as you need to define
+                your area. To close the area, click on the first point again. You can edit the polygon moving
+                any point at any time or delete it pressing
+                <button class="btn btn-default btn-xs">
                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"
                                           style="margin-right: 5px"></span> Delete area
-                </button> button.</p>
+                </button>
+                button.</p>
 
-                    <p></p>
-                    <p>You can "pan" the map or zoom in (+ or -) using the map controls.
-                        You can draw as many areas as you need. The more areas you place, the better! </p>
-                </div> <!--/.modal-body -->
-                <div class="no-float"></div>
-                <div class="modal-footer" style="border:none;">
-                    <div class="float-left" style="color: #A9A9A9; padding-top: 8px">
-                        1/3
-                    </div>
-                    <div class="float-right">
-                        <button type="button" class="btn btn-primary btn-next" href="#">Next</button>
-                    </div>
+                <p></p>
+                <p>You can "pan" the map or zoom in (+ or -) using the map controls.
+                    You can draw as many areas as you need. The more areas you place, the better! </p>
+            </div> <!--/.modal-body -->
+            <div class="no-float"></div>
+            <div class="modal-footer" style="border:none;">
+                <div class="float-left" style="color: #A9A9A9; padding-top: 8px">
+                    1/3
                 </div>
-            </div> <!--/.modal-content -->
-        </div> <!--/.modal-dialog -->
-    </div> <!--/.modal fade -->
-    <!-- ------------------------------- End Modal 3 ---------------------------------------------------------------------------- -->
-    <!-- ------------------------------- Modal 4 Learn sliders ------------------------------------------------------------------ -->
-    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-              <button type="button" class="close close-modal" id="icon-link" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <div class="modal-header">
+                <div class="float-right">
+                    <button type="button" class="btn btn-primary btn-next" href="#">Next</button>
+                </div>
+            </div>
+        </div> <!--/.modal-content -->
+    </div> <!--/.modal-dialog -->
+</div> <!--/.modal fade -->
+<!-- ------------------------------- End Modal 3 ---------------------------------------------------------------------------- -->
+<!-- ------------------------------- Modal 4 Learn sliders ------------------------------------------------------------------ -->
+<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" class="close close-modal" id="icon-link" data-dismiss="modal" aria-label="Close"><span
+                    aria-hidden="true">&times;</span></button>
+            <div class="modal-header">
                 <b>Questions & Sliders</b>
-              </div>
-              <div class="modal-body">
+            </div>
+            <div class="modal-body">
                 <!--  Explanation as sliders are used  -->
                 <p>We also want to know your perception regarding the drawn areas. So, please answer the questions
-                      regarding the areas when is required. We also provide you some tool "sliders" to characterize
-                      some
-                      areas</p>
-                  <!-- <img src="img/slider.png" id="image_slider"
-                       class="col-xs-12 col-sm-10 col-md-10 col-lg-10 col-sm-offset-2 col-md-offset-2 col-lg-offset-2"> -->
+                    regarding the areas when is required. We also provide you some tool "sliders" to characterize
+                    some
+                    areas</p>
+                <!-- <img src="img/slider.png" id="image_slider"
+                     class="col-xs-12 col-sm-10 col-md-10 col-lg-10 col-sm-offset-2 col-md-offset-2 col-lg-offset-2"> -->
                 <div style="text-align: center;">
-                  <input id="ex9" type="text" data-slider-id='ex9Slider' data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="0" style="text-align: center"/>
-                      <span id="ex9CurrentSliderValLabel" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Current Slider Value: 
+                    <input id="ex9" type="text" data-slider-id='ex9Slider' data-slider-min="0" data-slider-max="10"
+                           data-slider-step="1" data-slider-value="0" style="text-align: center"/>
+                    <span id="ex9CurrentSliderValLabel" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">Current Slider Value:
                         <span id="ex9SliderVal">0</span> 
                       </span>
                 </div>
                 <div class="no-float"></div>
                 <p style="margin-top: 20px">through moving horizontally the circle inside the sliders, you can give
-                      us your opinion (from 0 to 10) about each respective asked item. </p>
-              </div> <!--/.modal-body -->
-              <div class="no-float"></div>
-              <div class="modal-footer" style="border:none;">
-                  <div class="float-left" style="color: #A9A9A9; padding-top: 8px">
-                      2/3
-                  </div>
-                  <div class="float-right">
-                      <button type="button" class="btn btn-primary btn-next" href="#">Next</button>
-                  </div>
-                  <div class="float-right" style="padding-top: 8px; margin-right: 20px">
-                      <a type="button" class="link-primary btn-prev" href="#">Prev</a>
-                  </div>
-              </div>
-            </div> <!--/.modal-content -->
-        </div> <!--/.modal-dialog -->
-    </div> <!--/.modal fade -->
-    <!-- ------------------------------- End Modal 4 ---------------------------------------------------------------------------- -->
-    <!-- ------------------------------- Modal 5 Learn finish ------------------------------------------------------------------- -->
-    <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-              <button type="button" class="close close-modal" id="icon-link" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <div class="modal-header">
+                    us your opinion (from 0 to 10) about each respective asked item. </p>
+            </div> <!--/.modal-body -->
+            <div class="no-float"></div>
+            <div class="modal-footer" style="border:none;">
+                <div class="float-left" style="color: #A9A9A9; padding-top: 8px">
+                    2/3
+                </div>
+                <div class="float-right">
+                    <button type="button" class="btn btn-primary btn-next" href="#">Next</button>
+                </div>
+                <div class="float-right" style="padding-top: 8px; margin-right: 20px">
+                    <a type="button" class="link-primary btn-prev" href="#">Prev</a>
+                </div>
+            </div>
+        </div> <!--/.modal-content -->
+    </div> <!--/.modal-dialog -->
+</div> <!--/.modal fade -->
+<!-- ------------------------------- End Modal 4 ---------------------------------------------------------------------------- -->
+<!-- ------------------------------- Modal 5 Learn finish ------------------------------------------------------------------- -->
+<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <button type="button" class="close close-modal" id="icon-link" data-dismiss="modal" aria-label="Close"><span
+                    aria-hidden="true">&times;</span></button>
+            <div class="modal-header">
                 <b>Next & Finish</b>
-              </div>
-              <div class="modal-body">
-                  <!--  Explanation finish  -->
-                  <p>This is all. When you finish to locate your different areas and to move on to the next activity,
-                      press the button
-                  <button type="button" class="btn btn-primary btn-next" href="#" disabled>Next</button></p>
-                  <h3 style="text-align: center; margin-top: 40px">Happy mapping!!</h3>
-              </div> <!--/.modal-body -->
-              <div class="no-float"></div>
-              <div class="modal-footer" style="border:none;">
-                  <div class="float-left" style="color: #A9A9A9; padding-top: 8px">
-                      3/3
-                  </div>
-                  <div class="float-right">
-                      <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close" href="#">
-                          Done
-                      </button>
-                  </div>
-                  <div class="float-right" style="padding-top: 8px; margin-right: 20px">
-                      <a type="button" class="link-primary btn-prev" href="#">Prev</a>
-                  </div>
-              </div>
-            </div> <!--/.modal-content -->
-        </div> <!--/.modal-dialog -->
-    </div> <!--/.modal fade -->
-    <!-- ------------------------------- End Modal 5 ---------------------------------------------------------------------------- -->
+            </div>
+            <div class="modal-body">
+                <!--  Explanation finish  -->
+                <p>This is all. When you finish to locate your different areas and to move on to the next activity,
+                    press the button
+                    <button type="button" class="btn btn-primary btn-next" href="#" disabled>Next</button>
+                </p>
+                <h3 style="text-align: center; margin-top: 40px">Happy mapping!!</h3>
+            </div> <!--/.modal-body -->
+            <div class="no-float"></div>
+            <div class="modal-footer" style="border:none;">
+                <div class="float-left" style="color: #A9A9A9; padding-top: 8px">
+                    3/3
+                </div>
+                <div class="float-right">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close" href="#">
+                        Done
+                    </button>
+                </div>
+                <div class="float-right" style="padding-top: 8px; margin-right: 20px">
+                    <a type="button" class="link-primary btn-prev" href="#">Prev</a>
+                </div>
+            </div>
+        </div> <!--/.modal-content -->
+    </div> <!--/.modal-dialog -->
+</div> <!--/.modal fade -->
+<!-- ------------------------------- End Modal 5 ---------------------------------------------------------------------------- -->
 
 
 <script src="js/jquery-3.1.1.js"></script>
@@ -1116,6 +1161,7 @@
                 $("#draw").toggleClass("hidden show");
                 $("#questions_bonding_bridging").removeClass().addClass("show");
                 buttonDraw.prop('disabled', true);
+                buttonDelete.prop('disabled', false);
                 $("#draw").removeClass().addClass("hidden");
                 $("#another_draw").removeClass().addClass("hidden");
                 $("#specifications").removeClass().addClass("hidden");
@@ -1124,21 +1170,14 @@
                 }
 
 
-
-
-
-
-
-
-
                 /*$("#questions_done").removeClass().addClass("hidden");
-                $("#communities_done").removeClass().addClass("show");
-                $("#second_part_SC").removeClass().addClass("show");
-                $("#title2_done").removeClass().addClass("hidden");
-                $("#draw_poly").prop('disabled', true);
-                $(".finish-map").attr('disabled', true);
-                showsliders();
-                */
+                 $("#communities_done").removeClass().addClass("show");
+                 $("#second_part_SC").removeClass().addClass("show");
+                 $("#title2_done").removeClass().addClass("hidden");
+                 $("#draw_poly").prop('disabled', true);
+                 $(".finish-map").attr('disabled', true);
+                 showsliders();
+                 */
 
 
             });
@@ -1164,20 +1203,25 @@
                     deleteareas();
                 }
 
-
+                buttonDraw.prop('disabled', false);
+                buttonDelete.prop('disabled', true);
 
 
                 /*if ($('#title2_done').is(":hidden")) {
-                    $("#communities_done").removeClass().addClass("show");
-                    $("#second_part_SC").removeClass().addClass("show");
-                    $("#draw_poly").prop('disabled', false);
-                    $("#questions_done").removeClass().addClass("hidden");
-                }*/
+                 $("#communities_done").removeClass().addClass("show");
+                 $("#second_part_SC").removeClass().addClass("show");
+                 $("#draw_poly").prop('disabled', false);
+                 $("#questions_done").removeClass().addClass("hidden");
+                 }*/
             });
 
             bdraw.on('click', function () {
                 var polygonDrawer = new L.Draw.Polygon(map, drawControl);
                 polygonDrawer.enable();
+
+                buttonDelete.prop('disabled', true);
+                buttonDraw.prop('disabled', true);
+
 
             });
         }

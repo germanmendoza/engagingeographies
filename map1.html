@@ -81,7 +81,7 @@
                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"
                                   style="margin-right: 5px"></span> Start drawing
                         </button>
-                        <button class="btn btn-default btn-md" id="delete_poly">
+                        <button class="btn btn-default btn-md" id="delete_poly" disabled>
                             <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span>
                             Delete area
                         </button>
@@ -658,11 +658,11 @@
                     <div class="panel-body">
                         <div id="map2" style="height:83vh; position: relative;">
                             <div style="position: absolute; top: 10px; left: 40px; z-index: 998">
-                                <button class="btn btn-default btn-xs" id="draw_polyxs">
+                                <button class="btn btn-default btn-xs" id="draw_polyxs" disabled>
                                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"
                                           style="margin-right: 5px"></span> Start drawing
                                 </button>
-                                <button class="btn btn-default btn-xs" id="delete_polyxs">
+                                <button class="btn btn-default btn-xs" id="delete_polyxs" disabled>
                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"
                                           style="margin-right: 5px"></span> Delete area
                                 </button>
@@ -936,7 +936,8 @@
                     map.fitBounds(drawnItems.getBounds(), null);
                     $("#sliders_done").removeClass().addClass("hidden");
                     $("#let_draw").removeClass().addClass("show");
-                    $("#draw_poly").prop('disabled', true);
+                    buttonDraw.prop('disabled', true);
+                    buttonDelete.prop('disabled', false);
                     $(".finish-map").attr('disabled', true);
                     $("#sliders_done").toggleClass("hidden show");
                     $("#let_draw").toggleClass("hidden show");
@@ -965,7 +966,8 @@
                         if ($('#title_done').is(":hidden")) {
                             $("#sliders_done").removeClass().addClass("hidden");
                             $("#let_draw").removeClass().addClass("show");
-                            $("#draw_poly").prop('disabled', false);
+                            buttonDraw.prop('disabled', false);
+                            buttonDelete.prop('disabled', true);
                         }
                     }
                 });
@@ -973,7 +975,8 @@
                 bdraw.on('click', function () {
                     var polygonDrawer = new L.Draw.Polygon(map, drawControl);
                     polygonDrawer.enable();
-
+                    buttonDraw.prop('disabled', true);
+                    buttonDelete.prop('disabled', true);
 
                 });
 
