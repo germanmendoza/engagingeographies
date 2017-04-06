@@ -355,54 +355,62 @@ function startAll() {
         map.fitBounds(group.getBounds(), null);
 
         $('#choose_group').click(function () {
-            buttonDraw.prop('disabled', true);
-            buttonDelete.prop('disabled', true);
-            $("#sc_done").toggleClass("hidden show");
-            $("#select_group").toggleClass("hidden show");
 
-            for (var i = 0; i < SC.length; i++) {
-                for (var j = 0; j < SC[i].areas.length; j++) {
-                    map.removeLayer(SC[i].areas[j].layer);
+            if ($('input[name=sc_groups]:checked').length) {
+
+
+                buttonDraw.prop('disabled', true);
+                buttonDelete.prop('disabled', true);
+                $("#sc_done").toggleClass("hidden show");
+                $("#select_group").toggleClass("hidden show");
+
+                for (var i = 0; i < SC.length; i++) {
+                    for (var j = 0; j < SC[i].areas.length; j++) {
+                        map.removeLayer(SC[i].areas[j].layer);
+                    }
                 }
+
+                var group = new L.featureGroup();
+
+                for (var j = 0; j < highlightedGroup.areas.length; j++) {
+                    highlightedGroup.areas[j].layer.setStyle({color: '#FF0000'});
+                    group.addLayer(highlightedGroup.areas[j].layer);
+                    map.addLayer(highlightedGroup.areas[j].layer);
+                }
+                L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {}).addTo(map);
+                map.fitBounds(group.getBounds(), null);
+
+
+                var title = $("#change").html().replace('X', highlightedGroup.name);
+                $("#change").html(title);
+                var soc1re = $("#soc1").html().replace('Y', highlightedGroup.name);
+                $("#soc1").html(soc1re);
+                var soc2re = $("#soc2").html().replace('Y', highlightedGroup.name);
+                $("#soc2").html(soc2re);
+                var soc3re = $("#soc3").html().replace('Y', highlightedGroup.name);
+                $("#soc3").html(soc3re);
+                var n1re = $("#n1").html().replace('Y', highlightedGroup.name);
+                $("#n1").html(n1re);
+                var n2re = $("#n2").html().replace('Y', highlightedGroup.name);
+                $("#n2").html(n2re);
+                var n3re = $("#n3").html().replace('Y', highlightedGroup.name);
+                $("#n3").html(n3re);
+                var cee1re = $("#cee1").html().replace('Y', highlightedGroup.name);
+                $("#cee1").html(cee1re);
+                var cee2re = $("#cee2").html().replace('Y', highlightedGroup.name);
+                $("#cee2").html(cee2re);
+                var cee3re = $("#cee3").html().replace('Y', highlightedGroup.name);
+                $("#cee3").html(cee3re);
+                var cp1re = $("#cp1").html().replace('Y', highlightedGroup.name);
+                $("#cp1").html(cp1re);
+                var cp2re = $("#cp2").html().replace('Y', highlightedGroup.name);
+                $("#cp2").html(cp2re);
+                var cp3re = $("#cp3").html().replace('Y', highlightedGroup.name);
+                $("#cp3").html(cp3re);
             }
-
-            var group = new L.featureGroup();
-
-            for (var j = 0; j < highlightedGroup.areas.length; j++) {
-                highlightedGroup.areas[j].layer.setStyle({color: '#FF0000'});
-                group.addLayer(highlightedGroup.areas[j].layer);
-                map.addLayer(highlightedGroup.areas[j].layer);
+            else {
+                alert("Please choose one group");
             }
-            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {}).addTo(map);
-            map.fitBounds(group.getBounds(), null);
-
-
-            var title = $("#change").html().replace('X', highlightedGroup.name);
-            $("#change").html(title);
-            var soc1re = $("#soc1").html().replace('Y', highlightedGroup.name);
-            $("#soc1").html(soc1re);
-            var soc2re = $("#soc2").html().replace('Y', highlightedGroup.name);
-            $("#soc2").html(soc2re);
-            var soc3re = $("#soc3").html().replace('Y', highlightedGroup.name);
-            $("#soc3").html(soc3re);
-            var n1re = $("#n1").html().replace('Y', highlightedGroup.name);
-            $("#n1").html(n1re);
-            var n2re = $("#n2").html().replace('Y', highlightedGroup.name);
-            $("#n2").html(n2re);
-            var n3re = $("#n3").html().replace('Y', highlightedGroup.name);
-            $("#n3").html(n3re);
-            var cee1re = $("#cee1").html().replace('Y', highlightedGroup.name);
-            $("#cee1").html(cee1re);
-            var cee2re = $("#cee2").html().replace('Y', highlightedGroup.name);
-            $("#cee2").html(cee2re);
-            var cee3re = $("#cee3").html().replace('Y', highlightedGroup.name);
-            $("#cee3").html(cee3re);
-            var cp1re = $("#cp1").html().replace('Y', highlightedGroup.name);
-            $("#cp1").html(cp1re);
-            var cp2re = $("#cp2").html().replace('Y', highlightedGroup.name);
-            $("#cp2").html(cp2re);
-            var cp3re = $("#cp3").html().replace('Y', highlightedGroup.name);
-            $("#cp3").html(cp3re);
 
         });
     }

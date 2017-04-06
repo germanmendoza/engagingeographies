@@ -98,7 +98,9 @@
                     </div>
                     <div id="map" style="height:84vh"></div> -->
                     <!-- <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12" style="text-align: right;"> -->
+<!--
                     <a type="button" class="btn btn-primary finish-map" disabled>Next</a>
+-->
                     <!-- </div> -->
                 </div>
             </div> <!-- /.panel-body -->
@@ -141,7 +143,7 @@
 
                     <div class="no-float"></div>
                     <div class="float-right" style="margin-top: 20px">
-                        <a type="button" class="btn btn-primary" id="submit_name_places">Done</a>
+                        <a type="button" class="btn btn-primary" id="submit_name_places">Next</a>
                     </div>
                 </div>
 
@@ -337,13 +339,13 @@
                     </div>-->
                     <div class="no-float"></div>
                     <a type="button" id="sliders_done_button"
-                       class="btn btn-primary float-right display_sliders  display_title display_title2">Done</a>
+                       class="btn btn-primary float-right display_sliders  display_title display_title2">Next</a>
                 </div>
                 <!-- -------------------------------  End Slider ----------------------------------------------------- -->
 
 
                 <!-- ------------------------------- Put a name to the area?  -------------------------------------- -->
-                <div class="hidden" id="area_done">
+                <!--<div class="hidden" id="area_done">
                     <h5 style="margin-top: 20px">
                         Please, put a name to the selected area
                     </h5>
@@ -354,7 +356,7 @@
                     <a type="button" id="name_area" class="btn btn-primary float-right display_questions"
                        onclick="changeclass();" disabled>Done</a>
                     <div class="no-float"></div>
-                </div>
+                </div>-->
 
                 <!-- ------------------------------- End Do you live in that area? ----------------------------------- -->
 
@@ -364,7 +366,7 @@
                     <div id="radios">
                     </div>
                     <div class="float-right">
-                        <a type="button" class="btn btn-primary" id="choose_place">Done</a>
+                        <a type="button" class="btn btn-primary" id="choose_place">Next</a>
                     </div>
                 </div>
 
@@ -667,10 +669,10 @@
                                           style="margin-right: 5px"></span> Delete area
                                 </button>
                             </div>
-                            <a type="button" class="btn btn-primary finish-map pop" data-toggle="popover"
+                            <!--<a type="button" class="btn btn-primary finish-map pop" data-toggle="popover"
                                data-placement="top" title="Before finish"
                                data-content="Areas that have drawn, choose the most important to you."
-                               onclick="toggler('secondimage');" disabled>Next</a>
+                               onclick="toggler('secondimage');" disabled>Next</a>-->
                         </div>
                     </div>
                 </div>
@@ -938,7 +940,7 @@
                     $("#let_draw").removeClass().addClass("show");
                     buttonDraw.prop('disabled', true);
                     buttonDelete.prop('disabled', false);
-                    $(".finish-map").attr('disabled', true);
+                    //$(".finish-map").attr('disabled', true);
                     $("#sliders_done").toggleClass("hidden show");
                     $("#let_draw").toggleClass("hidden show");
                     if (zoommap != -100) {

@@ -142,6 +142,7 @@ function startAll() {
 
         if (number == name_places.length - 1) {
 
+
             var polygonData = {
                 type: "sopa",
                 name: name_places[number],
@@ -165,6 +166,10 @@ function startAll() {
             ShowAllAreas();
             $("#select_place").toggleClass("hidden show");
             $("#sliders_done").toggleClass("hidden show");
+
+            buttonDelete.prop('disabled', true);
+            buttonDraw.prop('disabled', true);
+
         }
 
         else {
@@ -172,7 +177,7 @@ function startAll() {
             map.setZoom(zoommap);
             buttonDraw.prop('disabled', false);
             //$("#draw_polyxs").prop('disabled', false);
-            $(".finish-map").attr('disabled', false);
+            //$(".finish-map").attr('disabled', false);
 
             $("#sliders_done").toggleClass("hidden show");
             $("#let_draw").toggleClass("hidden show");
@@ -199,7 +204,6 @@ function startAll() {
             $("#group_name_place").fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
 
 
-
             for (i = 1; i <= 7; i++) {
                 $('input[id=ex' + i + ']').slider('setValue', 0);
                 $('span[id=ex' + i + 'SliderVal]').text(0);
@@ -213,9 +217,12 @@ function startAll() {
             map.addLayer(drawnItems);
             map.addLayer(polygonData.layer);
 
+            buttonDelete.prop('disabled', true);
+            buttonDraw.prop('disabled', false);
+
         }
-        $("#delete_poly").prop('disabled', true);
-        $("#delete_polyxs").prop('disabled', true);
+
+
     });
 
     var AreaSelected;
@@ -227,7 +234,7 @@ function startAll() {
     function ShowAllAreas() {
 
         map.removeLayer(drawnItems);
-        $(".finish-map").attr('disabled', true);
+        //$(".finish-map").attr('disabled', true);
         buttonDraw.prop('disabled', true);
         buttonDelete.prop('disabled', true);
         for (i = 0; i < SOP.length; i++) {
@@ -263,55 +270,57 @@ function startAll() {
 
         $('#choose_place').click(function () {
 
-            $("#select_place").toggleClass("hidden show");
-            $("#questions_done").toggleClass("hidden show");
-            buttonDraw.prop('disabled', true);
-            buttonDelete.prop('disabled', true);
+            if ($('input[name=sc_areas]:checked').length) {
+                $("#select_place").toggleClass("hidden show");
+                $("#questions_done").toggleClass("hidden show");
+                buttonDraw.prop('disabled', true);
+                buttonDelete.prop('disabled', true);
 
 
-            for (var i = 0; i < SOP.length; i++) {
-                map.removeLayer(SOP[i].layer);
+                for (var i = 0; i < SOP.length; i++) {
+                    map.removeLayer(SOP[i].layer);
+                }
+
+                var group = new L.featureGroup();
+
+                highlightedArea.layer.setStyle({color: '#FF0000'});
+                group.addLayer(highlightedArea.layer);
+                map.addLayer(highlightedArea.layer);
+
+                L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {}).addTo(map);
+                map.fitBounds(group.getBounds(), null);
+
+
+                var title = $("#change").html().replace('X', highlightedArea.name);
+                $("#change").html(title);
+                var pi1re = $("#pi1").html().replace('Y', highlightedArea.name);
+                $("#pi1").html(pi1re);
+                var pi2re = $("#pi2").html().replace('Y', highlightedArea.name);
+                $("#pi2").html(pi2re);
+                var pi3re = $("#pi3").html().replace('Y', highlightedArea.name);
+                $("#pi3").html(pi3re);
+                var pa1re = $("#pa1").html().replace('Y', highlightedArea.name);
+                $("#pa1").html(pa1re);
+                var pa2re = $("#pa2").html().replace('Y', highlightedArea.name);
+                $("#pa2").html(pa2re);
+                var pa3re = $("#pa3").html().replace('Y', highlightedArea.name);
+                $("#pa3").html(pa3re);
+                var pd1re = $("#pd1").html().replace('Y', highlightedArea.name);
+                $("#pd1").html(pd1re);
+                var pd2re = $("#pd2").html().replace('Y', highlightedArea.name);
+                $("#pd2").html(pd2re);
+                var pd3re = $("#pd3").html().replace('Y', highlightedArea.name);
+                $("#pd3").html(pd3re);
             }
-
-            var group = new L.featureGroup();
-
-            highlightedArea.layer.setStyle({color: '#FF0000'});
-            group.addLayer(highlightedArea.layer);
-            map.addLayer(highlightedArea.layer);
-
-            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {}).addTo(map);
-            map.fitBounds(group.getBounds(), null);
-
-
-            var title = $("#change").html().replace('X', highlightedArea.name);
-            $("#change").html(title);
-            var pi1re = $("#pi1").html().replace('Y', highlightedArea.name);
-            $("#pi1").html(pi1re);
-            var pi2re = $("#pi2").html().replace('Y', highlightedArea.name);
-            $("#pi2").html(pi2re);
-            var pi3re = $("#pi3").html().replace('Y', highlightedArea.name);
-            $("#pi3").html(pi3re);
-            var pa1re = $("#pa1").html().replace('Y', highlightedArea.name);
-            $("#pa1").html(pa1re);
-            var pa2re = $("#pa2").html().replace('Y', highlightedArea.name);
-            $("#pa2").html(pa2re);
-            var pa3re = $("#pa3").html().replace('Y', highlightedArea.name);
-            $("#pa3").html(pa3re);
-            var pd1re = $("#pd1").html().replace('Y', highlightedArea.name);
-            $("#pd1").html(pd1re);
-            var pd2re = $("#pd2").html().replace('Y', highlightedArea.name);
-            $("#pd2").html(pd2re);
-            var pd3re = $("#pd3").html().replace('Y', highlightedArea.name);
-            $("#pd3").html(pd3re);
+            else {
+                alert("please choose one area");
+            }
         });
 
     }
 
 
-
-
-
-        //------
+    //------
 
 
     /*$('.finish-map').click(function () {

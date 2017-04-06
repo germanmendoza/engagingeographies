@@ -10,9 +10,15 @@
 
 
 
+
+
      $('#ce_done').click(function () {
 
-
+         var cevalidation = $('[name=ce1]:checked,[name=ce2]:checked,[name=ce3]:checked');
+         if (cevalidation.length < 3) {
+             alert("Please, answer all the questions");
+             return;
+         }
          /*var cevalidationbondingbridging = $('[name=ce1]:checked,[name=ce2]:checked,[name=ce3]:checked');
          if (cevalidationbondingbridging.length < 3) {
              alert("Please, answer all the questions");
