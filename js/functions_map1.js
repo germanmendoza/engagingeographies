@@ -76,14 +76,15 @@ function startAll() {
         $("#area_name_sliders").html('Area' + '<b style="font-size: 18px">' + ' hola ' + '</b>');
         var replaced2 = $("#area_name_sliders").html().replace('hola', name_places[number]);
         $("#area_name_sliders").html(replaced2);
-        $("#title_sliders_change").html('Please, indicate with the sliders the level of only applicable characteristic about the area' + '<b>' + ' Y' + '</b>' + '.');
+        $("#title_sliders_change").html('Please, indicate the level of only applicable characteristic that explains why do you draw this area' + '<b>' + ' Y ' + '</b>' +'. ( where 0 is nothing and 5 is totally)');
         var replaced3 = $("#title_sliders_change").html().replace('Y', name_places[number]);
         $("#title_sliders_change").html(replaced3);
 
     };
 
 
-// SLIDER
+
+/*// SLIDER
     $("#ex1").slider();
     $("#ex1").on("slide", function (slideEvt) {
         $("#ex1SliderVal").text(slideEvt.value);
@@ -119,7 +120,7 @@ function startAll() {
     $("#ex9").slider();
     $("#ex9").on("slide", function (slideEvt) {
         $("#ex9SliderVal").text(slideEvt.value);
-    });
+    });*/
 
 
     /*var namearea;
@@ -140,6 +141,12 @@ function startAll() {
 
     $('#sliders_done_button').click(function () {
 
+        var naturevalidation = $('[name=na1]:checked,[name=na2]:checked,[name=na3]:checked,[name=na4]:checked');
+        if (naturevalidation.length < 4) {
+            alert("Please, answer all the questions");
+            return;
+        }
+
         if (number == name_places.length - 1) {
 
 
@@ -149,13 +156,10 @@ function startAll() {
                 layer: L.geoJson(drawnItems.toGeoJSON()),
                 livingIn: ($("input[name=live]:checked").val()) === 'true',
                 predictors: {
-                    ex1: $("#ex1").slider('getValue'),
-                    ex2: $("#ex2").slider('getValue'),
-                    ex3: $("#ex3").slider('getValue'),
-                    ex4: $("#ex4").slider('getValue'),
-                    ex5: $("#ex5").slider('getValue'),
-                    ex6: $("#ex6").slider('getValue'),
-                    ex7: $("#ex7").slider('getValue')
+                    na1: parseInt($("input[name=na1]:checked").val()),
+                    na2: parseInt($("input[name=na2]:checked").val()),
+                    na3: parseInt($("input[name=na3]:checked").val()),
+                    na4: parseInt($("input[name=na4]:checked").val())
                 }
             };
 
@@ -189,13 +193,10 @@ function startAll() {
                 layer: L.geoJson(drawnItems.toGeoJSON()),
                 livingIn: ($("input[name=live]:checked").val()) === 'true',
                 predictors: {
-                    ex1: $("#ex1").slider('getValue'),
-                    ex2: $("#ex2").slider('getValue'),
-                    ex3: $("#ex3").slider('getValue'),
-                    ex4: $("#ex4").slider('getValue'),
-                    ex5: $("#ex5").slider('getValue'),
-                    ex6: $("#ex6").slider('getValue'),
-                    ex7: $("#ex7").slider('getValue')
+                    na1: parseInt($("input[name=na1]:checked").val()),
+                    na2: parseInt($("input[name=na2]:checked").val()),
+                    na3: parseInt($("input[name=na3]:checked").val()),
+                    na4: parseInt($("input[name=na4]:checked").val())
                 }
             };
 
@@ -203,12 +204,18 @@ function startAll() {
             nameplace();
             $("#group_name_place").fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
 
+/*
 
             for (i = 1; i <= 7; i++) {
                 $('input[id=ex' + i + ']').slider('setValue', 0);
                 $('span[id=ex' + i + 'SliderVal]').text(0);
-            }
-            ;
+            };
+*/
+            $("input[name=na1]").prop('checked', false);
+            $("input[name=na2]").prop('checked', false);
+            $("input[name=na3]").prop('checked', false);
+            $("input[name=na4]").prop('checked', false);
+
 
 
             SOP.push(polygonData);
