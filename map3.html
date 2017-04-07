@@ -96,8 +96,9 @@
                     <!--title="Before finish" data-content="Areas that have drawn, chooses the most important to you."-->
                     <!--onclick="toggler('secondimage');" disabled>Next</a>-->
                     <!--GERMAN-->
-                    <a type="button" id="questions-ce" class="btn btn-primary finish-map pop" disabled>Next</a>
-                    <!--GERMAN-->
+                    <div id="finish_button" class="hidden">
+                    <a type="button" id="questions-ce" class="btn btn-primary finish-map ">Next</a>
+                    </div>
 
                     <!-- </div> -->
                 </div>
@@ -256,10 +257,6 @@
                             Delete area
                         </button>
                     </div>
-                    <a type="button" class="btn btn-primary finish-map pop" data-toggle="popover"
-                       data-placement="top" title="Before finish"
-                       data-content="Areas that have drawn, chooses the most important to you."
-                       onclick="toggler('secondimage');" disabled>Next</a>
                 </div> <!-- map -->
                 <!-- <div class="custom_buttons_leaflet">
                     <button class="btn btn-default btn-xs" id="draw_polyxs" onclick="drawPolygon()">
@@ -413,12 +410,11 @@
                 drawnItems.setStyle({color: '#00ff00'})
 //                zoommap = map.getZoom();
 //                map.fitBounds(drawnItems.getBounds(), null);
-                $(".finish-map").attr('disabled', false);
                 $("#another_draw_ce").removeClass().addClass("show");
                 $("#draw_ce").removeClass().addClass("hidden");
                 $("#live_area").removeClass().addClass("show");
                 buttonDelete.prop('disabled', false);
-                $('#questions-ce').removeClass().addClass("show");
+                $("#finish_button").removeClass().addClass("show");
 
 
                 var polygonData = {

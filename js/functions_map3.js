@@ -102,6 +102,7 @@
 
 
 
+
      //$("#draw_poly").prop('disabled', true);
 
    $('#myModal15').modal('show');

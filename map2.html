@@ -97,9 +97,9 @@
                     </div>
                     <div id="map" style="height:84vh"></div> -->
                     <!-- <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12" style="text-align: right;"> -->
-                    <a type="button" class="btn btn-primary finish-map pop" data-toggle="popover" data-placement="top"
-                       title="Before finish" data-content="Areas that have drawn, chooses the most important to you."
-                       onclick="toggler('secondimage');" disabled>Next</a>
+                    <div id="finish_button" class="hidden">
+                    <a  type="button" class="btn btn-primary finish-map">Next</a>
+                    </div>
                     <!-- </div> -->
                 </div>
             </div> <!-- /.panel-body -->
@@ -867,9 +867,6 @@
                             Delete area
                         </button>
                     </div>
-                    <a type="button" class="btn btn-primary finish-map pop" data-toggle="popover" data-placement="top"
-                       title="Before finish" data-content="Areas that have drawn, chooses the most important to you."
-                       onclick="toggler('secondimage');" disabled>Next</a>
                 </div> <!-- map -->
                 <!-- <div class="custom_buttons_leaflet">
                     <button class="btn btn-default btn-xs" id="draw_polyxs" onclick="drawPolygon()">
@@ -1170,6 +1167,8 @@
                 }
 
 
+
+
                 /*$("#questions_done").removeClass().addClass("hidden");
                  $("#communities_done").removeClass().addClass("show");
                  $("#second_part_SC").removeClass().addClass("show");
@@ -1221,6 +1220,7 @@
 
                 buttonDelete.prop('disabled', true);
                 buttonDraw.prop('disabled', true);
+                $("#finish_button").removeClass().addClass("hidden");
 
 
             });

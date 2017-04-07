@@ -246,7 +246,7 @@ function startAll() {
         counterAreasName();
         buttonDraw.prop('disabled', false);
         buttonDelete.prop('disabled', true);
-        $(".finish-map").attr('disabled', false);
+        $("#finish_button").removeClass().addClass("show");
         map.setZoom(zoommap);
 
 
@@ -282,7 +282,7 @@ function startAll() {
 
     $('.finish-map').click(function () {
         areasdrawn = 0;
-        $(".finish-map").attr('disabled', true);
+        $("#finish_button").removeClass().addClass("hidden");
         map.removeLayer(drawnItems);
         //L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {}).addTo(map);
 
