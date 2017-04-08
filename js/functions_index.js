@@ -119,10 +119,8 @@ function startall() {
         var zip = $('#zip').val();
 
         var zipRegex = /(^\d{4}-\d{3}$)/;
-
         if (!zipRegex.test(zip)) {
             if ($("input:checkbox[name='no_zip']").is(':checked')) {
-
                 $('#myModal12').modal({backdrop: 'static', keyboard: false});
             }
             else{
@@ -130,8 +128,19 @@ function startall() {
             }
         }
         else {
-
-            $('#myModal12').modal({backdrop: 'static', keyboard: false});
+            var found = false;
+            for(var i = 1; i < zipCodes.length; i++){
+                if (zip === zipCodes[i]){
+                    found = true;
+                    break;
+                }
+            }
+            if(found){
+                $('#myModal12').modal({backdrop: 'static', keyboard: false});
+            }
+            else{
+                alert("Please, write the zip code");
+            }
         }
     });
 
