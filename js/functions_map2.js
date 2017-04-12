@@ -280,7 +280,7 @@ function startAll() {
 
     var group = new L.featureGroup();
 
-    $('.finish-map').click(function () {
+    $('#button_more_areas').click(function () {
         areasdrawn = 0;
         $("#finish_button").removeClass().addClass("hidden");
         map.removeLayer(drawnItems);
