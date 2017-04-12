@@ -144,6 +144,39 @@ hr{
 	right: 3%;
 	z-index: 999;
 }
+
+.width-buttons-map{
+	padding-right: 0px; 
+	padding-left: 0px; 
+	width: 68%
+}
+
+.dropdown-map {
+    font-size: 12px;
+    text-align: left;
+    list-style: none;
+}
+
+.dropdown-map >li > a{
+	display: block;
+	padding: 5px;
+	clear: both;
+	font-weight: normal;
+	line-height: 1.42857143;
+	color: #333;
+	/*white-space: nowrap;*/
+}
+.dropdown-map > li > a:hover{
+	color: #262626;
+	text-decoration: none;
+	background-color: #f5f5f5;
+}
+.dropdown-map> li > a:active{
+	color: #262626;
+	text-decoration: none;
+	background-color: #f5f5f5; 
+}
+
 /* End Map */
 
 /* Floats */
@@ -205,15 +238,19 @@ hr{
 	.custom_buttons_leaflet{
 		left: 25%;
 		top: 2%;
+	}
+	
+@media (max-width:970px){
+	.width-buttons-map{
+		width: 100%
+	}
 }
-
 @media (max-width:768px){
 	.custom_buttons_leaflet{
 		left: 24%;
 		top: 3%; 
 	}
 }
-
 
 @media (max-width:767px){
 	.name_navbar{

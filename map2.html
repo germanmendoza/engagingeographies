@@ -71,8 +71,8 @@
         <div class="panel panel-default">
             <div class="panel-body">
                 <div id="map" style="height:84vh; position: relative;">
-                    <div class="visible-lg visible-md visible-sm"
-                         style="position: absolute; top: 10px; left: 65px; z-index: 998">
+                    <div class="visible-lg visible-md visible-sm" style="position: absolute; top: 10px; left: 65px; z-index: 998">
+                      <div class="col-lg-9 col-md-12 col-sm-12 width-buttons-map">
                         <button class="btn btn-default btn-md" id="draw_poly" disabled>
                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"
                                   style="margin-right: 5px"></span> Start drawing
@@ -81,7 +81,47 @@
                             <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span>
                             Delete area
                         </button>
-                    </div>
+                      </div>
+                      <div class="col-lg-3 col-md-12 col-sm-12" style="padding-left: 0px;">
+                        <span class="dropdown" style="margin-right: 5px">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdown-freguesias" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Freguesias
+                            <span class="caret"></span>
+                          </button>
+                          <div class="dropdown-menu" style="min-width: 250px;">
+                            <ul class="dropdown-map col-lg-6 col-md-6 col-sm-6 col-xs-12 " aria-labelledby="dropdown-freguesias">
+                              <li><a href="#">Ajuda</a></li>
+                              <li><a href="#">Alcântara</a></li>
+                              <li><a href="#">Alvalade</a></li>
+                              <li><a href="#">Areeiro</a></li>
+                              <li><a href="#">Arroios</a></li>
+                              <li><a href="#">Avenidas Novas</a></li>
+                              <li><a href="#">Beato</a></li>
+                              <li><a href="#">Belém</a></li>
+                              <li><a href="#">Benfica</a></li>
+                              <li><a href="#">Campo de Ourique</a></li>
+                              <li><a href="#">Campolide</a></li>
+                              <li><a href="#">Carnide</a></li>
+                              <li><a href="#">Estrela</a></li>
+                            </ul>
+                            <ul class="col-lg-6 col-md-6 col-sm-6 col-xs-12 dropdown-map" aria-labelledby="dropdown-freguesias">
+                              <li><a href="#">Lumiar</a></li>
+                              <li><a href="#">Marvila</a></li>
+                              <li><a href="#">Misericórdia</a></li>
+                              <li><a href="#">Olivais</a></li>
+                              <li><a href="#">Parque das Nações</a></li>
+                              <li><a href="#">Penha de França</a></li>
+                              <li><a href="#">Santa Clara</a></li>
+                              <li><a href="#">Santa Maria Maior</a></li>
+                              <li><a href="#">Santo António</a></li>
+                              <li><a href="#">São Domingos de Benfica </a></li>
+                              <li><a href="#">São Vicente</a></li>
+                              <li><a href="#">None of theme</a></li>
+                            </ul>
+                          </div>
+                        </span>
+                      </div>
+                </div> <!-- /map -->
                     <!-- <div class="custom_buttons_leaflet visible-lg visible-md visible-sm">
                         <button class="btn btn-default btn-md" id="draw_poly" onclick="drawPolygon()" disabled>
                             <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span>
