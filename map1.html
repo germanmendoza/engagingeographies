@@ -85,7 +85,7 @@
                       </div>
                       <div class="col-lg-3 col-md-12 col-sm-12" style="padding-left: 0px;">
                         <span class="dropdown" style="margin-right: 5px">
-                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdown-freguesias" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="button-freguesia" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             Freguesias
                             <span class="caret"></span>
                           </button>
@@ -117,7 +117,6 @@
                               <li><a href="#">Santo António</a></li>
                               <li><a href="#">São Domingos de Benfica </a></li>
                               <li><a href="#">São Vicente</a></li>
-                              <li><a href="#">None of theme</a></li>
                             </ul>
                           </div>
                         </span>
@@ -1048,6 +1047,8 @@
     <script src="js/leaflet.draw.js"></script>
     <script src="js/bootstrap-slider.js"></script>
     <script src="js/functions_map1.js"></script>
+    <script src="language/language.js"></script>
+
 
 
     <script src="src/edit/handler/Edit.Poly.js"></script>
@@ -1205,6 +1206,8 @@
                             $("#let_draw").removeClass().addClass("show");
                             buttonDraw.prop('disabled', false);
                             buttonDelete.prop('disabled', true);
+                            $('#button-freguesia').prop('disabled', false);
+
                         }
                     }
                 });
@@ -1214,6 +1217,13 @@
                     polygonDrawer.enable();
                     buttonDraw.prop('disabled', true);
                     buttonDelete.prop('disabled', true);
+                    $('#button-freguesia').prop('disabled', true);
+                    $(document).keyup(function(e) {
+                        if ((e.keyCode == 27) && ($('#let_draw').is(":visible"))) {
+                            buttonDraw.prop('disabled', false);
+                            buttonDelete.prop('disabled', false);
+                        }
+                    });
 
                 });
 

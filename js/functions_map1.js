@@ -12,6 +12,10 @@ function startAll() {
     $('#myModal3').modal('show');
     $("#draw_poly").prop('disabled', true);
 
+    $("#title_done").html(languages('en','noLocation'));
+
+
+
 // POPOVER
 
     $(function () {
@@ -173,6 +177,8 @@ function startAll() {
 
             buttonDelete.prop('disabled', true);
             buttonDraw.prop('disabled', true);
+            $('#button-freguesia').prop('disabled', true);
+
 
         }
 
@@ -180,6 +186,7 @@ function startAll() {
 
             map.setZoom(zoommap);
             buttonDraw.prop('disabled', false);
+            $('#button-freguesia').prop('disabled', false);
             //$("#draw_polyxs").prop('disabled', false);
             //$(".finish-map").attr('disabled', false);
 

@@ -8,6 +8,20 @@ function languages(lang, text) {
     //English
     var en = {
         'noLocation': 'we cannot obtain your location!',
+
+
+
+            'We want to know where are the areas that, for some reason/s, are significant for you.' + '<br><br>' + 'Please, think about the area/s in which you most:'
+
+
+
+
+
+
+
+
+
+
         'editedSchool': 'You drawn or edited you school!',
         'pointsMapAndImage': 'It shortage some points in MAP and IMAGE',
         'pointsMap': 'It shortage some points in MAP',

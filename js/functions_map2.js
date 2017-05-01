@@ -16,6 +16,8 @@ var spatialyes = 0;
 function startAll() {
     buttonDelete.prop('disabled', true);
     buttonDraw.prop('disabled', true);
+    $('#button-freguesia').prop('disabled', true);
+
 
     $("#name_actual_group").select2({
         tags: [],
@@ -98,6 +100,7 @@ function startAll() {
                 $("#let_draw").html(replaceddraw);
                 $("#draw").toggleClass("hidden show");
                 buttonDraw.prop('disabled', false);
+                $('#button-freguesia').prop('disabled', false);
                 //buttonDelete.prop('disabled', false);
 
 
@@ -246,6 +249,7 @@ function startAll() {
         counterAreasName();
         buttonDraw.prop('disabled', false);
         buttonDelete.prop('disabled', true);
+        $('#button-freguesia').prop('disabled', false);
         $("#finish_button").removeClass().addClass("show");
         map.setZoom(zoommap);
 
@@ -321,6 +325,7 @@ function startAll() {
     function showAllGroups() {
         buttonDraw.prop('disabled', true);
         buttonDelete.prop('disabled', true);
+        $('#button-freguesia').prop('disabled', true);
         $("#specifications").removeClass().addClass("hidden");
 
 
@@ -361,6 +366,7 @@ function startAll() {
 
                 buttonDraw.prop('disabled', true);
                 buttonDelete.prop('disabled', true);
+                $('#button-freguesia').prop('disabled', true);
                 $("#sc_done").toggleClass("hidden show");
                 $("#select_group").toggleClass("hidden show");
 
@@ -483,6 +489,11 @@ function startAll() {
         });
     });
 
+//Freguesia buttons
+    $('#d-ajuda').click(function () {
+        //alert("hola");
+        map.setView([38.7500, -9.1500], 12);
+    });
 }
 
 

@@ -84,13 +84,13 @@
                       </div>
                       <div class="col-lg-3 col-md-12 col-sm-12" style="padding-left: 0px;">
                         <span class="dropdown" style="margin-right: 5px">
-                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdown-freguesias" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="button-freguesia" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             Freguesias
                             <span class="caret"></span>
                           </button>
                           <div class="dropdown-menu" style="min-width: 250px;">
                             <ul class="dropdown-map col-lg-6 col-md-6 col-sm-6 col-xs-12 " aria-labelledby="dropdown-freguesias">
-                              <li><a href="#">Ajuda</a></li>
+                              <li><a href="#" id="d-ajuda">Ajuda</a></li>
                               <li><a href="#">Alcântara</a></li>
                               <li><a href="#">Alvalade</a></li>
                               <li><a href="#">Areeiro</a></li>
@@ -116,7 +116,6 @@
                               <li><a href="#">Santo António</a></li>
                               <li><a href="#">São Domingos de Benfica </a></li>
                               <li><a href="#">São Vicente</a></li>
-                              <li><a href="#">None of theme</a></li>
                             </ul>
                           </div>
                         </span>
@@ -1243,6 +1242,8 @@
 
                 buttonDraw.prop('disabled', false);
                 buttonDelete.prop('disabled', true);
+                $('#button-freguesia').prop('disabled', false);
+
 
 
                 /*if ($('#title2_done').is(":hidden")) {
@@ -1256,12 +1257,22 @@
             bdraw.on('click', function () {
                 var polygonDrawer = new L.Draw.Polygon(map, drawControl);
                 polygonDrawer.enable();
-
                 buttonDelete.prop('disabled', true);
                 buttonDraw.prop('disabled', true);
+                $('#button-freguesia').prop('disabled', true);
                 $("#finish_button").removeClass().addClass("hidden");
 
-
+                $(document).keyup(function(e) {
+                    if ((e.keyCode == 27) && ($('#draw').is(":visible"))) {
+                        buttonDraw.prop('disabled', false);
+                        buttonDelete.prop('disabled', false);
+                    }
+                    else if ((e.keyCode == 27) && ($('#another_draw').is(":visible")))
+                    {
+                        buttonDraw.prop('disabled', false);
+                        buttonDelete.prop('disabled', false);
+                    }
+                });
             });
         }
     }
