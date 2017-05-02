@@ -12,10 +12,6 @@ function startAll() {
     $('#myModal3').modal('show');
     $("#draw_poly").prop('disabled', true);
 
-    $("#title_done").html(languages('en','noLocation'));
-
-
-
 // POPOVER
 
     $(function () {
@@ -428,6 +424,10 @@ function startAll() {
 
 
     });
+
+    // TRANSLATIONS
+    //$("#title_done1").html(languages('en','title_done1'));
+
 
 }
 

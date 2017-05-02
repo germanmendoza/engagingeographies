@@ -7,47 +7,83 @@
 function languages(lang, text) {
     //English
     var en = {
-        'noLocation': 'we cannot obtain your location!',
+        'index1': "The following web-map survey is part of a research project at NOVA IMS (Lisbon). Its primary objective is to understand how citizens' place perceptions, and their relationships, influence participation in a given urban area.",
+        'index2': 'The questionnaire will take less than 5 minutes, and the mapping activity takes most people around 15 minutes, depending on how many areas you define.',
+        'index3': 'With your contribution, you will support the improvement of Lisbon municipality participation processes.',
+        'index4': 'Do you live in Lisbon?',
+        'index5': 'Yes',
+        'index6': 'No',
+        'index7': 'Notes:',
+        'index8': '1. All data collected is treated with confidentiality and anonymity, and will not be used for commercial purposes or distributed to third parties. 2. For more information or questions about this study, please contact us using the following email address acedo@novaims.unl.pt (Albert Acedo Sánchez) or visit our blog.',
+        'index9': 'Next',
+        'index10': 'Please, select the parish where you live.',
+        'index11': 'Prev',
+        'index12': 'None of the above',
+        'index13': 'How long have you lived there? ',
+        'index14': 'Less than 1 year',
+        'index15': '1-3 years',
+        'index16': '3-6 years',
+        'index17': 'more than 6 years',
+        'index18': 'Indique por favor o código postal da sua residência',
+        'index19': 'If you do not want to give your zip code, please click the checkbox.',
+        'index20': 'Please, select the most important problems in your parish. (Max. 3)',
+        'index21': 'Street paving',
+        'index22': 'Parking',
+        'index23': 'Accessibility',
+        'index24': 'Urban Hygiene',
+        'index25': 'Noise',
+        'index26': '',
+        'index27': '',
+        'index28': '',
+        'index29': '',
+        'index30': '',
+        'index31': '',
+        'index32': '',
 
 
 
-            'We want to know where are the areas that, for some reason/s, are significant for you.' + '<br><br>' + 'Please, think about the area/s in which you most:'
 
-
-
-
-
-
-
-
-
-
-        'editedSchool': 'You drawn or edited you school!',
-        'pointsMapAndImage': 'It shortage some points in MAP and IMAGE',
-        'pointsMap': 'It shortage some points in MAP',
-        'pointsImage': 'It shortage some points in IMAGE',
-        'mistake': 'There was an error, please try again',
-        'imageDelete': 'Image Deleted',
-        'imageDeleteMistake': 'This image does not exist in the image server.',
-        'nameSchoolNoExist': 'Register new school',
-        'noIntersectLines': 'Can&#39;t intersect the line with other polygons',
-        'noContainPoints': 'Can&#39;t add points within the polygons',
-        'uploadingImage': 'Successfully uploaded. We are transforming the image. It can take up to 2 -3 min before this changes take effect.',
-        'dashSaved': 'Saved!',
-        'dashSaveChanges': 'Save Changes',
-        'on': 'On',
-        'off': 'Off',
-        'done': 'Done',
-        'missing': 'Missing',
-        'errorConfiguration': 'Could not load configuration. Try again later.',
-        'percentDone': ' % done',
-        'dashTrPlanted': 'Treasures Planted \n Total: ',
-        'dashTrFound': 'Treasures Found \n Total: ',
-        'dashFiCaptured': 'Locations captured \n Total: ',
-        'totalStudents' : 'Total Students: ',
-        'errorNoBoundary' : 'Before realise this step, you have to do the first step, visit him',
-        'checkFp' : 'Sorry, you only can activate this phase when the phase 1 has at least 80%'
     };
+
+    //Portuguese
+    var pt = {
+        'index1': "Este questionário é parte integrante de um projeto de investigação da Nova Information Management School (NOVA IMS) da Universidade Nova de Lisboa. O objetivo principal é perceber a forma como a perceção do local e as relações sociais do cidadão influenciam a sua participação numa dada área urbana.",
+        'index2': 'O preenchimento do questionário demora cerca de 5 minutos e a atividade de mapeamento cerca de 15 minutos, dependendo do número de áreas que se pretenderem assinalar.',
+        'index3': 'A sua contribuição apoia os processos participativos da cidade de Lisboa.',
+        'index4': 'Reside em Lisboa?',
+        'index5': 'Sim',
+        'index6': 'Não',
+        'index7': 'Notas:',
+        'index8': '1-	Todos os dados recolhidos neste questionário serão tratados de forma anónima e confidencial e não serão utilizados para fins comerciais ou cedidos a terceiros. 2. Se pretender esclarecer alguma dúvida ou pedir alguma informação sobre este estudo, queira por favor contactar-nos através do seguinte endereço de email: acedo@novaims.unl.pt (Albert Acedo Sánchez) ou visite o nosso blog',
+        'index9': 'Próximo',
+        'index10': 'Por favor selecione a sua freguesia de residência',
+        'index11': 'Anterior',
+        'index12': 'Nenhuma das anteriores',
+        'index13': 'Há quanto tempo reside aí?',
+        'index14': 'Menos de 1 ano',
+        'index15': '1 a 3 anos',
+        'index16': '3 a 6 anos',
+        'index17': 'Mais do que 6 anos',
+        'index18': 'Please type the zip code of your (primary) home.',
+        'index19': 'Se não desejar indicar o seu código postal, selecione por favor na caixa',
+        'index20': 'Selecione por favor os problemas mais importantes da sua freguesia (máximo 3)',
+        'index21': '',
+        'index22': '',
+        'index23': '',
+        'index24': '',
+        'index25': '',
+        'index26': '',
+        'index27': '',
+        'index28': '',
+        'index29': '',
+        'index30': '',
+        'index31': '',
+        'index32': '',
+
+    };
+
+
+
     //Spanish
     var es = {
         'noLocation': 'no se ha podido obtener tu localización',
@@ -107,35 +143,7 @@ function languages(lang, text) {
         'errorNoBoundary' : 'Avançs de fer aquest pas, has de fer el primer pas, veus a él',
         'checkFp' : 'Hu sent, sols pots accedir aquesta fase quan la primera fase tinga al menys un 80%'
     };
-    //Portuguese
-    var pt = {
-        'noLocation': 'Não é possível obter localização',
-        'editedSchool': 'Escola editada!',
-        'pointsMapAndImage': 'Faltam alguns pontos no mapa/imagem',
-        'pointsMap': 'Faltam alguns pontos no mapa',
-        'pointsImage': 'Faltam alguns pontos na imagem',
-        'mistake': 'Houve um erro, por favor tente novamente',
-        'imageDelete': 'Remover imagem',
-        'imageDeleteMistake': 'Esta imagem não existe no servidor.',
-        'nameSchoolNoExist': 'Registar nova escola',
-        'noIntersectLines': 'Não se podem cruzar linhas com outros polígonos',
-        'noContainPoints': 'Não é possível adicionar pontos dentro dos polígonos',
-        'uploadingImage': 'Enviada com sucesso. Estamos a transformar a imagem. Pode demorar 2 a 3 minutos até que as alterações tenham efeito.',
-        'dashSaved': 'Gravado!',
-        'dashSaveChanges': 'Guardar alterações',
-        'on': 'Ativo',
-        'off': 'Desativado',
-        'done': 'Concluído',
-        'missing': 'Não concluído',
-        'errorConfiguration': 'Não foi possível carregar a configuração. Tente mais tarde.',
-        'percentDone': ' % feito',
-        'dashTrPlanted': 'Tesouros escondidos \n Total: ',
-        'dashTrFound': 'Tesouros encontrados \n Total: ',
-        'dashFiCaptured': 'Localizações capturadas \n Total: ',
-        'totalStudents' : 'Total de alunos: ',
-        'errorNoBoundary' : 'Antes de realizar este passo, você tem que fazer o primeiro passo, visitá-lo',
-        'checkFp' : 'Desculpe, você só pode ativar esta fase quando a fase 1 tiver pelo menos 80%'
-    };
+
     //German
     var de = {
         'noLocation': 'Position kann nicht bestimmt werden',
