@@ -9,7 +9,6 @@ var SOP = [];
 
 
 function startAll() {
-    $("#draw_poly").prop('disabled', true);
 
 // POPOVER
 
@@ -51,7 +50,7 @@ function startAll() {
     $('#submit_name_places').click(function () {
         name_places = $('#name_actual_place').val();
         if (name_places.length > 0) {
-            $("#draw_poly").prop('disabled', false);
+            //buttonDraw.prop('disabled', false);
             $("#let_draw").toggleClass("hidden show");
             $("#title_done").toggleClass("hidden show");
             nameplace();
@@ -66,7 +65,7 @@ function startAll() {
         $("#pepe").toggleClass("hidden show");
         $("#pepa").toggleClass("hidden show");
         startMapComponents();
-        //hola
+
     });
 
 
@@ -178,6 +177,7 @@ function startAll() {
             buttonDelete.prop('disabled', true);
             buttonDraw.prop('disabled', true);
             $('#button-freguesia').prop('disabled', true);
+            $('#button-freguesiaxs').prop('disabled', true);
 
 
         }
@@ -187,6 +187,7 @@ function startAll() {
             map.setZoom(zoommap);
             buttonDraw.prop('disabled', false);
             $('#button-freguesia').prop('disabled', false);
+            $('#button-freguesiaxs').prop('disabled', false);
             //$("#draw_polyxs").prop('disabled', false);
             //$(".finish-map").attr('disabled', false);
 

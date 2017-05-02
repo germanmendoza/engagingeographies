@@ -14,9 +14,9 @@ var number = 0;
 var spatialyes = 0;
 
 function startAll() {
-    buttonDelete.prop('disabled', true);
+    /*buttonDelete.prop('disabled', true);
     buttonDraw.prop('disabled', true);
-    $('#button-freguesia').prop('disabled', true);
+    $('#button-freguesia').prop('disabled', true);*/
 
 
     $("#name_actual_group").select2({
@@ -44,6 +44,10 @@ function startAll() {
         else {
             alert("Please, insert at least a group name");
         }
+
+        $("#pepe").toggleClass("hidden show");
+        $("#pepa").toggleClass("hidden show");
+        startMapComponents();
     });
 
 
@@ -101,6 +105,7 @@ function startAll() {
                 $("#draw").toggleClass("hidden show");
                 buttonDraw.prop('disabled', false);
                 $('#button-freguesia').prop('disabled', false);
+                $('#button-freguesiaxs').prop('disabled', false);
                 //buttonDelete.prop('disabled', false);
 
 
@@ -250,6 +255,7 @@ function startAll() {
         buttonDraw.prop('disabled', false);
         buttonDelete.prop('disabled', true);
         $('#button-freguesia').prop('disabled', false);
+        $('#button-freguesiaxs').prop('disabled', false);
         $("#finish_button").removeClass().addClass("show");
         map.setZoom(zoommap);
 
@@ -326,6 +332,7 @@ function startAll() {
         buttonDraw.prop('disabled', true);
         buttonDelete.prop('disabled', true);
         $('#button-freguesia').prop('disabled', true);
+        $('#button-freguesiaxs').prop('disabled', true);
         $("#specifications").removeClass().addClass("hidden");
 
 
@@ -367,6 +374,7 @@ function startAll() {
                 buttonDraw.prop('disabled', true);
                 buttonDelete.prop('disabled', true);
                 $('#button-freguesia').prop('disabled', true);
+                $('#button-freguesiaxs').prop('disabled', true);
                 $("#sc_done").toggleClass("hidden show");
                 $("#select_group").toggleClass("hidden show");
 

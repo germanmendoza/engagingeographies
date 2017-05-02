@@ -66,7 +66,7 @@
 <!-- ------------------------------- End Navbar ----------------------------------------------------------------------------- -->
 <div class="container-fluid">
     <!-- ------------------------------- Map visible lg md sm  -------------------------------------------------------------------- -->
-    <div id="pepe" class="col-lg-6 col-md-6 col-sm-6 visible-lg visible-md visible-sm"
+    <div id="pepe" class="col-lg-6 col-md-6 col-sm-6 visible-lg visible-md visible-sm hidden"
          style="position: fixed; right: 0px;">
         <div class="panel panel-default">
             <div class="panel-body">
@@ -888,17 +888,15 @@
                     <!-- ------------------------------- End Panel left ------------------------------------------------------------------------ -->
                 </div>
                 <div id="finish_button" class="hidden">
-<<<<<<< HEAD
-                  <a  type="button" class="btn btn-primary float-right finish-map">Next</a>
-=======
+
                   <a  type="button" id="button_more_areas" class="btn btn-primary float-right">Next</a>
->>>>>>> bb9d0854fc32769acdb28c754b8208525cc3b745
+
                 </div>
             </div>
         </div>
     </div>
     <!-- ------------------------------- Map visible xs ---------------------------------------------------------------------------------- -->
-    <div class="visible-xs col-xs-12" style="padding: 0px; padding-top: 30px">
+    <div class="visible-xs col-xs-12 hidden" id="pepa" style="padding: 0px; padding-top: 30px">
         <div class="panel panel-default">
             <div class="panel-body">
                 <div id="map2" style="height:83vh; position: relative;">
@@ -1106,7 +1104,7 @@
 
 <script>
     $(document).ready(function () {
-        startMapComponents();
+        //startMapComponents();
         startAll();
     });
 
@@ -1147,15 +1145,16 @@
         var mapxs = L.map('map2');
         mapxs.on('load', function (e) {
             if (isElementInViewport($('#map2'))) {
-                createAll(mapxs, $("#draw_polyxs"), $("#delete_polyxs"));
+                createAll(mapxs, $("#draw_polyxs"), $("#delete_polyxs"), $('#button-freguesia'));
             }
         });
         mapxs.setView([38.7500, -9.1500], 12);
 
-        function createAll(rmap, bdraw, bdelete) {
+        function createAll(rmap, bdraw, bdelete, freguesia) {
             map = rmap;
             buttonDraw = bdraw;
             buttonDelete = bdelete;
+            buttonFreguesia = freguesia;
             // add an OpenStreetMap tile layer
             L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
                 // attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
