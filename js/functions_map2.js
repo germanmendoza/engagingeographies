@@ -52,11 +52,11 @@ function startAll() {
 
 
     function namegroup() {
-        $("#group_name_nature").html('Group' + '<b style="font-size: 18px">' + ' hola ' + '</b>');
+        $("#group_name_nature").html('Grupo' + '<b style="font-size: 18px">' + ' hola ' + '</b>');
         var replaced = $("#group_name_nature").html().replace('hola', name_groups[number]);
         $("#group_name_nature").html(replaced);
-        $("#textchange").html('Now, think about the group' + '<b style="font-size: 18px">' + ' X ' + '</b>' + 'that you belong.');
-        $("#textchange_nature").html('Please, select the nature of this social group' + '<b style="font-size: 18px">' + ' X' + '</b>' + '.');
+        $("#textchange").html('Agora, pense no grupo' + '<b style="font-size: 18px">' + ' X ' + '</b>' + 'de que faz parte.');
+        $("#textchange_nature").html('Por favor selecione a natureza deste grupo social' + '<b style="font-size: 18px">' + ' X' + '</b>' + '.');
         var replaced1 = $("#textchange").html().replace('X', name_groups[number]);
         var replaced2 = $("#textchange_nature").html().replace('X', name_groups[number]);
         $("#textchange").html(replaced1);
@@ -96,10 +96,10 @@ function startAll() {
 
             if ($("input[name=spatial]:checked").val() == "true") {
 
-                $("#title_let_draw").html('Lets draw the group X!');
+                $("#title_let_draw").html('Vamos desenhar o grupo X!');
                 var replacetitle = $("#title_let_draw").html().replace('X', name_groups[number]);
                 $("#title_let_draw").html(replacetitle);
-                $("#let_draw").html('Please, draw all the areas that define the group' + '<b style="font-size: 18px">' + ' X ' + '</b>' + 'using <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="margin-right: 5px"></span> Start drawing </button>button and you can delete the area clicking <button class="btn btn-default btn-xs" disabled> <span class="glyphicon glyphicon-trash" aria-hidden="true"style="margin-right: 5px"></span> Delete area </button>button on the map.');
+                $("#let_draw").html('Desenhe, por favor, todas as áreas que definem o grupo' + '<b style="font-size: 18px">' + ' X ' + '</b>' + 'clicando o botão<button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="margin-right: 5px"></span> Comece a desenhar </button>e pode apagar a área clicando no botão<button class="btn btn-default btn-xs" disabled> <span class="glyphicon glyphicon-trash" aria-hidden="true"style="margin-right: 5px"></span> Apagar áreas </button>por cima do mapa.');
                 var replaceddraw = $("#let_draw").html().replace('X', name_groups[number]);
                 $("#let_draw").html(replaceddraw);
                 $("#draw").toggleClass("hidden show");
@@ -347,7 +347,7 @@ function startAll() {
             // Add to radio
 
             if (cGroup.areas.length != 0) {
-                $('#radios').append('<div class="radio"><label><input type="radio" name="sc_groups" value="' + i + '"/>Group ' + cGroup.name + '</label></div>');
+                $('#radios').append('<div class="radio"><label><input type="radio" name="sc_groups" value="' + i + '"/>Grupo ' + cGroup.name + '</label></div>');
             }
         }
 
@@ -532,12 +532,12 @@ function deleteareas() {
 function counterAreasName() {
 
 
-    $("#counting_areas").html("You have already defined: L areas.");
+    $("#counting_areas").html("Já definiu: L áreas.");
     var replaced2 = $("#counting_areas").html().replace('L', areasdrawn);
     $("#counting_areas").html(replaced2);
 
 
-    $("#change_name_group").html('Now you can draw another area that define the' + '<b style="font-size: 18px">' + ' G ' + '</b>' + 'group, or click the <button type="button" class="btn btn-primary btn-next" href="#" disabled>Next</button> on the map to define the next group.');
+    $("#change_name_group").html('Pode agora desenhar outra área para o grupo' + '<b style="font-size: 18px">' + ' G ' + '</b>' + 'ou, clicar <button type="button" class="btn btn-primary btn-next" href="#" disabled>Próximo</button> sobre o mapa para definir o próximo grupo');
     var replaced3 = $("#change_name_group").html().replace('G', name_groups[number]);
     $("#change_name_group").html(replaced3);
 

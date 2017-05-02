@@ -75,11 +75,11 @@
                       <div class="col-lg-9 col-md-12 col-sm-12 width-buttons-map">
                         <button class="btn btn-default btn-md" id="draw_poly" disabled>
                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"
-                                  style="margin-right: 5px"></span> Start drawing
+                                  style="margin-right: 5px"></span> Comece a desenhar
                         </button>
                         <button class="btn btn-default btn-md" id="delete_poly" disabled>
                             <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span>
-                            Delete area
+                            Apagar áreas
                         </button>
                       </div>
                       <div class="col-lg-3 col-md-12 col-sm-12" style="padding-left: 0px;">
@@ -151,15 +151,18 @@
             <div class="panel-body">
                 <!-- ------------------------------- Social capital explanation --------------------------------------------- -->
                 <div class="show" id="groups_done">
-                    <p>
+                    <!-- <p>
                         I would like to start by asking you about the groups of people or
                         organizations, networks, associations to which you belong. These could be formally organized
                         groups (religious groups, familiar groups, sports teams, workplace groups…) or just groups of
                         people who get together regularly to do an activity or talk about things.
+                    </p> -->
+                    <p>
+                        Gostaria de começar por lhe perguntar sobre grupos de pessoas ou organizações, redes ou associações a que pertença. Podem ser grupos formalmente organizados (grupos religiosos, de familiares, desportivos, de local de trabalho... ) o pura e simplesmente grupos de pessoas que que se juntam regularmente para realizar uma atividade ou falar sobre vários assuntos.
                     </p>
+
                     <h5 style="text-align: center; margin-top: 40px">
-                        Can you write words that define your groups? Write as many words as groups you have. Take your
-                        time :)
+                        Pode definir os seus grupos com palavras soltas? Escreva tantas palavras quantos os grupos que tem :)
                     </h5>
 
                     <!-- <div  class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-lg-9 col-md-9 col-sm-9 col-xs-9"> -->
@@ -172,12 +175,12 @@
                     <div class="no-float"></div>
                     <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-9 col-md-9 col-sm-9 col-xs-12"
                          style="margin-top: 10px">
-                        <p style="font-size: 12px">Note: separate words by commas or enter key.</p>
+                        <p style="font-size: 12px">Nota: separe por favor as palavras por vírgulas.</p>
                     </div>
 
                     <div class="no-float"></div>
                     <div class="float-right" style="margin-top: 20px">
-                        <a type="button" class="btn btn-primary" id="submit_name_group">Next</a>
+                        <a type="button" class="btn btn-primary" id="submit_name_group">Próximo</a>
                     </div>
                     <!--<div class="no-float"></div>
                     <p style="margin-top: 30px" class="hidden" id="second_part_SC">
@@ -194,39 +197,38 @@
 
 
                     <h5 id="group_name_nature">
-                        Group hola
+                        Grupo hola
                     </h5>
                     <hr style="width: 100%">
 
                     <div>
 
                         <h5 style="margin-top: 20px" id="textchange_nature">
-                            Please, select the nature of this social group X.
+                            Por favor selecione a natureza deste grupo social X.
                         </h5>
                     </div>
                     <div style="margin-bottom: 20px">
                         <select id="nature">
                             <option value="0"></option>
-                            <option value="1">Business</option>
-                            <option value="2">Civic</option>
+                            <option value="1">Negócios</option>
+                            <option value="2">Cívico</option>
                             <option value="3">Cultural</option>
-                            <option value="4">Ecology</option>
-                            <option value="5">Family</option>
-                            <option value="6">Finance</option>
-                            <option value="7">Friend</option>
-                            <option value="8">Health</option>
-                            <option value="9">Leisure</option>
-                            <option value="10">Neighborhood/Village</option>
-                            <option value="11">NGO</option>
-                            <option value="12">Political</option>
-                            <option value="13">Professional</option>
-                            <option value="14">Religious</option>
-                            <option value="15">School</option>
-                            <option value="16">Sports</option>
-                            <option value="17">Women's</option>
-                            <option value="18">Youth</option>
-                            <option value="19">Other</option>
-
+                            <option value="4">Ecológico</option>
+                            <option value="5">Familiar</option>
+                            <option value="6">Financeiro</option>
+                            <option value="7">Amigos</option>
+                            <option value="8">Saúde</option>
+                            <option value="9">Tempo livre</option>
+                            <option value="10">Vizinhança</option>
+                            <option value="11">ONG</option>
+                            <option value="12">Político</option>
+                            <option value="13">Profissional</option>
+                            <option value="14">Religioso</option>
+                            <option value="15">Escola</option>
+                            <option value="16">Desporto</option>
+                            <option value="17">De mulher</option>
+                            <option value="18">Juventude</option>
+                            <option value="19">Outro</option>
                         </select>
                     </div>
                     <!--<p></p>
@@ -243,7 +245,7 @@
                         <input id="other" class="form-control" rows="1" placeholder="other name"></input>
                     </div>
                     <div class="no-float"></div>
-                    <a type="button" class="btn btn-primary float-right" id="nature_write">Done</a>
+                    <a type="button" class="btn btn-primary float-right" id="nature_write">Terminado</a>
                     <div class="no-float"></div>
                 </div>
                 <!-- ------------------------------- Social capital spatial  --------------------------------------------- -->
@@ -253,21 +255,21 @@
 
 
                     <p id="textchange">
-                        Think about the Group X that you belong.
+                        Agora, pense no grupo X de que faz parte
                     </p>
                     <h5 style="margin-top: 20px">
-                        Can be related with some place?
+                        Pode estar relacionado com um local?
                     </h5>
                     <div>
                         <label class="radio-inline">
-                            <input type="radio" name="spatial" value="true" checked="checked"> Yes
+                            <input type="radio" name="spatial" value="true" checked="checked"> Sim
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="spatial" value="false"> No
+                            <input type="radio" name="spatial" value="false"> Não
                         </label>
                     </div>
                     <div class="no-float"></div>
-                    <a type="button" class="btn btn-primary float-right" id="spatial_dimension">Next</a>
+                    <a type="button" class="btn btn-primary float-right" id="spatial_dimension">Próximo</a>
                     <div class="no-float"></div>
                 </div>
 
@@ -276,21 +278,15 @@
 
                 <!-- ------------------------------- Social capital spatialization (let's draw)  --------------------------------------------- -->
                 <div class="hidden" id="draw">
-                    <h4 style="margin-bottom: 20px" id="title_let_draw">Let's draw the group X!</h4>
+                    <h4 style="margin-bottom: 20px" id="title_let_draw">Vamos desenhar o grupo X!</h4>
                     <div id="let_draw">
-                        Please, draw all the areas that define the group X using
-                        <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil"
-                                                                              aria-hidden="true"
-                                                                              style="margin-right: 5px"></span> Start
-                            drawing
+                    Desenhe, por favor, todas as áreas que definem o grupo X utilizando o botão  
+                        <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Comece a desenhar
                         </button>
-                        button and you can delete the area clicking
-                        <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-trash"
-                                                                              aria-hidden="true"
-                                                                              style="margin-right: 5px"></span> Delete
-                            area
+                        Pode apagar a área clicando no botão 
+                        <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Apagar áreas
                         </button>
-                        button on the map.
+                        por cima do mapa.
                     </div>
                 </div>
 
@@ -300,15 +296,16 @@
                 <!-- ------------------------------- Social capital spatialization (another area o next)  --------------------------------------------- -->
 
                 <div class="hidden" id="another_draw">
-                    <h5 style="margin-bottom: 20px">Great job!</h5>
+                    <h5 style="margin-bottom: 20px">Muito obrigado!</h5>
                     <hr style="width: 100%">
-                    <div id="change_name_group">Now you can draw another area that define the X group, or click the
-                        <button type="button" class="btn btn-primary btn-next" href="#" disabled>Next</button>
-                        button on th map to define the next group.
+                    <div id="change_name_group">Pode agora desenhar outra área para o grupo X ou, clicar 
+                    <!-- Now you can draw another area that define the X group -->
+                        <button type="button" class="btn btn-primary btn-next" href="#" disabled>Próximo</button>
+                        sobre o mapa para definir o próximo grupo.
                     </div>
                     <br>
                     <div id="counting_areas">
-                        You have already defined: L areas.
+                        Já definiu: L áreas.
                     </div>
 
                 </div>
@@ -320,27 +317,26 @@
                 <!-- ------------------------------- Questions ----------------------------------------------------- -->
                 <div class="hidden" id="questions_bonding_bridging">
                     <h5 style="margin-top: 20px">
-                        Do you live in that area?
+                        Reside nesta área?
                     </h5>
                     <div>
                         <label class="radio-inline">
-                            <input type="radio" name="live" value="true"> Yes
+                            <input type="radio" name="live" value="true"> Sim
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="live" value="false" checked="checked"> Not
+                            <input type="radio" name="live" value="false" checked="checked"> Não
                         </label>
                     </div>
                     <hr style="width: 100%">
                     <div class="no-float"></div>
-                    <h5>Please, answer the following questions about the area just drawn.</h5>
+                    <h5>Em relação à área que acabou de desenhar, responda por favor às perguntas seguintes.</h5>
                     <div class="no-float">
                         <div>
-                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">The people I
-                                interact in that group would put their reputation on the line for me.</p>
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">As pessoas com quem interajo neste grupo poriam as mãos no fogo por mim.</p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
-                                    <input type="radio" name="bosc1" value="1"> 1 Strongly disagree
+                                    <input type="radio" name="bosc1" value="1"> 1 Discordo completamente
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -356,19 +352,17 @@
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="bosc1" value="5"> 5 Strongly agree
+                                    <input type="radio" name="bosc1" value="5"> 5 Concordo completamente
                                 </label>
                             </div>
                         </div>
                         <div class="no-float"></div>
                         <div>
-                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">I know people
-                                in
-                                that group well enough to get them to do anything important.</p>
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Conheço suficientemente bem pessoas neste grupo para as levar a fazer coisas importantes.</p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
-                                    <input type="radio" name="bosc2" value="1"> 1 Strongly disagree
+                                    <input type="radio" name="bosc2" value="1"> 1 Discordo completamente
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -384,7 +378,7 @@
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="bosc2" value="5"> 5 Strongly agree
+                                    <input type="radio" name="bosc2" value="5"> 5 Concordo completamente
                                 </label>
                             </div>
                         </div>
@@ -392,14 +386,12 @@
 
                         <div class="no-float">
                             <div>
-                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Interacting
-                                    with people in that group makes me interested in what people unlike me are
-                                    thinking.</p>
+                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">A interação com as pessoas deste grupo leva a que me interesse sobre aquilo que pessoas diferentes de mim pensam.</p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                     <label class="radio-inline personal_radio"
                                            style="margin-top: -10px; font-size: 12px;">
-                                        <input type="radio" name="brsc1" value="1"> 1 Strongly disagree
+                                        <input type="radio" name="brsc1" value="1"> 1 Discordo completamente
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -415,19 +407,18 @@
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="brsc1" value="5"> 5 Strongly agree
+                                        <input type="radio" name="brsc1" value="5"> 5 Concordo completamente
                                     </label>
                                 </div>
                             </div>
                             <div class="no-float"></div>
                             <div>
-                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Interacting
-                                    with people in that group gives me new people to talk to.</p>
+                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">A interação com pessoas deste grupo disponibiliza-me novas pessoas com quem falar.</p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                     <label class="radio-inline personal_radio"
                                            style="margin-top: -10px; font-size: 12px;">
-                                        <input type="radio" name="brsc2" value="1"> 1 Strongly disagree
+                                        <input type="radio" name="brsc2" value="1"> 1 Discordo completamente
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -443,45 +434,43 @@
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="brsc2" value="5"> 5 Strongly agree
+                                        <input type="radio" name="brsc2" value="5"> 5 Concordo completamente
                                     </label>
                                 </div>
                             </div>
                             <div class="no-float"></div>
                             <a type="button" class="btn btn-primary float-right display_questions  display_communities"
-                               id="bonding_bridging_done" onclick="changeclass();">Next</a>
+                               id="bonding_bridging_done" onclick="changeclass();">Próximo</a>
                         </div>
                     </div>
                 </div>
                 <!-- -------------------------------  End questions ----------------------------------------------------- -->
                 <div class="hidden" id="select_group">
-                    <h5 style="margin-bottom: 20px">Please, choose the group that you better socially identify
-                        with.</h5>
+                    <h5 style="margin-bottom: 20px">Por favor escolha o grupo com que melhor se identifica socialmente.</h5>
                     <hr style="width: 100%">
                     <div id="radios">
                     </div>
                     <div class="float-right">
-                        <a type="button" class="btn btn-primary" id="choose_group">Next</a>
+                        <a type="button" class="btn btn-primary" id="choose_group">Próximo</a>
                     </div>
                 </div>
 
                 <!-- ------------------------------- SC questions  -------------------------------------------------- -->
                 <div class="hidden" id="sc_done">
-                    <h5 id="change">Please, answer the following questions regarding the <b
-                            style="font-size: 18px">X</b> group.</h5>
+                    <h5 id="change">Responda por favor às perguntas que se seguem em relação ao <b
+                            style="font-size: 18px">X</b> grupo.</h5>
                     <hr style="width:100%">
                     <h5 style="margin-bottom: 20px; padding-top: 0px">
-                        Sense of community
+                        Sentido de comunidade
                     </h5>
                     <div class="no-float">
                         <div>
-                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc1">I
-                                feel like a member of <b>Y</b> group.</p>
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc1">Sinto-me parte do grupo <b>Y</b></p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
                                     <input type="radio" name="soc1" value="1"> 1
-                                    Strongly disagree
+                                    Discordo completamente
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -498,19 +487,18 @@
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                     <input type="radio" name="soc1" value="5"> 5
-                                    Strongly agree
+                                    Concordo completamente
                                 </label>
                             </div>
                         </div>
                         <div class="no-float"></div>
                         <div>
-                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc2">I
-                                belong to the <b>Y</b> group.</p>
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc2">Pertenço ao grupo <b>Y</b></p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
                                     <input type="radio" name="soc2" value="1"> 1
-                                    Strongly disagree
+                                    Discordo completamente
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -527,19 +515,18 @@
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                     <input type="radio" name="soc2" value="5"> 5
-                                    Strongly agree
+                                    Concordo completamente
                                 </label>
                             </div>
                         </div>
                         <div class="no-float"></div>
                         <div>
-                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc3">I
-                                feel connected to the <b>Y</b> group.</p>
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc3">Sinto-me ligado ao grupo <b>Y</b></p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
                                     <input type="radio" name="soc3" value="1"> 1
-                                    Strongly disagree
+                                    Discordo completamente
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -556,25 +543,24 @@
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                     <input type="radio" name="soc3" value="5"> 5
-                                    Strongly agree
+                                    Concordo completamente
                                 </label>
                             </div>
                         </div>
                         <div class="no-float"></div>
                         <h5 style="margin-bottom: 20px; padding-top: 0px;">
-                            Neighboring : The following three actions that group members might do for each other. On
-                            average, how many times do you …
+                            Vizinhança: Os membros do grupo poderão realizar as 3 ações seguintes entre eles. Em média quantas vezes...
                         </h5>
                         <div class="no-float">
                             <div>
                                 <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="n1">
-                                    Help a <b>Y</b> group member in an emergency.</p>
+                                    Ajuda um membro do grupo <b>Y</b> numa emergência.</p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                     <label class="radio-inline personal_radio"
                                            style="margin-top: -10px; font-size: 12px;">
                                         <input type="radio" name="n1" value="1">
-                                        1 Never
+                                        1 Nunca
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -594,20 +580,20 @@
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                         <input type="radio" name="n1" value="5">
-                                        5 Every-day
+                                        5 Todos os dias
                                     </label>
                                 </div>
                             </div>
                             <div class="no-float"></div>
                             <div>
                                 <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="n2">
-                                    Offer an advice on a personal problem of a <b>Y</b> group member.</p>
+                                    Dá conselhos sobre um problema pessoal de um membro do grupo <b>Y</b>.</p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                     <label class="radio-inline personal_radio"
                                            style="margin-top: -10px; font-size: 12px;">
                                         <input type="radio" name="n2" value="1">
-                                        1 Never
+                                        1 Nunca
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -627,20 +613,20 @@
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                         <input type="radio" name="n2" value="5">
-                                        5 Every-day
+                                        5 Todos os dias
                                     </label>
                                 </div>
                             </div>
                             <div class="no-float"></div>
                             <div>
                                 <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="n3">
-                                    Discuss a problem with a <b>Y</b> group member.</p>
+                                    Discute um problema com um membro do grupo <b>Y</b>.</p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                     <label class="radio-inline personal_radio"
                                            style="margin-top: -10px; font-size: 12px;">
                                         <input type="radio" name="n3" value="1">
-                                        1 Never
+                                        1 Nunca
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -660,25 +646,24 @@
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                         <input type="radio" name="n3" value="5">
-                                        5 Every-day
+                                        5 Todos os dias
                                     </label>
                                 </div>
                             </div>
                             <div class="no-float"></div>
                             <h5 style="margin-bottom: 20px; padding-top: 0px">
-                                Collective efficacy/empowerment
+                                Eficácia coletiva/empoderamento
                             </h5>
                             <div class="no-float">
                                 <div>
                                     <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
-                                       id="cee1">I think that a collective action from this group <b>(Y)</b> will
-                                        increase chances of the government changing their plans?</p>
+                                       id="cee1">Penso que uma ação coletiva deste grupo <b>(Y)</b> aumentará as possibilidades de o governo alterar os seus planos?</p>
                                     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                          style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                         <label class="radio-inline personal_radio"
                                                style="margin-top: -10px; font-size: 12px;">
                                             <input type="radio" name="cee1"
-                                                   value="1"> 1 Strongly disagree
+                                                   value="1"> 1 Discordo completamente
                                         </label>
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -698,21 +683,20 @@
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                             <input type="radio" name="cee1"
-                                                   value="5"> 5 Strongly agree
+                                                   value="5"> 5 Concordo completamente
                                         </label>
                                     </div>
                                 </div>
                                 <div class="no-float"></div>
                                 <div>
                                     <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
-                                       id="cee2">I think
-                                        that together we can change a <b>(Y)</b> problem.</p>
+                                       id="cee2">Penso que em conjunto podemos alterar um problema do grupo <b>(Y)</b>.</p>
                                     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                          style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                         <label class="radio-inline personal_radio"
                                                style="margin-top: -10px; font-size: 12px;">
                                             <input type="radio" name="cee2"
-                                                   value="1"> 1 Strongly disagree
+                                                   value="1"> 1 Discordo completamente
                                         </label>
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -732,21 +716,20 @@
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                             <input type="radio" name="cee2"
-                                                   value="5"> 5 Strongly agree
+                                                   value="5"> 5 Concordo completamente
                                         </label>
                                     </div>
                                 </div>
                                 <div class="no-float"></div>
                                 <div>
                                     <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
-                                       id="cee3">I think that is important to get people on the <b>(Y)</b> group to help
-                                        each other more.</p>
+                                       id="cee3">Penso que é importante fazer com que as pessoas do grupo <b>(Y)</b> se entreajudem mais.</p>
                                     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                          style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                         <label class="radio-inline personal_radio"
                                                style="margin-top: -10px; font-size: 12px;">
                                             <input type="radio" name="cee3"
-                                                   value="1"> 1 Strongly disagree
+                                                   value="1"> 1 Discordo completamente
                                         </label>
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -766,24 +749,24 @@
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                             <input type="radio" name="cee3"
-                                                   value="5"> 5 Strongly agree
+                                                   value="5"> 5 Concordo completamente
                                         </label>
                                     </div>
                                     <div class="no-float"></div>
                                     <h5 style="margin-bottom: 20px; padding-top: 0px">
-                                        Citizen participation
+                                        Participação do cidadão
                                     </h5>
                                     <div class="no-float">
                                         <div>
                                             <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
                                                id="cp1">
-                                                Have you attended a group <b>(Y)</b> meeting in the last 12 months?</p>
+                                                Nos últimos 12 meses participou nalguma reunião do grupo <b>(Y)</b>?</p>
                                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                                 <label class="radio-inline personal_radio"
                                                        style="margin-top: -10px; font-size: 12px;">
                                                     <input type="radio" name="cp1"
-                                                           value="1"> 1 Never
+                                                           value="1"> 1 Nunca
                                                 </label>
                                                 <label class="radio-inline"
                                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -803,7 +786,7 @@
                                                 <label class="radio-inline"
                                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                                     <input type="radio" name="cp1"
-                                                           value="5"> 5 Every-day
+                                                           value="5"> 5 Todos os dias
                                                 </label>
                                             </div>
                                         </div>
@@ -811,14 +794,13 @@
                                         <div>
                                             <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
                                                id="cp2">
-                                                How often do you participate in the activities of <b>(Y)</b> group in
-                                                the last 12 months?</p>
+                                                Com que frequência participou nas atividades do grupo <b>(Y)</b> nos últimos 12 meses?</p>
                                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                                 <label class="radio-inline personal_radio"
                                                        style="margin-top: -10px; font-size: 12px;">
                                                     <input type="radio" name="cp2"
-                                                           value="1"> 1 Never
+                                                           value="1"> 1 Nunca
                                                 </label>
                                                 <label class="radio-inline"
                                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -838,7 +820,7 @@
                                                 <label class="radio-inline"
                                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                                     <input type="radio" name="cp2"
-                                                           value="5"> 5 Every-day
+                                                           value="5"> 5 Todos os dias
                                                 </label>
                                             </div>
                                         </div>
@@ -846,14 +828,13 @@
                                         <div>
                                             <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
                                                id="cp3">
-                                                To what extent do you participate in the <b>(Y)</b> group
-                                                decision-making in the last 12 months?</p>
+                                                Até que ponto participou no processo de decisão do grupo <b>(Y)</b> nos últimos 12 meses?</p>
                                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                                 <label class="radio-inline personal_radio"
                                                        style="margin-top: -10px; font-size: 12px;">
                                                     <input type="radio" name="cp3"
-                                                           value="1"> 1 Never
+                                                           value="1"> 1 Nunca
                                                 </label>
                                                 <label class="radio-inline"
                                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -873,11 +854,11 @@
                                                 <label class="radio-inline"
                                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                                     <input type="radio" name="cp3"
-                                                           value="5"> 5 Every-day
+                                                           value="5"> 5 Todos os dias
                                                 </label>
                                             </div>
                                             <a type="button" id="questions-sc"
-                                               class="btn btn-primary float-right">Done</a>
+                                               class="btn btn-primary float-right">Terminado</a>
                                         </div>
                                     </div>
                                 </div> <!-- /questions-panel-left  -->
@@ -888,11 +869,8 @@
                     <!-- ------------------------------- End Panel left ------------------------------------------------------------------------ -->
                 </div>
                 <div id="finish_button" class="hidden">
-<<<<<<< HEAD
-                  <a  type="button" class="btn btn-primary float-right finish-map">Next</a>
-=======
-                  <a  type="button" id="button_more_areas" class="btn btn-primary float-right">Next</a>
->>>>>>> bb9d0854fc32769acdb28c754b8208525cc3b745
+                  <a  type="button" class="btn btn-primary float-right finish-map">Próximo</a>
+                  <a  type="button" id="button_more_areas" class="btn btn-primary float-right">Próximo</a>
                 </div>
             </div>
         </div>
@@ -905,11 +883,11 @@
                     <div style="position: absolute; top: 10px; left: 40px; z-index: 998">
                         <button class="btn btn-default btn-xs" id="draw_polyxs" disabled>
                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"
-                                  style="margin-right: 5px"></span> Start drawing
+                                  style="margin-right: 5px"></span> Comece a desenhar
                         </button>
                         <button class="btn btn-default btn-xs" id="delete_polyxs">
                             <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span>
-                            Delete area
+                            Apagar áreas
                         </button>
                     </div>
                 </div> <!-- map -->
@@ -944,30 +922,21 @@
                 <span aria-hidden="true">&times;</span>
             </button>
             <div class="modal-header">
-                <b>Let’s start!! – Please, read the following instructions carefully.</b>
+                <b>Vamos começar! Leia por favor com atenção as instruções que se seguem.</b>
             </div>
             <div class="modal-body">
                 <!--  Explanation of the process of drawing  -->
-                <p>This is a web-map survey application for Lisbon city. We invite you to draw areas on the map freely.
+                <p>TIsto é um questionário com base num mapa para a cidade de Lisboa. Convidamo-lo a desenhar áreas no mapa de forma livre.
                 <p></p>
-                To start, just press
-                <button class="btn btn-default btn-xs">
-                                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"
-                                          style="margin-right: 5px"></span> Start drawing
+                Pressione o botão  
+                <button class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Comece a desenhar
                 </button>
-                button at top-centre on the map
-                part and then click on the map to define your first point and as many points as you need to define
-                your area. To close the area, click on the first point again. You can edit the polygon moving
-                any point at any time or delete it pressing
-                <button class="btn btn-default btn-xs">
-                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"
-                                          style="margin-right: 5px"></span> Delete area
-                </button>
-                button.</p>
-
+                situado ao centro na parte superior do mapa e clique no mapa para definir o seu primeiro ponto. Clique os pontos que considerar necessários para definir um polígono (área). Para fechar um polígono, clique outra vez no primeiro ponto. Pode fazer alterações na forma do polígono movendo qualquer um dos pontos. Pode apagar a área clicando no botão
+                <button class="btn btn-default btn-xs"> <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Apagar áreas
+                </button>.</p>
                 <p></p>
                 <p>You can "pan" the map or zoom in (+ or -) using the map controls.
-                    You can draw as many areas as you need. The more areas you place, the better! </p>
+                    You can draw as many areas as you need. Quanto mais polígonos desenhar melhor! </p>
             </div> <!--/.modal-body -->
             <div class="no-float"></div>
             <div class="modal-footer" style="border:none;">
@@ -975,7 +944,7 @@
                     1/3
                 </div>
                 <div class="float-right">
-                    <button type="button" class="btn btn-primary btn-next" href="#">Next</button>
+                    <button type="button" class="btn btn-primary btn-next" href="#">Próximo</button>
                 </div>
             </div>
         </div> <!--/.modal-content -->
@@ -989,7 +958,7 @@
             <button type="button" class="close close-modal" id="icon-link" data-dismiss="modal" aria-label="Close"><span
                     aria-hidden="true">&times;</span></button>
             <div class="modal-header">
-                <b>Questions & Sliders</b>
+                <b>Perguntas </b>
             </div>
             <div class="modal-body">
                 <!--  Explanation as sliders are used  -->
@@ -1033,13 +1002,12 @@
             <button type="button" class="close close-modal" id="icon-link" data-dismiss="modal" aria-label="Close"><span
                     aria-hidden="true">&times;</span></button>
             <div class="modal-header">
-                <b>Next & Finish</b>
+                <b>Próximo e Terminar</b>
             </div>
             <div class="modal-body">
                 <!--  Explanation finish  -->
-                <p>This is all. When you finish to locate your different areas and to move on to the next activity,
-                    press the button
-                    <button type="button" class="btn btn-primary btn-next" href="#" disabled>Next</button>
+                <p>Quando terminar de definir as suas áreas pode passar à próxima atividade, pressionando o botão 
+                    <button type="button" class="btn btn-primary btn-next" href="#" disabled>Próximo</button>
                 </p>
                 <h3 style="text-align: center; margin-top: 40px">Happy mapping!!</h3>
             </div> <!--/.modal-body -->
@@ -1050,7 +1018,7 @@
                 </div>
                 <div class="float-right">
                     <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close" href="#">
-                        Done
+                        Terminado
                     </button>
                 </div>
                 <div class="float-right" style="padding-top: 8px; margin-right: 20px">
