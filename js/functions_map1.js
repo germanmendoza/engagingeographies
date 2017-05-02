@@ -66,15 +66,16 @@ function startAll() {
         startMapComponents();
         buttonDraw.prop('disabled', false);
 
-
     });
 
+     utilizando o botão (X) no mapa.
 
-    function nameplace() {
-        $("#group_name_place").html('Area' + '<b style="font-size: 18px">' + ' hola ' + '</b>');
+
+        function nameplace() {
+        $("#group_name_place").html('Área' + '<b style="font-size: 18px">' + ' hola ' + '</b>');
         var replaced = $("#group_name_place").html().replace('hola', name_places[number]);
         $("#group_name_place").html(replaced);
-        $("#draw_places").html('Please draw the area' + '<b>' + ' (hola) ' + '</b>' + 'using the ' + ' <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing</button>' + ' button in the map.');
+        $("#draw_places").html('Por favor desenhe a área' + '<b>' + ' (hola) ' + '</b>' + 'using the ' + ' <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Comece a desenhar </button>' + ' button in the map.');
         var replaced1 = $("#draw_places").html().replace('hola', name_places[number]);
         $("#draw_places").html(replaced1);
         $("#area_name_sliders").html('Area' + '<b style="font-size: 18px">' + ' hola ' + '</b>');

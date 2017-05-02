@@ -141,7 +141,7 @@ function startall() {
                 $('#myModal12').modal({backdrop: 'static', keyboard: false});
             }
             else{
-                alert("Please, write the zip code");
+                alert("Indique por favor o seu código postal");
             }
         }
     });
