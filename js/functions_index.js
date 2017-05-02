@@ -25,6 +25,8 @@ function startall() {
     };
     // End Ajax
 
+
+
     //Show modals NExt and Prev
 
     $('#myModal9').modal({backdrop: 'static', keyboard: false});
