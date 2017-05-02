@@ -179,7 +179,7 @@ function languages(lang, text) {
         'dashTrPlanted': 'Schätze versteckt \n Gesamt: ',
         'dashTrFound': 'Schätze gefunden \n Gesamt: ',
         'dashFiCaptured': 'Standorte erfasst \n Gesamt: ',
-        'totalStudents' : 'Anzahl aller Studenten: ',
+        'totalStudents' : 'Anrezahl aller Studenten: ',
         'errorNoBoundary' : 'Bevor Sie diesen Schritt zu realisieren, müssen Sie den ersten Schritt tun, besuchen Sie ihn',
         'checkFp' : 'Leider können Sie diese Phase nur aktivieren, wenn die Phase 1 mindestens 80%'
     };
