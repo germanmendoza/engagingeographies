@@ -50,7 +50,6 @@ function startAll() {
     $('#submit_name_places').click(function () {
         name_places = $('#name_actual_place').val();
         if (name_places.length > 0) {
-            //buttonDraw.prop('disabled', false);
             $("#let_draw").toggleClass("hidden show");
             $("#title_done").toggleClass("hidden show");
             nameplace();
@@ -65,6 +64,8 @@ function startAll() {
         $("#pepe").toggleClass("hidden show");
         $("#pepa").toggleClass("hidden show");
         startMapComponents();
+        buttonDraw.prop('disabled', false);
+
 
     });
 

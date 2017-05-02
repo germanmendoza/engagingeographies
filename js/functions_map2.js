@@ -501,11 +501,16 @@ function startAll() {
 $('#d-ajuda').click(function () {
         map.setView([38.7500, -9.1500], 12);
     });
-}
-$('#d-alcantara').click(function () {
+
+
+    $('#d-alcantara').click(function () {
         map.setView([38.7500, -9.1500], 12);
     });
+
+
+
 }
+
 
 function deleteareas() {
     if (currGroup.areas.length > 0) {
