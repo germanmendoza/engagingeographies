@@ -55,16 +55,17 @@ function startAll() {
             nameplace();
 
             $("#group_name_place").fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+            $('#myModal3').modal('show');
+            $("#pepe").toggleClass("hidden show");
+            $("#pepa").toggleClass("hidden show");
+            startMapComponents();
+            buttonDraw.prop('disabled', false);
+
 
         }
         else {
             alert("Please, insert at least a group name");
         }
-        $('#myModal3').modal('show');
-        $("#pepe").toggleClass("hidden show");
-        $("#pepa").toggleClass("hidden show");
-        startMapComponents();
-        buttonDraw.prop('disabled', false);
 
     });
 
@@ -74,13 +75,13 @@ function startAll() {
         $("#group_name_place").html('Área' + '<b style="font-size: 18px">' + ' hola ' + '</b>');
         var replaced = $("#group_name_place").html().replace('hola', name_places[number]);
         $("#group_name_place").html(replaced);
-        $("#draw_places").html('Por favor desenhe a área' + '<b>' + ' (hola) ' + '</b>' + 'using the ' + ' <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Comece a desenhar </button>' + ' button in the map.');
+        $("#draw_places").html('Por favor desenhe a área' + '<b>' + ' (hola) ' + '</b>' + 'utilizando o ' + ' <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Comece a desenhar </button>' + ' botão no mapa.');
         var replaced1 = $("#draw_places").html().replace('hola', name_places[number]);
         $("#draw_places").html(replaced1);
-        $("#area_name_sliders").html('Area' + '<b style="font-size: 18px">' + ' hola ' + '</b>');
+        $("#area_name_sliders").html('Área' + '<b style="font-size: 18px">' + ' hola ' + '</b>');
         var replaced2 = $("#area_name_sliders").html().replace('hola', name_places[number]);
         $("#area_name_sliders").html(replaced2);
-        $("#title_sliders_change").html('Please, indicate the level of only applicable characteristic that explains why do you draw this area' + '<b>' + ' Y ' + '</b>' +'. ( where 0 is nothing and 5 is totally)');
+        $("#title_sliders_change").html('Por favor, indique o nível de características aplicáveis que explica por que você desenhou esta área' + '<b>' + ' Y ' + '</b>' +'. ( Numa escala de 0 a 5, onde 0 é nada e 5 totalmente)');
         var replaced3 = $("#title_sliders_change").html().replace('Y', name_places[number]);
         $("#title_sliders_change").html(replaced3);
 
@@ -88,43 +89,45 @@ function startAll() {
 
 
 
-/*// SLIDER
-    $("#ex1").slider();
-    $("#ex1").on("slide", function (slideEvt) {
-        $("#ex1SliderVal").text(slideEvt.value);
-    });
-    $("#ex2").slider();
-    $("#ex2").on("slide", function (slideEvt) {
-        $("#ex2SliderVal").text(slideEvt.value);
-    });
-    $("#ex3").slider();
-    $("#ex3").on("slide", function (slideEvt) {
-        $("#ex3SliderVal").text(slideEvt.value);
-    });
-    $("#ex4").slider();
-    $("#ex4").on("slide", function (slideEvt) {
-        $("#ex4SliderVal").text(slideEvt.value);
-    });
-    $("#ex5").slider();
-    $("#ex5").on("slide", function (slideEvt) {
-        $("#ex5SliderVal").text(slideEvt.value);
-    });
-    $("#ex6").slider();
-    $("#ex6").on("slide", function (slideEvt) {
-        $("#ex6SliderVal").text(slideEvt.value);
-    });
-    $("#ex7").slider();
-    $("#ex7").on("slide", function (slideEvt) {
-        $("#ex7SliderVal").text(slideEvt.value);
-    });
-    $("#ex8").slider();
-    $("#ex8").on("slide", function (slideEvt) {
-        $("#ex8SliderVal").text(slideEvt.value);
-    });
-    $("#ex9").slider();
-    $("#ex9").on("slide", function (slideEvt) {
-        $("#ex9SliderVal").text(slideEvt.value);
-    });*/
+
+
+    /*// SLIDER
+        $("#ex1").slider();
+        $("#ex1").on("slide", function (slideEvt) {
+            $("#ex1SliderVal").text(slideEvt.value);
+        });
+        $("#ex2").slider();
+        $("#ex2").on("slide", function (slideEvt) {
+            $("#ex2SliderVal").text(slideEvt.value);
+        });
+        $("#ex3").slider();
+        $("#ex3").on("slide", function (slideEvt) {
+            $("#ex3SliderVal").text(slideEvt.value);
+        });
+        $("#ex4").slider();
+        $("#ex4").on("slide", function (slideEvt) {
+            $("#ex4SliderVal").text(slideEvt.value);
+        });
+        $("#ex5").slider();
+        $("#ex5").on("slide", function (slideEvt) {
+            $("#ex5SliderVal").text(slideEvt.value);
+        });
+        $("#ex6").slider();
+        $("#ex6").on("slide", function (slideEvt) {
+            $("#ex6SliderVal").text(slideEvt.value);
+        });
+        $("#ex7").slider();
+        $("#ex7").on("slide", function (slideEvt) {
+            $("#ex7SliderVal").text(slideEvt.value);
+        });
+        $("#ex8").slider();
+        $("#ex8").on("slide", function (slideEvt) {
+            $("#ex8SliderVal").text(slideEvt.value);
+        });
+        $("#ex9").slider();
+        $("#ex9").on("slide", function (slideEvt) {
+            $("#ex9SliderVal").text(slideEvt.value);
+        });*/
 
 
     /*var namearea;
@@ -147,7 +150,7 @@ function startAll() {
 
         var naturevalidation = $('[name=na1]:checked,[name=na2]:checked,[name=na3]:checked,[name=na4]:checked');
         if (naturevalidation.length < 4) {
-            alert("Please, answer all the questions");
+            alert("Por favor responda a todas as perguntas");
             return;
         }
 
@@ -329,7 +332,7 @@ function startAll() {
                 $("#pd3").html(pd3re);
             }
             else {
-                alert("please choose one area");
+                alert("Escolha uma área");
             }
         });
 
@@ -385,7 +388,7 @@ function startAll() {
 
         var sopvalidation = $('[name=PI1]:checked,[name=PI2]:checked,[name=PI3]:checked,[name=PA1]:checked,[name=PA2]:checked,[name=PA3]:checked,[name=PD1]:checked,[name=PD2]:checked,[name=PD3]:checked');
         if (sopvalidation.length < 9) {
-            alert("Please, answer all the questions");
+            alert("Por favor responda a todas as perguntas");
             return;
         }
 
