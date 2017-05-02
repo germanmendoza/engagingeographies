@@ -72,11 +72,11 @@
                       <div class="col-lg-9 col-md-12 col-sm-12 width-buttons-map">
                         <button class="btn btn-default btn-md" id="draw_poly" disabled>
                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"
-                                  style="margin-right: 5px"></span> Start drawing
+                                  style="margin-right: 5px"></span> Comece a desenhar
                         </button>
                         <button class="btn btn-default btn-md" id="delete_poly" disabled>
                             <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span>
-                            Delete area
+                            Apagar áreas
                         </button>
                       </div>
                       <div class="col-lg-3 col-md-12 col-sm-12" style="padding-left: 0px;">
@@ -148,51 +148,49 @@
             <div class="panel-body">
                 <!-- ------------------------------- Draw areas ce first ----------------------------------------------------- -->
                 <div class="hidden" id="draw_ce">
-                    <h5 style="margin-bottom: 20px">Please, can you draw the areas in which you want to participate in
-                        city participatory processes.
+                    <h5 style="margin-bottom: 20px">Pode por favor desenhar as áreas nas quais gostaria de participar em processos participativos.
+
                     </h5>
                 </div>
                 <!-- ------------------------------- Draw areas ce first end ----------------------------------------------------- -->
                 <!-- ------------------------------- Draw areas ce next ----------------------------------------------------- -->
                <div class="hidden" id="live_area">
                 <h5 style="margin-top: 20px">
-                    Do you live in that area?
+                    Reside nesta área?
                 </h5>
                 <div>
                     <label class="radio-inline">
-                        <input type="radio" name="live" value="true"> Yes
+                        <input type="radio" name="live" value="true"> Sim
                     </label>
                     <label class="radio-inline">
-                        <input type="radio" name="live" value="false" checked="checked"> Not
+                        <input type="radio" name="live" value="false" checked="checked"> Não
                     </label>
                 </div>
                </div>
                 <div class="hidden" id="another_draw_ce">
                     <p style="margin-bottom: 20px"><b><h4>Great job!</h4></b></p>
-                    <div id="change_name_group">Now you can draw another area where you want to be involve in
-                        participatory processes, or click the
-                        <button type="button" class="btn btn-primary btn-next" href="#" disabled>Next</button>
-                        button on the map to continue.
+                    <div id="change_name_group">Pode agora desenhar outra área onde gostaria de estar envolvido em processos participativos,
+                        ou clique no botão
+                        <button type="button" class="btn btn-primary btn-next" href="#" disabled>Próximo</button>
+                        para continuar.
                     </div>
                 </div>
                 <!-- ------------------------------- Draw areas ce next end ----------------------------------------------------- -->
             <!-- ------------------------------- Questions ----------------------------------------------------- -->
             <div class="show" id="questions_done">
-                <h5>We are almost finishing. Please, answer the following questions regarding Lisbon city.</h5>
+                <h5>Estamos quase a terminar. Por favor responda às seguintes perguntas sobre a cidade de Lisboa.</h5>
                 <hr style="width: 100%">
                 <h5 style="margin-bottom: 20px; padding-top: 0px">
-                    Civic engagement
+                    Comprometimento cívico.
                 </h5>
                 <div class="no-float">
                     <div>
-                        <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">In the last 12
-                            months, have you joined together with other people members to address a common problem
-                            or issue?</p>
+                        <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Nos últimos 12 meses, juntou-se com outros membros do grupo para tratar de um problema</p>
                         <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                              style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                             <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
                                 <input type="radio" name="ce1" value="1"> 1
-                                 Never
+                                 Nunca
                             </label>
                             <label class="radio-inline"
                                    style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -209,20 +207,18 @@
                             <label class="radio-inline"
                                    style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                 <input type="radio" name="ce1" value="5"> 5
-                                Every-day
+                                Todos os dias
                             </label>
                         </div>
                     </div>
                     <div class="no-float"></div>
                     <div>
-                        <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">In the last 12
-                            months, have you talked with a local authority or governmental organization about common
-                            problems?</p>
+                        <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Nos últimos 12 meses, interagiu com alguma autoridade local ou organização governamental sobre problemas comuns?</p>
                         <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                              style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                             <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
                                 <input type="radio" name="ce2" value="1"> 1
-                                 Never
+                                 Nunca
                             </label>
                             <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                 <input type="radio" name="ce2" value="2"> 2
@@ -235,20 +231,18 @@
                             </label>
                             <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                 <input type="radio" name="ce2" value="5"> 5
-                                Every-day
+                                Todos os dias
                             </label>
                         </div>
                     </div>
                     <div class="no-float"></div>
                     <div>
-                        <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">In the last 12
-                            months, have you worked with a local authority or governmental organization to solve
-                            common problems?</p>
+                        <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Nos últimos 12 meses, trabalho com alguma autoridade local ou organização governamental sobre problemas comuns?</p>
                         <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                              style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                             <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
                                 <input type="radio" name="ce3" value="1"> 1
-                                 Never
+                                 Nunca
                             </label>
                             <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                 <input type="radio" name="ce3" value="2"> 2
@@ -261,13 +255,13 @@
                             </label>
                             <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                 <input type="radio" name="ce3" value="5"> 5
-                                Every-day
+                                Todos os dias
                             </label>
                         </div>
                     </div>
                     <div class="no-float"></div>
                     <a type="button" class="btn btn-primary float-right display_questions  display_title" id="ce_done"
-                       onclick="changeclass();">Next</a>
+                       onclick="changeclass();">Próximo</a>
                 </div>
                 <!-- -------------------------------  End questions ----------------------------------------------------- -->
                 <div id="finish_button" class="hidden">
@@ -289,11 +283,11 @@
                     <div class="col-xs-12">
                       <button class="btn btn-default btn-xs" id="draw_polyxs" disabled>
                           <span class="glyphicon glyphicon-pencil" aria-hidden="true"
-                                style="margin-right: 5px"></span> Start drawing
+                                style="margin-right: 5px"></span> Comece a desenhar
                       </button>
                       <button class="btn btn-default btn-xs" id="delete_polyxs" disabled>
                           <span class="glyphicon glyphicon-trash" aria-hidden="true"
-                                style="margin-right: 5px"></span> Delete area
+                                style="margin-right: 5px"></span> Apagar área
                       </button>
                     </div>
                     <div class="col-xs-12">

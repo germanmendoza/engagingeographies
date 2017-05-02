@@ -56,20 +56,20 @@
             <div class="panel-body">
               <div id="map" style="height:84vh; position: relative;">
                 <div style="position: absolute; top: 10px; left: 210px; z-index: 998; background-color: #fff; padding-left: 3px; padding-right: 3px">
-                  <h4>These are your important areas!</h4>
+                  <h4>Estas são as suas áreas importantes!</h4>
                 </div>
                 <div  class="legend" style="position: absolute; bottom: 5px; left: 10px; z-index: 998">
                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="float: left; margin: 0px; padding: 0px">
                       <div class="foo blue"></div>
-                      <div class="legend-name" style="margin-right: 20px"> Sense Of Place</div>
+                      <div class="legend-name" style="margin-right: 20px"> Sentido do local</div>
                   </div>
                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="float: left;margin: 0px; padding: 0px">
                       <div class="foo purple"></div>
-                      <div class="legend-name" style="margin-right: 20px"> Social Capital</div>
+                      <div class="legend-name" style="margin-right: 20px">Capital social</div>
                   </div>
                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="float: left; margin: 0px; padding: 0px">
                       <div class="foo wine"></div>
-                      <div class="legend-name"> Civic engagement</div>
+                      <div class="legend-name"> Comprometimento cívico </div>
                   </div>
                 </div>
                 <!-- <div class="custom_buttons_leaflet visible-lg visible-md visible-sm">
@@ -97,25 +97,25 @@
         <div class="panel-body">
           <!--  ----------- Questions ---------- -->
           <div class="show">
-            <h4>We want to know a little of you ;)</h4>
+            <h4>Gostaríamos de saber alguma coisa sobre si.</h4>
             <div style="margin-bottom: 20px">
-              <h5>Gender</h5>
+              <h5>Género</h5>
               <label class="radio-inline">
-                  <input type="radio" name="gender" value="1"> Male
+                  <input type="radio" name="gender" value="1"> Masculino
               </label>
               <label class="radio-inline">
-                <input type="radio" name="gender" value="2"> Female
+                <input type="radio" name="gender" value="2"> Feminino
               </label>
               <label class="radio-inline">
-                <input type="radio" name="gender" value="3" checked="checked"> Undefined
+                <input type="radio" name="gender" value="3" checked="checked"> Não definido
               </label>
             </div>
             <div style="margin-bottom: 20px">
-              <h5>Age</h5>
+              <h5>Idade</h5>
               <input type="number" id="age" min="18" max="125" value="30">
             </div>
             <div style="margin-bottom: 20px">
-              <h5>Where are you from?</h5>
+              <h5>Nacionalidade</h5>
               <select id = "country" style="width: 67%; max-width: 100%">
                 <option value="AF">Afghanistan</option>
                 <option value="AX">Åland Islands</option>
@@ -369,7 +369,7 @@
               </select>
             </div>
             <div style="margin-bottom: 20px">
-              <h5>Study level</h5>
+              <h5>Nível de educação</h5>
               <select id = "study" style="width: 67%; max-width: 100%">
                 <option value="0"></option>
                 <option value="1">4ª classe</option>
@@ -384,7 +384,7 @@
             </div>
 
             <div style="margin-bottom: 20px">
-              <h5>Profession</h5>
+              <h5>Profissão</h5>
               <select id = "profession" style="width: 67%; max-width: 100%">
                 <option value="0"></option>
                 <option value="1">Estudante</option>
@@ -405,6 +405,7 @@
               <h5>Por favor indique o salário mensal do seu agregado familiar em Euros.</h5>
               <select id = "income">
                 <option value="0"></option>
+                <option value="8">NS/NR</option>
                 <option value="1">Menos de 1000</option>
                 <option value="2">1000 - 1999</option>
                 <option value="3">2000 - 3999</option>
@@ -412,10 +413,9 @@
                 <option value="5">6000 - 9999</option>
                 <option value="6">10000 - 19999</option>
                 <option value="7">Mas de 20000</option>
-                <option value="8">NS/NR</option>
               </select>
             </div>
-            <a type="button" id="finishBtn" class="btn btn-primary float-right">Done</a>
+            <a type="button" id="finishBtn" class="btn btn-primary float-right">Terminado</a>
           </div> <!-- /questions -->
 
            <!--  ----------- Dinamic table ---------- -->
