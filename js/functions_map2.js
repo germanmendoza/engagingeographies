@@ -491,7 +491,6 @@ function startAll() {
 
 //Freguesia buttons
     $('#d-ajuda').click(function () {
-        //alert("hola");
         map.setView([38.7500, -9.1500], 12);
     });
 }
