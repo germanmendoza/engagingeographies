@@ -9,7 +9,6 @@ var SOP = [];
 
 
 function startAll() {
-    $('#myModal3').modal('show');
     $("#draw_poly").prop('disabled', true);
 
 // POPOVER
@@ -63,6 +62,11 @@ function startAll() {
         else {
             alert("Please, insert at least a group name");
         }
+        $('#myModal3').modal('show');
+        $("#pepe").toggleClass("hidden show");
+        $("#pepa").toggleClass("hidden show");
+        startMapComponents();
+
     });
 
 
