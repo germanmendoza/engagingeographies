@@ -68,7 +68,6 @@ function startAll() {
 
     });
 
-     utilizando o botão (X) no mapa.
 
 
         function nameplace() {
