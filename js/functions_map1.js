@@ -66,7 +66,7 @@ function startAll() {
         $("#pepe").toggleClass("hidden show");
         $("#pepa").toggleClass("hidden show");
         startMapComponents();
-
+        //hola
     });
 
 
