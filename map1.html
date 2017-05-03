@@ -91,32 +91,32 @@
                           </button>
                           <div class="dropdown-menu" style="min-width: 250px;">
                             <ul class="dropdown-map col-lg-6 col-md-6 col-sm-6 col-xs-6" aria-labelledby="dropdown-freguesias">
-                              <li><a href="#">Ajuda</a></li>
-                              <li><a href="#">Alcântara</a></li>
-                              <li><a href="#">Alvalade</a></li>
-                              <li><a href="#">Areeiro</a></li>
-                              <li><a href="#">Arroios</a></li>
-                              <li><a href="#">Avenidas Novas</a></li>
-                              <li><a href="#">Beato</a></li>
-                              <li><a href="#">Belém</a></li>
-                              <li><a href="#">Benfica</a></li>
-                              <li><a href="#">Campo de Ourique</a></li>
-                              <li><a href="#">Campolide</a></li>
-                              <li><a href="#">Carnide</a></li>
-                              <li><a href="#">Estrela</a></li>
+                              <li><a href="#" id="d-ajuda">Ajuda</a></li>
+                              <li><a href="#" id="d-alcantara">Alcântara</a></li>
+                              <li><a href="#" id="d-alvalade">Alvalade</a></li>
+                              <li><a href="#" id="d-areeiro">Areeiro</a></li>
+                              <li><a href="#" id="d-arroios">Arroios</a></li>
+                              <li><a href="#" id="d-avenidas">Avenidas Novas</a></li>
+                              <li><a href="#" id="d-beato">Beato</a></li>
+                              <li><a href="#" id="d-belem">Belém</a></li>
+                              <li><a href="#" id="d-benfica">Benfica</a></li>
+                              <li><a href="#" id="d-campo">Campo de Ourique</a></li>
+                              <li><a href="#" id="d-campolide">Campolide</a></li>
+                              <li><a href="#" id="d-carnide">Carnide</a></li>
+                              <li><a href="#" id="d-estrela">Estrela</a></li>
                             </ul>
                             <ul class="col-lg-6 col-md-6 col-sm-6 col-xs-6 dropdown-map" aria-labelledby="dropdown-freguesias">
-                              <li><a href="#">Lumiar</a></li>
-                              <li><a href="#">Marvila</a></li>
-                              <li><a href="#">Misericórdia</a></li>
-                              <li><a href="#">Olivais</a></li>
-                              <li><a href="#">Parque das Nações</a></li>
-                              <li><a href="#">Penha de França</a></li>
-                              <li><a href="#">Santa Clara</a></li>
-                              <li><a href="#">Santa Maria Maior</a></li>
-                              <li><a href="#">Santo António</a></li>
-                              <li><a href="#">São Domingos de Benfica </a></li>
-                              <li><a href="#">São Vicente</a></li>
+                              <li><a href="#" id="d-lumiar">Lumiar</a></li>
+                              <li><a href="#" id="d-marvila">Marvila</a></li>
+                              <li><a href="#" id="d-misericordia">Misericórdia</a></li>
+                              <li><a href="#" id="d-olivais">Olivais</a></li>
+                              <li><a href="#" id="d-parque">Parque das Nações</a></li>
+                              <li><a href="#" id="d-penha">Penha de França</a></li>
+                              <li><a href="#" id="d-santa">Santa Clara</a></li>
+                              <li><a href="#" id="d-santamaria">Santa Maria Maior</a></li>
+                              <li><a href="#" id="d-santo">Santo António</a></li>
+                              <li><a href="#" id="d-sao">São Domingos de Benfica </a></li>
+                              <li><a href="#" id="d-saovicente">São Vicente</a></li>
                             </ul>
                           </div>
                         </span>
@@ -1184,6 +1184,7 @@
                             buttonDraw.prop('disabled', false);
                             buttonDelete.prop('disabled', true);
                             $('#button-freguesia').prop('disabled', false);
+                            $('#button-freguesiaxs').prop('disabled', false);
 
                         }
                     }
@@ -1195,10 +1196,13 @@
                     buttonDraw.prop('disabled', true);
                     buttonDelete.prop('disabled', true);
                     $('#button-freguesia').prop('disabled', true);
+                    $('#button-freguesiaxs').prop('disabled', true);
                     $(document).keyup(function(e) {
                         if ((e.keyCode == 27) && ($('#let_draw').is(":visible"))) {
                             buttonDraw.prop('disabled', false);
                             buttonDelete.prop('disabled', false);
+                            $('#button-freguesia').prop('disabled', false);
+                            $('#button-freguesiaxs').prop('disabled', false);
                         }
                     });
 
