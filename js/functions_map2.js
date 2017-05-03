@@ -99,7 +99,7 @@ function startAll() {
                 $("#title_let_draw").html('Vamos desenhar o grupo X!');
                 var replacetitle = $("#title_let_draw").html().replace('X', name_groups[number]);
                 $("#title_let_draw").html(replacetitle);
-                $("#let_draw").html('Desenhe, por favor, todas as áreas que definem o grupo' + '<b style="font-size: 18px">' + ' X ' + '</b>' + 'clicando o botão<button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="margin-right: 5px"></span> Comece a desenhar </button>e pode apagar a área clicando no botão<button class="btn btn-default btn-xs" disabled> <span class="glyphicon glyphicon-trash" aria-hidden="true"style="margin-right: 5px"></span> Apagar áreas </button>por cima do mapa.');
+                $("#let_draw").html('Desenhe, por favor, todas as áreas que definem o grupo' + '<b style="font-size: 18px">' + ' X ' + '</b>' + 'clicando o botão <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="margin-right: 5px"></span> Comece a desenhar </button><br><br>Pode apagar a área clicando no botão <button class="btn btn-default btn-xs" disabled> <span class="glyphicon glyphicon-trash" aria-hidden="true"style="margin-right: 5px"></span> Apagar áreas </button> por cima do mapa.');
                 var replaceddraw = $("#let_draw").html().replace('X', name_groups[number]);
                 $("#let_draw").html(replaceddraw);
                 $("#draw").toggleClass("hidden show");
@@ -594,6 +594,103 @@ function startAll() {
         map.setView([38.718305, -9.130119], 15);
     });
 
+
+//Freguesia buttons XS
+    $('#d-ajuda-xs').click(function () {
+        map.setView([38.711402, -9.199039], 14);
+    });
+
+    $('#d-alcantara-xs').click(function () {
+        map.setView([38.710676, -9.182990], 14);
+    });
+
+    $('#d-alvalade-xs').click(function () {
+        map.setView([38.753182, -9.151691], 14);
+    });
+
+    $('#d-areeiro-xs').click(function () {
+        map.setView([38.742261, -9.133480], 14);
+    });
+
+    $('#d-arroios-xs').click(function () {
+        map.setView([38.727819, -9.140717], 14);
+    });
+
+    $('#d-avenidas-xs').click(function () {
+        map.setView([38.739568, -9.149152], 14);
+    });
+
+    $('#d-beato-xs').click(function () {
+        map.setView([38.733268, -9.113798], 14);
+    });
+
+    $('#d-belem-xs').click(function () {
+        map.setView([38.702305, -9.215116], 14);
+    });
+
+    $('#d-benfica-xs').click(function () {
+        map.setView([38.737770, -9.196060], 14);
+    });
+
+
+    $('#d-campo-xs').click(function () {
+        map.setView([38.719247, -9.166428], 14);
+    });
+
+    $('#d-campolide-xs').click(function () {
+        map.setView([38.731470, -9.165880], 14);
+    });
+
+    $('#d-carnide-xs').click(function () {
+        map.setView([38.763229, -9.188106], 14);
+    });
+    $('#d-estrela-xs').click(function () {
+        map.setView([38.710837, -9.153887], 14);
+    });
+
+    $('#d-lumiar-xs').click(function () {
+        map.setView([38.770204, -9.160321], 14);
+    });
+
+    $('#d-marvila-xs').click(function () {
+        map.setView([38.750852, -9.116730], 14);
+    });
+
+    $('#d-misericordia-xs').click(function () {
+        map.setView([38.711113, -9.147195], 15);
+    });
+
+    $('#d-olivais-xs').click(function () {
+        map.setView([38.772473, -9.126950], 14);
+    });
+
+    $('#d-parque-xs').click(function () {
+        map.setView([38.765502, -9.099971], 14);
+    });
+
+    $('#d-penha-xs').click(function () {
+        map.setView([38.725873, -9.124024], 14);
+    });
+
+    $('#d-santa-xs').click(function () {
+        map.setView([38.785799, -9.155323], 15);
+    });
+
+    $('#d-santamaria-xs').click(function () {
+        map.setView([38.711168, -9.137130], 14);
+    });
+
+    $('#d-santo-xs').click(function () {
+        map.setView([38.718769, -9.149313], 14);
+    });
+
+    $('#d-sao-xs').click(function () {
+        map.setView([38.752111, -9.177416], 14);
+    });
+
+    $('#d-saovicente-xs').click(function () {
+        map.setView([38.718305, -9.130119], 15);
+    });
 
 
 

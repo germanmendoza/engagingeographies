@@ -158,12 +158,14 @@
                         people who get together regularly to do an activity or talk about things.
                     </p> -->
                     <p>
-                        Gostaria de começar por lhe perguntar sobre grupos de pessoas ou organizações, redes ou associações a que pertença. Podem ser grupos formalmente organizados (grupos religiosos, de familiares, desportivos, de local de trabalho... ) o pura e simplesmente grupos de pessoas que que se juntam regularmente para realizar uma atividade ou falar sobre vários assuntos.
+                        Gostaria de começar por lhe perguntar sobre grupos de pessoas ou organizações, redes ou associações a que pertença.<br><br>Podem ser grupos formalmente organizados (grupos religiosos, de familiares, desportivos, de local de trabalho... ) o pura e simplesmente grupos de pessoas que que se juntam regularmente para realizar uma atividade ou falar sobre vários assuntos.
                     </p>
+                    <br><br>
 
-                    <h5 style="text-align: center; margin-top: 40px">
+                    <span style="text-align: center;">
                         Pode definir os seus grupos com palavras soltas? Escreva tantas palavras quantos os grupos que tem :)
-                    </h5>
+                    </span>
+                    <br><br><br>
 
                     <!-- <div  class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-lg-9 col-md-9 col-sm-9 col-xs-9"> -->
                     <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-9 col-md-9 col-sm-9 col-xs-12"
@@ -279,10 +281,10 @@
                     <h4 style="margin-bottom: 20px" id="title_let_draw">Vamos desenhar o grupo X!</h4>
                     <div id="let_draw">
                     Desenhe, por favor, todas as áreas que definem o grupo X utilizando o botão  
-                        <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Comece a desenhar
+                        <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Comece a desenhar 
                         </button>
-                        Pode apagar a área clicando no botão 
-                        <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Apagar áreas
+                         Pode apagar a área clicando no botão 
+                        <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Apagar áreas 
                         </button>
                         por cima do mapa.
                     </div>
@@ -873,7 +875,7 @@
         </div>
     </div>
     <!-- ------------------------------- Map visible xs ---------------------------------------------------------------------------------- -->
-    <div class="visible-xs col-xs-12" style="padding: 0px; padding-top: 30px">
+    <div class="visible-xs col-xs-12 hidden"  id="pepa" style="padding: 0px; padding-top: 30px">
         <div class="panel panel-default">
             <div class="panel-body">
                 <div id="map2" style="height:83vh; position: relative;">
@@ -895,34 +897,34 @@
                           <span class="caret"></span>
                         </button>
                         <div class="dropdown-menu" style="min-width: 180px; margin: 8px 0 0">
-                          <ul class="dropdown-map col-xs-6" aria-labelledby="dropdown-freguesias" style="margin: 0px; padding: 0px">
-                            <li><a href="#">Ajuda</a></li>
-                            <li><a href="#">Alcântara</a></li>
-                            <li><a href="#">Alvalade</a></li>
-                            <li><a href="#">Areeiro</a></li>
-                            <li><a href="#">Arroios</a></li>
-                            <li><a href="#">Avenidas Novas</a></li>
-                            <li><a href="#">Beato</a></li>
-                            <li><a href="#">Belém</a></li>
-                            <li><a href="#">Benfica</a></li>
-                            <li><a href="#">Campo de Ourique</a></li>
-                            <li><a href="#">Campolide</a></li>
-                            <li><a href="#">Carnide</a></li>
-                          </ul>
-                          <ul class="col-xs-6 dropdown-map" aria-labelledby="dropdown-freguesias" style="margin: 0px; padding: 0px">
-                            <li><a href="#">Estrela</a></li>
-                            <li><a href="#">Lumiar</a></li>
-                            <li><a href="#">Marvila</a></li>
-                            <li><a href="#">Misericórdia</a></li>
-                            <li><a href="#">Olivais</a></li>
-                            <li><a href="#">Parque das Nações</a></li>
-                            <li><a href="#">Penha França</a></li>
-                            <li><a href="#">Santa Clara</a></li>
-                            <li><a href="#">Sta. Maria Maior</a></li>
-                            <li><a href="#">St. António</a></li>
-                            <li><a href="#">S. Dom. Benfica </a></li>
-                            <li><a href="#">São Vicente</a></li>
-                          </ul>
+                            <ul class="dropdown-map col-xs-6" aria-labelledby="dropdown-freguesias" style="margin: 0px; padding: 0px">
+                                <li><a href="#" id="d-ajuda-xs">Ajuda</a></li>
+                                <li><a href="#" id="d-alcantara-xs">Alcântara</a></li>
+                                <li><a href="#" id="d-alvalade-xs">Alvalade</a></li>
+                                <li><a href="#" id="d-areeiro-xs">Areeiro</a></li>
+                                <li><a href="#" id="d-arroios-xs">Arroios</a></li>
+                                <li><a href="#" id="d-avenidas-xs">Avenidas Novas</a></li>
+                                <li><a href="#" id="d-beato-xs">Beato</a></li>
+                                <li><a href="#" id="d-belem-xs">Belém</a></li>
+                                <li><a href="#" id="d-benfica-xs">Benfica</a></li>
+                                <li><a href="#" id="d-campo-xs">Campo de Ourique</a></li>
+                                <li><a href="#" id="d-campolide-xs">Campolide</a></li>
+                                <li><a href="#" id="d-carnide-xs">Carnide</a></li>
+                                <li><a href="#" id="d-estrela-xs">Estrela</a></li>
+                            </ul>
+                            <ul class="col-xs-6 dropdown-map" aria-labelledby="dropdown-freguesias" style="margin: 0px; padding: 0px">
+                                <li><a href="#" id="d-lumiar-xs">Lumiar</a></li>
+                                <li><a href="#" id="d-marvila-xs">Marvila</a></li>
+                                <li><a href="#" id="d-misericordia-xs">Misericórdia</a></li>
+                                <li><a href="#" id="d-olivais-xs">Olivais</a></li>
+                                <li><a href="#" id="d-parque-xs">Parque das Nações</a></li>
+                                <li><a href="#" id="d-penha-xs">Penha de França</a></li>
+                                <li><a href="#" id="d-santa-xs">Santa Clara</a></li>
+                                <li><a href="#" id="d-santamaria-xs">Santa Maria Maior</a></li>
+                                <li><a href="#" id="d-santo-xs">Santo António</a></li>
+                                <li><a href="#" id="d-sao-xs">São Domingos de Benfica </a></li>
+                                <li><a href="#" id="d-saovicente-xs">São Vicente</a></li>
+                            </ul>
                         </div>
                       </span>
                     </div>
