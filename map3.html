@@ -69,50 +69,50 @@
             <div class="panel-body">
                 <div id="map" style="height:84vh; position: relative;">
                     <div class="visible-lg visible-md visible-sm" style="position: absolute; top: 10px; left: 65px; z-index: 998">
-                      <div class="col-lg-9 col-md-12 col-sm-12 width-buttons-map">
-                        <button class="btn btn-default btn-md" id="draw_poly" disabled>
+                      <div class="col-lg-12 col-md-12 col-sm-12 width-buttons-map">
+                        <button class="btn btn-default btn-md" id="draw_poly" style="margin-bottom: 3px" disabled>
                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"
                                   style="margin-right: 5px"></span> Comece a desenhar
                         </button>
-                        <button class="btn btn-default btn-md" id="delete_poly" disabled>
+                        <button class="btn btn-default btn-md" id="delete_poly" style="margin-bottom: 3px" disabled>
                             <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span>
                             Apagar áreas
                         </button>
                       </div>
-                      <div class="col-lg-3 col-md-12 col-sm-12" style="padding-left: 0px;">
+                      <div class="col-lg-12 col-md-12 col-sm-12" style="padding-left: 0px;">
                         <span class="dropdown" style="margin-right: 5px">
                           <button class="btn btn-default dropdown-toggle" type="button" id="button-freguesia" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             Freguesias
                             <span class="caret"></span>
                           </button>
                           <div class="dropdown-menu" style="min-width: 250px;">
-                            <ul class="dropdown-map col-lg-6 col-md-6 col-sm-6 col-xs-12 " aria-labelledby="dropdown-freguesias">
+                            <ul class="dropdown-map col-lg-6 col-md-6 col-sm-6 col-xs-6" aria-labelledby="dropdown-freguesias">
                               <li><a href="#" id="d-ajuda">Ajuda</a></li>
-                              <li><a href="#">Alcântara</a></li>
-                              <li><a href="#">Alvalade</a></li>
-                              <li><a href="#">Areeiro</a></li>
-                              <li><a href="#">Arroios</a></li>
-                              <li><a href="#">Avenidas Novas</a></li>
-                              <li><a href="#">Beato</a></li>
-                              <li><a href="#">Belém</a></li>
-                              <li><a href="#">Benfica</a></li>
-                              <li><a href="#">Campo de Ourique</a></li>
-                              <li><a href="#">Campolide</a></li>
-                              <li><a href="#">Carnide</a></li>
-                              <li><a href="#">Estrela</a></li>
+                              <li><a href="#" id="d-alcantara">Alcântara</a></li>
+                              <li><a href="#" id="d-alvalade">Alvalade</a></li>
+                              <li><a href="#" id="d-areeiro">Areeiro</a></li>
+                              <li><a href="#" id="d-arroios">Arroios</a></li>
+                              <li><a href="#" id="d-avenidas">Avenidas Novas</a></li>
+                              <li><a href="#" id="d-beato">Beato</a></li>
+                              <li><a href="#" id="d-belem">Belém</a></li>
+                              <li><a href="#" id="d-benfica">Benfica</a></li>
+                              <li><a href="#" id="d-campo">Campo de Ourique</a></li>
+                              <li><a href="#" id="d-campolide">Campolide</a></li>
+                              <li><a href="#" id="d-carnide">Carnide</a></li>
+                              <li><a href="#" id="d-estrela">Estrela</a></li>
                             </ul>
-                            <ul class="col-lg-6 col-md-6 col-sm-6 col-xs-12 dropdown-map" aria-labelledby="dropdown-freguesias">
-                              <li><a href="#">Lumiar</a></li>
-                              <li><a href="#">Marvila</a></li>
-                              <li><a href="#">Misericórdia</a></li>
-                              <li><a href="#">Olivais</a></li>
-                              <li><a href="#">Parque das Nações</a></li>
-                              <li><a href="#">Penha de França</a></li>
-                              <li><a href="#">Santa Clara</a></li>
-                              <li><a href="#">Santa Maria Maior</a></li>
-                              <li><a href="#">Santo António</a></li>
-                              <li><a href="#">São Domingos de Benfica </a></li>
-                              <li><a href="#">São Vicente</a></li>
+                            <ul class="col-lg-6 col-md-6 col-sm-6 col-xs-6 dropdown-map" aria-labelledby="dropdown-freguesias">
+                              <li><a href="#" id="d-lumiar">Lumiar</a></li>
+                              <li><a href="#" id="d-marvila">Marvila</a></li>
+                              <li><a href="#" id="d-misericordia">Misericórdia</a></li>
+                              <li><a href="#" id="d-olivais">Olivais</a></li>
+                              <li><a href="#" id="d-parque">Parque das Nações</a></li>
+                              <li><a href="#" id="d-penha">Penha de França</a></li>
+                              <li><a href="#" id="d-santa">Santa Clara</a></li>
+                              <li><a href="#" id="d-santamaria">Santa Maria Maior</a></li>
+                              <li><a href="#" id="d-santo">Santo António</a></li>
+                              <li><a href="#" id="d-sao">São Domingos de Benfica </a></li>
+                              <li><a href="#" id="d-saovicente">São Vicente</a></li>
                             </ul>
                           </div>
                         </span>
@@ -281,11 +281,11 @@
                 <div id="map2" style="height:83vh; position: relative;">
                     <div style="position: absolute; top: 10px; left: 40px; z-index: 998">
                     <div class="col-xs-12">
-                      <button class="btn btn-default btn-xs" id="draw_polyxs" disabled>
+                      <button class="btn btn-default btn-xs" id="draw_polyxs" style="margin-bottom: 3px" disabled>
                           <span class="glyphicon glyphicon-pencil" aria-hidden="true"
                                 style="margin-right: 5px"></span> Comece a desenhar
                       </button>
-                      <button class="btn btn-default btn-xs" id="delete_polyxs" disabled>
+                      <button class="btn btn-default btn-xs" id="delete_polyxs" style="margin-bottom: 3px" disabled>
                           <span class="glyphicon glyphicon-trash" aria-hidden="true"
                                 style="margin-right: 5px"></span> Apagar área
                       </button>
@@ -296,7 +296,7 @@
                           Freguesias
                           <span class="caret"></span>
                         </button>
-                        <div class="dropdown-menu" style="min-width: 180px;">
+                        <div class="dropdown-menu" style="min-width: 180px; margin: 8px 0 0">
                           <ul class="dropdown-map col-xs-6" aria-labelledby="dropdown-freguesias" style="margin: 0px; padding: 0px">
                             <li><a href="#">Ajuda</a></li>
                             <li><a href="#">Alcântara</a></li>
