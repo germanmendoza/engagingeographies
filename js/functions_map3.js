@@ -5,8 +5,8 @@
 
  function startAll() {
 
-     buttonDraw.prop('disabled', true);
-     buttonDelete.prop('disabled', true);
+     //buttonDraw.prop('disabled', true);
+     //buttonDelete.prop('disabled', true);
 
 
 
@@ -24,6 +24,9 @@
              alert("Please, answer all the questions");
              return;
          }*/
+         $("#pepe").toggleClass("hidden show");
+         $("#pepa").toggleClass("hidden show");
+         startMapComponents();
          buttonDraw.prop('disabled', false);
          //buttonDelete.prop('disabled', false);
          //$(".finish-map").attr('disabled', false);

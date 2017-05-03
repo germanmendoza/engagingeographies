@@ -39,15 +39,15 @@ function startAll() {
                 areas: [],
                 nature: 0
             };
-
+            $("#pepe").toggleClass("hidden show");
+            $("#pepa").toggleClass("hidden show");
+            startMapComponents();
         }
         else {
             alert("Please, insert at least a group name");
         }
 
-        $("#pepe").toggleClass("hidden show");
-        $("#pepa").toggleClass("hidden show");
-        startMapComponents();
+
     });
 
 
