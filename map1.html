@@ -18,7 +18,7 @@
 
 <body>
 <!-- ------------------------------- Navbar --------------------------------------------------------------------------------- -->
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom: 0px">
     <div class="container-fluid">
         <div class="navbar-header name_navbar col-xs-4 col-sm-5 col-md-5 col-lg-5 visible-lg visible-md visible-sm">
             <img src="img/logo_engaging.svg" class="logo_phd">Place and City
@@ -65,7 +65,14 @@
     </div>
 </nav>
 <!-- ------------------------------- End Navbar ----------------------------------------------------------------------------- -->
+
 <div class="container-fluid">
+<!--  Progress bar -->
+    <div class="">
+      <div class="progress" style="height: 6px; margin-top: 0px; margin-bottom: 5px">
+        <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%; background-color: #6DBFCE"></div>
+      </div>
+    </div>
     <!-- ------------------------------- Map visible lg md sm  -------------------------------------------------------------------- -->
     <div id="pepe" class="col-lg-6 col-md-6 col-sm-6 visible-lg visible-md visible-sm hidden"
          style="position: fixed; right: 0px;">
@@ -896,9 +903,18 @@
                 </div>
             </div>
 
+
             <!-- ------------------------------- End map ------------------------------------------------------------------------------ -->
+        
         </div>
     </div> <!-- .container fluid -->
+
+    <!--  Progress bar -->
+    <!-- <div style="position: absolute; bottom: 0px; width: 48%" class="visible-lg visible-sm visible-md">
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width:25%; background-color: #6DBFCE">25%</div>
+      </div>
+    </div> -->
 
     <!-- ------------------------------- Modal 3 Learn draw --------------------------------------------------------------------- -->
     <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
