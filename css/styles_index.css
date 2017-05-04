@@ -32,6 +32,13 @@
 	width: auto;
 	height: 100px;
 }
+#logo_camara{
+	width: 70px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
 #logo_geoc{
 	width: 100px;
 	margin-bottom: 20px;
@@ -39,7 +46,7 @@
 	margin-left: 20px;
 }
 #logo_marie{
-	width: 240px;
+	width: 200px;
 	margin-bottom: 20px;
 	margin-right: 20px;
 	margin-left: 20px;

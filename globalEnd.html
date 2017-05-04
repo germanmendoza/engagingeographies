@@ -101,18 +101,6 @@
     <div class="show col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <h3 style="margin-top: 25px; text-align: center;">Nós apreciamos todo o esforço</h3>
     </div>
-
-    <div class="float-right" style="margin-bottom: 15px; margin-top: 15px; margin-right: 15px">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://placeandcity.com/engagingeographies/" data-lang="pt">Tweetar</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
-        <span class="g-plus" data-action="share" data-annotation="none" data-href="http://placeandcity.com/engagingeographies/"></span>
-
-        <!-- <div class="fb-share-button" data-href="http://placeandcity.com/engagingeographies/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fplaceandcity.com%2Fengagingeographies%2F&amp;src=sdkpreparse">Compartir</a></div> -->
-
-        <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fplaceandcity.com%2Fengagingeographies%2F&layout=button&size=small&mobile_iframe=true&appId=1255866227829550&width=81&height=20" width="90" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-        
-    </div>
-
     <div class="no-float"></div>
     <!-- ------------------------------- Map visible lg md sm  -------------------------------------------------------------------- -->
     <!-- <div id="pepe" class="col-lg-6 col-md-6 col-sm-6 visible-lg visible-md visible-sm" style="position: fixed; right: 0px;"> -->
@@ -209,14 +197,27 @@
             </div>
             <a type="button" id="finishBtn" class="btn btn-primary">Enviar</a>
         </form>
+        <!--  Social media  -->
+        <div style="margin-bottom: 15px; margin-top: 50px; text-align: center;">
+            <!--  Twitter  -->
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://placeandcity.com/engagingeographies/" data-lang="pt">Tweetar</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            <!--  Google+  -->
+            <span class="g-plus" data-action="share" data-annotation="none" data-href="http://placeandcity.com/engagingeographies/"></span>
+            <!--  Facebook  -->
+            <!-- <div class="fb-share-button" data-href="http://placeandcity.com/engagingeographies/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fplaceandcity.com%2Fengagingeographies%2F&amp;src=sdkpreparse">Compartir</a></div> -->
+            <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Fplaceandcity.com%2Fengagingeographies%2F&layout=button&size=small&mobile_iframe=true&appId=1255866227829550&width=81&height=20" width="90" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe> 
+        </div>
         <h3 style="margin-top: 50px; text-align: center;">Até à próxima :)</h3>
         <div class="no-float"></div>
         <hr>
-        <img src="img/geoc.png" id="logo_geoc">
-        <img src="img/mariecurie.png" id="logo_marie">
-        <img src="img/nova.png" id="logo_nova">
-        <img src="img/munster.png" id="logo_munster">
-        <img src="img/uji.png" id="logo_uji">
+        <div style="text-align: center;">
+            <img src="img/camara.jpeg" id="logo_camara">
+            <img src="img/geoc.png" id="logo_geoc">
+            <img src="img/mariecurie.png" id="logo_marie">
+            <img src="img/nova.png" id="logo_nova">
+            <img src="img/munster.png" id="logo_munster">
+            <img src="img/uji.png" id="logo_uji">
+        </div>
 
     </div> <!-- /goodbye -->
     <!--   </div> --> <!-- .panel-body -->
@@ -225,40 +226,10 @@
     <div class="no-float"></div>
 
     <!-- ------------------------------- End Panel left ------------------------------------------------------------------------ -->
-    <div class="visible-xs col-xs-12" style="padding: 0px; padding-top: 30px">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <div id="map2" style="height:83vh; position: relative;">
-                    <div style="position: absolute; top: 10px; left: 40px; z-index: 998">
-                        <button class="btn btn-default btn-xs" id="draw_polyxs" onclick="drawPolygon()" >
-                            <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing
-                        </button>
-                        <button class="btn btn-default btn-xs" id="delete_polyxs">
-                            <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Delete area
-                        </button>
-                    </div>
-                </div> <!-- map -->
-                <!-- <div class="custom_buttons_leaflet">
-                    <button class="btn btn-default btn-xs" id="draw_polyxs" onclick="drawPolygon()">
-                        <span class="glyphicon glyphicon-pencil" aria-hidden="true"
-                              style="margin-right: 5px;"></span> Drawing
-                    </button>
-                    <button class="btn btn-default btn-xs" id="delete_polyxs">
-                        <span class="glyphicon glyphicon-trash" aria-hidden="true"
-                              style="margin-right: 5px"></span> Delete
-                    </button>
-                </div>
-                <div id="map2" style="height:83vh"></div> -->
-                <!-- Button finish -->
-                <!-- <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12" style="text-align: right;">
-                  <a class="btn btn-primary finish-map" href="#">Next</a>
-                </div> -->
-            </div> <!-- /.panel-body -->
-        </div> <!-- /.panel-default -->
-    </div> <!-- /.col6 -->
+    
 </div> <!-- .container fluid -->
 
-// satisfaction questions
+<!-- ------------------------------- Modal  satisfaction questions ------------------------------------------------------------------------ --> 
 
 
 <div class="modal fade" id="myModalsatisfaction" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
