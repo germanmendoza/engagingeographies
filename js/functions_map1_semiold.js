@@ -65,7 +65,8 @@ function startAll() {
 
         }
         else {
-            alert("Please, insert at least a group name");
+            // alert("Please, insert at least a group name");
+            alert("Por favor, insira pelo menos um nome de grupo.");
         }
     });
 
@@ -202,11 +203,6 @@ function startAll() {
         map.fitBounds(group.getBounds(), null);
     });
 
-
-
-
-    uiCoreAPI.instanceUrl = "http://localhost:8080/";
-
     app = {
         setSOP: function (data2, callback) {
             uiCoreAPI._postRequest(
@@ -225,7 +221,8 @@ function startAll() {
 
         var sopvalidation = $('[name=PI1]:checked,[name=PI2]:checked,[name=PI3]:checked,[name=PA1]:checked,[name=PA2]:checked,[name=PA3]:checked,[name=PD1]:checked,[name=PD2]:checked,[name=PD3]:checked');
         if (sopvalidation.length < 9) {
-            alert("Please, answer all the questions");
+            // alert("Please, answer all the questions");
+            alert("Por favor, responda todas as perguntas.");
             return;
         }
 

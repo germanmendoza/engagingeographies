@@ -44,7 +44,8 @@ function startAll() {
             startMapComponents();
         }
         else {
-            alert("Please, insert at least a group name");
+            // alert("Please, insert at least a group name");
+            alert("Por favor, insira pelo menos um nome de grupo.");
         }
 
 
@@ -70,7 +71,8 @@ function startAll() {
 
 
         if ($("#nature").val() == "0") {
-            alert("Please, choose a kind of group");
+            // alert("Please, choose a kind of group");
+            alert("Por favor, escolha um tipo de grupo.");
         }
 
 
@@ -80,7 +82,8 @@ function startAll() {
         }
         else {
             if (!$("#other").val()) {
-                alert("Please, introduce the nature of the group.")
+                // alert("Please, introduce the nature of the group.")
+                alert("Por favor, introduza a natureza do grupo.");
             }
             else {
                 currGroup.nature = $('#other').val();
@@ -135,7 +138,8 @@ function startAll() {
 
                         app.setSC(data2, function (response) {
                             if (response === false) {
-                                alert("There is a connection problem; please try again later");
+                                // alert("There is a connection problem; please, try again later");
+                                alert("Há um problema de conexão; por favor, tente novamente mais tarde.");
                             }
                             else {
                                 util.redirectToPage({
@@ -160,7 +164,8 @@ function startAll() {
 
                     app.setSC(data2, function (response) {
                         if (response === false) {
-                            alert("There is a connection problem; please try again later");
+                            // alert("There is a connection problem; please, try again later");
+                            alert("Há um problema de conexão; por favor, tente novamente mais tarde.");
                         }
                         else {
                             util.redirectToPage({
@@ -214,7 +219,8 @@ function startAll() {
 
         if ($("#nature").val() == "19") {
             if (!$("#other").val()) {
-                alert("Please, introduce the nature of the group.")
+                // alert("Please, introduce the nature of the group.")
+                alert("Por favor, introduza a natureza do grupo.");
             }
             else {
                 $("#SC_group").removeClass().addClass("show");
@@ -244,7 +250,8 @@ function startAll() {
 
         var scvalidationbondingbridging = $('[name=bosc1]:checked,[name=bosc2]:checked,[name=brsc1]:checked,[name=brsc2]:checked');
         if (scvalidationbondingbridging.length < 4) {
-            alert("Please, answer all the questions");
+            // alert("Please, answer all the questions");
+            alert("Por favor, responda todas as perguntas.");
             return;
         }
 
@@ -423,14 +430,12 @@ function startAll() {
                 $("#cp3").html(cp3re);
             }
             else {
-                alert("Please choose one group");
+                // alert("Please choose one group");
+                alert("Por favor, escolha um grupo");
             }
 
         });
     }
-
-
-    uiCoreAPI.instanceUrl = "http://localhost:8080/";
 
     app = {
         setSC: function (data2, callback) {
@@ -448,7 +453,8 @@ function startAll() {
 
         var scvalidation = $('[name=soc1]:checked,[name=soc2]:checked,[name=soc3]:checked,[name=n1]:checked,[name=n2]:checked,[name=n3]:checked,[name=cee1]:checked,[name=cee2]:checked,[name=cee3]:checked,[name=cp1]:checked,[name=cp2]:checked,[name=cp3]:checked');
         if (scvalidation.length < 12) {
-            alert("Please, answer all the questions");
+            // alert("Please, answer all the questions");
+            alert("Por favor, responda todas as perguntas.");
             return;
         }
 
@@ -486,7 +492,8 @@ function startAll() {
 
         app.setSC(data2, function (response) {
             if (response === false) {
-                alert("There is a connection problem; please try again later");
+                // alert("There is a connection problem; please, try again later");
+                alert("Há um problema de conexão; por favor, tente novamente mais tarde.");
             }
             else {
                 util.redirectToPage({

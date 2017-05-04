@@ -21,7 +21,8 @@ util = {
 };
 
 uiCoreAPI = {
-    instanceUrl: "",
+    //instanceUrl: "http://localhost:8080/",
+    instanceUrl: "/enggeows/",
 
     _getRequest: function (url, callback) {
         $.ajax({

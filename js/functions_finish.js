@@ -4,7 +4,6 @@ var overPassOPs;
 var profession_new;
 
 function startAll(){
-    uiCoreAPI.instanceUrl = "http://localhost:8080/";
     app = {
         getSOP: function (id, callback) {
             uiCoreAPI._getRequest(
@@ -50,13 +49,12 @@ function startAll(){
 }
 
 function startOthers() {
-    uiCoreAPI.instanceUrl = "http://localhost:8080/";
-
     $('#finishBtn').click(function () {
 
         if ($("#profession").val() == "7") {
             if (!$("#other_prof").val()) {
-                alert("Please, introduce a profession.")
+                //alert("Please, introduce a profession.")
+                alert("Por favor, introduza uma profissão.");
             }
             else {
                 profession_new = parseInt($( "#other_prof" ).val())
@@ -76,7 +74,8 @@ function startOthers() {
             };
             app.finish(data,function (response) {
                 if (response === false) {
-                    alert("There is a connection problem; please try again later");
+                    // alert("There is a connection problem; please, try again later.");
+                    alert("Há um problema de conexão; por favor, tente novamente mais tarde.");
                 }
                 else {
                     util.redirectToPage({

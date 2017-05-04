@@ -3,8 +3,8 @@
 
 function startall() {
 
+
     //Ajax
-    uiCoreAPI.instanceUrl = "http://localhost:8080/";
 
     app = {
         setHome: function (data, callback) {
@@ -74,7 +74,8 @@ function startall() {
             };
             app.setHome(data, function (response) {
                 if (response === false) {
-                    alert("There is a connection problem; please try again later");
+                    // alert("There is a connection problem; please, try again later");
+                    alert("Há um problema de conexão; por favor, tente novamente mais tarde.");
                 }
                 else {
                     util.redirectToPage({
@@ -101,7 +102,8 @@ function startall() {
             };
             app.setHome(data, function (response) {
                 if (response === false) {
-                    alert("There is a connection problem; please try again later");
+                    // alert("There is a connection problem; please, try again later");
+                    alert("Há um problema de conexão; por favor, tente novamente mais tarde.");
                 }
                 else {
                     util.redirectToPage({
@@ -126,7 +128,8 @@ function startall() {
                 $('#myModal12').modal({backdrop: 'static', keyboard: false});
             }
             else{
-                alert("Please, write the zip code");
+                // alert("Please, write the zip code");
+                alert("Por favor, escreva o código postal");
             }
         }
         else {
@@ -178,7 +181,8 @@ function startall() {
         };
         app.setHome(data, function (response) {
             if (response === false) {
-                alert("There is a connection problem; please try again later");
+                // alert("There is a connection problem; please, try again later");
+                alert("Há um problema de conexão; por favor, tente novamente mais tarde.");
             }
             else {
                 util.redirectToPage({
@@ -190,6 +194,21 @@ function startall() {
     });
 
     // End prepare data to send
+
+    translator.applyBrowserLanguage(function(langCode){
+        $("#mipruebaborrar").html(translator.getKeyLanguageValue("index1"));
+
+        $('input:radio[name="language"]').filter('[value="' + langCode + '"]').attr("checked",true);
+
+        $('input[name=language]').change(function(){
+            translator.applyLanguage(this.value, function () {
+                $("#mipruebaborrar").html(translator.getKeyLanguageValue("index1"));
+            });
+
+        });
+
+    });
+
 }
 
 

@@ -64,7 +64,8 @@ function startAll() {
 
         }
         else {
-            alert("Please, insert at least a group name");
+            // alert("Please, insert at least a group name");
+            alert("Por favor, insira pelo menos um nome de grupo.");
         }
 
     });
@@ -332,7 +333,7 @@ function startAll() {
                 $("#pd3").html(pd3re);
             }
             else {
-                alert("Escolha uma área");
+                alert("Por favor, escolha uma área");
             }
         });
 
@@ -366,9 +367,6 @@ function startAll() {
      }
      map.fitBounds(group.getBounds(), null);
      });*/
-
-
-    uiCoreAPI.instanceUrl = "http://localhost:8080/";
 
     app = {
         setSOP: function (data2, callback) {
@@ -421,7 +419,8 @@ function startAll() {
 
         app.setSOP(data2, function (response) {
             if (response === false) {
-                alert("There is a connection problem; please try again later");
+                // alert("There is a connection problem; please, try again later");
+                alert("Há um problema de conexão; por favor, tente novamente mais tarde.");
             }
             else {
                 util.redirectToPage({

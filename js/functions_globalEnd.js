@@ -5,10 +5,6 @@
 
 
 function startAll () {
-
-
-    uiCoreAPI.instanceUrl = "http://localhost:8080/";
-
     app = {
         getSOP: function (callback) {
             uiCoreAPI._getRequest(
@@ -60,17 +56,20 @@ function startAll () {
                 };
                 app.finish(data,function (response) {
                     if (response === false) {
-                        alert("There is a connection problem; please try again later");
+                        //alert("There is a connection problem; please, try again later");
+                        alert("Há um problema de conexão; por favor, tente novamente mais tarde.");
                     }
                     else {
-                        alert("Thanks");
+                        // alert("Thanks");
+                        alert("Obrigado");
                     }
                 })
 
 
             }
             else{
-               alert("Please introduce a mail and/or twitter username valid structure");
+               // alert("Please introduce a mail and/or twitter username valid structure");
+                alert("Introduza um endereço de e-mail e / ou nome de usuário válido estrutura");
             }
         }
         //$('#myModalsatisfaction').modal('show');
@@ -118,8 +117,6 @@ function startMapComponents(){
 
 
 function areasLoading() {
-
-    uiCoreAPI.instanceUrl = "http://localhost:8080/";
 
     //var id = util.getFromLocalStorage(util.interPageDataKey);
     //var id = "589888c01c0856701818e512";

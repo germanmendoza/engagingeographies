@@ -1110,6 +1110,10 @@
 
 <script>
     $(document).ready(function () {
+        var id = util.getFromLocalStorage(util.interPageDataKey);
+        if(!id){
+            window.location.href = "index.html";
+        }
         //startMapComponents();
         startAll();
     });
