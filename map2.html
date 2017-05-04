@@ -1254,6 +1254,7 @@
                 buttonDraw.prop('disabled', false);
                 buttonDelete.prop('disabled', true);
                 $('#button-freguesia').prop('disabled', false);
+                $('#button-freguesiaxs').prop('disabled', false);
 
 
 
@@ -1271,17 +1272,22 @@
                 buttonDelete.prop('disabled', true);
                 buttonDraw.prop('disabled', true);
                 $('#button-freguesia').prop('disabled', true);
+                $('#button-freguesiaxs').prop('disabled', true);
                 $("#finish_button").removeClass().addClass("hidden");
 
                 $(document).keyup(function(e) {
                     if ((e.keyCode == 27) && ($('#draw').is(":visible"))) {
                         buttonDraw.prop('disabled', false);
                         buttonDelete.prop('disabled', false);
+                        $('#button-freguesia').prop('disabled', false);
+                        $('#button-freguesiaxs').prop('disabled', false);
                     }
                     else if ((e.keyCode == 27) && ($('#another_draw').is(":visible")))
                     {
                         buttonDraw.prop('disabled', false);
                         buttonDelete.prop('disabled', false);
+                        $('#button-freguesia').prop('disabled', false);
+                        $('#button-freguesiaxs').prop('disabled', false);
                     }
                 });
             });

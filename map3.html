@@ -180,9 +180,10 @@
                         <button type="button" class="btn btn-primary btn-next" href="#" disabled>Próximo</button>
                         para continuar.
                     </div>
-                    <div id="finish_button" class="hidden" style="margin-top: 100px">
-                        <a type="button" id="questions-ce" class="btn btn-primary finish-map float-right">Próximo</a>
-                    </div>
+
+                </div>
+                <div id="finish_button" class="hidden" style="margin-top: 100px">
+                    <a type="button" id="questions-ce" class="btn btn-primary finish-map float-right">Próximo</a>
                 </div>
                 <!-- ------------------------------- Draw areas ce next end ----------------------------------------------------- -->
             <!-- ------------------------------- Questions ----------------------------------------------------- -->
@@ -484,12 +485,13 @@
 //                zoommap = map.getZoom();
 //                map.fitBounds(drawnItems.getBounds(), null);
                 $("#another_draw_ce").removeClass().addClass("show");
+                $("#questions-ce").removeClass("hidden").addClass("show");
                 $("#draw_ce").removeClass().addClass("hidden");
                 $("#live_area").removeClass().addClass("show");
                 buttonDelete.prop('disabled', false);
                 $("#finish_button").removeClass().addClass("show");
-
-
+                $('#button-freguesia').prop('disabled', false);
+                $('#button-freguesiaxs').prop('disabled', false);
                 var polygonData = {
                     type:"cea",
                     layer: L.geoJson(drawnItems.toGeoJSON()),
@@ -521,10 +523,18 @@
                 $("#draw_ce").removeClass().addClass("show");
                 $("#another_draw_ce").removeClass().addClass("hidden");
                 $("#live_area").removeClass().addClass("hidden");
-                buttonDelete.prop('disabled', true);
-                if (CE.length > 0){
+                if (CE.length > 1){
                     map.removeLayer(CE[CE.length-1].layer);
                     CE.pop();
+                    $("#questions-ce").removeClass("hidden").addClass("show");
+
+                }
+                else if (CE.length == 1){
+                    map.removeLayer(CE[CE.length-1].layer);
+                    CE.pop();
+                    buttonDelete.prop('disabled', true);
+                    $("#questions-ce").removeClass("show").addClass("hidden");
+
                 }
             });
 
@@ -535,6 +545,9 @@
                 var polygonDrawer = new L.Draw.Polygon(map, drawControl);
                 polygonDrawer.enable();
                 $("#live_area").removeClass().addClass("hidden");
+                $('#button-freguesia').prop('disabled', true);
+                $('#button-freguesiaxs').prop('disabled', true);
+                buttonDelete.prop('disabled', true);
             });
         }
     }

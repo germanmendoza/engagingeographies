@@ -67,11 +67,13 @@ function startAll () {
                     }
                 })
 
+
             }
             else{
                alert("Please introduce a mail and/or twitter username valid structure");
             }
         }
+        //$('#myModalsatisfaction').modal('show');
     });
 
 }

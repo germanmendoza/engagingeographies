@@ -474,7 +474,6 @@ function startAll() {
         map.setView([38.737770, -9.196060], 14);
     });
 
-
     $('#d-campo').click(function () {
         map.setView([38.719247, -9.166428], 14);
     });
