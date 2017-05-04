@@ -96,13 +96,13 @@
                         </button>
                         <button class="btn btn-default btn-md" id="delete_poly" style="margin-bottom: 3px" disabled>
                             <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span>
-                            Apagar áreas
+                            <span langkey="map1-2">Apagar áreas</span>
                         </button>
                       </div>
                       <div class="col-lg-12 col-md-12 col-sm-12" style="padding-left: 0px;">
                         <span class="dropdown" style="margin-right: 5px">
                           <button class="btn btn-default dropdown-toggle" type="button" id="button-freguesia" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            Freguesias
+                              <span langkey="map1-3">Freguesias</span>
                             <span class="caret"></span>
                           </button>
                           <div class="dropdown-menu" style="min-width: 250px; margin: 12px 0 0">
@@ -166,22 +166,22 @@
             <div class="panel-body">
                 <!--  Header  -->
                 <div style="margin-bottom: 20px" class="show" id="title_done">
-                    <span langkey="map11">Gostaríamos de saber onde estão os locais que, por alguma razão, têm um significado para si.</span> 
+                    <span langkey="map1-4">Gostaríamos de saber onde estão os locais que, por alguma razão, têm um significado para si.</span> 
                     <br><br>
-                    <span langkey="map12">Pense por favor sobre os locais onde:</span>
+                    <span langkey="map1-5">Pense por favor sobre os locais onde:</span>
                     <br><br>
                     <ul>
-                        <li><span langkey="map13">se sente mais identificado (p.e. Este local representa-me)</span></li>
-                        <li><span langkey="map14">se sente mais ligado (p.e. adoro este local)</span></li>
-                        <li><span langkey="map15">se sente mais dependente (p.e. este é o local mais adequado para fazer as coisas que mais gosto)</span>
+                        <li><span langkey="map1-6">se sente mais identificado (p.e. Este local representa-me)</span></li>
+                        <li><span langkey="map1-7">se sente mais ligado (p.e. adoro este local)</span></li>
+                        <li><span langkey="map1-8">se sente mais dependente (p.e. este é o local mais adequado para fazer as coisas que mais gosto)</span>
                         </li>
                     </ul>
                     <br><br>
-                    <span langkey="map16">Consegue definir por palavras estes locais? Escreva tantas palavras quantas áreas desenhou.</span>
+                    <span langkey="map1-9">Consegue definir por palavras estes locais? Escreva tantas palavras quantas áreas desenhou.</span>
                     <br><br><br>
                     <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-9 col-md-9 col-sm-9 col-xs-12"
                          style="margin-top: 10px">
-                        <p style="font-size: 12px" langkey="map17">Nota: separe por favor as palavras por vírgulas.</p>
+                        <p style="font-size: 12px" langkey="map1-10">Nota: separe por favor as palavras por vírgulas.</p>
                     </div>
                     <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-9 col-md-9 col-sm-9 col-xs-12">
                         <div class="s2-example">
@@ -191,7 +191,7 @@
                     </div>
                     <div class="no-float"></div>
                     <div class="float-right" style="margin-top: 20px">
-                        <a type="button" class="btn btn-primary" id="submit_name_places" langkey="map18">Próximo</a>
+                        <a type="button" class="btn btn-primary" id="submit_name_places" langkey="index9">Próximo</a>
                     </div>
                 </div>
 
@@ -202,23 +202,23 @@
                     <!-- <h5 id="group_name_place">Place hola
                     </h5> -->
 
-                    <h5 id="group_name_place" langkey="map19">
+                    <h5 id="group_name_place" langkey="map1-11">
                         Área hola
                     </h5>
 
                     <hr style="width: 100%">
 
 
-                    <p id="draw_places" langkey="map20">Please draw the area (hola) using the
-                        <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Start drawing
+                    <p id="draw_places"><span langkey="map1-12">Please draw the area (hola) using the </span>
+                        <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span><span langkey="map1-13"> Start drawing</span>
                         </button>
-                        button in the map.
+                        <span langkey="map1-14">button in the map.</span>
                     </p>
                     <br><br>
-                    <p langkey="map21">Se necessitar, pode apagar a área pressionando o
-                        <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span> Apagar áreas
+                    <p><span langkey="map1-15">Se necessitar, pode apagar a área pressionando o </span>
+                        <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span><span langkey="map1-16"> Apagar áreas</span>
                         </button>
-                        botão também no mapa.
+                        <span langkey="map1-17">botão também no mapa.</span>
                     </p>
 
 
@@ -229,30 +229,30 @@
                 <!-- ------------------------------- Sliders ----------------------------------------------------- -->
                 <div class="hidden" id="sliders_done">
 
-                    <h5 id="area_name_sliders" langkey="map18">
+                    <h5 id="area_name_sliders" langkey="map1-18">
                         Area hola
                     </h5>
                     <hr style="width: 100%">
 
-                    <h5 style="margin-top: 20px">
+                    <h5 style="margin-top: 20px" id langkey="map1-19">
                         Reside nesta área?
                     </h5>
                     <div>
                         <label class="radio-inline">
-                            <input type="radio" name="live" value="true"> Sim
+                            <input type="radio" name="live" value="true"> <span langkey="index5"> Sim</span>
                         </label>
                         <label class="radio-inline">
-                            <input type="radio" name="live" value="false" checked="checked"> Não
+                            <input type="radio" name="live" value="false" checked="checked"> <span langkey="index6">Não</span>
                         </label>
                     </div>
                     <div class="no-float"></div>
                     <hr style="width: 100%">
-                    <h5 id="title_sliders_change"> Please, indicate the level of only applicable
+                    <h5 id="title_sliders_change" langkey="map1-20"> Please, indicate the level of only applicable
                         characteristic that explains why do you draw this area Y. ( where 0 is nothing and 5 is totally) . </h5>
 
                     <div class="no-float">
                         <div>
-                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Sociabilidade (vizinhança, amigável, interativo, acolhedor, etc)</p>
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"><span langkey="map1-21">Sociabilidade (vizinhança, amigável, interativo, acolhedor, etc)</span></p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
@@ -281,7 +281,7 @@
                         </div>
                         <div class="no-float"></div>
                         <div>
-                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Usos e atividades (divertido, ativo, vital, útil, etc)</p>
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"><span langkey="map1-22">Usos e atividades (divertido, ativo, vital, útil, etc)</span></p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
@@ -312,7 +312,7 @@
 
                         <div class="no-float">
                             <div>
-                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Conforto e imagem (limpo, “verde”, espiritual, atrativo, etc)</p>
+                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"><span langkey="map1-23">Conforto e imagem (limpo, “verde”, espiritual, atrativo, etc)</span></p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                     <label class="radio-inline personal_radio"
@@ -343,7 +343,7 @@
                             </div>
                             <div class="no-float"></div>
                             <div>
-                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px">Acesso e ligação (continuidade, caminhável, acessível, proximidade, etc)</p>
+                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"><span langkey="map1-24">Acesso e ligação (continuidade, caminhável, acessível, proximidade, etc)</span></p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                     <label class="radio-inline personal_radio"
@@ -523,7 +523,7 @@
                     </div>-->
                     <div class="no-float"></div>
                     <a type="button" id="sliders_done_button"
-                       class="btn btn-primary float-right display_sliders  display_title display_title2">Próximo</a>
+                       class="btn btn-primary float-right display_sliders  display_title display_title2"><span langkey="index9">Próximo</span></a>
                 </div>
                 <!-- -------------------------------  End Slider ----------------------------------------------------- -->
 
@@ -545,31 +545,31 @@
                 <!-- ------------------------------- End Do you live in that area? ----------------------------------- -->
 
                 <div class="hidden" id="select_place">
-                    <h5 style="margin-bottom: 20px">Escolha a área mais importante para si.</h5>
+                    <h5 style="margin-bottom: 20px" langkey="map1-25">Escolha a área mais importante para si.</h5>
                     <hr style="width: 100%">
                     <div id="radios">
                     </div>
                     <div class="float-right">
-                        <a type="button" class="btn btn-primary" id="choose_place">Próximo</a>
+                        <a type="button" class="btn btn-primary" id="choose_place"><span langkey="index9">Próximo</span></a>
                     </div>
                 </div>
 
                 <!-- ------------------------------- SOP questions  -------------------------------------------------- -->
                 <div class="hidden" id="questions_done">
-                    <h5 id="change">Em relação à área escolhida <b style="font-size: 18px">X</b>, responda por favor às perguntas que se seguem.</h5>
+                    <h5 id="change" langkey="map1-26">Em relação à área escolhida <b style="font-size: 18px">X</b>, responda por favor às perguntas que se seguem.</h5>
                     <hr style="width: 100%">
-                    <h5 style="margin-bottom: 20px; padding-top: 0px">
+                    <h5 style="margin-bottom: 20px; padding-top: 0px" langkey="map1-27">
                         Identidade do local
                     </h5>
                     <div class="no-float">
                         <div>
                             <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="pi1">
-                                Tudo sobre esta área <b>(Y)</b> é um reflexo de mim
+                                <span langkey="map1-28">Tudo sobre esta área <b>(Y)</b> é um reflexo de mim.</span>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
                                     <input type="radio" name="PI1" value="1"> 1
-                                    Discordo completamente
+                                    <span langkey="map1-29">Discordo completamente</span>
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -586,19 +586,19 @@
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                     <input type="radio" name="PI1" value="5"> 5
-                                    Concordo completamente
+                                    <span langkey="map1-30">Concordo completamente</span>
                                 </label>
                             </div>
                         </div>
                         <div class="no-float"></div>
                         <div>
-                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="pi2">Sinto que posso ser realmente eu nesta área
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="pi2"><span langkey="map1-31">Sinto que posso ser realmente eu nesta área.</span>
                                 <b>(Y)</b>.</p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
                                     <input type="radio" name="PI2" value="1"> 1
-                                    Discordo completamente
+                                    <span langkey="map1-29">Discordo completamente</span>
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -615,19 +615,19 @@
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                     <input type="radio" name="PI2" value="5"> 5
-                                    Concordo completamente
+                                    <span langkey="map1-30">Concordo completamente</span>
                                 </label>
                             </div>
                         </div>
                         <div class="no-float"></div>
                         <div>
                             <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="pi3">
-                                Esta área <b>(Y)</b> reflete o tipo de pessoa que eu sou.</p>
+                                <span langkey="map1-32">Esta área <b>(Y)</b> reflete o tipo de pessoa que eu sou.</span></p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                 <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
                                     <input type="radio" name="PI3" value="1"> 1
-                                    Discordo completamente
+                                    <span langkey="map1-29">Discordo completamente</span>
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -644,23 +644,23 @@
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                     <input type="radio" name="PI3" value="5"> 5
-                                    Concordo completamente
+                                    <span langkey="map1-30">Concordo completamente</span>
                                 </label>
                             </div>
                         </div>
                         <div class="no-float"></div>
                         <h5 style="margin-bottom: 20px; padding-top: 0px;">
-                            Ligação ao local
+                            <span langkey="map1-33">Ligação ao local</span>
                         </h5>
                         <div class="no-float">
                             <div>
-                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="pa1">Sinto-me relaxado quando estou nesta área <b>(Y)</b>.</p>
+                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="pa1"><span langkey="map1-34">Sinto-me relaxado quando estou nesta área <b>(Y)</b>.</span></p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                     <label class="radio-inline personal_radio"
                                            style="margin-top: -10px; font-size: 12px;">
                                         <input type="radio" name="PA1" value="1"> 1
-                                        Discordo completamente
+                                        <span langkey="map1-29">Discordo completamente</span>
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -677,19 +677,19 @@
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                         <input type="radio" name="PA1" value="5"> 5
-                                        Concordo completamente
+                                        <span langkey="map1-30">Concordo completamente</span>
                                     </label>
                                 </div>
                             </div>
                             <div class="no-float"></div>
                             <div>
-                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="pa2">Sinto-me muito feliz quando estou nesta área <b>(Y)</b>.</p>
+                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="pa2"><span langkey="map1-35">Sinto-me muito feliz quando estou nesta área <b>(Y)</b>.</span></p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                     <label class="radio-inline personal_radio"
                                            style="margin-top: -10px; font-size: 12px;">
                                         <input type="radio" name="PA2" value="1"> 1
-                                        Discordo completamente
+                                        <span langkey="map1-29">Discordo completamente</span>
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -706,20 +706,20 @@
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                         <input type="radio" name="PA2" value="5"> 5
-                                        Concordo completamente
+                                        <span langkey="map1-30">Concordo completamente</span>
                                     </label>
                                 </div>
                             </div>
                             <div class="no-float"></div>
                             <div>
                                 <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="pa3">
-                                    Esta área <b>(Y)</b> é o meu lugar favorito para estar.</p>
+                                    <span langkey="map1-36">Esta área <b>(Y)</b> é o meu lugar favorito para estar.</span></p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                     <label class="radio-inline personal_radio"
                                            style="margin-top: -10px; font-size: 12px;">
                                         <input type="radio" name="PA3" value="1"> 1
-                                        Discordo completamente
+                                        <span langkey="map1-29">Discordo completamente</span>
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -736,25 +736,25 @@
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                         <input type="radio" name="PA3" value="5"> 5
-                                        Concordo completamente
+                                        <span langkey="map1-30">Concordo completamente</span>
                                     </label>
                                 </div>
                             </div>
                             <div class="no-float"></div>
                             <h5 style="margin-bottom: 20px; padding-top: 0px">
-                                Dependência do local
+                                <span langkey="map1-37">Dependência do local</span>
                             </h5>
                             <div class="no-float">
                                 <div>
                                     <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
                                        id="pd1">
-                                        Esta área <b>(Y)</b> é o melhor local para fazer as coisas de que mais gosto</p>
+                                        <span langkey="map1-38">Esta área <b>(Y)</b> é o melhor local para fazer as coisas de que mais gosto.</span></p>
                                     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                          style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                         <label class="radio-inline personal_radio"
                                                style="margin-top: -10px; font-size: 12px;">
                                             <input type="radio" name="PD1" value="1"> 1
-                                            Discordo completamente
+                                            <span langkey="map1-29">Discordo completamente</span>
                                         </label>
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -771,21 +771,21 @@
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                             <input type="radio" name="PD1" value="5"> 5
-                                            Concordo completamente
+                                            <span langkey="map1-30">Concordo completamente.</span>
                                         </label>
                                     </div>
                                 </div>
                                 <div class="no-float"></div>
                                 <div>
                                     <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
-                                       id="pd2">Não existe nenhum outro local que se compare com este para fazer as coisas de que mais gosto
-                                        <b>(Y)</b>.</p>
+                                       id="pd2"><span langkey="map1-39">Não existe nenhum outro local que se compare com este para fazer as coisas de que mais gosto
+                                        <b>(Y)</b>.</span></p>
                                     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                          style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                         <label class="radio-inline personal_radio"
                                                style="margin-top: -10px; font-size: 12px;">
                                             <input type="radio" name="PD2" value="1"> 1
-                                            Discordo completamente
+                                            <span langkey="map1-29">Discordo completamente</span>
                                         </label>
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -802,7 +802,7 @@
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                             <input type="radio" name="PD2" value="5"> 5
-                                            Concordo completamente
+                                            <span langkey="map1-30">Concordo completamente</span>
                                         </label>
                                     </div>
                                 </div>
@@ -810,13 +810,13 @@
                                 <div>
                                     <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
                                        id="pd3">
-                                        Esta área <b>(Y)</b> é um bom local para fazer as coisas que mais gosto</p>
+                                        <span langkey="map1-40">Esta área <b>(Y)</b> é um bom local para fazer as coisas que mais gosto.</span></p>
                                     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                          style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                         <label class="radio-inline personal_radio"
                                                style="margin-top: -10px; font-size: 12px;">
                                             <input type="radio" name="PD3" value="1"> 1
-                                            Discordo completamente
+                                            <span langkey="map1-29">Discordo completamente</span>
                                         </label>
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
@@ -833,11 +833,11 @@
                                         <label class="radio-inline"
                                                style="margin-top: -10px; margin-left: 10px; font-size: 12px">
                                             <input type="radio" name="PD3" value="5"> 5
-                                            Concordo completamente
+                                            <span langkey="map1-30">Concordo completamente</span>
                                         </label>
                                     </div>
                                     <div class="no-float"></div>
-                                    <a type="button" id="questions-sop" class="btn btn-primary float-right">Terminado</a>
+                                    <a type="button" id="questions-sop" class="btn btn-primary float-right"><span langkey="index32">Terminado</span></a>
                                 </div>
                             </div>
                         </div> <!-- /questions-panel-left  -->
@@ -857,17 +857,17 @@
                               <div class="col-xs-12">
                                 <button class="btn btn-default btn-xs" id="draw_polyxs" style="margin-bottom: 3px" disabled>
                                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"
-                                          style="margin-right: 5px"></span> Comece a desenhar
+                                          style="margin-right: 5px"></span> <span langkey="map1-1">Comece a desenhar</span>
                                 </button>
                                 <button class="btn btn-default btn-xs" id="delete_polyxs" style="margin-bottom: 3px" disabled>
                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"
-                                          style="margin-right: 5px"></span> Apagar áreas
+                                          style="margin-right: 5px"></span> <span langkey="map1-2">Apagar áreas</span>
                                 </button>
                               </div>
                               <div class="col-xs-12">
                                 <span class="dropdown" style="margin-right: 5px">
                                   <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="dropdown-freguesias" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" id="button-freguesiaxs">
-                                    Freguesias
+                                      <span langkey="map1-3">Freguesias</span>
                                     <span class="caret"></span>
                                   </button>
                                   <div class="dropdown-menu" style="min-width: 180px; margin: 8px 0 0">
@@ -935,24 +935,24 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <div class="modal-header">
-                    <b>Vamos começar! Leia por favor com atenção as instruções que se seguem</b>
+                    <b><span langkey="map1-41">Vamos começar! Leia por favor com atenção as instruções que se seguem</span></b>
                 </div>
                 <div class="modal-body">
                     <!--  Explanation of the process of drawing  -->
-                    <p>Isto é um questionário com base num mapa para a cidade de Lisboa. Convidamo-lo a desenhar áreas no mapa de forma livre.
+                    <p><span langkey="map1-42">Isto é um questionário com base num mapa para a cidade de Lisboa. Convidamo-lo a desenhar áreas no mapa de forma livre.</span>
 
                     <p></p>
-                    Pressione o botão
+                    <span langkey="map1-43">Pressione o botão</span>
                     <button class="btn btn-default btn-xs">
                                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"
-                                          style="margin-right: 5px"></span> Comece a desenhar
+                                          style="margin-right: 5px"></span> <span langkey="map1-1">Comece a desenhar</span>
                     </button>
-                    situado ao centro na parte superior do mapa e clique no mapa para definir o seu primeiro ponto. Clique os pontos que considerar necessários para definir um polígono (área).
+                    <span langkey="map1-44">situado ao centro na parte superior do mapa e clique no mapa para definir o seu primeiro ponto. Clique os pontos que considerar necessários para definir um polígono (área).
                     Para fechar um polígono, clique outra vez no primeiro ponto. Pode fazer alterações na forma do polígono movendo qualquer um dos pontos.
-                    Pode apagar o área clicando o botão
+                        Pode apagar o área clicando o botão</span>
                     <button class="btn btn-default btn-xs">
                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"
-                                          style="margin-right: 5px"></span> Apagar área
+                                          style="margin-right: 5px"></span> <span langkey="map1-2">Apagar área</span>
                     </button>
                     </p>
 
@@ -966,7 +966,7 @@
                         1/3
                     </div>
                     <div class="float-right">
-                        <button type="button" class="btn btn-primary btn-next" href="#">Próximo</button>
+                        <button type="button" class="btn btn-primary btn-next" href="#"><span langkey="index9">Próximo</span></button>
                     </div>
                 </div>
             </div> <!--/.modal-content -->
@@ -980,11 +980,11 @@
                 <button type="button" class="close close-modal" id="icon-link" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
                 <div class="modal-header">
-                    <b>Questions & Sliders</b>
+                    <b><span langkey="map1-45">Questões</span></b>
                 </div>
                 <div class="modal-body">
                     <!--  Explanation as sliders are used  -->
-                    <p>Gostaríamos de saber o que pensa sobre as áreas que desenhou. Nesse sentido, queira por favor responder às perguntas quando solicitado para tal. </p>
+                    <p><span langkey="map1-46">Gostaríamos de saber o que pensa sobre as áreas que desenhou. Nesse sentido, queira por favor responder às perguntas quando solicitado para tal. </span></p>
                     <!-- <img src="img/slider.png" id="image_slider"
                          class="col-xs-12 col-sm-10 col-md-10 col-lg-10 col-sm-offset-2 col-md-offset-2 col-lg-offset-2"> -->
                      <!--/.modal-body -->
@@ -995,10 +995,10 @@
                         2/3
                     </div>
                     <div class="float-right">
-                        <button type="button" class="btn btn-primary btn-next" href="#">Próximo</button>
+                        <button type="button" class="btn btn-primary btn-next" href="#"><span langkey="index9">Próximo</span></button>
                     </div>
                     <div class="float-right" style="padding-top: 8px; margin-right: 20px">
-                        <a type="button" class="link-primary btn-prev" href="#">Anterior</a>
+                        <a type="button" class="link-primary btn-prev" href="#"><span langkey="index11">Anterior</span></a>
                     </div>
                 </div>
             </div> <!--/.modal-content -->
@@ -1012,12 +1012,12 @@
                 <button type="button" class="close close-modal" id="icon-link" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
                 <div class="modal-header">
-                    <b>Próximo & Terminar</b>
+                    <b><span langkey="map1-47">Próximo & Terminar</span></b>
                 </div>
                 <div class="modal-body">
                     <!--  Explanation finish  -->
-                    <p>Quando terminar de definir as suas áreas pode passar à próxima atividade, pressionando o botão
-                        <button type="button" class="btn btn-primary btn-next" href="#" disabled>Próximo</button>
+                    <p><span langkey="map1-48">Quando terminar de definir as suas áreas pode passar à próxima atividade, pressionando o botão </span>
+                        <button type="button" class="btn btn-primary btn-next" href="#" disabled><span langkey="index9">Próximo</span></button>
                     </p>
                     <h3 style="text-align: center; margin-top: 40px">Happy mapping!!</h3>
                 </div> <!--/.modal-body -->
@@ -1028,11 +1028,11 @@
                     </div>
                     <div class="float-right">
                         <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close" href="#">
-                            Termninado
+                            <span langkey="index32">Termninado</span>
                         </button>
                     </div>
                     <div class="float-right" style="padding-top: 8px; margin-right: 20px">
-                        <a type="button" class="link-primary btn-prev" href="#">Anterior</a>
+                        <a type="button" class="link-primary btn-prev" href="#"><span langkey="index11">Anterior</span></a>
                     </div>
                 </div>
             </div> <!--/.modal-content -->
@@ -1088,7 +1088,7 @@
         $(document).ready(function () {
             var id = util.getFromLocalStorage(util.interPageDataKey);
             if(!id){
-                window.location.href = "index.html";
+               // window.location.href = "index.html";
             }
             //startMapComponents();
             startAll();

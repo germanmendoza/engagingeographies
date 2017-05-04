@@ -181,6 +181,7 @@ function startall() {
         $('input[name=language]').change(function(){
             translator.saveChosenLanguage(this.value);
             translator.applyLanguage(this.value, function () {
+
                 $("#mipruebaborrar").html(translator.getKeyLanguageValue("index1"));
             });
         });

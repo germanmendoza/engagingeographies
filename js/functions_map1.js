@@ -73,8 +73,8 @@ function startAll() {
 
 
         function nameplace() {
-        $("#group_name_place").html('Área' + '<b style="font-size: 18px">' + ' hola ' + '</b>');
-        var replaced = $("#group_name_place").html().replace('hola', name_places[number]);
+        $("#group_name_place").html('Área hola');
+        var replaced = $("#group_name_place").html().replace('hola', '<b style="font-size: 18px">' + name_places[number] + '</b>');
         $("#group_name_place").html(replaced);
         $("#draw_places").html('Por favor desenhe a área' + '<b>' + ' (hola) ' + '</b>' + 'utilizando o ' + ' <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Comece a desenhar </button>' + ' botão no mapa.');
         var replaced1 = $("#draw_places").html().replace('hola', name_places[number]);
