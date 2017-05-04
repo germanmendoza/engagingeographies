@@ -4,33 +4,6 @@ var overPassOPs;
 var profession_new;
 
 function startAll(){
-    app = {
-        getSOP: function (id, callback) {
-            uiCoreAPI._getRequest(
-                uiCoreAPI.instanceUrl + uiCoreWS.SOP + "/" + id,
-                callback
-            );
-        },
-        getSC: function (id, callback) {
-            uiCoreAPI._getRequest(
-                uiCoreAPI.instanceUrl + uiCoreWS.SC + "/" + id,
-                callback
-            );
-        },
-        getCE: function (id, callback) {
-            uiCoreAPI._getRequest(
-                uiCoreAPI.instanceUrl + uiCoreWS.CE + "/" + id,
-                callback
-            );
-        },
-        finish: function (data, callback) {
-            uiCoreAPI._postRequest(
-                uiCoreAPI.instanceUrl + uiCoreWS.finish,
-                data,
-                callback
-            );
-        }
-    };
 
     $('#profession').change(function () {
         if ($("#profession").val() == "7") {
@@ -46,6 +19,10 @@ function startAll(){
     startMapComponents();
     areasLoading();
     startOthers();
+
+    translator.applyPreviousLanguage(function () {
+        // Nothing yet to do
+    });
 }
 
 function startOthers() {

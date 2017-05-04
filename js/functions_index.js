@@ -3,30 +3,6 @@
 
 function startall() {
 
-
-    //Ajax
-
-    app = {
-        setHome: function (data, callback) {
-            uiCoreAPI._postRequest(
-                uiCoreAPI.instanceUrl + uiCoreWS.home,
-                data,
-                callback
-            );
-        },
-        getHome: function () {
-            uiCoreAPI._getRequest(
-                uiCoreAPI.instanceUrl + uiCoreWS.home2,
-                function (response) {
-                    alert(response);
-                }
-            );
-        }
-    };
-    // End Ajax
-
-
-
     //Show modals NExt and Prev
 
     $('#myModal9').modal({backdrop: 'static', keyboard: false});
@@ -196,19 +172,19 @@ function startall() {
     // End prepare data to send
 
     translator.applyBrowserLanguage(function(langCode){
+        translator.saveChosenLanguage(langCode);
+
         $("#mipruebaborrar").html(translator.getKeyLanguageValue("index1"));
 
         $('input:radio[name="language"]').filter('[value="' + langCode + '"]').attr("checked",true);
 
         $('input[name=language]').change(function(){
+            translator.saveChosenLanguage(this.value);
             translator.applyLanguage(this.value, function () {
                 $("#mipruebaborrar").html(translator.getKeyLanguageValue("index1"));
             });
-
         });
-
     });
-
 }
 
 

@@ -5,34 +5,6 @@
 
 
 function startAll () {
-    app = {
-        getSOP: function (callback) {
-            uiCoreAPI._getRequest(
-                uiCoreAPI.instanceUrl + uiCoreWS.SOP,
-                callback
-            );
-        },
-        getSC: function (callback) {
-            uiCoreAPI._getRequest(
-                uiCoreAPI.instanceUrl + uiCoreWS.SC,
-                callback
-            );
-        },
-        getCE: function (callback) {
-            uiCoreAPI._getRequest(
-                uiCoreAPI.instanceUrl + uiCoreWS.CE,
-                callback
-            );
-        },
-        finish: function (data, callback) {
-            uiCoreAPI._postRequest(
-                uiCoreAPI.instanceUrl + uiCoreWS.globalEnd,
-                data,
-                callback
-            );
-        }
-    };
-
     startMapComponents();
     areasLoading();
 
@@ -54,7 +26,7 @@ function startAll () {
                     mailUser : mail,
                     twitterName : twitter
                 };
-                app.finish(data,function (response) {
+                app.finishA(data,function (response) {
                     if (response === false) {
                         //alert("There is a connection problem; please, try again later");
                         alert("Há um problema de conexão; por favor, tente novamente mais tarde.");
@@ -75,6 +47,9 @@ function startAll () {
         //$('#myModalsatisfaction').modal('show');
     });
 
+    translator.applyPreviousLanguage(function () {
+        // Nothing yet to do
+    });
 }
 
 function startMapComponents(){
@@ -134,18 +109,24 @@ function areasLoading() {
     };
     var CEStyle = function(feature){return {color: "#00ff00"}; };
 
-    app.getSOP(function (SOPLayersGeoJson) {
-        var geoJson = JSON.parse(SOPLayersGeoJson.geoJson);
-        SOPLayers = L.geoJson(geoJson, {style: SOPStyle}).addTo(map);
+    app.getSOPA(function (SOPLayersGeoJson) {
+        if((SOPLayersGeoJson.geoJson)&&(SOPLayersGeoJson.geoJson!=="")) {
+            var geoJson = JSON.parse(SOPLayersGeoJson.geoJson);
+            SOPLayers = L.geoJson(geoJson, {style: SOPStyle}).addTo(map);
 
-        app.getSC(function (SCLayersGeoJson) {
-            var geoJson = JSON.parse(SCLayersGeoJson.geoJson);
-            SCLayers = L.geoJson(geoJson, {style: SCStyle}).addTo(map);
+            app.getSCA(function (SCLayersGeoJson) {
+                if((SCLayersGeoJson.geoJson)&&(SCLayersGeoJson.geoJson!=="")) {
+                    var geoJson = JSON.parse(SCLayersGeoJson.geoJson);
+                    SCLayers = L.geoJson(geoJson, {style: SCStyle}).addTo(map);
 
-            app.getCE(function (CELayersGeoJson) {
-                var geoJson = JSON.parse(CELayersGeoJson.geoJson);
-                CELayers = L.geoJson(geoJson, {style: CEStyle}).addTo(map);
+                    app.getCEA(function (CELayersGeoJson) {
+                        if((CELayersGeoJson.geoJson)&&(CELayersGeoJson.geoJson!=="")) {
+                            var geoJson = JSON.parse(CELayersGeoJson.geoJson);
+                            CELayers = L.geoJson(geoJson, {style: CEStyle}).addTo(map);
+                        }
+                    });
+                }
             });
-        });
+        }
     });
 }

@@ -437,16 +437,6 @@ function startAll() {
         });
     }
 
-    app = {
-        setSC: function (data2, callback) {
-            uiCoreAPI._postRequest(
-                uiCoreAPI.instanceUrl + uiCoreWS.SC,
-                data2,
-                callback
-            );
-        }
-    };
-
 
     $('#questions-sc').click(function () {
 
@@ -699,8 +689,9 @@ function startAll() {
         map.setView([38.718305, -9.130119], 15);
     });
 
-
-
+    translator.applyPreviousLanguage(function () {
+        // Nothing yet to do
+    });
 }
 
 

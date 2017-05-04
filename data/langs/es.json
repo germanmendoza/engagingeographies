@@ -6,7 +6,7 @@
   "index5": "Sim",
   "index6": "Não",
   "index7": "Notas:",
-  "index8": "1-	Todos os dados recolhidos neste questionário serão tratados de forma anónima e confidencial e não serão utilizados para fins comerciais ou cedidos a terceiros. 2. Se pretender esclarecer alguma dúvida ou pedir alguma informação sobre este estudo, queira por favor contactar-nos através do seguinte endereço de email: acedo@novaims.unl.pt (Albert Acedo Sánchez) ou visite o nosso blog",
+  "index8": "1. Todos os dados recolhidos neste questionário serão tratados de forma anónima e confidencial e não serão utilizados para fins comerciais ou cedidos a terceiros. 2. Se pretender esclarecer alguma dúvida ou pedir alguma informação sobre este estudo, queira por favor contactar-nos através do seguinte endereço de email: acedo@novaims.unl.pt (Albert Acedo Sánchez) ou visite o nosso blog",
   "index9": "Próximo",
   "index10": "Por favor selecione a sua freguesia de residência",
   "index11": "Anterior",
@@ -40,5 +40,7 @@
   "index39": "",
   "index40": "",
   "index41": "",
-  "index42": ""
+  "index42": "",
+
+  "map1-1":"Comenzar Dibujo"
 }

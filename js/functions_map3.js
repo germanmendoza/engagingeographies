@@ -234,16 +234,6 @@
          map.addLayer(drawnItems);
      });
 
-     app = {
-         setCE: function (data, callback) {
-             uiCoreAPI._postRequest(
-                 uiCoreAPI.instanceUrl + uiCoreWS.CE,
-                 data,
-                 callback
-             );
-         }
-     };
-
 
      $('#questions-ce').click(function () {
 
@@ -340,6 +330,10 @@
    }
 
 // Finish Show&hidden map image
+
+     translator.applyPreviousLanguage(function () {
+         // Nothing yet to do
+     });
  }
 
  function showsliders() {
