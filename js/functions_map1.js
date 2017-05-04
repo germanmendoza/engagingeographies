@@ -82,7 +82,7 @@ function startAll() {
         $("#area_name_sliders").html('Área' + '<b style="font-size: 18px">' + ' hola ' + '</b>');
         var replaced2 = $("#area_name_sliders").html().replace('hola', name_places[number]);
         $("#area_name_sliders").html(replaced2);
-        $("#title_sliders_change").html('Por favor, indique o nível de características aplicáveis que explica por que você desenhou esta área' + '<b>' + ' Y ' + '</b>' +'. ( Numa escala de 0 a 5, onde 0 é nada e 5 totalmente)');
+        $("#title_sliders_change").html('Por favor, indique o nível de características aplicáveis que explica por que você desenhou esta área' + '<b>' + ' Y ' + '</b>' +'. (Numa escala de 0 a 5, onde 0 é nada e 5 totalmente)');
         var replaced3 = $("#title_sliders_change").html().replace('Y', name_places[number]);
         $("#title_sliders_change").html(replaced3);
 
