@@ -73,11 +73,11 @@ function startAll() {
 
 
         function nameplace() {
-        $("#group_name_place").html('Área hola');
+        $("#group_name_place").html(translator.getKeyLanguageValue("map1-11"));
         var replaced = $("#group_name_place").html().replace('hola', '<b style="font-size: 18px">' + name_places[number] + '</b>');
         $("#group_name_place").html(replaced);
-        $("#draw_places").html('Por favor desenhe a área' + '<b>' + ' (hola) ' + '</b>' + 'utilizando o ' + ' <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> Comece a desenhar </button>' + ' botão no mapa.');
-        var replaced1 = $("#draw_places").html().replace('hola', name_places[number]);
+        $("#draw_places").html('Por favor desenhe a área' + '<b>' + ' (hola) ' + '</b>' + 'utilizando o ' + ' <span class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> <span langkey="map1-1"> Comece a desenhar </span> </button>' + ' botão no mapa.');
+        var replaced1 = $("#draw_places").html().replace('hola', '<b>' + name_places[number] + '</b>');
         $("#draw_places").html(replaced1);
         $("#area_name_sliders").html('Área' + '<b style="font-size: 18px">' + ' hola ' + '</b>');
         var replaced2 = $("#area_name_sliders").html().replace('hola', name_places[number]);

@@ -174,7 +174,7 @@ function startall() {
     translator.applyBrowserLanguage(function(langCode){
         translator.saveChosenLanguage(langCode);
 
-        $("#mipruebaborrar").html(translator.getKeyLanguageValue("index1"));
+        $("#mipruebaborrar").html(translator.getKeyLanguageValue("index1" + "index2"));
 
         $('input:radio[name="language"]').filter('[value="' + langCode + '"]').attr("checked",true);
 

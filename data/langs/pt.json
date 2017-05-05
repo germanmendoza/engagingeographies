@@ -33,19 +33,19 @@
   "index32": "Terminado",
 
 
-  "map1-1":"",
-  "map1-2":"",
-  "map1-3":"",
-  "map1-4":"",
-  "map1-5":"",
-  "map1-6":"",
-  "map1-7":"",
-  "map1-8":"",
-  "map1-9":"",
-  "map1-10":"",
-  "map1-11":"Area hola",
-  "map1-12":"",
-  "map1-13":"",
+  "map1-1":"Comece a desenhar",
+  "map1-2":"Apagar áreas",
+  "map1-3":"Freguesias",
+  "map1-4":"Gostaríamos de saber onde estão os locais que, por alguma razão, têm um significado para si.",
+  "map1-5":"Pense por favor sobre os locais onde:",
+  "map1-6":"se sente mais identificado (p.e. Este local representa-me)",
+  "map1-7":"se sente mais ligado (p.e. adoro este local)",
+  "map1-8":"se sente mais dependente (p.e. este é o local mais ",
+  "map1-9":"Consegue definir por palavras estes locais? Escreva tantas palavras quantas áreas desenhou. Sem stress.",
+  "map1-10":"Nota: separe por favor as palavras por vírgulas",
+  "map1-11":"Área hola",
+  "map1-12":"Por favor desenhe a área (hola) utilizando o botão ",
+  "map1-13":"no mapa.",
   "map1-14":"",
   "map1-15":"",
   "map1-16":"",
@@ -81,4 +81,6 @@
   "map1-46":"",
   "map1-47":"",
   "map1-48":""
+
+
 }
