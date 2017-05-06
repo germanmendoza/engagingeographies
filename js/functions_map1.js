@@ -76,13 +76,13 @@ function startAll() {
         $("#group_name_place").html(translator.getKeyLanguageValue("map1-11"));
         var replaced = $("#group_name_place").html().replace('hola', '<b style="font-size: 18px">' + name_places[number] + '</b>');
         $("#group_name_place").html(replaced);
-        $("#draw_places").html('Por favor desenhe a área' + '<b>' + ' (hola) ' + '</b>' + 'utilizando o ' + ' <span class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span> <span langkey="map1-1"> Comece a desenhar </span> </button>' + ' botão no mapa.');
+        $("#draw_places").html(translator.getKeyLanguageValue("map1-12"));
         var replaced1 = $("#draw_places").html().replace('hola', '<b>' + name_places[number] + '</b>');
         $("#draw_places").html(replaced1);
         $("#area_name_sliders").html('Área' + '<b style="font-size: 18px">' + ' hola ' + '</b>');
-        var replaced2 = $("#area_name_sliders").html().replace('hola', name_places[number]);
+        var replaced2 = $("#area_name_sliders").html().replace('hola', '<b>' + name_places[number] + '</b>');
         $("#area_name_sliders").html(replaced2);
-        $("#title_sliders_change").html('Por favor, indique o nível de características aplicáveis que explica por que você desenhou esta área' + '<b>' + ' Y ' + '</b>' +'. (Numa escala de 0 a 5, onde 0 é nada e 5 totalmente)');
+        $("#title_sliders_change").html('map1-20');
         var replaced3 = $("#title_sliders_change").html().replace('Y', name_places[number]);
         $("#title_sliders_change").html(replaced3);
 
@@ -311,25 +311,25 @@ function startAll() {
                 map.fitBounds(group.getBounds(), null);
 
 
-                var title = $("#change").html().replace('X', highlightedArea.name);
+                var title = $("#change").html().replace('X', "<b>" + highlightedArea.name + "</b>");
                 $("#change").html(title);
-                var pi1re = $("#pi1").html().replace('Y', highlightedArea.name);
+                var pi1re = $("#pi1").html().replace('Y', "<b>" + highlightedArea.name + "</b>");
                 $("#pi1").html(pi1re);
-                var pi2re = $("#pi2").html().replace('Y', highlightedArea.name);
+                var pi2re = $("#pi2").html().replace('Y', "<b>" + highlightedArea.name + "</b>");
                 $("#pi2").html(pi2re);
-                var pi3re = $("#pi3").html().replace('Y', highlightedArea.name);
+                var pi3re = $("#pi3").html().replace('Y', "<b>" + highlightedArea.name + "</b>");
                 $("#pi3").html(pi3re);
-                var pa1re = $("#pa1").html().replace('Y', highlightedArea.name);
+                var pa1re = $("#pa1").html().replace('Y', "<b>" + highlightedArea.name + "</b>");
                 $("#pa1").html(pa1re);
-                var pa2re = $("#pa2").html().replace('Y', highlightedArea.name);
+                var pa2re = $("#pa2").html().replace('Y', "<b>" + highlightedArea.name + "</b>");
                 $("#pa2").html(pa2re);
-                var pa3re = $("#pa3").html().replace('Y', highlightedArea.name);
+                var pa3re = $("#pa3").html().replace('Y', "<b>" + highlightedArea.name + "</b>");
                 $("#pa3").html(pa3re);
-                var pd1re = $("#pd1").html().replace('Y', highlightedArea.name);
+                var pd1re = $("#pd1").html().replace('Y', "<b>" + highlightedArea.name + "</b>");
                 $("#pd1").html(pd1re);
-                var pd2re = $("#pd2").html().replace('Y', highlightedArea.name);
+                var pd2re = $("#pd2").html().replace('Y', "<b>" + highlightedArea.name + "</b>");
                 $("#pd2").html(pd2re);
-                var pd3re = $("#pd3").html().replace('Y', highlightedArea.name);
+                var pd3re = $("#pd3").html().replace('Y', "<b>" + highlightedArea.name + "</b>");
                 $("#pd3").html(pd3re);
             }
             else {

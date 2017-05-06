@@ -209,7 +209,7 @@
                     <hr style="width: 100%">
 
 
-                    <p id="draw_places"><span langkey="map1-12">Please draw the area (hola) using the </span>
+                    <p ><span langkey="map1-12" id="draw_places">Please draw the area (hola) using the </span>
                         <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span><span langkey="map1-13"> Start drawing</span>
                         </button>
                         <span langkey="map1-14">button in the map.</span>
@@ -556,7 +556,7 @@
 
                 <!-- ------------------------------- SOP questions  -------------------------------------------------- -->
                 <div class="hidden" id="questions_done">
-                    <h5 id="change" langkey="map1-26">Em relação à área escolhida <b style="font-size: 18px">X</b>, responda por favor às perguntas que se seguem.</h5>
+                    <h5 id="change"> <span langkey="map1-26" >Responda por favor às perguntas que se seguem em relação à área escolhida</span> <b style="font-size: 18px">X</b>  .</span></h5>
                     <hr style="width: 100%">
                     <h5 style="margin-bottom: 20px; padding-top: 0px" langkey="map1-27">
                         Identidade do local
@@ -592,7 +592,7 @@
                         </div>
                         <div class="no-float"></div>
                         <div>
-                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="pi2"><span langkey="map1-31">Sinto que posso ser realmente eu nesta área.</span>
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="pi2"><span langkey="map1-31">Sinto que posso ser realmente eu nesta área (Y).</span>
                                 <b>(Y)</b>.</p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
@@ -957,16 +957,27 @@
                     </p>
 
                     <p></p>
-                    <!--p>You can "pan" the map or zoom in (+ or -) using the map controls.
-                        You can draw as many areas as you need. The more areas you place, the better! </p>-->
+                    <p><span langkey="1-44a">You can "pan" the map or zoom in (+ or -) using the map controls and go directly to a certain freguesia using the button</span>
+                        <button class="btn btn-default btn-xs">
+                                    <span class="glyphicon glyphicon-trash" aria-hidden="true"
+                                          style="margin-right: 5px"></span> <span langkey="map1-3">Apagar área</span>
+                    </button>
+                        <span langkey="1-44b">You can draw as many areas as you need. The more meaningful areas you can draw, the better! </span></p>
+
+                    <p><span langkey="map1-46">Gostaríamos de saber o que pensa sobre as áreas que desenhou. Nesse sentido, queira por favor responder às perguntas quando solicitado para tal. </span></p>
+
+                    <p><span langkey="map1-48">Quando terminar de definir as suas áreas pode passar à próxima atividade, pressionando o botão </span>
+                        <button type="button" class="btn btn-primary btn-next" href="#" disabled><span langkey="index9">Próximo</span></button>
+                    </p>
+                    <h3 style="text-align: center; margin-top: 40px">Happy mapping!!</h3>
+
                 </div> <!--/.modal-body -->
                 <div class="no-float"></div>
                 <div class="modal-footer" style="border:none;">
-                    <div class="float-left" style="color: #A9A9A9; padding-top: 8px">
-                        1/3
-                    </div>
                     <div class="float-right">
-                        <button type="button" class="btn btn-primary btn-next" href="#"><span langkey="index9">Próximo</span></button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close" href="#">
+                            <span langkey="index32">Termninado</span>
+                        </button>
                     </div>
                 </div>
             </div> <!--/.modal-content -->
@@ -984,7 +995,7 @@
                 </div>
                 <div class="modal-body">
                     <!--  Explanation as sliders are used  -->
-                    <p><span langkey="map1-46">Gostaríamos de saber o que pensa sobre as áreas que desenhou. Nesse sentido, queira por favor responder às perguntas quando solicitado para tal. </span></p>
+
                     <!-- <img src="img/slider.png" id="image_slider"
                          class="col-xs-12 col-sm-10 col-md-10 col-lg-10 col-sm-offset-2 col-md-offset-2 col-lg-offset-2"> -->
                      <!--/.modal-body -->

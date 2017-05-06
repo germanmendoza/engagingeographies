@@ -53,11 +53,11 @@ function startAll() {
 
 
     function namegroup() {
-        $("#group_name_nature").html('Grupo' + '<b style="font-size: 18px">' + ' hola ' + '</b>');
-        var replaced = $("#group_name_nature").html().replace('hola', name_groups[number]);
+        $("#group_name_nature").html(translator.getKeyLanguageValue("map2-3"));
+        var replaced = $("#group_name_nature").html().replace('hola', '<b style="font-size: 18px">' + name_groups[number] + '</b>');
         $("#group_name_nature").html(replaced);
-        $("#textchange").html('Agora, pense no grupo' + '<b style="font-size: 18px">' + ' X ' + '</b>' + 'de que faz parte.');
-        $("#textchange_nature").html('Por favor selecione a natureza deste grupo social' + '<b style="font-size: 18px">' + ' X' + '</b>' + '.');
+        $("#textchange").html(translator.getKeyLanguageValue("map2-4"));
+        $("#textchange_nature").html(translator.getKeyLanguageValue("map2-5"));
         var replaced1 = $("#textchange").html().replace('X', name_groups[number]);
         var replaced2 = $("#textchange_nature").html().replace('X', name_groups[number]);
         $("#textchange").html(replaced1);
@@ -99,10 +99,10 @@ function startAll() {
 
             if ($("input[name=spatial]:checked").val() == "true") {
 
-                $("#title_let_draw").html('Vamos desenhar o grupo X!');
+                $("#title_let_draw").html(translator.getKeyLanguageValue("map2-26"));
                 var replacetitle = $("#title_let_draw").html().replace('X', name_groups[number]);
                 $("#title_let_draw").html(replacetitle);
-                $("#let_draw").html('Desenhe, por favor, todas as áreas que definem o grupo' + '<b style="font-size: 18px">' + ' X ' + '</b>' + 'clicando o botão <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil" aria-hidden="true"style="margin-right: 5px"></span> Comece a desenhar </button><br><br>Pode apagar a área clicando no botão <button class="btn btn-default btn-xs" disabled> <span class="glyphicon glyphicon-trash" aria-hidden="true"style="margin-right: 5px"></span> Apagar áreas </button> por cima do mapa.');
+                $("#let_draw").html(translator.getKeyLanguageValue("map2-27"));
                 var replaceddraw = $("#let_draw").html().replace('X', name_groups[number]);
                 $("#let_draw").html(replaceddraw);
                 $("#draw").toggleClass("hidden show");
