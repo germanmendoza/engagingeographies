@@ -171,7 +171,7 @@ function startall() {
 
     // End prepare data to send
 
-    translator.applyBrowserLanguage(function(langCode){
+    /*translator.applyBrowserLanguage(function(langCode){
         translator.saveChosenLanguage(langCode);
 
         $("#mipruebaborrar").html(translator.getKeyLanguageValue("index1" + "index2"));
@@ -188,7 +188,7 @@ function startall() {
                 //$("#mipruebaborrar").html(translator.getKeyLanguageValue("index1"));
             });
         });
-    });
+    });*/
 
 
 

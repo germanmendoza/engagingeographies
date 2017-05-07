@@ -56,8 +56,8 @@ function startAll() {
         $("#group_name_nature").html(translator.getKeyLanguageValue("map2-3"));
         var replaced = $("#group_name_nature").html().replace('hola', '<b style="font-size: 18px">' + name_groups[number] + '</b>');
         $("#group_name_nature").html(replaced);
-        $("#textchange").html(translator.getKeyLanguageValue("map2-4"));
-        $("#textchange_nature").html(translator.getKeyLanguageValue("map2-5"));
+        $("#textchange").html(translator.getKeyLanguageValue("map2-5"));
+        $("#textchange_nature").html(translator.getKeyLanguageValue("map2-4"));
         var replaced1 = $("#textchange").html().replace('X', name_groups[number]);
         var replaced2 = $("#textchange_nature").html().replace('X', name_groups[number]);
         $("#textchange").html(replaced1);

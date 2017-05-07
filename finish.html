@@ -72,20 +72,20 @@
             <div class="panel-body">
               <div id="map" style="height:84vh; position: relative;">
                 <div style="position: absolute; top: 10px; left: 210px; z-index: 998; background-color: #fff; padding-left: 3px; padding-right: 3px">
-                  <h4>Estas são as suas áreas importantes!</h4>
+                  <h4><span langkey="finish1">Estas são as suas áreas importantes!</span></h4>
                 </div>
                 <div  class="legend" style="position: absolute; bottom: 5px; left: 10px; z-index: 998">
                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="float: left; margin: 0px; padding: 0px">
                       <div class="foo blue"></div>
-                      <div class="legend-name" style="margin-right: 20px"> Sentido do local</div>
+                    <div class="legend-name" style="margin-right: 20px"> <span langkey="finish2">Sentido do local</span></div>
                   </div>
                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="float: left;margin: 0px; padding: 0px">
                       <div class="foo purple"></div>
-                      <div class="legend-name" style="margin-right: 20px">Capital social</div>
+                    <div class="legend-name" style="margin-right: 20px"><span langkey="finish3">Capital social</span></div>
                   </div>
                   <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="float: left; margin: 0px; padding: 0px">
                       <div class="foo wine"></div>
-                      <div class="legend-name"> Comprometimento cívico </div>
+                    <div class="legend-name"> <span langkey="finish4">Comprometimento cívico </span></div>
                   </div>
                 </div>
                 <!-- <div class="custom_buttons_leaflet visible-lg visible-md visible-sm">
@@ -113,25 +113,25 @@
         <div class="panel-body">
           <!--  ----------- Questions ---------- -->
           <div class="show">
-            <h4 style="margin-bottom: 30px">Gostaríamos de saber alguma coisa sobre si.</h4>
+            <h4 style="margin-bottom: 30px"><span langkey="finish5">Gostaríamos de saber alguma coisa sobre si.</span></h4>
             <div style="margin-bottom: 20px">
-              <h5>Género</h5>
+              <h5><span langkey="finish6">Género</span></h5>
               <label class="radio-inline">
-                  <input type="radio" name="gender" value="1"> Masculino
+                <input type="radio" name="gender" value="1"> <span langkey="finish7">Masculino</span>
               </label>
               <label class="radio-inline">
-                <input type="radio" name="gender" value="2"> Feminino
+                <input type="radio" name="gender" value="2"> <span langkey="finish8">Feminino</span>
               </label>
               <label class="radio-inline">
-                <input type="radio" name="gender" value="3" checked="checked"> Não definido
+                <input type="radio" name="gender" value="3" checked="checked"> <span langkey="finish9">Não definido</span>
               </label>
             </div>
             <div style="margin-bottom: 20px">
-              <h5>Idade</h5>
+              <h5><span langkey="finish10">Idade</span></h5>
               <input type="number" id="age" min="18" max="125" value="30">
             </div>
             <div style="margin-bottom: 20px">
-              <h5>Nacionalidade</h5>
+              <h5><span langkey="finish11">Nacionalidade</span></h5>
               <select id = "country" style="width: 67%; max-width: 100%">
                 <option value="AF">Afghanistan</option>
                 <option value="AX">Åland Islands</option>
@@ -385,7 +385,7 @@
               </select>
             </div>
             <div style="margin-bottom: 20px">
-              <h5>Nível de educação</h5>
+              <h5><span langkey="finish12">Nível de educação</span></h5>
               <select id = "study" style="width: 67%; max-width: 100%">
                 <option value="0"></option>
                 <option value="1">4ª classe</option>
@@ -400,16 +400,15 @@
             </div>
 
             <div style="margin-bottom: 20px">
-              <h5>Profissão</h5>
+              <h5><span langkey="finish12a">Profissão</span></h5>
               <select id = "profession" style="width: 67%; max-width: 100%">
                 <option value="0"></option>
-                <option value="1">Estudante</option>
-                <option value="2">Reformado</option>
-                <option value="3">Desempregado</option>
-                <option value="4">Trabalhador por conta de outrem</option>
-                <option value="5">Trabalhador Freelancer</option>
-                <option value="6">Trabalhador por conta própria</option>
-                <option value="7">Outro</option>
+                <option value="1"><span langkey="finish13">Estudante</span></option>
+                <option value="2"><span langkey="finish14">Reformado</span></option>
+                <option value="3"><span langkey="finish15">Desempregado</span></option>
+                <option value="4"><span langkey="finish16">Trabalhador por conta de outrem</span></option>
+                <option value="5"><span langkey="finish17">Trabalhador por conta própria</span></option>
+                <option value="6"><span langkey="finish18">Outro</span></option>
               </select>
             </div>
 
@@ -418,58 +417,30 @@
             </div>
 
             <div style="margin-bottom: 20px">
-              <h5>Por favor indique o salário mensal do seu agregado familiar em Euros.</h5>
+              <h5><span langkey="finish19">Por favor indique o salário mensal do seu agregado familiar em Euros.</span></h5>
               <select id = "income">
                 <option value="0"></option>
-                <option value="8">NS/NR</option>
-                <option value="1">Menos de 1000</option>
-                <option value="2">1000 - 1999</option>
-                <option value="3">2000 - 3999</option>
-                <option value="4">4000 - 5999</option>
-                <option value="5">6000 - 9999</option>
-                <option value="6">10000 - 19999</option>
-                <option value="7">Mas de 20000</option>
+                <option value="8"><span langkey="finish20">NS/NR</span></option>
+                <option value="1"><span langkey="finish21">Menos de 1000</span></option>
+                <option value="2"><span langkey="finish22">1000 - 1500</span></option>
+                <option value="3"><span langkey="finish23">1500 - 1999</span>/option>
+                <option value="4"><span langkey="finish24">2000 - 2999</span></option>
+                <option value="5"><span langkey="finish25">3000 - 4999</span></option>
+                <option value="6"><span langkey="finish26">Mas de 5000</span></option>
               </select>
             </div>
-            <a type="button" id="finishBtn" class="btn btn-primary float-right">Terminado</a>
+            <a type="button" id="finishBtn" class="btn btn-primary float-right"><span langkey="index32">Terminado</span></a>
           </div> <!-- /questions -->
 
            <!--  ----------- Dinamic table ---------- -->
           <div class="hidden">
             <span class="glyphicon glyphicon-check btn-lg icon_normal"></span>
-            <h3>Thank you for participating!!</h3>
+            <h3><span langkey="finish27">Thank you for participating!!</span></h3>
             <div id="table" style="height: 500px; margin-bottom: 20px; margin-top: 20px"></div>
             <!-- <div id="map" style="height: 500px; margin-bottom: 20px; margin-top: 20px"></div> -->
           </div> <!-- /dinamic table -->
 
-          <!--  ----------- Goodbye ---------- -->
-          <div class="hidden">
-            <p>We appreciate all the effort. If you want to know both where are the areas of your close fellow citizen please or contained in Lisbon city, please, press the correspondent button.</p>
-            <p><a type="button" class="btn btn-primary" href="finish.html">Done</a> <a type="button" class="btn btn-primary" href="finish.html">Finish</a></p>
-            <p>We are going to create dynamic areas to connect you with people that share you places and groups!! In case you are interested in be part of these new areas of engagement or have more information about the project, please provide us with your email and twitter username. Together, we are going  to improve Lisbon boundaries!!! </p>
-            <form  class="form-inline" style="margin-top: 30px">
-              <div class="form-group">
-                <label for="mail_user"> Email</label>
-                <input type="email" class="form-control" id="mail_user" placeholder="jane.doe@example.com">
-              </div>
-              <div class="form-group">
-                <label for="twitter_name"> Twitter username </label>
-                <input class="form-control" id="twitter_name" placeholder="@janedoe">
-              </div>
-            </form>
-            <h3 style="margin-top: 50px">Until next time :)</h3>
-            <div class="no-float"></div>
-            <hr>
-            <img src="img/geoc.png" id="logo_geoc">
-            <img src="img/mariecurie.png" id="logo_marie">
-            <img src="img/nova.png" id="logo_nova">
-            <img src="img/munster.png" id="logo_munster">
-            <img src="img/uji.png" id="logo_uji"> 
-          </div> <!-- /goodbye -->
-        </div> <!-- .panel-body -->
-      </div> <!-- .panel-default --> 
-    </div>  <!-- .col-6 -->
-    <div class="no-float"></div>
+
             <!-- ------------------------------- End Panel left ------------------------------------------------------------------------ -->
 
   <div class="visible-xs col-xs-12" style="padding: 0px; padding-top: 30px">
@@ -477,20 +448,20 @@
       <div class="panel-body">
         <div id="map2" style="height:83vh; position: relative;">
           <div style="position: absolute; top: 10px; left: 100px; z-index: 998; background-color: #fff; padding-left: 3px; padding-right: 3px">
-            <h4>These are yout important areas!</h4>
+            <h4><span langkey="finish1">Estas são as suas áreas importantes!</span></h4>
           </div>
           <div  class="legend" style="position: absolute; bottom: 5px; left: 10px; z-index: 998">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="float: left; margin: 0px; padding: 0px">
                 <div class="foo blue"></div>
-                <div class="legend-name" style="margin-right: 20px"> Sense Of Place</div>
+                <div class="legend-name" style="margin-right: 20px"><span langkey="finish2">Sense Of Place</span></div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="float: left;margin: 0px; padding: 0px">
                 <div class="foo purple"></div>
-                <div class="legend-name" style="margin-right: 20px"> Social Capital</div>
+              <div class="legend-name" style="margin-right: 20px"> <span langkey="finish3">Social Capital</span></div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="float: left; margin: 0px; padding: 0px">
                 <div class="foo wine"></div>
-                <div class="legend-name"> Civic engagement </div>
+              <div class="legend-name"> <span langkey="finish4">Civic engagement </span></div>
             </div>
           </div>
         </div> <!-- map -->
