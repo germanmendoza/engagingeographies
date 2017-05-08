@@ -23,99 +23,111 @@ function startAll(){
     translator.applyPreviousLanguage(function () {
         // Nothing yet to do
     });
+
+    // startOverpassComponents();
+    // gatherAndShowOverpassData();
 }
 
 function startOthers() {
-    $('#finishBtn').click(function () {
+    try {
+        $('#finishBtn').click(function () {
 
-        if (($("#study").val() == "0")) {
-            alert("Por favor, introduza uma loco.");
-            return;
-        }
-
-        if (($("#profession").val() == "0")){
-            alert("Por favor, introduza uma loco.");
-            return;
-        }
-        if (($("#income").val() == "0")){
-            alert("Por favor, introduza uma loco.");
-            return;
-        }
-
-
-        if ($("#profession").val() == "6") {
-            if (!$("#other_prof").val()) {
-                //alert("Please, introduce a profession.")
-                alert("Por favor, introduza uma profissão.");
+            if (($("#study").val() == "0")) {
+                alert("Por favor, introduza uma loco.");
+                return;
             }
-            else {
-                profession_new = parseInt($( "#other_prof" ).val())
-            }
-        }
-        else{
-            profession_new = parseInt($( "#profession" ).val())
 
-            var data = {
-                id : util.getFromLocalStorage(util.interPageDataKey),
-                gender : parseInt($("input[name=gender]:checked").val()),
-                age : parseInt($( "#age" ).val()),
-                country : $( "#country" ).val(),
-                study : parseInt($( "#study" ).val()),
-                profession : profession_new,
-                income : parseInt($( "#income" ).val())
-            };
-            app.finish(data,function (response) {
-                if (response === false) {
-                    // alert("There is a connection problem; please, try again later.");
-                    alert("Há um problema de conexão; por favor, tente novamente mais tarde.");
+            if (($("#profession").val() == "0")) {
+                alert("Por favor, introduza uma loco.");
+                return;
+            }
+            if (($("#income").val() == "0")) {
+                alert("Por favor, introduza uma loco.");
+                return;
+            }
+
+
+            if ($("#profession").val() == "6") {
+                if (!$("#other_prof").val()) {
+                    //alert("Please, introduce a profession.")
+                    alert("Por favor, introduza uma profissão.");
                 }
                 else {
-                    util.redirectToPage({
-                        url:"globalEnd.html",
-                        payload:response.id
-                    });
+                    profession_new = parseInt($("#other_prof").val())
                 }
-            })
-        }
+            }
+            else {
+                profession_new = parseInt($("#profession").val())
 
-    });
+                var data = {
+                    id: util.getFromLocalStorage(util.interPageDataKey),
+                    gender: parseInt($("input[name=gender]:checked").val()),
+                    age: parseInt($("#age").val()),
+                    country: $("#country").val(),
+                    study: parseInt($("#study").val()),
+                    profession: profession_new,
+                    income: parseInt($("#income").val())
+                };
+                app.finish(data, function (response) {
+                    if (response === false) {
+                        // alert("There is a connection problem; please, try again later.");
+                        alert("Há um problema de conexão; por favor, tente novamente mais tarde.");
+                    }
+                    else {
+                        util.redirectToPage({
+                            url: "globalEnd.html",
+                            payload: response.id
+                        });
+                    }
+                })
+            }
+
+        });
+    }
+    catch (err){
+        console.error(err.message);
+    }
 }
 
 function startMapComponents(){
+    try {
+        function createAll(rmap) {
+            map = rmap;
+            // add an OpenStreetMap tile layer
+            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                // attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+        }
 
-    function createAll(rmap){
-        map = rmap;
-        // add an OpenStreetMap tile layer
-        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-            // attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+        function isElementInViewport(el) {
+            if (typeof jQuery === "function" && el instanceof jQuery) {
+                el = el[0];
+            }
+            var rect = el.getBoundingClientRect();
+            return !((rect.top == 0) && (rect.left == 0) && (rect.bottom == 0) && (rect.right == 0));
+        }
+
+        var map1 = L.map('map', {
+            scrollWheelZoom: false,
+        });
+        map1.on('load', function (e) {
+            if (isElementInViewport($('#map'))) {
+                createAll(map1);
+            }
+        });
+        map1.setView([38.7500, -9.1500], 12);
+
+        var mapxs = L.map('map2');
+        mapxs.on('load', function (e) {
+            if (isElementInViewport($('#map2'))) {
+                createAll(mapxs);
+            }
+        });
+        mapxs.setView([38.7500, -9.1500], 12);
     }
-
-    function isElementInViewport (el) {
-        if (typeof jQuery === "function" && el instanceof jQuery) {
-            el = el[0];
-        }
-        var rect = el.getBoundingClientRect();
-        return !((rect.top==0)&&(rect.left==0)&&(rect.bottom==0)&&(rect.right==0));
+    catch (err){
+        console.error(err.message);
     }
-
-    var map1 = L.map('map', {
-        scrollWheelZoom: false,
-    });
-    map1.on('load', function (e) {
-        if(isElementInViewport($('#map'))){
-            createAll(map1);
-        }
-    });
-    map1.setView([38.7500, -9.1500], 12);
-
-    var mapxs = L.map('map2');
-    mapxs.on('load', function (e) {
-        if(isElementInViewport($('#map2'))){
-            createAll(mapxs);
-        }
-    });
-    mapxs.setView([38.7500, -9.1500], 12);
 }
 
 function startOverpassComponents() {
@@ -212,7 +224,7 @@ function startOverpassComponents() {
             });
         }
     };
-    function gatherAndShowOverpassData(overPassData) {
+    gatherAndShowOverpassData = function () {
         overPassOPs.queryOverPass(testGeoJson, function (overPassData) {
             if (overPassData === false) {
                 alert("SHIT!");
@@ -285,39 +297,49 @@ function startOverpassComponents() {
                 }
             });
         };
-    }
+    };
 }
 
 function areasLoading() {
-    var id = util.getFromLocalStorage(util.interPageDataKey);
-    //var id = "589888c01c0856701818e512";
-    var SOPLayers, SCLayers, CELayers;
+    try {
+        var id = util.getFromLocalStorage(util.interPageDataKey);
+        //var id = "589888c01c0856701818e512";
+        var SOPLayers, SCLayers, CELayers;
 
-    var count = 0;
-    var SOPStyle = function(feature){return {color: "#ff0000"}; };
-    var SCStyle = function(feature){return {color: "#4080ff"};
-        /*if (count++ >=   2){
-         return {color: "#6000ff"};
-         }
-         else{
-         return {color: "#4080ff"};
-         }*/
-    };
-    var CEStyle = function(feature){return {color: "#00ff00"}; };
+        var count = 0;
+        var SOPStyle = function (feature) {
+            return {color: "#ff0000"};
+        };
+        var SCStyle = function (feature) {
+            return {color: "#4080ff"};
+            /*if (count++ >=   2){
+             return {color: "#6000ff"};
+             }
+             else{
+             return {color: "#4080ff"};
+             }*/
+        };
+        var CEStyle = function (feature) {
+            return {color: "#00ff00"};
+        };
 
-    app.getSOP(id, function (SOPLayersGeoJson) {
-        var geoJson = JSON.parse(SOPLayersGeoJson.geoJson);
-        SOPLayers = L.geoJson(geoJson, {style: SOPStyle}).addTo(map);
+        app.getSOP(id, function (SOPLayersGeoJson) {
+            var geoJson = JSON.parse(SOPLayersGeoJson.geoJson);
+            SOPLayers = L.geoJson(geoJson, {style: SOPStyle}).addTo(map);
 
-        app.getSC(id, function (SCLayersGeoJson) {
-            var geoJson = JSON.parse(SCLayersGeoJson.geoJson);
-            SCLayers = L.geoJson(geoJson, {style: SCStyle}).addTo(map);
+            app.getSC(id, function (SCLayersGeoJson) {
+                var geoJson = JSON.parse(SCLayersGeoJson.geoJson);
+                SCLayers = L.geoJson(geoJson, {style: SCStyle}).addTo(map);
 
-            app.getCE(id, function (CELayersGeoJson) {
-                var geoJson = JSON.parse(CELayersGeoJson.geoJson);
-                CELayers = L.geoJson(geoJson, {style: CEStyle}).addTo(map);
+                app.getCE(id, function (CELayersGeoJson) {
+                    var geoJson = JSON.parse(CELayersGeoJson.geoJson);
+                    CELayers = L.geoJson(geoJson, {style: CEStyle}).addTo(map);
+                });
             });
         });
-    });
+    }
+    catch (err){
+        console.error(err.message);
+    }
 }
 
