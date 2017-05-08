@@ -6,7 +6,7 @@ var profession_new;
 function startAll(){
 
     $('#profession').change(function () {
-        if ($("#profession").val() == "7") {
+        if ($("#profession").val() == "6") {
             $("#other_profession").removeClass().addClass("show");
         }
         else{
@@ -28,7 +28,22 @@ function startAll(){
 function startOthers() {
     $('#finishBtn').click(function () {
 
-        if ($("#profession").val() == "7") {
+        if (($("#study").val() == "0")) {
+            alert("Por favor, introduza uma loco.");
+            return;
+        }
+
+        if (($("#profession").val() == "0")){
+            alert("Por favor, introduza uma loco.");
+            return;
+        }
+        if (($("#income").val() == "0")){
+            alert("Por favor, introduza uma loco.");
+            return;
+        }
+
+
+        if ($("#profession").val() == "6") {
             if (!$("#other_prof").val()) {
                 //alert("Please, introduce a profession.")
                 alert("Por favor, introduza uma profissão.");

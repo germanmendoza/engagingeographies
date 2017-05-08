@@ -47,6 +47,7 @@ function startAll () {
         //$('#myModalsatisfaction').modal('show');
     });
 
+
     translator.applyPreviousLanguage(function () {
         // Nothing yet to do
     });

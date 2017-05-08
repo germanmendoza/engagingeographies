@@ -74,15 +74,15 @@ function startAll() {
 
         function nameplace() {
         $("#group_name_place").html(translator.getKeyLanguageValue("map1-11"));
-        var replaced = $("#group_name_place").html().replace('hola', '<b style="font-size: 18px">' + name_places[number] + '</b>');
+        var replaced = $("#group_name_place").html().replace('hola', name_places[number] );
         $("#group_name_place").html(replaced);
         $("#draw_places").html(translator.getKeyLanguageValue("map1-12"));
         var replaced1 = $("#draw_places").html().replace('hola', '<b>' + name_places[number] + '</b>');
         $("#draw_places").html(replaced1);
-        $("#area_name_sliders").html('Área' + '<b style="font-size: 18px">' + ' hola ' + '</b>');
-        var replaced2 = $("#area_name_sliders").html().replace('hola', '<b>' + name_places[number] + '</b>');
+        $("#area_name_sliders").html(translator.getKeyLanguageValue("map1-11"));
+        var replaced2 = $("#area_name_sliders").html().replace('hola', name_places[number]);
         $("#area_name_sliders").html(replaced2);
-        $("#title_sliders_change").html('map1-20');
+        $("#title_sliders_change").html(translator.getKeyLanguageValue("map1-20"));
         var replaced3 = $("#title_sliders_change").html().replace('Y', name_places[number]);
         $("#title_sliders_change").html(replaced3);
 
@@ -311,7 +311,7 @@ function startAll() {
                 map.fitBounds(group.getBounds(), null);
 
 
-                var title = $("#change").html().replace('X', "<b>" + highlightedArea.name + "</b>");
+                var title = $("#change").html().replace('X', '<b style="font-size: 18px">' + highlightedArea.name + "</b>");
                 $("#change").html(title);
                 var pi1re = $("#pi1").html().replace('Y', "<b>" + highlightedArea.name + "</b>");
                 $("#pi1").html(pi1re);

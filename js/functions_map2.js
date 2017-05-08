@@ -54,7 +54,7 @@ function startAll() {
 
     function namegroup() {
         $("#group_name_nature").html(translator.getKeyLanguageValue("map2-3"));
-        var replaced = $("#group_name_nature").html().replace('hola', '<b style="font-size: 18px">' + name_groups[number] + '</b>');
+        var replaced = $("#group_name_nature").html().replace('hola', name_groups[number]);
         $("#group_name_nature").html(replaced);
         $("#textchange").html(translator.getKeyLanguageValue("map2-5"));
         $("#textchange_nature").html(translator.getKeyLanguageValue("map2-4"));
@@ -102,7 +102,7 @@ function startAll() {
                 $("#title_let_draw").html(translator.getKeyLanguageValue("map2-26"));
                 var replacetitle = $("#title_let_draw").html().replace('X', name_groups[number]);
                 $("#title_let_draw").html(replacetitle);
-                $("#let_draw").html(translator.getKeyLanguageValue("map2-27"));
+                $("#let_draw").html(translator.getKeyLanguageValue("map2-26a"));
                 var replaceddraw = $("#let_draw").html().replace('X', name_groups[number]);
                 $("#let_draw").html(replaceddraw);
                 $("#draw").toggleClass("hidden show");
@@ -206,7 +206,13 @@ function startAll() {
             $("#other_name").removeClass().addClass("show");
             var anterior = $('#nature').val();
         }
-        else {
+        else if(($("#nature").val() == "0")){
+            $("#SC_group").removeClass().addClass("hidden");
+            $("#other_name").removeClass().addClass("hidden");
+
+
+        }
+        else    {
 
 
             $("#other_name").removeClass().addClass("hidden");
@@ -402,31 +408,31 @@ function startAll() {
                 map.fitBounds(group.getBounds(), null);
 
 
-                var title = $("#change").html().replace('X', highlightedGroup.name);
+                var title = $("#change").html().replace('X', "<b>" + highlightedGroup.name + "</b>");
                 $("#change").html(title);
-                var soc1re = $("#soc1").html().replace('Y', highlightedGroup.name);
+                var soc1re = $("#soc1").html().replace('Y', "<b>" + highlightedGroup.name + "</b>");
                 $("#soc1").html(soc1re);
-                var soc2re = $("#soc2").html().replace('Y', highlightedGroup.name);
+                var soc2re = $("#soc2").html().replace('Y', "<b>" + highlightedGroup.name + "</b>");
                 $("#soc2").html(soc2re);
-                var soc3re = $("#soc3").html().replace('Y', highlightedGroup.name);
+                var soc3re = $("#soc3").html().replace('Y', "<b>" + highlightedGroup.name + "</b>");
                 $("#soc3").html(soc3re);
-                var n1re = $("#n1").html().replace('Y', highlightedGroup.name);
+                var n1re = $("#n1").html().replace('Y', "<b>" + highlightedGroup.name + "</b>");
                 $("#n1").html(n1re);
-                var n2re = $("#n2").html().replace('Y', highlightedGroup.name);
+                var n2re = $("#n2").html().replace('Y', "<b>" + highlightedGroup.name + "</b>");
                 $("#n2").html(n2re);
-                var n3re = $("#n3").html().replace('Y', highlightedGroup.name);
+                var n3re = $("#n3").html().replace('Y', "<b>" + highlightedGroup.name + "</b>");
                 $("#n3").html(n3re);
-                var cee1re = $("#cee1").html().replace('Y', highlightedGroup.name);
+                var cee1re = $("#cee1").html().replace('Y', "<b>" + highlightedGroup.name + "</b>");
                 $("#cee1").html(cee1re);
-                var cee2re = $("#cee2").html().replace('Y', highlightedGroup.name);
+                var cee2re = $("#cee2").html().replace('Y', "<b>" + highlightedGroup.name + "</b>");
                 $("#cee2").html(cee2re);
-                var cee3re = $("#cee3").html().replace('Y', highlightedGroup.name);
+                var cee3re = $("#cee3").html().replace('Y', "<b>" + highlightedGroup.name + "</b>");
                 $("#cee3").html(cee3re);
-                var cp1re = $("#cp1").html().replace('Y', highlightedGroup.name);
+                var cp1re = $("#cp1").html().replace('Y', "<b>" + highlightedGroup.name + "</b>");
                 $("#cp1").html(cp1re);
-                var cp2re = $("#cp2").html().replace('Y', highlightedGroup.name);
+                var cp2re = $("#cp2").html().replace('Y', "<b>" + highlightedGroup.name + "</b>");
                 $("#cp2").html(cp2re);
-                var cp3re = $("#cp3").html().replace('Y', highlightedGroup.name);
+                var cp3re = $("#cp3").html().replace('Y', "<b>" + highlightedGroup.name + "</b>");
                 $("#cp3").html(cp3re);
             }
             else {
@@ -715,13 +721,13 @@ function deleteareas() {
 function counterAreasName() {
 
 
-    $("#counting_areas").html("Já definiu: L áreas.");
+    $("#counting_areas").html(translator.getKeyLanguageValue("map2-32a"));
     var replaced2 = $("#counting_areas").html().replace('L', areasdrawn);
     $("#counting_areas").html(replaced2);
 
 
-    $("#change_name_group").html('Pode agora desenhar outra área para o grupo' + '<b style="font-size: 18px">' + ' G ' + '</b>' + 'ou, clicar <button type="button" class="btn btn-primary btn-next" href="#" disabled>Próximo</button> sobre o mapa para definir o próximo grupo');
-    var replaced3 = $("#change_name_group").html().replace('G', name_groups[number]);
+    $("#change_name_group").html(translator.getKeyLanguageValue("map2-30"));
+    var replaced3 = $("#change_name_group").html().replace('X', name_groups[number]);
     $("#change_name_group").html(replaced3);
 
 }

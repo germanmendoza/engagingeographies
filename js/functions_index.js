@@ -171,7 +171,7 @@ function startall() {
 
     // End prepare data to send
 
-    /*translator.applyBrowserLanguage(function(langCode){
+    translator.applyBrowserLanguage(function(langCode){
         translator.saveChosenLanguage(langCode);
 
         $("#mipruebaborrar").html(translator.getKeyLanguageValue("index1" + "index2"));
@@ -181,14 +181,12 @@ function startall() {
         $('input[name=language]').change(function(){
             translator.saveChosenLanguage(this.value);
             translator.applyLanguage(this.value, function () {
-                $("#draw_places").html(translator.getKeyLanguageValue("map1-12"));
-                var replaced1 = $("#draw_places").html().replace('hola', '<b>' + boa + '</b>');
-                $("#draw_places").html(replaced1);
+
 
                 //$("#mipruebaborrar").html(translator.getKeyLanguageValue("index1"));
             });
         });
-    });*/
+    });
 
 
 
@@ -196,6 +194,9 @@ function startall() {
     var title = $("#change").html().replace('X', "<b>" + boa + "</b>");
     $("#change").html(title);
 
+    $("#draw_places").html(translator.getKeyLanguageValue("map1-12"));
+    var replaced1 = $("#draw_places").html().replace('hola', '<b>' + boa + '</b>');
+    $("#draw_places").html(replaced1);
 
 }
 
