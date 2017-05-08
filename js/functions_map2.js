@@ -502,63 +502,63 @@ function startAll() {
 
  //Freguesia buttons
     $('#d-ajuda').click(function () {
-        map.setView([38.711402, -9.199039], 14);
+        map.setView([38.711402, -9.199039], 15);
     });
 
     $('#d-alcantara').click(function () {
-        map.setView([38.710676, -9.182990], 14);
+        map.setView([38.710676, -9.182990], 15);
     });
 
     $('#d-alvalade').click(function () {
-        map.setView([38.753182, -9.151691], 14);
+        map.setView([38.753182, -9.151691], 15);
     });
 
     $('#d-areeiro').click(function () {
-        map.setView([38.742261, -9.133480], 14);
+        map.setView([38.742261, -9.133480], 15);
     });
 
     $('#d-arroios').click(function () {
-        map.setView([38.727819, -9.140717], 14);
+        map.setView([38.727819, -9.140717], 15);
     });
 
     $('#d-avenidas').click(function () {
-        map.setView([38.739568, -9.149152], 14);
+        map.setView([38.739568, -9.149152], 15);
     });
 
     $('#d-beato').click(function () {
-        map.setView([38.733268, -9.113798], 14);
+        map.setView([38.733268, -9.113798], 15);
     });
 
     $('#d-belem').click(function () {
-        map.setView([38.702305, -9.215116], 14);
+        map.setView([38.702305, -9.215116], 15);
     });
 
     $('#d-benfica').click(function () {
-        map.setView([38.737770, -9.196060], 14);
+        map.setView([38.737770, -9.196060], 15);
     });
 
 
     $('#d-campo').click(function () {
-        map.setView([38.719247, -9.166428], 14);
+        map.setView([38.719247, -9.166428], 15);
     });
 
     $('#d-campolide').click(function () {
-        map.setView([38.731470, -9.165880], 14);
+        map.setView([38.731470, -9.165880], 15);
     });
 
     $('#d-carnide').click(function () {
-        map.setView([38.763229, -9.188106], 14);
+        map.setView([38.763229, -9.188106], 15);
     });
     $('#d-estrela').click(function () {
-        map.setView([38.710837, -9.153887], 14);
+        map.setView([38.710837, -9.153887], 15);
     });
 
     $('#d-lumiar').click(function () {
-        map.setView([38.770204, -9.160321], 14);
+        map.setView([38.770204, -9.160321], 15);
     });
 
     $('#d-marvila').click(function () {
-        map.setView([38.750852, -9.116730], 14);
+        map.setView([38.750852, -9.116730], 15);
     });
 
     $('#d-misericordia').click(function () {
@@ -566,15 +566,15 @@ function startAll() {
     });
 
     $('#d-olivais').click(function () {
-        map.setView([38.772473, -9.126950], 14);
+        map.setView([38.772473, -9.126950], 15);
     });
 
     $('#d-parque').click(function () {
-        map.setView([38.765502, -9.099971], 14);
+        map.setView([38.765502, -9.099971], 15);
     });
 
     $('#d-penha').click(function () {
-        map.setView([38.725873, -9.124024], 14);
+        map.setView([38.725873, -9.124024], 15);
     });
 
     $('#d-santa').click(function () {
@@ -582,15 +582,15 @@ function startAll() {
     });
 
     $('#d-santamaria').click(function () {
-        map.setView([38.711168, -9.137130], 14);
+        map.setView([38.711168, -9.137130], 15);
     });
 
     $('#d-santo').click(function () {
-        map.setView([38.718769, -9.149313], 14);
+        map.setView([38.718769, -9.149313], 15);
     });
 
     $('#d-sao').click(function () {
-        map.setView([38.752111, -9.177416], 14);
+        map.setView([38.752111, -9.177416], 15);
     });
 
     $('#d-saovicente').click(function () {
@@ -600,63 +600,63 @@ function startAll() {
 
 //Freguesia buttons XS
     $('#d-ajuda-xs').click(function () {
-        map.setView([38.711402, -9.199039], 14);
+        map.setView([38.711402, -9.199039], 15);
     });
 
     $('#d-alcantara-xs').click(function () {
-        map.setView([38.710676, -9.182990], 14);
+        map.setView([38.710676, -9.182990], 15);
     });
 
     $('#d-alvalade-xs').click(function () {
-        map.setView([38.753182, -9.151691], 14);
+        map.setView([38.753182, -9.151691], 15);
     });
 
     $('#d-areeiro-xs').click(function () {
-        map.setView([38.742261, -9.133480], 14);
+        map.setView([38.742261, -9.133480], 15);
     });
 
     $('#d-arroios-xs').click(function () {
-        map.setView([38.727819, -9.140717], 14);
+        map.setView([38.727819, -9.140717], 15);
     });
 
     $('#d-avenidas-xs').click(function () {
-        map.setView([38.739568, -9.149152], 14);
+        map.setView([38.739568, -9.149152], 15);
     });
 
     $('#d-beato-xs').click(function () {
-        map.setView([38.733268, -9.113798], 14);
+        map.setView([38.733268, -9.113798], 15);
     });
 
     $('#d-belem-xs').click(function () {
-        map.setView([38.702305, -9.215116], 14);
+        map.setView([38.702305, -9.215116], 15);
     });
 
     $('#d-benfica-xs').click(function () {
-        map.setView([38.737770, -9.196060], 14);
+        map.setView([38.737770, -9.196060], 15);
     });
 
 
     $('#d-campo-xs').click(function () {
-        map.setView([38.719247, -9.166428], 14);
+        map.setView([38.719247, -9.166428], 15);
     });
 
     $('#d-campolide-xs').click(function () {
-        map.setView([38.731470, -9.165880], 14);
+        map.setView([38.731470, -9.165880], 15);
     });
 
     $('#d-carnide-xs').click(function () {
-        map.setView([38.763229, -9.188106], 14);
+        map.setView([38.763229, -9.188106], 15);
     });
     $('#d-estrela-xs').click(function () {
-        map.setView([38.710837, -9.153887], 14);
+        map.setView([38.710837, -9.153887], 15);
     });
 
     $('#d-lumiar-xs').click(function () {
-        map.setView([38.770204, -9.160321], 14);
+        map.setView([38.770204, -9.160321], 15);
     });
 
     $('#d-marvila-xs').click(function () {
-        map.setView([38.750852, -9.116730], 14);
+        map.setView([38.750852, -9.116730], 15);
     });
 
     $('#d-misericordia-xs').click(function () {
@@ -664,15 +664,15 @@ function startAll() {
     });
 
     $('#d-olivais-xs').click(function () {
-        map.setView([38.772473, -9.126950], 14);
+        map.setView([38.772473, -9.126950], 15);
     });
 
     $('#d-parque-xs').click(function () {
-        map.setView([38.765502, -9.099971], 14);
+        map.setView([38.765502, -9.099971], 15);
     });
 
     $('#d-penha-xs').click(function () {
-        map.setView([38.725873, -9.124024], 14);
+        map.setView([38.725873, -9.124024], 15);
     });
 
     $('#d-santa-xs').click(function () {
@@ -680,15 +680,15 @@ function startAll() {
     });
 
     $('#d-santamaria-xs').click(function () {
-        map.setView([38.711168, -9.137130], 14);
+        map.setView([38.711168, -9.137130], 15);
     });
 
     $('#d-santo-xs').click(function () {
-        map.setView([38.718769, -9.149313], 14);
+        map.setView([38.718769, -9.149313], 15);
     });
 
     $('#d-sao-xs').click(function () {
-        map.setView([38.752111, -9.177416], 14);
+        map.setView([38.752111, -9.177416], 15);
     });
 
     $('#d-saovicente-xs').click(function () {
