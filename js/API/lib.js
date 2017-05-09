@@ -143,18 +143,47 @@ var translator = {
      * @param langDefData - the language definition data
      */
     _translateAll: function (langDefData){
-        $("[langkey]").each(function (){
+        $("[langkey]").each (function (){
+
             var strTr = langDefData [$(this).attr ('langkey')];
-            if(strTr) {
-                if (typeof ($(this).attr("text")) !== typeof undefined && $(this).attr("text") !== false) {
+            if (!($(this).attr ('tagName'))){
+                $(this).text(strTr);
+            }else {
+                var tagName = ($(this).attr('tagName')).toLowerCase();
+                if (tagName === "div") {
                     $(this).text(strTr);
                 }
-                else if (typeof ($(this).attr("value")) !== typeof undefined && $(this).attr("value") !== false) {
+                else if (tagName === "a") {
+                    $(this).text(strTr);
+                }
+                else if (tagName === "span") {
+                    $(this).text(strTr);
+                }
+                else if (tagName === "p") {
+                    $(this).text(strTr);
+                }
+                else if (tagName === "textarea") {
+                    $(this).text(strTr);
+                }
+                else if (tagName === "option") {
+                    $(this).text(strTr);
+                }
+                else if (tagName === "input") {
                     $(this).val(strTr);
                 }
                 else {
-                    $(this).html(strTr);
+                    $(this).text(strTr);
                 }
+
+                /*if(typeof ($(this).attr("text")) !== typeof undefined && $(this).attr("text") !== false){
+                 $(this).text(strTr);
+                 }
+                 else if(typeof ($(this).attr("value")) !== typeof undefined && $(this).attr("value") !== false){
+                 $(this).val(strTr);
+                 }
+                 else{
+                 $(this).html(strTr);
+                 }*/
             }
         });
     },
