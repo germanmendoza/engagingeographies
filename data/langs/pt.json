@@ -17,7 +17,7 @@
   "index15": "1 a 3 anos",
   "index16": "3 a 6 anos",
   "index17": "Mais do que 6 anos",
-  "index18": "Please type the zip code of your (primary) home.",
+  "index18": "Indique por favor o código postal da sua residência",
   "index19": "Se não desejar indicar o seu código postal, selecione por favor na caixa",
   "index20": "Selecione por favor o menos positivo da sua freguesia (máximo 3)",
   "index21": "Estado do pavimento das ruas",
@@ -78,7 +78,7 @@
   "map1-42":"Isto é um questionário com base num mapa para a cidade de Lisboa. Convidamo-lo a desenhar áreas no mapa de forma livre.",
   "map1-43":"Pressione o botão",
   "map1-44":"situado ao centro na parte superior do mapa e clique no mapa para definir o seu primeiro ponto. Clique os pontos que considerar necessários para definir um polígono (área).Para fechar um polígono, clique outra vez no primeiro ponto. Pode fazer alterações na forma do polígono movendo qualquer um dos pontos.Pode apagar o área clicando o botão",
-  "map1-44a":"Pode mover o mapa e aproximar e afastar (+ ou -) utilizando os controlos do mapa para ir diretamente para uma dada freguesia utilizando o botão",
+  "map1-44a":"Pode mover o mapa e aproximar e afastar (+ ou -) utilizando os controlos do mapa ou para ir diretamente para uma dada freguesia utilizando o botão",
   "map1-44b":"Pode desenhar todas as áreas de que queira.",
   "map1-46":"Após desenhar as áreas iremos fazer-lhe perguntas sobre essas áreas. Nesse sentido, queira por favor responder às perguntas quando solicitado para tal.",
   "map1-48":"Quando terminar de definir as suas áreas pode passar à próxima atividade, pressionando o botão ",
@@ -129,7 +129,7 @@
   "map2-41":"Sinto-me parte do grupo Y",
   "map2-42":"Pertenço ao grupo Y",
   "map2-43":"Sinto-me ligado ao grupo Y",
-  "map2-44":"Vizinhança: Os membros do grupo poderão realizar as 3 ações seguintes entre eles. Em média quantas vezes",
+  "map2-44":"Os membros do grupo poderão realizar as 3 ações seguintes entre eles. Em média quantas vezes",
   "map2-45":"Ajuda um membro do grupo Y numa emergência",
   "map2-46":"Nunca",
   "map2-47":"Todos os dias",
@@ -211,7 +211,9 @@
   "general11":"Por favor, introduza uma profissão.",
   "general12":"Por favor, introduza o salário mensal do seu agregado familiar em Euros.",
   "general13":"Obrigado",
-  "general14":"Introduza um endereço de e-mail e / ou nome de usuário válido estrutura"
+  "general14":"Introduza um endereço de e-mail e / ou nome de usuário válido estrutura",
+  "general15":"Please, select um grupo."
+
 
 
 

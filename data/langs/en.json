@@ -17,7 +17,7 @@
   "index15": "1-3 years",
   "index16": "3-6 years",
   "index17": "more than 6 years",
-  "index18": "Indique por favor o código postal da sua residência",
+  "index18": "Please type the zip code of your (primary) home.",
   "index19": "If you do not want to give your zip code, please click the checkbox.",
   "index20": "Please, select the less positive in your parish. (Max. 3)",
   "index21": "Street paving",
@@ -78,10 +78,10 @@
   "map1-42":"This is a web-map survey application for Lisbon city. We invite you to draw areas on the map freely.",
   "map1-43":"To start, press the button",
   "map1-44":"at top-centre in the map part and then click on the map to plot your first point, and as many points as you need to define your area. To finish drawing an area, click on the first point again. You can edit the area moving any point at any time or delete it pressing the button",
-  "map1-44a":"You can 'pan' the map or zoom in (+ or -) using the map controls and go directly to a certain freguesia using the button ",
+  "map1-44a":"You can 'pan' the map or zoom in (+ or -) using the map controls or go directly to a certain freguesia using the button ",
   "map1-44b":"You can draw as many areas as you need.",
   "map1-46":"After to define the areas we are going to ask you about these areas. So, please answer the questions regarding the areas when asked.",
-  "map1-48":"This is all. When you finished defining your different areas, press the button (X) to move on to the next activity.",
+  "map1-48":"This is all. When you finished defining your different areas, to move on to the next activity press the button",
 
 
   "map2-1":"We would like also to ask you about the groups of people or organizations, networks, associations to which you belong. These could be formally organized groups (religious groups, familiar groups, sports teams, workplace groups…) or just groups of people who get together regularly to do an activity or talk about things.",
@@ -115,7 +115,7 @@
   "map2-28":"on the map.",
   "map2-29":"Great job!",
   "map2-30":"Now you can draw another area that defines the group X, or click the button ",
-  "map2-31":"to define the next group r to go to the next activity.",
+  "map2-31":"to define the next group or to go to the next activity.",
   "map2-32a":"You have already defined: L areas.",
   "map2-32":"Do you live in that area?",
   "map2-33":"Please, answer the following questions about the area just drawn.",
@@ -129,7 +129,7 @@
   "map2-41":"I feel like a member of group Y.",
   "map2-42":"I belong to the group Y.",
   "map2-43":"I feel connected to the group Y.",
-  "map2-44":"Neighboring : Group members might do the following three actions for each other. On average, how many times do you…",
+  "map2-44":"Group members might do the following three actions for each other. On average, how many times do you…",
   "map2-45":"Help a group (Y) member in an emergency.",
   "map2-46":"Never",
   "map2-47":"Every-day",
@@ -212,7 +212,8 @@
   "general11":"Please, select a profession",
   "general12":"Please, select the monthly salary of your household in Euros.",
   "general13":"Thanks",
-  "general14":"Please, insert an email and/or a valid twitter user name"
+  "general14":"Please, insert an email and/or a valid twitter user name",
+  "general15":"Please, select one group."
 
 
 

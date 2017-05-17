@@ -78,7 +78,7 @@
   "map1-42":"Este es un cuestionario para la ciudad de Lisboa. Te invitamos a dibujar áreas en el mapa de forma libre.",
   "map1-43":"Para empezar a dibujar, clica el botón",
   "map1-44":"situado en el centro de la parte superior del mapa y luego define tu primer punto del área, y tantos puntos como necesites para definir el área. Para finalizar el área, clica en el primer punto otra vez. Puedes editar el área moviendo los puntos o incluso borrarla clicando el botón",
-  "map1-44a":"Puedes acer zoom en el mapa (+ o -) usando los controles del mapa y también ir directamente a un barrio utilizando el botón",
+  "map1-44a":"Puedes acer zoom en el mapa (+ o -) usando los controles del mapa o ir directamente a un barrio utilizando el botón",
   "map1-44b":"Puedes dibujar tantas áreas como necesites.",
   "map1-46":"Después de definir cada área vamos a realizarte preguntas sobre ella.",
   "map1-48":"Eso es todo. Cuando acabes de definir las áreas y contestar las preguntas, para ir a la siguient actividad clica el botón.",
@@ -129,7 +129,7 @@
   "map2-41":"Me siento como un miembro del grupo Y.",
   "map2-42":"Pertenezco al grupo Y.",
   "map2-43":"Me siento conectado al grupo Y.",
-  "map2-44":"Vecindad : miembros del grupo harían estas tres acciones por otros miembros. De media, cuantas veces tu...",
+  "map2-44":"Miembros del grupo harían estas tres acciones por otros miembros. De media, cuantas veces tu...",
   "map2-45":"Ayudas a un miembro del grupo Y en una emergencia.",
   "map2-46":"Nunca",
   "map2-47":"Cada día",
@@ -211,7 +211,9 @@
   "general11":"Por favor, indique una profesión.",
   "general12":"Por favor, indique el salario mensual de su agregado familiar en Euros.",
   "general13":"Gracias",
-  "general14":"Introduzca una dirección de mail y/o un nombre de usuario válido."
+  "general14":"Introduzca una dirección de mail y/o un nombre de usuario válido.",
+  "general15":"Por favor, selecciona un grupo."
+
 
 
 

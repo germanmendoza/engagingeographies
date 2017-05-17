@@ -29,7 +29,7 @@ function startAll() {
 
     $('#plus_group').click(function () {
         if (!$('#actual_group').val()){
-            alert("Por favor, insira pelo menos um nome de grupo.");
+            alert(translator.getKeyLanguageValue("general7"));
         }
         else{
             name_groups.push($('#actual_group').val());
@@ -483,7 +483,7 @@ function startAll() {
             }
             else {
                 // alert("Please choose one group");
-                alert("Por favor, escolha um grupo");
+                alert(translator.getKeyLanguageValue("general5"));
             }
 
         });
@@ -496,7 +496,7 @@ function startAll() {
         var scvalidation = $('[name=soc1]:checked,[name=soc2]:checked,[name=soc3]:checked,[name=n1]:checked,[name=n2]:checked,[name=n3]:checked,[name=cee1]:checked,[name=cee2]:checked,[name=cee3]:checked,[name=cp1]:checked,[name=cp2]:checked,[name=cp3]:checked');
         if (scvalidation.length < 12) {
             // alert("Please, answer all the questions");
-            alert(translator.getKeyLanguageValue("general5"));
+            alert(translator.getKeyLanguageValue("general15"));
             return;
         }
 
