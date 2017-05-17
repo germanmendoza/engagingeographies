@@ -33,16 +33,16 @@ function startOthers() {
         $('#finishBtn').click(function () {
 
             if (($("#study").val() == "0")) {
-                alert("Por favor, introduza uma loco.");
+                alert(translator.getKeyLanguageValue("general10"));
                 return;
             }
 
             if (($("#profession").val() == "0")) {
-                alert("Por favor, introduza uma loco.");
+                alert(translator.getKeyLanguageValue("general11"));
                 return;
             }
             if (($("#income").val() == "0")) {
-                alert("Por favor, introduza uma loco.");
+                alert(translator.getKeyLanguageValue("general12"));
                 return;
             }
 
@@ -50,7 +50,7 @@ function startOthers() {
             if ($("#profession").val() == "6") {
                 if (!$("#other_prof").val()) {
                     //alert("Please, introduce a profession.")
-                    alert("Por favor, introduza uma profissão.");
+                    alert(translator.getKeyLanguageValue("general11"));
                 }
                 else {
                     profession_new = parseInt($("#other_prof").val())
@@ -71,7 +71,7 @@ function startOthers() {
                 app.finish(data, function (response) {
                     if (response === false) {
                         // alert("There is a connection problem; please, try again later.");
-                        alert("Há um problema de conexão; por favor, tente novamente mais tarde.");
+                        alert(translator.getKeyLanguageValue("general1"));
                     }
                     else {
                         util.redirectToPage({

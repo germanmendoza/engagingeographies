@@ -211,7 +211,7 @@
          var cevalidation = $('[name=ce1]:checked,[name=ce2]:checked,[name=ce3]:checked');
          if (cevalidation.length < 3) {
              // alert("Please, answer all the questions");
-             alert("Por favor, responda todas as perguntas.");
+             alert(translator.getKeyLanguageValue("general5"));
              return;
          }
          /*var cevalidationbondingbridging = $('[name=ce1]:checked,[name=ce2]:checked,[name=ce3]:checked');
@@ -267,7 +267,7 @@
          app.setCE(data, function (response) {
              if (response === false) {
                  // alert("There is a connection problem; please, try again later");
-                 alert("Há um problema de conexão; por favor, tente novamente mais tarde.");
+                 alert(translator.getKeyLanguageValue("general1"));
              }
              else {
                  util.redirectToPage({

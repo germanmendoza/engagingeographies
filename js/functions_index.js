@@ -51,7 +51,7 @@ function startall() {
             app.setHome(data, function (response) {
                 if (response === false) {
                     // alert("There is a connection problem; please, try again later");
-                    alert("Há um problema de conexão; por favor, tente novamente mais tarde.");
+                    alert(translator.getKeyLanguageValue("general1"));
                 }
                 else {
                     util.redirectToPage({
@@ -79,7 +79,7 @@ function startall() {
             app.setHome(data, function (response) {
                 if (response === false) {
                     // alert("There is a connection problem; please, try again later");
-                    alert("Há um problema de conexão; por favor, tente novamente mais tarde.");
+                    alert(translator.getKeyLanguageValue("general1"));
                 }
                 else {
                     util.redirectToPage({
@@ -105,7 +105,7 @@ function startall() {
             }
             else{
                 // alert("Please, write the zip code");
-                alert("Por favor, escreva o código postal");
+                alert(translator.getKeyLanguageValue("general2"));
             }
         }
         else {
@@ -120,7 +120,7 @@ function startall() {
                 $('#myModal12').modal({backdrop: 'static', keyboard: false});
             }
             else{
-                alert("Indique por favor o seu código postal");
+                alert(translator.getKeyLanguageValue("general3"));
             }
         }
     });
@@ -158,7 +158,7 @@ function startall() {
         app.setHome(data, function (response) {
             if (response === false) {
                 // alert("There is a connection problem; please, try again later");
-                alert("Há um problema de conexão; por favor, tente novamente mais tarde.");
+                alert(translator.getKeyLanguageValue("general1"));
             }
             else {
                 util.redirectToPage({

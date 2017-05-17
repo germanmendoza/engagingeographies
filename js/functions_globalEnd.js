@@ -32,11 +32,11 @@ function startAll () {
                 app.finishA(data,function (response) {
                     if (response === false) {
                         //alert("There is a connection problem; please, try again later");
-                        alert("Há um problema de conexão; por favor, tente novamente mais tarde.");
+                        alert(translator.getKeyLanguageValue("general1"));
                     }
                     else {
                         // alert("Thanks");
-                        alert("Obrigado");
+                        alert(translator.getKeyLanguageValue("general13"));
                     }
                 })
 
@@ -44,7 +44,7 @@ function startAll () {
             }
             else{
                // alert("Please introduce a mail and/or twitter username valid structure");
-                alert("Introduza um endereço de e-mail e / ou nome de usuário válido estrutura");
+                alert(translator.getKeyLanguageValue("general14"));
             }
         }
         //$('#myModalsatisfaction').modal('show');
@@ -106,10 +106,10 @@ function areasLoading() {
 
         var count = 0;
         var SOPStyle = function (feature) {
-            return {color: "#ff0000"};
+            return {color: "#ff0000", weight: 1};
         };
         var SCStyle = function (feature) {
-            return {color: "#4080ff"};
+            return {color: "#4080ff", weight: 1};
             /*if (count++ >=   2){
              return {color: "#6000ff"};
              }
@@ -118,7 +118,7 @@ function areasLoading() {
              }*/
         };
         var CEStyle = function (feature) {
-            return {color: "#00ff00"};
+            return {color: "#00ff00", weight: 1};
         };
 
         app.getSOPA(function (SOPLayersGeoJson) {

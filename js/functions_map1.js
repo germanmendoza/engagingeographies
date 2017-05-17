@@ -49,7 +49,7 @@ function startAll() {
 
     $('#plus_name').click(function () {
         if (!$('#actual_place').val()){
-            alert("Por favor, insira pelo menos um nome de grupo.");
+            alert(translator.getKeyLanguageValue("general4"));
         }
         else{
             name_places.push($('#actual_place').val());
@@ -92,7 +92,7 @@ function startAll() {
         }
         else {
             // alert("Please, insert at least a group name");
-            alert("Por favor, insira pelo menos um nome de grupo.");
+            alert(translator.getKeyLanguageValue("general4"));
         }
 
     });
@@ -174,7 +174,7 @@ function startAll() {
 
         var naturevalidation = $('[name=na1]:checked,[name=na2]:checked,[name=na3]:checked,[name=na4]:checked');
         if (naturevalidation.length < 4) {
-            alert("Por favor responda a todas as perguntas");
+            alert(translator.getKeyLanguageValue("general5"));
             return;
         }
 
@@ -355,7 +355,7 @@ function startAll() {
                 $("#pd3").html(pd3re);
             }
             else {
-                alert("Por favor, escolha uma área");
+                alert(translator.getKeyLanguageValue("general6"));
             }
         });
 
@@ -398,7 +398,7 @@ function startAll() {
 
         var sopvalidation = $('[name=PI1]:checked,[name=PI2]:checked,[name=PI3]:checked,[name=PA1]:checked,[name=PA2]:checked,[name=PA3]:checked,[name=PD1]:checked,[name=PD2]:checked,[name=PD3]:checked');
         if (sopvalidation.length < 9) {
-            alert("Por favor responda a todas as perguntas");
+            alert(translator.getKeyLanguageValue("general5"));
             return;
         }
 
@@ -432,7 +432,7 @@ function startAll() {
         app.setSOP(data2, function (response) {
             if (response === false) {
                 // alert("There is a connection problem; please, try again later");
-                alert("Há um problema de conexão; por favor, tente novamente mais tarde.");
+                alert(translator.getKeyLanguageValue("general1"));
             }
             else {
                 util.redirectToPage({

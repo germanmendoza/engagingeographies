@@ -1,7 +1,7 @@
 {
   "index1": "Este questionário é parte integrante de um projeto de investigação da Nova Information Management School (NOVA IMS) da Universidade Nova de Lisboa. O objetivo principal é perceber a forma como a perceção do local e as relações sociais do cidadão influenciam a sua participação numa dada área urbana.",
   "index2": "O preenchimento do questionário demora cerca de 5 minutos e a atividade de mapeamento cerca de 15 minutos, dependendo do número de áreas que se pretenderem assinalar.",
-  "index3": "A sua contribuição apoia os processos participativos da cidade de Lisboa.",
+  "index3": "A sua contribuição apoia os processos participativos da cidade de Lisboa. Por favor, faça o inquerito no laptop.",
   "index4": "Reside em Lisboa?",
   "index5": "Sim",
   "index6": "Não",
@@ -78,8 +78,8 @@
   "map1-42":"Isto é um questionário com base num mapa para a cidade de Lisboa. Convidamo-lo a desenhar áreas no mapa de forma livre.",
   "map1-43":"Pressione o botão",
   "map1-44":"situado ao centro na parte superior do mapa e clique no mapa para definir o seu primeiro ponto. Clique os pontos que considerar necessários para definir um polígono (área).Para fechar um polígono, clique outra vez no primeiro ponto. Pode fazer alterações na forma do polígono movendo qualquer um dos pontos.Pode apagar o área clicando o botão",
-  "map1-44a":"XXXX",
-  "map1-44b":"XXXX   Quanto mais polígonos desenhar melhor.",
+  "map1-44a":"Pode mover o mapa e aproximar e afastar (+ ou -) utilizando os controlos do mapa para ir diretamente para uma dada freguesia utilizando o botão",
+  "map1-44b":"Pode desenhar todas as áreas de que queira.",
   "map1-46":"Após desenhar as áreas iremos fazer-lhe perguntas sobre essas áreas. Nesse sentido, queira por favor responder às perguntas quando solicitado para tal.",
   "map1-48":"Quando terminar de definir as suas áreas pode passar à próxima atividade, pressionando o botão ",
 
@@ -192,11 +192,29 @@
   "global4":"Enviar",
   "global5":"Tweetar",
   "global6":"Até à próxima :)",
-  "global7":"Your opinion is important!",
-  "global8":"Please give your opinion about the following issues. (where 0 is nothing and 5 is totally)",
-  "global9":"How difficult have you found to answer the questions?",
-  "global10":"How difficult have you found the mapping process?",
-  "global11":"Please, if you want put some comment to improve the application."
+  "global7":"A sua opinião é importante!",
+  "global8":"Por favor dê a sua opinião sobre os assuntos que se seguem. (em que 0 é nada e 5 é totalmente)",
+  "global9":"Qual foi o grau de dificuldade da resposta às perguntas?",
+  "global10":"Qual foi o grau de dificuldade do processo de mapeamento?",
+  "global11":"Se quiser pode escrever alguns comentários de forma a melhorar a aplicação.",
+
+  "general1":"Há um problema de conexão; por favor, tente novamente mais tarde.",
+  "general2":"Por favor, escreva o código postal",
+  "general3":"Indique por favor o seu código postal",
+  "general4":"Por favor, insira pelo menos um nome de area.",
+  "general5":"Por favor responda a todas as perguntas",
+  "general6":"Por favor, escolha uma área",
+  "general7":"Por favor, insira pelo menos um nome de grupo.",
+  "general8":"Por favor, escolha um tipo de grupo.",
+  "general9":"Por favor, introduza a natureza do grupo.",
+  "general10":"Por favor, introduza um nivel de estudios.",
+  "general11":"Por favor, introduza uma profissão.",
+  "general12":"Por favor, introduza o salário mensal do seu agregado familiar em Euros.",
+  "general13":"Obrigado",
+  "general14":"Introduza um endereço de e-mail e / ou nome de usuário válido estrutura"
+
+
+
 
 
 

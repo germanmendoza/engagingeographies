@@ -1,7 +1,7 @@
 {
   "index1": "The following web-map survey is part of a research project at NOVA IMS (Lisbon). Its primary objective is to understand how citizens' place perceptions, and their relationships, influence participation in a given urban area.",
   "index2": "The questionnaire will take less than 5 minutes, and the mapping activity takes most people around 15 minutes, depending on how many areas you define.",
-  "index3": "With your contribution, you will support the improvement of Lisbon municipality participation processes.",
+  "index3": "With your contribution, you will support the improvement of Lisbon municipality participation processes. Please, do the survey with the laptop.",
   "index4": "Do you live in Lisbon?",
   "index5": "Yes",
   "index6": "No",
@@ -193,10 +193,26 @@
   "global5":"Tweet",
   "global6":"Until next time",
   "global7":"Your opinion is important!",
-  "global8":"Please give your opinion about the following issues. (where 0 is nothing and 5 is totally)",
+  "global8":"Please give us your opinion about the following issues. (where 0 is nothing and 5 is totally)",
   "global9":"How difficult have you found to answer the questions?",
   "global10":"How difficult have you found the mapping process?",
-  "global11":"Please, if you want put some comment to improve the application."
+  "global11":"Please, if you want put some comment to improve the application.",
+
+
+  "general1":"There is a problem with the server; try again later.",
+  "general2":"Please, write the zip-code",
+  "general3":"Please, indicate your zip-code.",
+  "general4":"Please, write at least the name of one area.",
+  "general5":"Please, answer all the questions",
+  "general6":"Please, select one area.",
+  "general7":"Please, write at least the name of one group.",
+  "general8":"Please, select a type of group.",
+  "general9":"Please, insert a group's nature.",
+  "general10":"Please, select a study level.",
+  "general11":"Please, select a profession",
+  "general12":"Please, select the monthly salary of your household in Euros.",
+  "general13":"Thanks",
+  "general14":"Please, insert an email and/or a valid twitter user name"
 
 
 

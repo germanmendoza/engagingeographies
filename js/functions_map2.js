@@ -73,7 +73,7 @@ function startAll() {
         }
         else {
             // alert("Please, insert at least a group name");
-            alert("Por favor, insira pelo menos um nome de grupo.");
+            alert(  translator.getKeyLanguageValue("general7"));
         }
 
 
@@ -100,7 +100,7 @@ function startAll() {
 
         if ($("#nature").val() == "0") {
             // alert("Please, choose a kind of group");
-            alert("Por favor, escolha um tipo de grupo.");
+            alert(translator.getKeyLanguageValue("general8"));
         }
 
 
@@ -111,7 +111,7 @@ function startAll() {
         else {
             if (!$("#other").val()) {
                 // alert("Please, introduce the nature of the group.")
-                alert("Por favor, introduza a natureza do grupo.");
+                alert(translator.getKeyLanguageValue("general9"));
             }
             else {
                 currGroup.nature = $('#other').val();
@@ -167,7 +167,7 @@ function startAll() {
                         app.setSC(data2, function (response) {
                             if (response === false) {
                                 // alert("There is a connection problem; please, try again later");
-                                alert("Há um problema de conexão; por favor, tente novamente mais tarde.");
+                                alert(translator.getKeyLanguageValue("general1"));
                             }
                             else {
                                 util.redirectToPage({
@@ -193,7 +193,7 @@ function startAll() {
                     app.setSC(data2, function (response) {
                         if (response === false) {
                             // alert("There is a connection problem; please, try again later");
-                            alert("Há um problema de conexão; por favor, tente novamente mais tarde.");
+                            alert(translator.getKeyLanguageValue("general1"));
                         }
                         else {
                             util.redirectToPage({
@@ -254,7 +254,7 @@ function startAll() {
         if ($("#nature").val() == "19") {
             if (!$("#other").val()) {
                 // alert("Please, introduce the nature of the group.")
-                alert("Por favor, introduza a natureza do grupo.");
+                alert(translator.getKeyLanguageValue("general9"));
             }
             else {
                 $("#SC_group").removeClass().addClass("show");
@@ -285,7 +285,7 @@ function startAll() {
         var scvalidationbondingbridging = $('[name=bosc1]:checked,[name=bosc2]:checked,[name=brsc1]:checked,[name=brsc2]:checked');
         if (scvalidationbondingbridging.length < 4) {
             // alert("Please, answer all the questions");
-            alert("Por favor, responda todas as perguntas.");
+            alert(translator.getKeyLanguageValue("general5"));
             return;
         }
 
@@ -478,7 +478,7 @@ function startAll() {
         var scvalidation = $('[name=soc1]:checked,[name=soc2]:checked,[name=soc3]:checked,[name=n1]:checked,[name=n2]:checked,[name=n3]:checked,[name=cee1]:checked,[name=cee2]:checked,[name=cee3]:checked,[name=cp1]:checked,[name=cp2]:checked,[name=cp3]:checked');
         if (scvalidation.length < 12) {
             // alert("Please, answer all the questions");
-            alert("Por favor, responda todas as perguntas.");
+            alert(translator.getKeyLanguageValue("general5"));
             return;
         }
 
@@ -517,7 +517,7 @@ function startAll() {
         app.setSC(data2, function (response) {
             if (response === false) {
                 // alert("There is a connection problem; please, try again later");
-                alert("Há um problema de conexão; por favor, tente novamente mais tarde.");
+                alert(translator.getKeyLanguageValue("general1"));
             }
             else {
                 util.redirectToPage({
