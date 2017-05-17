@@ -77,9 +77,10 @@
   "map1-41":"Vamos começar! Leia por favor com atenção as instruções que se seguem",
   "map1-42":"Isto é um questionário com base num mapa para a cidade de Lisboa. Convidamo-lo a desenhar áreas no mapa de forma livre.",
   "map1-43":"Pressione o botão",
-  "map1-44":"situado ao centro na parte superior do mapa e clique no mapa para definir o seu primeiro ponto. Clique os pontos que considerar necessários para definir um polígono (área).Para fechar um polígono, clique outra vez no primeiro ponto. Pode fazer alterações na forma do polígono movendo qualquer um dos pontos.Pode apagar o área clicando o botão",
-  "map1-44a":"Pode mover o mapa e aproximar e afastar (+ ou -) utilizando os controlos do mapa ou para ir diretamente para uma dada freguesia utilizando o botão",
+  "map1-44":"situado na parte superior do mapa e clique no mapa para definir o seu primeiro ponto. Clique os pontos que considerar necessários para definir um polígono (área).Para fechar um polígono, clique outra vez no primeiro ponto. Pode fazer alterações na forma do polígono movendo qualquer um dos pontos.Pode apagar o área clicando o botão",
+  "map1-44a":"Pode mover o mapa e aproximar e afastar utilizando os controlos do mapa",
   "map1-44b":"Pode desenhar todas as áreas de que queira.",
+  "map1-44c":"ou para ir diretamente para uma dada freguesia utilizando o botão",
   "map1-46":"Após desenhar as áreas iremos fazer-lhe perguntas sobre essas áreas. Nesse sentido, queira por favor responder às perguntas quando solicitado para tal.",
   "map1-48":"Quando terminar de definir as suas áreas pode passar à próxima atividade, pressionando o botão ",
 
@@ -183,7 +184,15 @@
   "finish24":"2000 - 2999",
   "finish25":"3000 - 4999",
   "finish26":"Mas de 5000",
-  "finish27":"",
+  "finish27":"4ª classe",
+  "finish28":"12º ano ou equivalente",
+  "finish29":"Licenciatura",
+  "finish30":"Pós-Graduação",
+  "finish31":"Mestrado",
+  "finish32":"Doutoramento",
+  "finish33":"NS/NR",
+  "finish34":"None",
+
 
 
   "global1":"Agradecemos a sua participação",
@@ -212,7 +221,8 @@
   "general12":"Por favor, introduza o salário mensal do seu agregado familiar em Euros.",
   "general13":"Obrigado",
   "general14":"Introduza um endereço de e-mail e / ou nome de usuário válido estrutura",
-  "general15":"Please, select um grupo."
+  "general15":"Please, select um grupo.",
+  "general16":"Adicionar"
 
 
 

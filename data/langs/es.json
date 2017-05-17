@@ -2,11 +2,11 @@
   "index1": "Este cuestionario es parte de un proyecto de investigación de la universidad NOVA (Lisboa). El principal objetivo del estudio es comprender como las percepciones de los ciudadanos y sus relaciones sociales, influyen en la participación pública en un contexto urbano.",
   "index2": "Responder el cuestionario se demora menos de 5 minutos y la actividad de dibujo le lleva a la mayoría de la gente unos 15 minutos, depende del número de áreas a definir.",
   "index3": "Con tu contribución, vamos a mejorar los procesos participativos de Lisboa. Por favor, haga el cuestionario en un ordenador portátil o de escritorio",
-  "index4": "Resides den Lisboa?",
+  "index4": "Vives en Lisboa?",
   "index5": "Si",
   "index6": "No",
   "index7": "Notas:",
-  "index8": "1. Todos los datos recolectados son tratados con confidencialidad y anonimato, admás no serán usados con fines comerciales o distribuídos a terceros.",
+  "index8": "1. Todos los datos recolectados son tratados con confidencialidad y anonimato, además no serán usados con fines comerciales o distribuidos a terceros.",
   "index8a": "2. Para obtener más información o dudas acerca del estudio, puedes contactar con nosotros usando el mail acedo@novaims.unl.pt (Albert Acedo Sánchez) o visitando nuestro blog.",
   "index9": "Siguiente",
   "index10": "Por favor, seleccione el barrio donde vive.",
@@ -17,9 +17,9 @@
   "index15": "1-3 años",
   "index16": "3-6 años",
   "index17": "más de 6 años",
-  "index18": "Indica por favor el código postal de su casa",
+  "index18": "Indica por favor el código postal donde se encuentra su casa",
   "index19": "Si no quieres dar tu código postal, por favor marca el cuadro.",
-  "index20": "Por favor selecciona lo menos positivo de su barrio (Máx. 3)",
+  "index20": "Por favor selecciona lo menos positivo de tu barrio (Máx. 3)",
   "index21": "Estado calles",
   "index22": "Parking",
   "index23": "Accessibilidad",
@@ -77,9 +77,10 @@
   "map1-41":"Vamos a empezar!! – Por favor, lee atentamente las siguientes instrucciones.",
   "map1-42":"Este es un cuestionario para la ciudad de Lisboa. Te invitamos a dibujar áreas en el mapa de forma libre.",
   "map1-43":"Para empezar a dibujar, clica el botón",
-  "map1-44":"situado en el centro de la parte superior del mapa y luego define tu primer punto del área, y tantos puntos como necesites para definir el área. Para finalizar el área, clica en el primer punto otra vez. Puedes editar el área moviendo los puntos o incluso borrarla clicando el botón",
-  "map1-44a":"Puedes acer zoom en el mapa (+ o -) usando los controles del mapa o ir directamente a un barrio utilizando el botón",
+  "map1-44":"situado en la parte superior del mapa y luego define tu primer punto del área, y tantos puntos como necesites para definir el área. Para finalizar el área, clica en el primer punto otra vez. Puedes editar el área moviendo los puntos o incluso borrarla clicando el botón",
+  "map1-44a":"Puedes hacer zoom en el mapa usando los controles del mapa",
   "map1-44b":"Puedes dibujar tantas áreas como necesites.",
+  "map1-44c":"o ir directamente a un barrio utilizando el botón",
   "map1-46":"Después de definir cada área vamos a realizarte preguntas sobre ella.",
   "map1-48":"Eso es todo. Cuando acabes de definir las áreas y contestar las preguntas, para ir a la siguient actividad clica el botón.",
 
@@ -183,7 +184,14 @@
   "finish24":"2000 - 2999",
   "finish25":"3000 - 4999",
   "finish26":"Más de 5000",
-  "finish27":"",
+  "finish27":"Escuela primaria",
+  "finish28":"Escuela secundaria",
+  "finish29":"Estudios universitarios",
+  "finish30":"Post-graduado",
+  "finish31":"Master",
+  "finish32":"Doctorado",
+  "finish33":"NS/NC",
+  "finish34":"Ninguno de los anteriores",
 
 
   "global1":"Muchas gracias, apreciamos mucho tu esfuerzo.",
@@ -212,7 +220,8 @@
   "general12":"Por favor, indique el salario mensual de su agregado familiar en Euros.",
   "general13":"Gracias",
   "general14":"Introduzca una dirección de mail y/o un nombre de usuario válido.",
-  "general15":"Por favor, selecciona un grupo."
+  "general15":"Por favor, selecciona un grupo.",
+  "general16":"Añadir"
 
 
 
