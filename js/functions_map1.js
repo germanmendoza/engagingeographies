@@ -4,8 +4,9 @@
 
 
 var number = 0;
-var name_places;
+var name_places = [];
 var SOP = [];
+var current_name = [];
 
 
 function startAll() {
@@ -46,9 +47,35 @@ function startAll() {
 
     //
 
+    $('#plus_name').click(function () {
+        if (!$('#actual_place').val()){
+            alert("Por favor, insira pelo menos um nome de grupo.");
+        }
+        else{
+            name_places.push($('#actual_place').val());
+            $('#actual_place').val("");
+            names();
+        }
+
+    });
+
+
+    function names() {
+        if (name_places.length > 0) {
+            var text_names = "";
+            for (i = 0; i < name_places.length; i++) {
+                current_name[i] = name_places[i];
+                text_names = text_names + ' ' + current_name[i];
+            }
+            $("#words").html(text_names);
+            $("#continuar").removeClass("hidden").addClass("show");
+
+        }
+
+    }
 
     $('#submit_name_places').click(function () {
-        name_places = $('#name_actual_place').val();
+        //name_places = $('#name_actual_place').val();
         if (name_places.length > 0) {
             $("#let_draw").toggleClass("hidden show");
             $("#title_done").toggleClass("hidden show");
@@ -71,10 +98,9 @@ function startAll() {
     });
 
 
-
-        function nameplace() {
+    function nameplace() {
         $("#group_name_place").html(translator.getKeyLanguageValue("map1-11"));
-        var replaced = $("#group_name_place").html().replace('hola', name_places[number] );
+        var replaced = $("#group_name_place").html().replace('hola', name_places[number]);
         $("#group_name_place").html(replaced);
         $("#draw_places").html(translator.getKeyLanguageValue("map1-12"));
         var replaced1 = $("#draw_places").html().replace('hola', '<b>' + name_places[number] + '</b>');
@@ -89,46 +115,43 @@ function startAll() {
     };
 
 
-
-
-
     /*// SLIDER
-        $("#ex1").slider();
-        $("#ex1").on("slide", function (slideEvt) {
-            $("#ex1SliderVal").text(slideEvt.value);
-        });
-        $("#ex2").slider();
-        $("#ex2").on("slide", function (slideEvt) {
-            $("#ex2SliderVal").text(slideEvt.value);
-        });
-        $("#ex3").slider();
-        $("#ex3").on("slide", function (slideEvt) {
-            $("#ex3SliderVal").text(slideEvt.value);
-        });
-        $("#ex4").slider();
-        $("#ex4").on("slide", function (slideEvt) {
-            $("#ex4SliderVal").text(slideEvt.value);
-        });
-        $("#ex5").slider();
-        $("#ex5").on("slide", function (slideEvt) {
-            $("#ex5SliderVal").text(slideEvt.value);
-        });
-        $("#ex6").slider();
-        $("#ex6").on("slide", function (slideEvt) {
-            $("#ex6SliderVal").text(slideEvt.value);
-        });
-        $("#ex7").slider();
-        $("#ex7").on("slide", function (slideEvt) {
-            $("#ex7SliderVal").text(slideEvt.value);
-        });
-        $("#ex8").slider();
-        $("#ex8").on("slide", function (slideEvt) {
-            $("#ex8SliderVal").text(slideEvt.value);
-        });
-        $("#ex9").slider();
-        $("#ex9").on("slide", function (slideEvt) {
-            $("#ex9SliderVal").text(slideEvt.value);
-        });*/
+     $("#ex1").slider();
+     $("#ex1").on("slide", function (slideEvt) {
+     $("#ex1SliderVal").text(slideEvt.value);
+     });
+     $("#ex2").slider();
+     $("#ex2").on("slide", function (slideEvt) {
+     $("#ex2SliderVal").text(slideEvt.value);
+     });
+     $("#ex3").slider();
+     $("#ex3").on("slide", function (slideEvt) {
+     $("#ex3SliderVal").text(slideEvt.value);
+     });
+     $("#ex4").slider();
+     $("#ex4").on("slide", function (slideEvt) {
+     $("#ex4SliderVal").text(slideEvt.value);
+     });
+     $("#ex5").slider();
+     $("#ex5").on("slide", function (slideEvt) {
+     $("#ex5SliderVal").text(slideEvt.value);
+     });
+     $("#ex6").slider();
+     $("#ex6").on("slide", function (slideEvt) {
+     $("#ex6SliderVal").text(slideEvt.value);
+     });
+     $("#ex7").slider();
+     $("#ex7").on("slide", function (slideEvt) {
+     $("#ex7SliderVal").text(slideEvt.value);
+     });
+     $("#ex8").slider();
+     $("#ex8").on("slide", function (slideEvt) {
+     $("#ex8SliderVal").text(slideEvt.value);
+     });
+     $("#ex9").slider();
+     $("#ex9").on("slide", function (slideEvt) {
+     $("#ex9SliderVal").text(slideEvt.value);
+     });*/
 
 
     /*var namearea;
@@ -217,18 +240,17 @@ function startAll() {
             nameplace();
             $("#group_name_place").fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
 
-/*
+            /*
 
-            for (i = 1; i <= 7; i++) {
-                $('input[id=ex' + i + ']').slider('setValue', 0);
-                $('span[id=ex' + i + 'SliderVal]').text(0);
-            };
-*/
+             for (i = 1; i <= 7; i++) {
+             $('input[id=ex' + i + ']').slider('setValue', 0);
+             $('span[id=ex' + i + 'SliderVal]').text(0);
+             };
+             */
             $("input[name=na1]").prop('checked', false);
             $("input[name=na2]").prop('checked', false);
             $("input[name=na3]").prop('checked', false);
             $("input[name=na4]").prop('checked', false);
-
 
 
             SOP.push(polygonData);
@@ -521,7 +543,6 @@ function startAll() {
     $('#d-saovicente').click(function () {
         map.setView([38.718305, -9.130119], 15);
     });
-
 
 
     //Freguesia buttons XS

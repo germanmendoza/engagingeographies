@@ -9,7 +9,8 @@
 var SC = [];
 var currGroup;
 var areasdrawn = 0;
-var name_groups;
+var name_groups =[];
+var current_group = [];
 var number = 0;
 var spatialyes = 0;
 
@@ -24,8 +25,35 @@ function startAll() {
         tokenSeparators: [","]
     });
 
+
+    $('#plus_group').click(function () {
+        if (!$('#actual_group').val()){
+            alert("Por favor, insira pelo menos um nome de grupo.");
+        }
+        else{
+            name_groups.push($('#actual_group').val());
+            $('#actual_group').val("");
+            namesgroups();
+        }
+
+    });
+
+    function namesgroups() {
+        if (name_groups.length > 0) {
+            var text_groups = "";
+            for (i = 0; i < name_groups.length; i++) {
+                current_group[i] = name_groups[i];
+                text_groups = text_groups + ' ' + current_group[i];
+            }
+            $("#words1").html(text_groups);
+            $("#continuar1").removeClass("hidden").addClass("show");
+
+        }
+
+    }
+
     $('#submit_name_group').click(function () {
-        name_groups = $('#name_actual_group').val();
+        //name_groups = $('#name_actual_group').val();
         if (name_groups.length > 0) {
             $("#specifications").toggleClass("hidden show");
             $("#groups_done").toggleClass("hidden show");
