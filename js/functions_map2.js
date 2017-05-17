@@ -13,6 +13,7 @@ var name_groups =[];
 var current_group = [];
 var number = 0;
 var spatialyes = 0;
+var contador = 0;
 
 function startAll() {
     /*buttonDelete.prop('disabled', true);
@@ -34,6 +35,8 @@ function startAll() {
             name_groups.push($('#actual_group').val());
             $('#actual_group').val("");
             namesgroups();
+            contador=0;
+
         }
 
     });
@@ -43,7 +46,7 @@ function startAll() {
             var text_groups = "";
             for (i = 0; i < name_groups.length; i++) {
                 current_group[i] = name_groups[i];
-                text_groups = text_groups + ' ' + current_group[i];
+                text_groups = text_groups + '   ' + current_group[i];
             }
             $("#words1").html(text_groups);
             $("#continuar1").removeClass("hidden").addClass("show");
@@ -51,6 +54,21 @@ function startAll() {
         }
 
     }
+
+    $( "#actual_group" ).keypress(function( event ) {
+
+        if (!$('#actual_group').val()){
+            if (contador==0){
+                $("#continuar1").removeClass("show").addClass("hidden");
+            }
+            else {
+                $("#continuar1").removeClass("hidden").addClass("show");
+            }
+        }
+        else {
+            $("#continuar1").removeClass("show").addClass("hidden");
+        }
+    });
 
     $('#submit_name_group').click(function () {
         //name_groups = $('#name_actual_group').val();

@@ -7,6 +7,7 @@ var number = 0;
 var name_places = [];
 var SOP = [];
 var current_name = [];
+var contador=0;
 
 
 function startAll() {
@@ -55,9 +56,12 @@ function startAll() {
             name_places.push($('#actual_place').val());
             $('#actual_place').val("");
             names();
+            contador=0;
         }
 
     });
+
+
 
 
     function names() {
@@ -65,7 +69,7 @@ function startAll() {
             var text_names = "";
             for (i = 0; i < name_places.length; i++) {
                 current_name[i] = name_places[i];
-                text_names = text_names + ' ' + current_name[i];
+                text_names = text_names + '   ' + current_name[i];
             }
             $("#words").html(text_names);
             $("#continuar").removeClass("hidden").addClass("show");
@@ -73,6 +77,24 @@ function startAll() {
         }
 
     }
+
+
+    $( "#actual_place" ).keypress(function( event ) {
+
+        if (!$('#actual_place').val()){
+            if (contador==0){
+                $("#continuar").removeClass("show").addClass("hidden");
+            }
+            else {
+                $("#continuar").removeClass("hidden").addClass("show");
+            }
+        }
+        else {
+            $("#continuar").removeClass("show").addClass("hidden");
+        }
+    });
+
+
 
     $('#submit_name_places').click(function () {
         //name_places = $('#name_actual_place').val();

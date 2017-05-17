@@ -1,7 +1,7 @@
 {
   "index1": "Este cuestionario es parte de un proyecto de investigación de la universidad NOVA (Lisboa). El principal objetivo del estudio es comprender como las percepciones de los ciudadanos y sus relaciones sociales, influyen en la participación pública en un contexto urbano.",
   "index2": "Responder el cuestionario se demora menos de 5 minutos y la actividad de dibujo le lleva a la mayoría de la gente unos 15 minutos, depende del número de áreas a definir.",
-  "index3": "Con tu contribución, vamos a mejorar los procesos participativos de Lisboa. Por favor, haga el cuestionario en el ordenador",
+  "index3": "Con tu contribución, vamos a mejorar los procesos participativos de Lisboa. Por favor, haga el cuestionario en un ordenador portátil o de escritorio",
   "index4": "Resides den Lisboa?",
   "index5": "Si",
   "index6": "No",
@@ -199,7 +199,7 @@
   "global11":"Si quieres, puedes dejar aquí algun comentario.",
 
   "general1":"Hay un problema con la conexión; por favor, intentelo más tarde.",
-  "general2":"Por favor, escriba su código postal",
+  "general2":"Por favor, escriba su código postal correctamente",
   "general3":"Indique por favor su código postal",
   "general4":"Por favor, indique por lo menos un nombre de área.",
   "general5":"Por favor, responda a todas las preguntas.",
