@@ -97,6 +97,16 @@ function startMapComponents(){
 }
 
 
+$('#finishglobalend').click(function () {
+
+    var data2 = {
+        id : util.getFromLocalStorage(util.interPageDataKey), //nose si hace falta
+        di1: parseInt($("input[name=di1]:checked").val()),
+        dm1: parseInt($("input[name=dm1]:checked").val()),
+        comment: parseInt($("#comment").val())
+    };
+});
+
 
 function areasLoading() {
     try {
