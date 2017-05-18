@@ -108,7 +108,8 @@ uiCoreWS = {
     SC: 'home/SC_data',
     CE: 'home/CE_data',
     finish: 'home/finish',
-    globalEnd: 'home/final_details'
+    globalEnd: 'home/final_details',
+    comments: 'home/comments'
 };
 
 //------------------------------------------------------
@@ -361,6 +362,13 @@ app = {
     finishA: function (data, callback) {
         uiCoreAPI._postRequest(
             uiCoreAPI.instanceUrl + uiCoreWS.globalEnd,
+            data,
+            callback
+        );
+    },
+    comments: function (data, callback) {
+        uiCoreAPI._postRequest(
+            uiCoreAPI.instanceUrl + uiCoreWS.comments,
             data,
             callback
         );

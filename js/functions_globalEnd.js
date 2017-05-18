@@ -18,9 +18,6 @@ function startAll () {
         var testtwitter = /^@?(\w){1,15}$/;
         var twitter = $("#twitter_name" ).val();
 
-
-
-
         if (mail != "" & twitter != "") {
             if (testEmail.test(mail) & testtwitter.test(twitter)){
 
@@ -37,8 +34,9 @@ function startAll () {
                     else {
                         // alert("Thanks");
                         alert(translator.getKeyLanguageValue("general13"));
+                        $('#myModalsatisfaction').modal('show');
                     }
-                })
+                });
 
 
             }
@@ -47,10 +45,24 @@ function startAll () {
                 alert(translator.getKeyLanguageValue("general14"));
             }
         }
-        //$('#myModalsatisfaction').modal('show');
     });
 
-
+    $('#finishglobalend').click(function () {
+        var finalComments = {
+            id : util.getFromLocalStorage(util.interPageDataKey), //nose si hace falta
+            di1: parseInt($("input[name=di1]:checked").val()),
+            dm1: parseInt($("input[name=dm1]:checked").val()),
+            comment: $("#comment").val()
+        };
+        app.comments(finalComments, function (response) {
+            if (response === false) {
+                alert(translator.getKeyLanguageValue("general1"));
+            }
+            else {
+                alert(translator.getKeyLanguageValue("general13"));
+            }
+        });
+    });
 }
 
 function startMapComponents(){
@@ -95,17 +107,6 @@ function startMapComponents(){
         console.error(err.message)
     }
 }
-
-
-$('#finishglobalend').click(function () {
-
-    var data2 = {
-        id : util.getFromLocalStorage(util.interPageDataKey), //nose si hace falta
-        di1: parseInt($("input[name=di1]:checked").val()),
-        dm1: parseInt($("input[name=dm1]:checked").val()),
-        comment: parseInt($("#comment").val())
-    };
-});
 
 
 function areasLoading() {
