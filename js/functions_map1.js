@@ -48,18 +48,18 @@ function startAll() {
 
     //
 
-    $('#plus_name').click(function () {
-        if (!$('#actual_place').val()){
-            alert(translator.getKeyLanguageValue("general4"));
+    $('#plus_name').click(function () { 
+        if (!$('#actual_place').val() && (name_places.length == 0)){ 
+            alert(translator.getKeyLanguageValue("general4")); 
+        } 
+        else if (!$('#actual_place').val() && (name_places.length > 0)) { 
+            $("#continuar").removeClass("hidden").addClass("show"); 
+        } 
+        else{ 
+            name_places.push($('#actual_place').val());         $('#actual_place').val("");         names();         contador=0; 
         }
-        else{
-            name_places.push($('#actual_place').val());
-            $('#actual_place').val("");
-            names();
-            contador=0;
-        }
+      });
 
-    });
 
 
 
@@ -69,7 +69,7 @@ function startAll() {
             var text_names = "";
             for (i = 0; i < name_places.length; i++) {
                 current_name[i] = name_places[i];
-                text_names = text_names + '   ' + current_name[i];
+                text_names = text_names + '     ' + current_name[i];
             }
             $("#words").html(text_names);
             $("#continuar").removeClass("hidden").addClass("show");

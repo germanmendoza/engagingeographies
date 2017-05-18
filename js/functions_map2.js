@@ -28,8 +28,11 @@ function startAll() {
 
 
     $('#plus_group').click(function () {
-        if (!$('#actual_group').val()){
+        if (!$('#actual_group').val()&& (name_groups.length == 0)){
             alert(translator.getKeyLanguageValue("general7"));
+        }
+        else if(!$('#actual_group').val() && (name_groups.length == 0)){
+            $("#continuar1").removeClass("hidden").addClass("show");
         }
         else{
             name_groups.push($('#actual_group').val());
@@ -40,6 +43,7 @@ function startAll() {
         }
 
     });
+
 
     function namesgroups() {
         if (name_groups.length > 0) {
