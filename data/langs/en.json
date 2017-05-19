@@ -42,7 +42,7 @@
   "map1-6":"identify the most with (e.g., this place represents me)",
   "map1-7":"and/or feel attached to (e.g., I love this place)",
   "map1-8":"and/or depend on (e.g., it is the most suitable place for doing the things that I enjoy the most)",
-  "map1-9":"Can you write words that define these areas? Write as many words as areas you have. Take your time :)",
+  "map1-9":"Can you write (one or more) words that define each area? Please think of an area, and write, in the textbox below, one or more words that define that area, and click “Add area”. You can add as many areas as you want. Take your time :) ",
   "map1-10":"Note: separate words by commas or the “enter” key.",
   "map1-11":"Area hola",
   "map1-12":"Please draw the area (hola) using the",
@@ -86,7 +86,7 @@
 
 
   "map2-1":"We would like also to ask you about the groups of people or organizations, networks, associations to which you belong. These could be formally organized groups (religious groups, familiar groups, sports teams, workplace groups…) or just groups of people who get together regularly to do an activity or talk about things.",
-  "map2-2":"Can you write words that define your groups? Write as many words as groups you have.",
+  "map2-2":"Can you write (one or more) words that define each group? Please think of a group, and write, in the textbox below, one or more words that define that group, and click “Add group”. You can add as many groups as you want. Take your time :)",
   "map2-3":"Group hola",
   "map2-4":"Please, select the nature of this social group (X):",
   "map2-5":"Now, think about the group (X) that you belong to.",
@@ -225,8 +225,10 @@
   "general13":"Thanks",
   "general14":"Please, insert an email and/or a valid twitter user name",
   "general15":"Please, select one group.",
-  "general16":"Add"
-
+  "general16":"Add area",
+  "general17":"Add group",
+  "general18":"Area",
+  "general19":"Group"
 
 
 

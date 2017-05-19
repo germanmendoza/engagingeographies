@@ -42,7 +42,7 @@
   "map1-6":"te identificas más (p.ej., este lugar me representa)",
   "map1-7":"y/o sientes más apego (p.ej., me encanta este lugar)",
   "map1-8":"y/o tienes más dependencia (p.ej., este es el mejor lugar para las actividades que disfruto más)",
-  "map1-9":"Puedes escibir palabras que definan para ti esas áreas? Escribe tantas palabras como áreas tienes.",
+  "map1-9":"Puedes escribir (una o más) palabras que definan cada área? Por favor piensa en un área y escribe en la caja de texto abajo una o más palabras que definan el área, luego clica en “Añadir área”. Puedes añadir tantas áreas como quieras. Tómate tu tiempo. :) ",
   "map1-10":"Nota: separa las palabras con comas",
   "map1-11":"Área hola",
   "map1-13":"Comenzar a dibujar",
@@ -86,7 +86,7 @@
 
 
   "map2-1":"También nos gustaría preguntarte sobre los grupos de personas u organizaciones a los que perteneces. Éstos pueden ser formalmente organizados (religiosos, familiares, deportivos, trabajo...) o simplemente grupos de personas con las que haces actividades regularmente o hablas sobre temas.",
-  "map2-2":"Puedes escibir palabras que definan para ti esos grupos? Escribe tantas palabras como grupos tienes.",
+  "map2-2":"Puedes escribir (una o más) palabras que definan cada grupo? Por favor piensa en un grupo y escribe en la caja de texto abajo una o más palabras que definan el grupo, luego clica en “Añadir grupo”. Puedes añadir tantos grupos como quieras. Tómate tu tiempo. :)",
   "map2-3":"Grupo hola",
   "map2-4":"Por favor, selecciona la naturaleza del grupo social X:",
   "map2-5":"Ahora piensa sobre el grupo (X) al cual perteneces.",
@@ -221,7 +221,10 @@
   "general13":"Gracias",
   "general14":"Introduzca una dirección de mail y/o un nombre de usuario válido.",
   "general15":"Por favor, selecciona un grupo.",
-  "general16":"Añadir"
+  "general16":"Añadir área",
+  "general17":"Añadir grupo",
+  "general18":"Área",
+  "general19":"Grupo"
 
 
 

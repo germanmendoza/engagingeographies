@@ -56,7 +56,10 @@ function startAll() {
             $("#continuar").removeClass("hidden").addClass("show"); 
         } 
         else{ 
-            name_places.push($('#actual_place').val());         $('#actual_place').val("");         names();         contador=0; 
+            name_places.push($('#actual_place').val()); 
+            $('#actual_place').val(""); 
+            names(); 
+            contador=0; 
         }
       });
 
@@ -69,7 +72,7 @@ function startAll() {
             var text_names = "";
             for (i = 0; i < name_places.length; i++) {
                 current_name[i] = name_places[i];
-                text_names = text_names + '     ' + current_name[i];
+                text_names = text_names + '<br>' + translator.getKeyLanguageValue("general18") + ": " + current_name[i];
             }
             $("#words").html(text_names);
             $("#continuar").removeClass("hidden").addClass("show");
