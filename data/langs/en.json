@@ -109,7 +109,7 @@
   "map2-22":"Women's",
   "map2-23":"Youth",
   "map2-24":"Other",
-  "map2-25":"Can it be related with some place?",
+  "map2-25":"Can it be related with some place in Lisbon?",
   "map2-26":"Let’s draw the group X!",
   "map2-26a":"Please, draw all the areas that define the group X using button ",
   "map2-27":"and you can delete the area clicking button",
@@ -204,10 +204,12 @@
   "global5":"Tweet",
   "global6":"Until next time",
   "global7":"Your opinion is important!",
-  "global8":"Please give us your opinion about the following issues. (where 0 is nothing and 5 is totally)",
+  "global8":"Please give us your opinion about the following issues. (where 0 is nothing and 5 is completely)",
   "global9":"How difficult have you found to answer the questions?",
   "global10":"How difficult have you found the mapping process?",
   "global11":"Please, if you want put some comment to improve the application.",
+  "global12":"Nothing",
+  "global13":"Completely",
 
 
   "general1":"There is a problem with the server; try again later.",

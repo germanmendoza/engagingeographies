@@ -50,7 +50,7 @@ function startAll() {
             var text_groups = "";
             for (i = 0; i < name_groups.length; i++) {
                 current_group[i] = name_groups[i];
-                text_groups = text_groups + '<br>' + translator.getKeyLanguageValue("general18") + ": " + current_group[i];
+                text_groups = text_groups + '<br>' + translator.getKeyLanguageValue("general19") + ": " + current_group[i];
             }
             $("#words1").html(text_groups);
             $("#continuar1").removeClass("hidden").addClass("show");

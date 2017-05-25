@@ -109,7 +109,7 @@
   "map2-22":"De mulher",
   "map2-23":"Juventude",
   "map2-24":"Outro",
-  "map2-25":"Pode estar relacionado com um local?",
+  "map2-25":"Pode estar relacionado com um local em Lisboa?",
   "map2-26":"Vamos desenhar o grupo X!",
   "map2-26a":"Desenhe, por favor, todas as áreas que definem o grupo X",
   "map2-27":"Pode apagar a área clicando no botão ",
@@ -202,10 +202,13 @@
   "global5":"Tweetar",
   "global6":"Até à próxima :)",
   "global7":"A sua opinião é importante!",
-  "global8":"Por favor dê a sua opinião sobre os assuntos que se seguem. (em que 0 é nada e 5 é totalmente)",
+  "global8":"Por favor dê a sua opinião sobre os assuntos que se seguem. (em que 0 é nada e 5 é completamente)",
   "global9":"Qual foi o grau de dificuldade da resposta às perguntas?",
   "global10":"Qual foi o grau de dificuldade do processo de mapeamento?",
   "global11":"Se quiser pode escrever alguns comentários de forma a melhorar a aplicação.",
+  "global12":"Nada",
+  "global13":"Completamente",
+
 
   "general1":"Há um problema de conexão; por favor, tente novamente mais tarde.",
   "general2":"Por favor, escreva o código postal certo",
