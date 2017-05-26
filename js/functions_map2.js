@@ -523,7 +523,7 @@ function startAll() {
         for (var i = 0; i < SC.length; i++) {
             var cGroup = SC[i];
             for (var j = 0; j < cGroup.areas.length; j++) {
-                cGroup.areas[j].layer = JSON.stringify(cGroup.areas[j].layer.toGeoJSON());
+                cGroup.areas[j].layer = /*JSON.stringify(*/cGroup.areas[j].layer.toGeoJSON()/*)*/;
             }
         }
 

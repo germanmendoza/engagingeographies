@@ -20,7 +20,6 @@ function startAll () {
 
         if (mail != "" & twitter != "") {
             if (testEmail.test(mail) & testtwitter.test(twitter)){
-
                 var data = {
                     id : util.getFromLocalStorage(util.interPageDataKey),
                     mailUser : mail,
@@ -37,8 +36,6 @@ function startAll () {
                         $('#myModalsatisfaction').modal('show');
                     }
                 });
-
-
             }
             else{
                // alert("Please introduce a mail and/or twitter username valid structure");
@@ -134,18 +131,18 @@ function areasLoading() {
 
         app.getSOPA(function (SOPLayersGeoJson) {
             if ((SOPLayersGeoJson.geoJson) && (SOPLayersGeoJson.geoJson !== "")) {
-                var geoJson = JSON.parse(SOPLayersGeoJson.geoJson);
-                SOPLayers = L.geoJson(geoJson, {style: SOPStyle}).addTo(map);
+                //var geoJson = JSON.parse(SOPLayersGeoJson.geoJson);
+                SOPLayers = L.geoJson(SOPLayersGeoJson.geoJson, {style: SOPStyle}).addTo(map);
 
                 app.getSCA(function (SCLayersGeoJson) {
                     if ((SCLayersGeoJson.geoJson) && (SCLayersGeoJson.geoJson !== "")) {
-                        var geoJson = JSON.parse(SCLayersGeoJson.geoJson);
-                        SCLayers = L.geoJson(geoJson, {style: SCStyle}).addTo(map);
+                        //var geoJson = JSON.parse(SCLayersGeoJson.geoJson);
+                        SCLayers = L.geoJson(SCLayersGeoJson.geoJson, {style: SCStyle}).addTo(map);
 
                         app.getCEA(function (CELayersGeoJson) {
                             if ((CELayersGeoJson.geoJson) && (CELayersGeoJson.geoJson !== "")) {
-                                var geoJson = JSON.parse(CELayersGeoJson.geoJson);
-                                CELayers = L.geoJson(geoJson, {style: CEStyle}).addTo(map);
+                                //var geoJson = JSON.parse(CELayersGeoJson.geoJson);
+                                CELayers = L.geoJson(CELayersGeoJson.geoJson, {style: CEStyle}).addTo(map);
                             }
                         });
                     }

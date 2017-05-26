@@ -247,7 +247,7 @@
          // map.removeLayer(drawnItems);
 
          for (i = 0; i < CE.length; i++) {
-             CE[i].layer = JSON.stringify(CE[i].layer.toGeoJSON());
+             CE[i].layer = /*JSON.stringify(*/CE[i].layer.toGeoJSON()/*)*/;
          }
 
          var id = util.getFromLocalStorage(util.interPageDataKey);

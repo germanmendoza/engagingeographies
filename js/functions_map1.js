@@ -441,8 +441,8 @@ function startAll() {
             pd3: parseInt($("input[name=PD3]:checked").val())
         }
 
-        for (i = 0; i < SOP.length; i++) {
-            SOP[i].layer = JSON.stringify(SOP[i].layer.toGeoJSON());
+        for (var i = 0; i < SOP.length; i++) {
+            SOP[i].layer = /*JSON.stringify(*/SOP[i].layer.toGeoJSON()/*)*/;
         }
 
         var id = util.getFromLocalStorage(util.interPageDataKey);
