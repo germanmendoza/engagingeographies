@@ -449,12 +449,10 @@ function startAll() {
 
         var data2 = {
             type: "sop",
-            id: id,
             areas: SOP
         };
 
-
-        app.setSOP(data2, function (response) {
+        app.setSOP(id, data2, function (response) {
             if (response === false) {
                 // alert("There is a connection problem; please, try again later");
                 alert(translator.getKeyLanguageValue("general1"));

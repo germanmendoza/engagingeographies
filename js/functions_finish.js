@@ -59,8 +59,9 @@ function startOthers() {
             else {
                 profession_new = parseInt($("#profession").val())
 
+                var id = util.getFromLocalStorage(util.interPageDataKey);
+
                 var data = {
-                    id: util.getFromLocalStorage(util.interPageDataKey),
                     gender: parseInt($("input[name=gender]:checked").val()),
                     age: parseInt($("#age").val()),
                     country: $("#country").val(),
@@ -68,7 +69,8 @@ function startOthers() {
                     profession: profession_new,
                     income: parseInt($("#income").val())
                 };
-                app.finish(data, function (response) {
+
+                app.finish(id, data, function (response) {
                     if (response === false) {
                         // alert("There is a connection problem; please, try again later.");
                         alert(translator.getKeyLanguageValue("general1"));
@@ -324,15 +326,15 @@ function areasLoading() {
         };
 
         app.getSOP(id, function (SOPLayersGeoJson) {
-            var geoJson = JSON.parse(SOPLayersGeoJson.geoJson);
+            var geoJson = /*JSON.parse(*/SOPLayersGeoJson.geoJson/*)*/;
             SOPLayers = L.geoJson(geoJson, {style: SOPStyle}).addTo(map);
 
             app.getSC(id, function (SCLayersGeoJson) {
-                var geoJson = JSON.parse(SCLayersGeoJson.geoJson);
+                var geoJson = /*JSON.parse(*/SCLayersGeoJson.geoJson/*)*/;
                 SCLayers = L.geoJson(geoJson, {style: SCStyle}).addTo(map);
 
                 app.getCE(id, function (CELayersGeoJson) {
-                    var geoJson = JSON.parse(CELayersGeoJson.geoJson);
+                    var geoJson = /*JSON.parse(*/CELayersGeoJson.geoJson/*)*/;
                     CELayers = L.geoJson(geoJson, {style: CEStyle}).addTo(map);
                 });
             });

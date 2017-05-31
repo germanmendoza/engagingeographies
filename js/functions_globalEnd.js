@@ -17,15 +17,15 @@ function startAll () {
         var mail = $("#mail_user" ).val();
         var testtwitter = /^@?(\w){1,15}$/;
         var twitter = $("#twitter_name" ).val();
+        var id = util.getFromLocalStorage(util.interPageDataKey);
 
         if (mail != "" & twitter != "") {
             if (testEmail.test(mail) & testtwitter.test(twitter)){
                 var data = {
-                    id : util.getFromLocalStorage(util.interPageDataKey),
                     mailUser : mail,
                     twitterName : twitter
                 };
-                app.finishA(data,function (response) {
+                app.finishA(id, data,function (response) {
                     if (response === false) {
                         //alert("There is a connection problem; please, try again later");
                         alert(translator.getKeyLanguageValue("general1"));
@@ -45,13 +45,14 @@ function startAll () {
     });
 
     $('#finishglobalend').click(function () {
+        var id = util.getFromLocalStorage(util.interPageDataKey);
+
         var finalComments = {
-            id : util.getFromLocalStorage(util.interPageDataKey), //nose si hace falta
             di1: parseInt($("input[name=di1]:checked").val()),
             dm1: parseInt($("input[name=dm1]:checked").val()),
             comment: $("#comment").val()
         };
-        app.comments(finalComments, function (response) {
+        app.comments(id, finalComments, function (response) {
             if (response === false) {
                 alert(translator.getKeyLanguageValue("general1"));
             }

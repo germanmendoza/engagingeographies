@@ -259,12 +259,11 @@
                  ce2: parseInt($("input[name=ce2]:checked").val()),
                  ce3: parseInt($("input[name=ce3]:checked").val())
              },
-             id: id,
              areas: CE
          };
 
 
-         app.setCE(data, function (response) {
+         app.setCE(id, data, function (response) {
              if (response === false) {
                  // alert("There is a connection problem; please, try again later");
                  alert(translator.getKeyLanguageValue("general1"));

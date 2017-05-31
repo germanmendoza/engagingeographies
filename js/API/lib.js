@@ -102,14 +102,14 @@ uiCoreAPI = {
 //------------------------------------------------------
 
 uiCoreWS = {
-    home : 'home/lisbon_citizen',
-    home2 : 'home',
-    SOP: 'home/SOP_data',
-    SC: 'home/SC_data',
-    CE: 'home/CE_data',
-    finish: 'home/finish',
-    globalEnd: 'home/final_details',
-    comments: 'home/comments'
+    home : 'home/lisbon_citizen/',
+    home2 : 'home/',
+    SOP: 'home/SOP_data/',
+    SC: 'home/SC_data/',
+    CE: 'home/CE_data/',
+    finish: 'home/finish/',
+    globalEnd: 'home/final_details/',
+    comments: 'home/comments/'
 };
 
 //------------------------------------------------------
@@ -295,48 +295,62 @@ app = {
             }
         );
     },
-    setSOP: function (data2, callback) {
+    setSOP: function (id, data2, callback) {
         uiCoreAPI._postRequest(
-            uiCoreAPI.instanceUrl + uiCoreWS.SOP,
+            uiCoreAPI.instanceUrl + uiCoreWS.SOP + id,
             data2,
             callback
         );
     },
-    setSC: function (data2, callback) {
+    setSC: function (id, data2, callback) {
         uiCoreAPI._postRequest(
-            uiCoreAPI.instanceUrl + uiCoreWS.SC,
+            uiCoreAPI.instanceUrl + uiCoreWS.SC + id,
             data2,
             callback
         );
     },
-    setCE: function (data, callback) {
+    setCE: function (id, data, callback) {
         uiCoreAPI._postRequest(
-            uiCoreAPI.instanceUrl + uiCoreWS.CE,
+            uiCoreAPI.instanceUrl + uiCoreWS.CE + id,
             data,
             callback
         );
     },
     getSOP: function (id, callback) {
         uiCoreAPI._getRequest(
-            uiCoreAPI.instanceUrl + uiCoreWS.SOP + "/" + id,
+            uiCoreAPI.instanceUrl + uiCoreWS.SOP + id,
             callback
         );
     },
     getSC: function (id, callback) {
         uiCoreAPI._getRequest(
-            uiCoreAPI.instanceUrl + uiCoreWS.SC + "/" + id,
+            uiCoreAPI.instanceUrl + uiCoreWS.SC + id,
             callback
         );
     },
     getCE: function (id, callback) {
         uiCoreAPI._getRequest(
-            uiCoreAPI.instanceUrl + uiCoreWS.CE + "/" + id,
+            uiCoreAPI.instanceUrl + uiCoreWS.CE + id,
             callback
         );
     },
-    finish: function (data, callback) {
+    finish: function (id, data, callback) {
         uiCoreAPI._postRequest(
-            uiCoreAPI.instanceUrl + uiCoreWS.finish,
+            uiCoreAPI.instanceUrl + uiCoreWS.finish + id,
+            data,
+            callback
+        );
+    },
+    finishA: function (id, data, callback) {
+        uiCoreAPI._postRequest(
+            uiCoreAPI.instanceUrl + uiCoreWS.globalEnd + id,
+            data,
+            callback
+        );
+    },
+    comments: function (id, data, callback) {
+        uiCoreAPI._postRequest(
+            uiCoreAPI.instanceUrl + uiCoreWS.comments + id,
             data,
             callback
         );
@@ -356,20 +370,6 @@ app = {
     getCEA: function (callback) {
         uiCoreAPI._getRequest(
             uiCoreAPI.instanceUrl + uiCoreWS.CE,
-            callback
-        );
-    },
-    finishA: function (data, callback) {
-        uiCoreAPI._postRequest(
-            uiCoreAPI.instanceUrl + uiCoreWS.globalEnd,
-            data,
-            callback
-        );
-    },
-    comments: function (data, callback) {
-        uiCoreAPI._postRequest(
-            uiCoreAPI.instanceUrl + uiCoreWS.comments,
-            data,
             callback
         );
     }

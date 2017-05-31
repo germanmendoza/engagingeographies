@@ -531,12 +531,11 @@ function startAll() {
 
         var data2 = {
             type: "sc",
-            id: id,
             groups: SC
         };
 
 
-        app.setSC(data2, function (response) {
+        app.setSC(id, data2, function (response) {
             if (response === false) {
                 // alert("There is a connection problem; please, try again later");
                 alert(translator.getKeyLanguageValue("general1"));
