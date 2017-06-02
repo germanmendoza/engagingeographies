@@ -2,39 +2,44 @@
 /* CSS Document General */
 
 #logo_camara{
-	width: 70px;
+	width: 60px;
 	margin-bottom: 20px;
 	margin-right: 40px;
 	margin-left: 40px;
 }
 
 #logo_geoc{
-	width: 150px;
+	width: 100px;
 	margin-bottom: 20px;
 	margin-right: 40px;
 	margin-left: 40px;
 }
 #logo_marie{
-	width: 150px;
+	width: 120px;
 	margin-bottom: 20px;
 	margin-right: 40px;
 	margin-left: 40px;
 }
 #logo_nova{
-	width: 70px;
+	width: 60px;
 	margin-bottom: 20px;
 	margin-right: 40px;
 	margin-left: 40px;
 }
 #logo_munster{
-	width: 150px;
+	width: 120px;
 	margin-bottom: 20px;
 	margin-right: 40px;
 	margin-left: 40px;
 }
 #logo_uji{
-	width: 70px;
+	width: 60px;
 	margin-bottom: 20px;
 	margin-right: 40px;
 	margin-left: 40px;
+}
+
+/* Radios */
+.radio-inline input[type="radio"]{
+	position: relative;
 }
