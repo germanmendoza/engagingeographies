@@ -51,7 +51,7 @@
 
 
   "map1-1":"Comece a desenhar",
-  "map1-2":"Apagar áreas",
+  "map1-2":"Apagar área",
   "map1-3":"Freguesias",
   "map1-4":"Gostaríamos de saber onde estão os locais que, por alguma razão, têm um significado para si.",
   "map1-5":"Pense por favor sobre os locais onde:",
@@ -65,7 +65,7 @@
   "map1-13":"Comece a desenhar",
   "map1-14":"no mapa.",
   "map1-15":"Se necessitar, pode apagar a área pressionando o botão",
-  "map1-16":"Apagar áreas",
+  "map1-16":"Apagar área",
   "map1-17":"também no mapa",
   "map1-18":"Área hola",
   "map1-19":"Reside nesta área?",
@@ -133,7 +133,7 @@
   "map2-29":"Muito obrigado",
   "map2-30":"Pode agora desenhar outra área X ou, clicar no botão",
   "map2-31":"para definir o próximo grupo",
-  "map2-32a":"Já definiu: L áreas.",
+  "map2-32a":"Já definiu: L área/s.",
   "map2-32":"Reside nesta área?",
   "map2-33":"Em relação à área que acabou de desenhar, responda por favor às perguntas seguintes",
   "map2-34":"As pessoas com quem interajo neste grupo poriam as mãos no fogo por mim.",
@@ -162,7 +162,7 @@
   "map2-57":"Até que ponto participou no processo de decisão do grupo Y nos últimos 12 meses?",
 
 
-  "map3-1":"Pode por favor desenhar as áreas nas quais gostaria de participar em processos participativos.",
+  "map3-1":"Pode por favor desenhar as área/s nas quais gostaria de participar em processos participativos.",
   "map3-2":"Muito obrigado",
   "map3-3":"Pode agora desenhar outra área onde gostaria de estar envolvido em processos participativos, ou clique no botão",
   "map3-4":"para continuar",
@@ -241,8 +241,8 @@
   "general13":"Obrigado",
   "general14":"Introduza um endereço de e-mail e / ou nome de usuário válido estrutura",
   "general15":"Please, select um grupo.",
-  "general16":"Adicionar área",
-  "general17":"Adicionar grupo",
+  "general16":"Adicionar palavra",
+  "general17":"Adicionar palavra",
   "general18":"Área",
   "general19":"Grupo"
 

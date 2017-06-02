@@ -132,7 +132,7 @@
   "map2-29":"Great job!",
   "map2-30":"Now you can draw another area that defines the group X, or click the button ",
   "map2-31":"to define the next group or to go to the next activity.",
-  "map2-32a":"You have already defined: L areas.",
+  "map2-32a":"You have already defined: L area/s.",
   "map2-32":"Do you live in that area?",
   "map2-33":"Please, answer the following questions about the area just drawn.",
   "map2-34":"The people I interact in that group would put their reputation on the line for me.",
@@ -161,7 +161,7 @@
   "map2-57":"To what extent do you participate in group (Y) decision-making in the last 12 months?",
 
 
-  "map3-1":"Please, can you draw the areas in which you want to participate in city participatory processes.",
+  "map3-1":"Please, can you draw the area/s in which you want to participate in city participatory processes.",
   "map3-2":"Great job!",
   "map3-3":"Now you can draw another area where you want to be involved in participatory processes, or click the button ",
   "map3-4":"to continue.",
@@ -242,8 +242,8 @@
   "general13":"Thanks",
   "general14":"Please, insert an email and/or a valid twitter user name",
   "general15":"Please, select one group.",
-  "general16":"Add area",
-  "general17":"Add group",
+  "general16":"Add word",
+  "general17":"Add word",
   "general18":"Area",
   "general19":"Group"
 

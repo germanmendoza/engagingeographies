@@ -31,8 +31,9 @@ function startAll() {
         if (!$('#actual_group').val()&& (name_groups.length == 0)){
             alert(translator.getKeyLanguageValue("general7"));
         }
-        else if(!$('#actual_group').val() && (name_groups.length == 0)){
-            $("#continuar1").removeClass("hidden").addClass("show");
+        else if(!$('#actual_group').val() && (name_groups.length > 0)){
+            alert("loco");
+            //$("#continuar1").removeClass("hidden").addClass("show");
         }
         else{
             name_groups.push($('#actual_group').val());
@@ -112,6 +113,7 @@ function startAll() {
         var replaced2 = $("#textchange_nature").html().replace('X', name_groups[number]);
         $("#textchange").html(replaced1);
         $("#textchange_nature").html(replaced2);
+
     };
 
 
