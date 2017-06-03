@@ -155,7 +155,7 @@ function startAll() {
                 var replacetitle = $("#title_let_draw").html().replace('X', name_groups[number]);
                 $("#title_let_draw").html(replacetitle);
                 $("#let_draw").html(translator.getKeyLanguageValue("map2-26a"));
-                var replaceddraw = $("#let_draw").html().replace('X', name_groups[number]);
+                var replaceddraw = $("#let_draw").html().replace('X', '<b>' + name_groups[number] + '</b>');
                 $("#let_draw").html(replaceddraw);
                 $("#draw").toggleClass("hidden show");
                 buttonDraw.prop('disabled', false);
