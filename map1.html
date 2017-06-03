@@ -81,7 +81,9 @@
     <!--  Progress bar -->
     <div class="">
         <div class="progress" style="height: 15px; margin-top: 0px; margin-bottom: 5px">
-            <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%; background-color: #6DBFCE; line-height:15px">20%</div>
+            <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
+                 style="width:20%; background-color: #6DBFCE; line-height:15px">20%
+            </div>
         </div>
     </div>
     <!-- ------------------------------- Map visible lg md sm  -------------------------------------------------------------------- -->
@@ -198,10 +200,11 @@
                                     style="width: 100%; max-width: 100%"></select>
 
                         </div>-->
-                        <div class="input-group" >
-                          <input type="text" class="form-control" id="actual_place" placeholder="">
-                          <span class="input-group-btn" >
-                              <button class="btn btn-primary" id="plus_name" type="button"><span langkey="general16"></span></button>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="actual_place" placeholder="">
+                            <span class="input-group-btn">
+                              <button class="btn btn-primary" id="plus_name" type="button"><span
+                                      langkey="general16"></span></button>
                           </span>
                         </div>
                     </div>
@@ -216,45 +219,42 @@
                     <div class="float-right hidden" id="continuar" style="margin-top: 20px">
                         <a type="button" class="btn btn-primary" id="submit_name_places" langkey="index9">Próximo</a>
                     </div>
-            </div>
+                </div>
 
-                    <!-- ------------------------------- prueba ------------------------------------------------------------------------------ -->
+                <!-- ------------------------------- prueba ------------------------------------------------------------------------------ -->
 
-                   <!-- <div class="row">
-                        <div class="col-lg-6">
-                            <div class="input-group">
-      <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button">Go!</button>
-      </span>
-                                <input type="text" class="form-control" placeholder="Search for...">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search for...">
-                                <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button">Go!</button>
-      </span>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-lg-offset-3 col-lg-6">
-                            <div class="input-group">
-      <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button">Hate it</button>
-      </span>
-                                <input type="text" class="form-control" placeholder="Product name">
-                                <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button">Love it</button>
-      </span>
-                            </div>
-                        </div>
-                    </div>-->
-
-
-
+                <!-- <div class="row">
+                     <div class="col-lg-6">
+                         <div class="input-group">
+   <span class="input-group-btn">
+     <button class="btn btn-secondary" type="button">Go!</button>
+   </span>
+                             <input type="text" class="form-control" placeholder="Search for...">
+                         </div>
+                     </div>
+                     <div class="col-lg-6">
+                         <div class="input-group">
+                             <input type="text" class="form-control" placeholder="Search for...">
+                             <span class="input-group-btn">
+     <button class="btn btn-secondary" type="button">Go!</button>
+   </span>
+                         </div>
+                     </div>
+                 </div>
+                 <br>
+                 <div class="row">
+                     <div class="col-lg-offset-3 col-lg-6">
+                         <div class="input-group">
+   <span class="input-group-btn">
+     <button class="btn btn-secondary" type="button">Hate it</button>
+   </span>
+                             <input type="text" class="form-control" placeholder="Product name">
+                             <span class="input-group-btn">
+     <button class="btn btn-secondary" type="button">Love it</button>
+   </span>
+                         </div>
+                     </div>
+                 </div>-->
 
 
                 <div class="hidden" id="let_draw">
@@ -269,24 +269,48 @@
 
                     <hr style="width: 100%">
 
+                    <p><span langkey="map1-12" id="draw_places">Please draw the area (hola):</span></p>
+                    <br>
 
-                    <p><span langkey="map1-12" id="draw_places">Please draw the area (hola) using the </span>
-                        <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-pencil"
-                                                                              aria-hidden="true"
-                                                                              style="margin-right: 5px"></span><span
-                                langkey="map1-13"> Start drawing</span>
-                        </button>
-                        <span langkey="map1-14">button in the map.</span>
-                    </p>
-                    <br><br>
-                    <p><span langkey="map1-15">Se necessitar, pode apagar a área pressionando o </span>
-                        <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-trash"
-                                                                              aria-hidden="true"
-                                                                              style="margin-right: 5px"></span><span
-                                langkey="map1-16"> Apagar áreas</span>
-                        </button>
-                        <span langkey="map1-17">botão também no mapa.</span>
-                    </p>
+                    <ul>
+                        <li>
+                            <p><span langkey="map1-12a">using the </span>
+                                <button class="btn btn-default btn-xs" disabled>
+                                    <span class="glyphicon glyphicon-pencil" aria-hidden="true"
+                                          style="margin-right: 5px"></span>
+                                    <span langkey="map1-13"> Start drawing</span><br>
+                                    <h9 langkey="map1-14"></h9>
+                                </button>
+                            </p>
+                        </li>
+                        <li>
+                            <p><span langkey="map1-15">Se necessitar, pode apagar a área pressionando o </span>
+                                <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-trash"
+                                                                                      aria-hidden="true"
+                                                                                      style="margin-right: 5px"></span><span
+                                        langkey="map1-16"> Apagar áreas</span><br>
+                                    <h9 langkey="map1-14"></h9>
+                                </button>
+                            </p>
+
+                        </li>
+
+                        <li>
+                            <p><span langkey="map1-17">Puedes ir a un barrio específico utilizando el botón</span>
+                                <button
+                                        class="btn btn-default dropdown-toggle" type="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" disabled>
+                                    <span langkey="map1-3">Freguesias</span><br>
+                                    <h9 langkey="map1-14"></h9>
+                                    <span class="caret"></span>
+                                </button>
+                            </p>
+
+
+                        </li>
+
+
+                    </ul>
 
 
                 </div>
@@ -1057,13 +1081,15 @@
                     </p>
 
                     <p></p>
-                    <p><span langkey="map1-44a">You can "pan" the map or zoom in </span> <img src="img/mas.png" style="width: 30px; margin-bottom: 5px"> or <img src="img/menos.png" style="width: 30px;  margin-bottom: 5px"> <span langkey="map1-44c">using the map controls and go directly to a certain freguesia using the button</span>
+                    <p><span langkey="map1-44a">You can "pan" the map or zoom in </span> <img src="img/mas.png"
+                                                                                              style="width: 30px; margin-bottom: 5px">
+                        or <img src="img/menos.png" style="width: 30px;  margin-bottom: 5px"> <span langkey="map1-44c">using the map controls and go directly to a certain freguesia using the button</span>
                         <button class="btn btn-default btn-xs">
                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"
                                           style="margin-right: 5px"></span> <span langkey="map1-3">Apagar área</span>
                         </button>
                     <p></p>
-                        <span langkey="map1-44b">You can draw as many areas as you need. The more meaningful areas you can draw, the better! </span>
+                    <span langkey="map1-44b">You can draw as many areas as you need. The more meaningful areas you can draw, the better! </span>
                     <span langkey="map1-46">Gostaríamos de saber o que pensa sobre as áreas que desenhou. Nesse sentido, queira por favor responder às perguntas quando solicitado para tal. </span>
                     </p>
 

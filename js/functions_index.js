@@ -45,6 +45,23 @@ function startall() {
             $('#myModal10').modal({backdrop: 'static', keyboard: false});
         }
         else {
+            $('#myModalA').modal({backdrop: 'static', keyboard: false});
+
+
+        }
+
+
+    });
+
+
+   /* $('#home_button_out').click(function () {
+
+
+        if ($('input[name=portugal_home]:checked').val() == "true") {
+            $("#information_home").removeClass().addClass("show");
+
+        }
+        else {
             var data = {
                 home: false
             };
@@ -63,6 +80,18 @@ function startall() {
         }
 
 
+    });*/
+
+
+
+    $("input[name='portugal_home']").change(function () {
+
+        if ($('input[name=portugal_home]:checked').val() == "false") {
+            $("#information_home").removeClass().addClass("hidden");
+        }
+        else    {
+            $("#information_home").removeClass().addClass("show");
+        }
     });
 
 
@@ -73,21 +102,7 @@ function startall() {
 
     $('#freguesia_button').click(function () {
         if ($('input[name=freguesia]:checked').val() == "25") {
-            var data = {
-                home: false
-            };
-            app.setHome(data, function (response) {
-                if (response === false) {
-                    // alert("There is a connection problem; please, try again later");
-                    alert(translator.getKeyLanguageValue("general1"));
-                }
-                else {
-                    util.redirectToPage({
-                        url: "map1.html",
-                        payload: response.id
-                    });
-                }
-            });
+            $('#myModalA').modal({backdrop: 'static', keyboard: false});
         }
         else{
             $('#myModal11').modal({backdrop: 'static', keyboard: false});
@@ -122,6 +137,67 @@ function startall() {
             else{
                 alert(translator.getKeyLanguageValue("general3"));
             }
+        }
+    });
+
+
+
+    $('#how_long_no').click(function () {
+
+
+        if ($('input[name=portugal_home]:checked').val() == "true") {
+            var zip_no = $('#zip_no').val();
+
+            var zipRegex = /(^\d{4}-\d{3}$)/;
+            if (!zipRegex.test(zip_no)) {
+
+                alert(translator.getKeyLanguageValue("general2"));
+            }
+            else {
+                var home = ($("input[name=lisbon_home]:checked").val()) === 'false';
+                var portugal = ($("input[name=portugal_home]:checked").val());
+                var howlong = parseInt($("input[name=howlong_no]:checked").val());
+                var zip = $("#zip_no").val();
+
+                var data = {
+                    home: home,
+                    portugal: portugal,
+                    howlong: howlong,
+                    zip: zip,
+                };
+                app.setHome(data, function (response) {
+                    if (response === false) {
+                        // alert("There is a connection problem; please, try again later");
+                        alert(translator.getKeyLanguageValue("general1"));
+                    }
+                    else {
+                        util.redirectToPage({
+                            url: "map1.html",
+                            payload: response.id
+                        });
+                    }
+                });
+
+
+            }
+        }
+        else{
+            var data = {
+                home: false
+            };
+            app.setHome(data, function (response) {
+                if (response === false) {
+                    // alert("There is a connection problem; please, try again later");
+                    alert(translator.getKeyLanguageValue("general1"));
+                }
+                else {
+                    util.redirectToPage({
+                        url: "map1.html",
+                        payload: response.id
+                    });
+                }
+            });
+
         }
     });
 

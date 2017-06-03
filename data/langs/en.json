@@ -3,6 +3,7 @@
   "index2": "The questionnaire will take less than 5 minutes, and the mapping activity takes most people around 15 minutes, depending on how many areas you define.",
   "index3": "With your contribution, you will support the improvement of Lisbon municipality participation processes. Please, do the survey with the laptop or desktop computer.",
   "index4": "Do you live in Lisbon?",
+  "index4a": "Do you live in Portugal?",
   "index5": "Yes",
   "index6": "No",
   "index7": "Notes:",
@@ -30,7 +31,7 @@
   "index28": "Public Space",
   "index29": "Green spaces",
   "index30": "Proximity structures",
-  "index31": "Finances",
+  "index31": "Parking",
   "index32": "Done",
   "index33": "Housing",
   "index34": "Urban Hygiene",
@@ -44,9 +45,9 @@
   "index42": "Noise",
   "index43": "Safety",
   "index44": "Social Services",
-  "index45": "Information systems",
+  "index45": "Public Transports",
   "index46": "Tourism",
-  "index47": "Urbanism",
+  "index47": "Others",
 
 
   "map1-1":"Start drawing",

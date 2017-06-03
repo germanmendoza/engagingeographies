@@ -287,7 +287,6 @@
                  ce2: parseInt($("input[name=ce2]:checked").val()),
                  ce3: parseInt($("input[name=ce3]:checked").val())
              },
-             areas: ""
          };
 
 
