@@ -163,14 +163,15 @@
 
 
   "map3-1":"Pode por favor desenhar as área/s nas quais gostaria de participar em processos participativos.",
+  "map3-1a":"Se não quiser definir uma área, pressione o botão a seguir.",
   "map3-2":"Muito obrigado",
   "map3-3":"Pode agora desenhar outra área onde gostaria de estar envolvido em processos participativos, ou clique no botão",
   "map3-4":"para continuar",
   "map3-5":"Estamos quase a terminar. Por favor responda às seguintes perguntas sobre a cidade de Lisboa.",
   "map3-6":"Comprometimento cívico.",
-  "map3-7":"Nos últimos 12 meses, juntou-se com outros membros do grupo para tratar de um problema?",
-  "map3-8":"Nos últimos 12 meses, interagiu com alguma autoridade local ou organização governamental sobre problemas comuns?",
-  "map3-9":"Nos últimos 12 meses, trabalho com alguma autoridade local ou organização governamental sobre problemas comuns?",
+  "map3-7":"Nos últimos 12 meses, juntou-se com outros membros do grupo para tratar de um problema da comunidade, autoridade local ou problemas de organização governamental?",
+  "map3-8":"Nos últimos 12 meses, interagiu com uma comunidade, autoridade local ou organização governamental sobre problemas comuns?",
+  "map3-9":"Nos últimos 12 meses, trabalho com uma comunidade, autoridade local ou organização governamental sobre problemas comuns?",
 
 
   "finish1":"Estas são as suas áreas mais importantes!!",

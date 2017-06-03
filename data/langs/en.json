@@ -162,14 +162,15 @@
 
 
   "map3-1":"Please, can you draw the area/s in which you want to participate in city participatory processes.",
+  "map3-1a":"If you don't want to define an area, please press the following botton.",
   "map3-2":"Great job!",
   "map3-3":"Now you can draw another area where you want to be involved in participatory processes, or click the button ",
   "map3-4":"to continue.",
   "map3-5":"We are almost finished. Please, answer the following questions regarding Lisbon city.",
   "map3-6":"Civic engagement",
-  "map3-7":"In the last 12 months, have you joined together with other people to address a common problem or issue?",
-  "map3-8":"In the last 12 months, have you talked with a local authority or governmental organization about common problems?",
-  "map3-9":"In the last 12 months, have you worked with a local authority or governmental organization about common problems?",
+  "map3-7":"In the last 12 months, have you joined together with other people to address a community, local authority or governmental organization problems?",
+  "map3-8":"In the last 12 months, have you talked with a community, local authority or governmental organization about common problems?",
+  "map3-9":"In the last 12 months, have you worked with a community, local authority or governmental organization about common problems?",
 
 
   "finish1":"These are your important areas!!",

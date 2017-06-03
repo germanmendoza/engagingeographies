@@ -277,7 +277,36 @@
          });
      });
 
-     //$("#draw_poly").prop('disabled', true);
+     $('#no_ce_done').click(function () {
+         var id = util.getFromLocalStorage(util.interPageDataKey);
+
+         var data = {
+             type:"ce",
+             civicEngagement: {
+                 ce1: parseInt($("input[name=ce1]:checked").val()),
+                 ce2: parseInt($("input[name=ce2]:checked").val()),
+                 ce3: parseInt($("input[name=ce3]:checked").val())
+             },
+             areas: ""
+         };
+
+
+         app.setCE(id, data, function (response) {
+             if (response === false) {
+                 // alert("There is a connection problem; please, try again later");
+                 alert(translator.getKeyLanguageValue("general1"));
+             }
+             else {
+                 util.redirectToPage({
+                     url:"finish.html",
+                     payload:response.id
+                 });
+             }
+         });
+     });
+
+
+         //$("#draw_poly").prop('disabled', true);
 
    $('#myModal15').modal('show');
 

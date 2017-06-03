@@ -134,7 +134,8 @@
   "map2-31":"para definir el siguiente grupo o ir a la siguiente actividad.",
   "map2-32a":"Has definido: L área/s.",
   "map2-32":"Vives en esta área?",
-  "map2-33":"Por favor, responde las siguientes preguntas acerca del área justo dibujada.",
+  "map2-33":"Por favor, responde las siguientes preguntas acerca del ",
+  "map2-33a":"área justo dibujada.",
   "map2-34":"Las personas con las que interacto en este grupo darían la cara por mi.",
   "map2-35":"Conozco genete en este grupo bastante bien para confiarles cualquier cosa importante.",
   "map2-36":"Interactuar con gente de este grupo me hace interesarme con lo que gente diferente a mi piensa.",
@@ -158,18 +159,20 @@
   "map2-54":"Participación ciudadana",
   "map2-55":"Has atendido una reunión del grupo Y en los últimos 12 meses?",
   "map2-56":"Cuánto frecuente has participado en las actividades del grupo Y en los últimos 12 meses?",
-  "map2-57":"En qué cantidad has participado en las decisiones del grupo Y en los últimos 12 meses?",
+  "map2-57":"Que tan frecuente has participado en las decisiones del grupo Y en los últimos 12 meses?",
 
 
   "map3-1":"Por favor, puedes dibujar las área/s en las cuales quieres participar en los procesos participativos.",
+  "map3-1a":"Si no quieres definir ninguna área, por favor clicka en el siguiente botón.",
   "map3-2":"Buen trabajo!",
   "map3-3":"Ahora puedes dibujar más áreas donde quieres estar envuelto en procesos participativos o clicar el botón",
   "map3-4":"para continuar.",
   "map3-5":"Ya casi hemos acabado. Por favor, responde estas preguntas referentes a la ciudad de Lisboa",
   "map3-6":"Compromiso cívico",
-  "map3-7":"En los últimos 12 meses, te has unido con otra gente para redirigir un problema común?",
-  "map3-8":"En los últimos 12 meses, has hablado con la autoridad local o governamental sobre problemas comunes?",
-  "map3-9":"En los últimos 12 meses, has trabajado con la autoridad local o governamental sobre problemas comunes?",
+  "map3-7":"En los últimos 12 meses, te has unido con otra gente para redirigir un problema de la comunidad, autoridad local o organización gubernamental?",
+  "map3-8":"En los últimos 12 meses, has hablado con la comunidad, autoridad local o organización gubernamental sobre problemas comunes?",
+  "map3-9":"En los últimos 12 meses, has trabajado con la comunidad, autoridad local o organización gubernamental sobre problemas comunes?",
+
 
 
   "finish1":"Estas son tus áreas significativas",
