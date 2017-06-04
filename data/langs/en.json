@@ -62,12 +62,13 @@
   "map1-9":"Can you write (one or more) words that define each area? Please think of an area, and write, in the textbox below, one or more words that define that area, and click “Add area”. You can add as many areas as you want. Take your time :) ",
   "map1-10":"Note: separate words by commas or the “enter” key.",
   "map1-11":"Area hola",
-  "map1-12":"Please draw your area hola using the",
+  "map1-12":"Please draw your area hola",
+  "map1-12a":"using the button",
   "map1-13":"Start drawing",
   "map1-14":"button in the map",
-  "map1-15":"If you need, you can delete the area pressing button",
+  "map1-15":"if you need, you can delete the area pressing button",
   "map1-16":"Delete area",
-  "map1-17":"also in the map",
+  "map1-17":"you can go directly to a certain freguesia using the button",
   "map1-18":"Area hola",
   "map1-19":"Do you live in that area?",
   "map1-20":"Please rate the area hola according to the following criteria: (On a scale of 0 to 5, where 0 is nothing and 5 is totally)",
@@ -91,15 +92,30 @@
   "map1-38":"This area (Y) is the best place for doing the things that I enjoy most.",
   "map1-39":"For doing the things that I enjoy most, no other place can compare to this area (Y)",
   "map1-40":"This area (Y) is a good place to do the things I most like to do",
+
+
   "map1-41":"Let’s start!! – Please, read the following instructions carefully.",
   "map1-42":"We invite you to draw the areas that you though on the map freely.",
   "map1-43":"To start, press the button",
-  "map1-44":"at top-left in the map part and then click on the map to plot your first point, and as many points as you need to define your area. To finish drawing an area, click on the first point again. You can edit the area moving any point at any time or delete it pressing the button",
-  "map1-44a":"You can 'pan' the map or zoom in using the map controls",
-  "map1-44b":"You can draw as many areas as you need.",
-  "map1-44c":"or go directly to a certain freguesia using the button",
-  "map1-46":"After to define the areas we are going to ask you about these areas. So, please answer the questions regarding the areas when asked.",
-  "map1-48":"This is all. When you finished defining your different areas, to move on to the next activity press the button",
+  "map1-44":"then click on the map to plot your first point, and as many points as you need to define your area",
+  "map1-44ll":"to finish drawing an area, click on the first point again or doble-click in the last point defined of the area",
+  "map1-44g":"You can:",
+  "map1-44h":"edit the area moving any point at any time",
+  "map1-44i":"delete it pressing the button",
+  "map1-44j":"You can 'pan' the map or zoom using the map controls",
+  "map1-44l":"go directly to a certain freguesia using the button",
+  "map1-46":"After to define the areas we are going to ask you about these areas.",
+  "map1-48":"When you finished defining your different areas, to move on to the next activity press the button",
+  "map1-95":"Please",
+  "map1-96":"Think about a word that define one of these areas",
+  "map1-97":"Write the word in the form below",
+  "map1-98":"Click on",
+  "map1-99":"You can add as many areas as you want. When you finish to add them, click on button.",
+  "map1-100":"Add another word that define another area",
+
+
+
+
 
 
   "map2-1":"We would like also to ask you about the groups of people or organizations, networks, associations to which you belong. These could be formally organized groups (religious groups, familiar groups, sports teams, workplace groups…) or just groups of people who get together regularly to do an activity or talk about things.",
@@ -128,7 +144,7 @@
   "map2-24":"Other",
   "map2-25":"Can it be related with some place?",
   "map2-26":"Let’s draw the group X!",
-  "map2-26a":"Please, draw all the areas that define the group X using button ",
+  "map2-26a":"Please, draw all the areas that define the group X",
   "map2-27":"and you can delete the area clicking button",
   "map2-28":"on the map.",
   "map2-29":"Great job!",
@@ -161,6 +177,17 @@
   "map2-55":"Have you attended a group (Y) meeting in the last 12 months?",
   "map2-56":"How often do you participate in the activities of a group Y in the last 12 months?",
   "map2-57":"To what extent do you participate in group (Y) decision-making in the last 12 months?",
+
+
+  "map2-95":"Please:",
+  "map2-96":"Think about a word that define one of these groups",
+  "map2-97":"Write the word in the form below",
+  "map2-98":"Click on",
+  "map2-99":"You can add as many groups as you want. When you finish to add them, click on button.",
+  "map2-100":"Add another word that define another group",
+
+
+
 
 
   "map3-1":"Please, can you draw the area/s in which you want to participate in city participatory processes.",

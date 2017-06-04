@@ -126,7 +126,7 @@ function startall() {
         else {
             var found = false;
             for(var i = 1; i < zipCodes.length; i++){
-                if (zip === zipCodes[i]){ 
+                if (zip === zipCodes[i]){
                     found = true;
                     break;
                 }

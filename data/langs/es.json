@@ -65,10 +65,10 @@
   "map1-13":"Comenzar a dibujar",
   "map1-12":"Por favor dibuja en el mapa tu área hola:",
   "map1-12a":"usando el botón",
-  "map1-14":"(en el mapa)",
-  "map1-15":"Puedes borrar el área clicando el botón",
+  "map1-14":"botón en el mapa",
+  "map1-15":"puedes borrar el área clicando el botón",
   "map1-16":"Borrar área",
-  "map1-17":"Puedes ir a un barrio específico utilizando el botón",
+  "map1-17":"puedes ir a un barrio específico utilizando el botón",
   "map1-18":"Área hola",
   "map1-19":"Vives en esta área?",
   "map1-20":"Por favor clasifica el área hola de acuerdo con los siguientes criterios: (En una escala de 0 a 5, donde 0 es nada y 5 es todo)",
@@ -92,16 +92,26 @@
   "map1-38":"Esta área (Y) es el mejor lugar para hacer las cosas que más disfruto.",
   "map1-39":"Para hacer las cosas que más disfruto, no hay otro lugar comparable con esta área (Y)",
   "map1-40":"Esta área (Y) es un buen lugar para realizar las cosas que más me gustan hacer",
+
   "map1-41":"Vamos a empezar!! – Por favor, lee atentamente las siguientes instrucciones.",
   "map1-42":"Te invitamos a dibujar las áreas que pensaste en el mapa de forma libre.",
   "map1-43":"Para empezar a dibujar, clica el botón",
   "map1-44":"luego define tu primer punto del área con un clic, y tantos puntos como necesites para definir el área",
   "map1-44ll":"para finalizar el área, clica en el primer punto otra vez o haz doble clic en el último punto que definas",
-  "map1-44a":"Puedes hacer zoom en el mapa usando los controles del mapa",
-  "map1-44b":"Puedes dibujar tantas áreas como necesites.",
-  "map1-44c":"o ir directamente a un barrio utilizando el botón",
+  "map1-44g":"Puedes:",
+  "map1-44h":"hacer alteraciones en la forma del área moviendo cualquiera de sus puntos",
+  "map1-44i":"borrar el área clicando el botón",
+  "map1-44j":"puedes hacer zoom en el mapa usando los controles del mapa",
+  "map1-44l":"ir directamente a un barrio usando el botón",
   "map1-46":"Después de definir cada área vamos a realizarte preguntas sobre ella.",
-  "map1-48":"Cuando acabes de definir las áreas y contestar las preguntas, clica el botón.",
+  "map1-48":"Cuando acabes de definir las áreas y contestar las preguntas, clica el botón",
+  "map1-95":"Por favor",
+  "map1-96":"Piensa en una palabra que defina una de esas áreas",
+  "map1-97":"Escribe la palabra en el recuadro de abajo",
+  "map1-98":"Clica en",
+  "map1-99":"Puedes añadir tantas palabras como áreas tengas. Cuando acabes de introducirlas, clica el botón",
+  "map1-100":"Añade otra palabra que defina otra área",
+
 
 
   "map2-1":"También nos gustaría preguntarte sobre los grupos de personas u organizaciones a los que perteneces. Éstos pueden ser formalmente organizados (religiosos, familiares, deportivos, trabajo...) o simplemente grupos de personas con las que haces actividades regularmente o hablas sobre temas.",
@@ -130,7 +140,7 @@
   "map2-24":"Otro",
   "map2-25":"Puede estar relacionado con algun lugar?",
   "map2-26":"Vamos a dibujar el grupo X!",
-  "map2-26a":"Por favor, dibuja todas las áreas que definen el grupo X:",
+  "map2-26a":"Por favor, dibuja todas las áreas que definen el grupo X",
   "map2-26b":"utilizando el botón",
   "map2-27":"Puedes borrar el grupo clicando el botón",
   "map2-28":"en el mapa.",
@@ -166,6 +176,16 @@
   "map2-55":"Has atendido una reunión del grupo Y en los últimos 12 meses?",
   "map2-56":"Cuánto frecuente has participado en las actividades del grupo Y en los últimos 12 meses?",
   "map2-57":"Que tan frecuente has participado en las decisiones del grupo Y en los últimos 12 meses?",
+
+
+  "map2-95":"Por favor:",
+  "map2-96":"Piensa en una palabra que defina una de esos grupos",
+  "map2-97":"Escribe la palabra en el recuadro de abajo",
+  "map2-98":"Clica en",
+  "map2-99":"Puedes añadir tantas palabras como grupos tengas. Cuando acabes de introducirlos, clica el botón",
+  "map2-100":"Añade otra palabra que defina otro grupo",
+
+
 
 
   "map3-1":"Por favor, puedes dibujar las área/s en las cuales quieres participar en los procesos participativos.",

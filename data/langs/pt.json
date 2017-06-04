@@ -63,12 +63,13 @@
   "map1-9":"Escreva por favor uma ou mais palavras que descrevam cada uma das áreas. Pense numa determinada área e escreva no espaço abaixo uma ou mais palavras que definam essa área. A seguir clique em “Adicionar área”. Pode adicionar todas as áreas que quiser. Sem stress :)",
   "map1-10":"Nota: separe por favor as palavras por vírgulas",
   "map1-11":"Área hola",
-  "map1-12":"Por favor desenhe sua área hola utilizando o botão ",
+  "map1-12":"Por favor desenhe sua área hola",
+  "map1-12a":"usando o botão",
   "map1-13":"Comece a desenhar",
-  "map1-14":"no mapa.",
-  "map1-15":"Se necessitar, pode apagar a área pressionando o botão",
+  "map1-14":"botão no mapa.",
+  "map1-15":"se necessitar, pode apagar a área pressionando o botão",
   "map1-16":"Apagar área",
-  "map1-17":"também no mapa",
+  "map1-17":"pode ir diretamente para uma dada freguesia utilizando o botão",
   "map1-18":"Área hola",
   "map1-19":"Reside nesta área?",
   "map1-20":"Por favor classifique a área hola de acordo com os critérios abaixo: (Numa escala de 0 a 5, onde 0 é nada e 5 totalmente)",
@@ -92,15 +93,31 @@
   "map1-38":"Esta área (Y) é o melhor local para fazer as coisas de que mais gosto",
   "map1-39":"Não existe nenhum outro local que se compare com este (Y) para fazer as coisas de que mais gosto",
   "map1-40":"Esta área (Y) é um bom local para fazer as coisas que mais gosto",
+
+
+
   "map1-41":"Vamos começar! Leia por favor com atenção as instruções que se seguem",
-  "map1-42":"Convidamo-lo a desenhar AS áreas QUE PENSOU no mapa de forma livre.",
-  "map1-43":"Pressione o botão",
-  "map1-44":"situado na parte superior do mapa e clique no mapa para definir o seu primeiro ponto. Clique os pontos que considerar necessários para definir um polígono (área).Para fechar um polígono, clique outra vez no primeiro ponto. Pode fazer alterações na forma do polígono movendo qualquer um dos pontos.Pode apagar o área clicando o botão",
-  "map1-44a":"Pode mover o mapa e aproximar e afastar utilizando os controlos do mapa",
-  "map1-44b":"Pode desenhar todas as áreas de que queira.",
-  "map1-44c":"ou para ir diretamente para uma dada freguesia utilizando o botão",
-  "map1-46":"Após desenhar as áreas iremos fazer-lhe perguntas sobre essas áreas. Nesse sentido, queira por favor responder às perguntas quando solicitado para tal.",
+  "map1-42":"We invite you to draw the areas that you though on the map freely.",
+  "map1-43":"Para empezar, pressione o botão",
+  "map1-44":"then click on the map to plot your first point, and as many points as you need to define your area",
+  "map1-44ll":"to finish drawing an area, click on the first point again or doble-click in the last point defined of the area",
+  "map1-44g":"Pode:",
+  "map1-44h":"fazer alterações na forma do polígono movendo qualquer um dos pontos:",
+  "map1-44i":"apagar o área clicando o botão",
+  "map1-44j":"mover o mapa e aproximar e afastar utilizando os controlos do mapa",
+  "map1-44l":"ir diretamente para uma dada freguesia utilizando o botão",
+
+
+  "map1-46":"Após desenhar as áreas iremos fazer-lhe perguntas sobre essas áreas.",
   "map1-48":"Quando terminar de definir as suas áreas pode passar à próxima atividade, pressionando o botão ",
+  "map1-95":"Por favor",
+  "map1-96":"Pense numa determinada palavra que defina uma das áreas",
+  "map1-97":"Escreva no espaço abaixo a palavra",
+  "map1-98":"Clique em",
+  "map1-99":"You can add as many areas as you want. When you finish to add them, click in button.",
+  "map1-100":"Add another word that define another area",
+
+
 
 
   "map2-1":"Gostaria também de lhe perguntar sobre grupos de pessoas ou organizações, redes ou associações a que pertença. Podem ser grupos formalmente organizados (grupos religiosos, de familiares, desportivos, de local de trabalho... ) or pura e simplesmente grupos de pessoas que se juntam regularmente para realizar uma atividade ou falar sobre vários assuntos.",
@@ -162,6 +179,17 @@
   "map2-55":"Nos últimos 12 meses participou nalguma reunião do grupo Y?",
   "map2-56":"Com que frequência participou nas atividades do grupo Y nos últimos 12 meses?",
   "map2-57":"Até que ponto participou no processo de decisão do grupo Y nos últimos 12 meses?",
+
+
+
+
+  "map2-95":"Por favor:",
+  "map2-96":"Pense numa determinada palavra que defina umo dos grupos",
+  "map2-97":"Escreva no espaço abaixo a palavra",
+  "map2-98":"Clique em",
+  "map2-99":"You can add as many groups as you want. When you finish to add them, click in button.",
+  "map2-100":"Add another word that define another group",
+
 
 
   "map3-1":"Pode por favor desenhar as área/s nas quais gostaria de participar em processos participativos.",
