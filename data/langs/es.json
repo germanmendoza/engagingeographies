@@ -1,7 +1,8 @@
 {
   "index1": "Este cuestionario es parte de un proyecto de investigación de la universidad NOVA (Lisboa). El principal objetivo del estudio es comprender como las percepciones de los ciudadanos y sus relaciones sociales, influyen en la participación pública en un contexto urbano.",
-  "index2": "Responder el cuestionario se demora menos de 5 minutos y la actividad de dibujo le lleva a la mayoría de la gente unos 15 minutos, depende del número de áreas a definir.",
-  "index3": "Con tu contribución, vamos a mejorar los procesos participativos de Lisboa. Por favor, haga el cuestionario en un ordenador portátil o de escritorio.",
+  "index2": "Responder el cuestionario se demora menos de 5 minutos y la actividad de dibujo le lleva a la mayoría de la gente unos 10 minutos, depende del número de áreas a definir.",
+  "index3": "Con tu contribución, vamos a mejorar los procesos participativos de Lisboa.",
+  "index3a": "Por favor, haga el cuestionario en un ordenador portátil o de escritorio.",
   "index4": "Vives en Lisboa?",
   "index4a": "Vives en Portugal?",
   "index5": "Si",
@@ -20,7 +21,7 @@
   "index17": "más de 6 años",
   "index18": "Indica por favor el código postal donde se encuentra su casa",
   "index19": "Si no quieres dar tu código postal, por favor marca el cuadro.",
-  "index20": "Por favor selecciona, si es preciso, lo menos positivo de tu barrio (Máx. 3)",
+  "index20": "Por favor selecciona, si es necesario, los temas menos positivo de tu barrio (Máx. 3)",
   "index21": "Abastecimiento y mercado",
   "index22": "Cultura",
   "index23": "Deporte",
@@ -235,7 +236,7 @@
 
   "general1":"Hay un problema con la conexión; por favor, intentelo más tarde.",
   "general2":"Por favor, escriba su código postal correctamente",
-  "general3":"Indique por favor su código postal",
+  "general3":"Este código no pertenece a la ciudad de Lisboa, por favor indique por favor su código postal",
   "general4":"Por favor, indique por lo menos un nombre de área.",
   "general5":"Por favor, responda a todas las preguntas.",
   "general6":"Por favor, escoja un área.",

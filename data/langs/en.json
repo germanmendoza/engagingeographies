@@ -1,7 +1,8 @@
 {
   "index1": "The following web-map survey is part of a research project at NOVA IMS (Lisbon). Its primary objective is to understand how citizens' place perceptions, and their relationships, influence participation in a given urban area.",
-  "index2": "The questionnaire will take less than 5 minutes, and the mapping activity takes most people around 15 minutes, depending on how many areas you define.",
-  "index3": "With your contribution, you will support the improvement of Lisbon municipality participation processes. Please, do the survey with the laptop or desktop computer.",
+  "index2": "The questionnaire will take less than 5 minutes, and the mapping activity takes most people around 10 minutes, depending on how many areas you define.",
+  "index3": "With your contribution, you will support the improvement of Lisbon municipality participation processes.",
+  "index3a": "Please, do the survey with the laptop or desktop computer.",
   "index4": "Do you live in Lisbon?",
   "index4a": "Do you live in Portugal?",
   "index5": "Yes",
@@ -20,7 +21,7 @@
   "index17": "more than 6 years",
   "index18": "Please type the zip code of your (primary) home.",
   "index19": "If you do not want to give your zip code, please click the checkbox.",
-  "index20": "Please, select, if applicable, the less positive in your parish. (Max. 3)",
+  "index20": "Please, select, if necessary, the less positive topics in your parish. (Max. 3)",
   "index21": "Supplies and market",
   "index22": "Culture",
   "index23": "Sport",
@@ -231,7 +232,7 @@
 
   "general1":"There is a problem with the server; try again later.",
   "general2":"Please, write a correct zip-code",
-  "general3":"Please, indicate your zip-code.",
+  "general3":"This postal code doesn't belong to Lisbon city. Please, indicate your zip-code.",
   "general4":"Please, write at least the name of one area.",
   "general5":"Please, answer all the questions",
   "general6":"Please, select one area.",
