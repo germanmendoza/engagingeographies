@@ -96,7 +96,7 @@
 
 
   "map1-41":"Let’s start!! – Please, read the following instructions carefully.",
-  "map1-42":"We invite you to draw the areas that you though on the map freely.",
+  "map1-42":"We invite you to draw the areas that you have defined with words on the map freely.",
   "map1-43":"To start, press the button",
   "map1-44":"then click on the map to plot your first point, and as many points as you need to define your area",
   "map1-44ll":"to finish drawing an area, click on the first point again or doble-click in the last point defined of the area",
@@ -259,6 +259,8 @@
   "global11":"Please, if you want put some comment to improve the application.",
   "global12":"Nothing",
   "global13":"Completely",
+  "global14":"These are the important areas of your fellow citizens!",
+
 
 
   "general1":"There is a problem with the server; try again later.",

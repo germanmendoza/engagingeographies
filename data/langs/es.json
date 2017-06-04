@@ -95,7 +95,7 @@
   "map1-40":"Esta área (Y) es un buen lugar para realizar las cosas que más me gustan hacer",
 
   "map1-41":"Vamos a empezar!! – Por favor, lee atentamente las siguientes instrucciones.",
-  "map1-42":"Te invitamos a dibujar las áreas que pensaste en el mapa de forma libre.",
+  "map1-42":"Te invitamos a dibujar las áreas que has definido con palabras en el mapa de forma libre.",
   "map1-43":"Para empezar a dibujar, clica el botón",
   "map1-44":"luego define tu primer punto del área con un clic, y tantos puntos como necesites para definir el área",
   "map1-44ll":"para finalizar el área, clica en el primer punto otra vez o haz doble clic en el último punto que definas",
@@ -254,6 +254,7 @@
   "global11":"Si quieres, puedes dejar aquí algun comentario.",
   "global12":"Nada",
   "global13":"Completamente",
+  "global14":"Estas son las áreas importantes de tus conciudadanos!",
 
   "general1":"Hay un problema con la conexión; por favor, intentelo más tarde.",
   "general2":"Por favor, escriba su código postal correctamente",
