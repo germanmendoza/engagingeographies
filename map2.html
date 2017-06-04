@@ -94,7 +94,8 @@
                          style="position: absolute; top: 10px; left: 50px; z-index: 998">
                         <div class="col-lg-12 col-md-12 col-sm-12 width-buttons-map">
                             <span class="dropdown" style="margin-right: 5px">
-                              <button class="btn btn-default dropdown-toggle" type="button" id="button-freguesia" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                              <button class="btn btn-default dropdown-toggle" type="button" id="button-freguesia"
+                                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                   <span langkey="map1-3">Freguesias</span>
                                 <span class="caret"></span>
                               </button>
@@ -140,8 +141,8 @@
                                       style="margin-right: 5px"></span>
                                 <span langkey="map1-2">Apagar áreas</span>
                             </button>
-                        <!-- </div> -->
-                        <!-- <div class="col-lg-12 col-md-12 col-sm-12" style="padding-left: 0px;"> -->
+                            <!-- </div> -->
+                            <!-- <div class="col-lg-12 col-md-12 col-sm-12" style="padding-left: 0px;"> -->
                         </div>
                     </div> <!-- /map -->
                     <!-- <div class="custom_buttons_leaflet visible-lg visible-md visible-sm">
@@ -399,6 +400,7 @@
 
                 </div>
 
+
                 <!-- ------------------------------- Social capital spatialization (let's draw)  --------------------------------------------- -->
 
 
@@ -433,9 +435,37 @@
                         </ul>
                     </div>
                     <div id="finish_button" class="hidden" style="margin-top: 100px">
-            <a type="button" id="button_more_areas" class="btn btn-primary float-right"><span
-                    langkey="index9">Próximo</span></a>
-        </div>
+                        <a type="button" id="button_more_areas" class="btn btn-primary float-right"><span
+                                langkey="index9">Próximo</span></a>
+                    </div>
+                </div>
+
+                <div id="help" class="hidden" style="background-color: #e7e7e7; padding: 20px">
+
+                    <p><span langkey="map1-80"> Para dibujar las áreas:</span></p>
+                    <br>
+
+                    <ul style="list-style-type:decimal">
+
+                        <li>
+                            <p><span langkey="map1-82">Define el primer punto con un clic donde quieras empezar a dibujar en el mapa</span>
+                            </p>
+                        </li>
+                        <li>
+                            <p><span langkey="map1-83">Define todos los puntos necesarios para dibujar el área con un clic para cada uno</span>
+                            </p>
+                        </li>
+                        <li>
+                            <p><span langkey="map1-84">Para acabar de definir el área, clica en el primer punto que definiste o haz doble clic cuando definas el último punto</span>
+                            </p>
+                        </li>
+                    </ul>
+
+
+                    <p><span langkey="map1-85">* You can exit the drawing option by pressing the 'escape' key on your keyboard</span>
+                    </p>
+
+
                 </div>
 
 
@@ -456,7 +486,8 @@
                                 langkey="index6">Não</span>
                         </label>
                     </div>
-<br>                    <div class="no-float"></div>
+                    <br>
+                    <div class="no-float"></div>
                     <h5><span langkey="map2-33">Em relação à área que </span><b><span langkey="map2-33a">acabou de desenhar</span></b>
                     </h5>
                     <div style="margin-top: 30px">
@@ -583,453 +614,459 @@
                            id="bonding_bridging_done" onclick="changeclass();"><span langkey="index9">Próximo</span></a>
                     </div>
                 </div>
-           <!--  </div> -->
-            <!-- -------------------------------  End questions ----------------------------------------------------- -->
-            <div class="hidden" id="select_group">
-                <h5 style="margin-bottom: 20px"><span langkey="map2-38">Por favor escolha o grupo com que melhor se identifica socialmente.</span>
-                </h5>
-                <hr style="width: 100%">
-                <div id="radios">
+                <!--  </div> -->
+                <!-- -------------------------------  End questions ----------------------------------------------------- -->
+                <div class="hidden" id="select_group">
+                    <h5 style="margin-bottom: 20px"><span langkey="map2-38">Por favor escolha o grupo com que melhor se identifica socialmente.</span>
+                    </h5>
+                    <hr style="width: 100%">
+                    <div id="radios">
+                    </div>
+                    <div class="float-right">
+                        <a type="button" class="btn btn-primary" id="choose_group"><span langkey="index9">Próximo</span></a>
+                    </div>
                 </div>
-                <div class="float-right">
-                    <a type="button" class="btn btn-primary" id="choose_group"><span langkey="index9">Próximo</span></a>
-                </div>
-            </div>
 
-            <!-- ------------------------------- SC questions  -------------------------------------------------- -->
-            <div class="hidden" id="sc_done">
-                <h5 id="change" langkey="map2-39">Responda por favor às perguntas que se seguem em relação ao <b
-                        style="font-size: 18px">X</b> grupo.</h5>
-                <hr style="width:100%">
-                <h5 style="margin-bottom: 20px; padding-top: 0px">
-                    <span langkey="map2-40">Sentido de comunidade</span>
-                </h5>
-                <div class="no-float">
-                    <div>
-                        <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc1"><span
-                                langkey="map2-41">Sinto-me parte do grupo <b>Y</b></span></p>
-                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
-                             style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
-                            <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
-                                <span langkey="map1-29" style="margin-left: -20px; margin-right: 20px">Discordo completamente</span>
-                                <input type="radio" name="soc1" value="1"> 1
-                            </label>
-                            <label class="radio-inline"
-                                   style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                <input type="radio" name="soc1" value="2"> 2
-                            </label>
-                            <label class="radio-inline"
-                                   style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                <input type="radio" name="soc1" value="3"> 3
-                            </label>
-                            <label class="radio-inline"
-                                   style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                <input type="radio" name="soc1" value="4"> 4
-                            </label>
-                            <label class="radio-inline"
-                                   style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                <input type="radio" name="soc1" value="5"> 5
-                                <span langkey="map1-30">Concordo completamente</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="no-float"></div>
-                    <div>
-                        <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc2"><span
-                                langkey="map2-42">Pertenço ao grupo <b>Y</b></span></p>
-                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
-                             style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
-                            <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
-                                <span langkey="map1-29" style="margin-left: -20px; margin-right: 20px">Discordo completamente</span>
-                                <input type="radio" name="soc2" value="1"> 1
-                            </label>
-                            <label class="radio-inline"
-                                   style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                <input type="radio" name="soc2" value="2"> 2
-                            </label>
-                            <label class="radio-inline"
-                                   style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                <input type="radio" name="soc2" value="3"> 3
-                            </label>
-                            <label class="radio-inline"
-                                   style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                <input type="radio" name="soc2" value="4"> 4
-                            </label>
-                            <label class="radio-inline"
-                                   style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                <input type="radio" name="soc2" value="5"> 5
-                                <span langkey="map1-30">Concordo completamente</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="no-float"></div>
-                    <div>
-                        <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc3"><span
-                                langkey="map2-43">Sinto-me ligado ao grupo <b>Y</b></span></p>
-                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
-                             style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
-                            <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
-                                <span langkey="map1-29" style="margin-left: -20px; margin-right: 20px">Discordo completamente</span>
-                                <input type="radio" name="soc3" value="1"> 1
-                            </label>
-                            <label class="radio-inline"
-                                   style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                <input type="radio" name="soc3" value="2"> 2
-                            </label>
-                            <label class="radio-inline"
-                                   style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                <input type="radio" name="soc3" value="3"> 3
-                            </label>
-                            <label class="radio-inline"
-                                   style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                <input type="radio" name="soc3" value="4"> 4
-                            </label>
-                            <label class="radio-inline"
-                                   style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                <input type="radio" name="soc3" value="5"> 5
-                                <span langkey="map1-30">Concordo completamente</span>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="no-float"></div>
-                    <h5 style="margin-bottom: 20px; padding-top: 0px;">
-                        <span langkey="map2-44">Vizinhança: Os membros do grupo poderão realizar as 3 ações seguintes entre eles. Em média quantas vezes... </span>
+                <!-- ------------------------------- SC questions  -------------------------------------------------- -->
+                <div class="hidden" id="sc_done">
+                    <h5 id="change" langkey="map2-39">Responda por favor às perguntas que se seguem em relação ao <b
+                            style="font-size: 18px">X</b> grupo.</h5>
+                    <hr style="width:100%">
+                    <h5 style="margin-bottom: 20px; padding-top: 0px">
+                        <span langkey="map2-40">Sentido de comunidade</span>
                     </h5>
                     <div class="no-float">
                         <div>
-                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="n1">
-                                <span langkey="map2-45">Ajuda um membro do grupo <b>Y</b> numa emergência.</span></p>
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc1"><span
+                                    langkey="map2-41">Sinto-me parte do grupo <b>Y</b></span></p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
-                                <label class="radio-inline personal_radio"
-                                       style="margin-top: -10px; font-size: 12px;">
-                                    <span langkey="map2-46" style="margin-left: -20px; margin-right: 20px">Nunca</span>
-                                    <input type="radio" name="n1" value="1"> 1
+                                <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
+                                    <span langkey="map1-29" style="margin-left: -20px; margin-right: 20px">Discordo completamente</span>
+                                    <input type="radio" name="soc1" value="1"> 1
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="n1" value="2">
-                                    2
+                                    <input type="radio" name="soc1" value="2"> 2
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="n1" value="3">
-                                    3
+                                    <input type="radio" name="soc1" value="3"> 3
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="n1" value="4">
-                                    4
+                                    <input type="radio" name="soc1" value="4"> 4
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="n1" value="5"> 5
-                                    <span langkey="map2-47">Todos os dias</span>
+                                    <input type="radio" name="soc1" value="5"> 5
+                                    <span langkey="map1-30">Concordo completamente</span>
                                 </label>
                             </div>
                         </div>
                         <div class="no-float"></div>
                         <div>
-                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="n2">
-                                <span langkey="map2-48">Dá conselhos sobre um problema pessoal de um membro do grupo <b>Y</b>.</span>
-                            </p>
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc2"><span
+                                    langkey="map2-42">Pertenço ao grupo <b>Y</b></span></p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
-                                <label class="radio-inline personal_radio"
-                                       style="margin-top: -10px; font-size: 12px;">
-                                    <span langkey="map2-46" style="margin-left: -20px; margin-right: 20px">Nunca</span>
-                                    <input type="radio" name="n2" value="1"> 1
+                                <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
+                                    <span langkey="map1-29" style="margin-left: -20px; margin-right: 20px">Discordo completamente</span>
+                                    <input type="radio" name="soc2" value="1"> 1
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="n2" value="2">
-                                    2
+                                    <input type="radio" name="soc2" value="2"> 2
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="n2" value="3">
-                                    3
+                                    <input type="radio" name="soc2" value="3"> 3
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="n2" value="4">
-                                    4
+                                    <input type="radio" name="soc2" value="4"> 4
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="n2" value="5"> 5
-                                    <span langkey="map2-47">Todos os dias</span>
+                                    <input type="radio" name="soc2" value="5"> 5
+                                    <span langkey="map1-30">Concordo completamente</span>
                                 </label>
                             </div>
                         </div>
                         <div class="no-float"></div>
                         <div>
-                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="n3">
-                                <span langkey="map2-49">Discute um problema com um membro do grupo <b>Y</b>.</span></p>
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="soc3"><span
+                                    langkey="map2-43">Sinto-me ligado ao grupo <b>Y</b></span></p>
                             <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                  style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
-                                <label class="radio-inline personal_radio"
-                                       style="margin-top: -10px; font-size: 12px;">
-                                    <span langkey="map2-46" style="margin-left: -20px; margin-right: 20px">Nunca</span>
-                                    <input type="radio" name="n3" value="1"> 1
+                                <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
+                                    <span langkey="map1-29" style="margin-left: -20px; margin-right: 20px">Discordo completamente</span>
+                                    <input type="radio" name="soc3" value="1"> 1
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="n3" value="2">
-                                    2
+                                    <input type="radio" name="soc3" value="2"> 2
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="n3" value="3">
-                                    3
+                                    <input type="radio" name="soc3" value="3"> 3
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="n3" value="4">
-                                    4
+                                    <input type="radio" name="soc3" value="4"> 4
                                 </label>
                                 <label class="radio-inline"
                                        style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                    <input type="radio" name="n3" value="5"> 5
-                                    <span langkey="map2-47">Todos os dias</span>
+                                    <input type="radio" name="soc3" value="5"> 5
+                                    <span langkey="map1-30">Concordo completamente</span>
                                 </label>
                             </div>
                         </div>
                         <div class="no-float"></div>
-                        <h5 style="margin-bottom: 20px; padding-top: 0px">
-                            <span langkey="map2-50">Eficácia coletiva/empoderamento</span>
+                        <h5 style="margin-bottom: 20px; padding-top: 0px;">
+                            <span langkey="map2-44">Vizinhança: Os membros do grupo poderão realizar as 3 ações seguintes entre eles. Em média quantas vezes... </span>
                         </h5>
                         <div class="no-float">
                             <div>
-                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
-                                   id="cee1"><span langkey="map2-51">Penso que uma ação coletiva deste grupo <b>(Y)</b> aumentará as possibilidades de o governo alterar os seus planos?</span>
+                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="n1">
+                                    <span langkey="map2-45">Ajuda um membro do grupo <b>Y</b> numa emergência.</span>
                                 </p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                     <label class="radio-inline personal_radio"
                                            style="margin-top: -10px; font-size: 12px;">
-                                        <span langkey="map1-29" style="margin-left: -20px; margin-right: 20px">Discordo completamente</span>
-                                        <input type="radio" name="cee1"
-                                               value="1"> 1
+                                        <span langkey="map2-46"
+                                              style="margin-left: -20px; margin-right: 20px">Nunca</span>
+                                        <input type="radio" name="n1" value="1"> 1
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="cee1"
-                                               value="2"> 2
+                                        <input type="radio" name="n1" value="2">
+                                        2
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="cee1"
-                                               value="3"> 3
+                                        <input type="radio" name="n1" value="3">
+                                        3
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="cee1"
-                                               value="4"> 4
+                                        <input type="radio" name="n1" value="4">
+                                        4
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="cee1"
-                                               value="5"> 5 <span langkey="map1-30">Concordo completamente</span>
+                                        <input type="radio" name="n1" value="5"> 5
+                                        <span langkey="map2-47">Todos os dias</span>
                                     </label>
                                 </div>
                             </div>
                             <div class="no-float"></div>
                             <div>
-                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
-                                   id="cee2"><span langkey="map2-52">Penso que em conjunto podemos alterar um problema do grupo <b>(Y)</b>.</span>
+                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="n2">
+                                    <span langkey="map2-48">Dá conselhos sobre um problema pessoal de um membro do grupo <b>Y</b>.</span>
                                 </p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                     <label class="radio-inline personal_radio"
                                            style="margin-top: -10px; font-size: 12px;">
-                                        <span langkey="map1-29" style="margin-left: -20px; margin-right: 20px">Discordo completamente</span>
-                                        <input type="radio" name="cee2"
-                                               value="1"> 1
+                                        <span langkey="map2-46"
+                                              style="margin-left: -20px; margin-right: 20px">Nunca</span>
+                                        <input type="radio" name="n2" value="1"> 1
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="cee2"
-                                               value="2"> 2
+                                        <input type="radio" name="n2" value="2">
+                                        2
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="cee2"
-                                               value="3"> 3
+                                        <input type="radio" name="n2" value="3">
+                                        3
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="cee2"
-                                               value="4"> 4
+                                        <input type="radio" name="n2" value="4">
+                                        4
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="cee2"
-                                               value="5"> 5 <span langkey="map1-30">Concordo completamente</span>
+                                        <input type="radio" name="n2" value="5"> 5
+                                        <span langkey="map2-47">Todos os dias</span>
                                     </label>
                                 </div>
                             </div>
                             <div class="no-float"></div>
                             <div>
-                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
-                                   id="cee3"><span langkey="map2-53">Penso que é importante fazer com que as pessoas do grupo <b>(Y)</b> se entreajudem mais.</span>
+                                <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px" id="n3">
+                                    <span langkey="map2-49">Discute um problema com um membro do grupo <b>Y</b>.</span>
                                 </p>
                                 <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                      style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                     <label class="radio-inline personal_radio"
                                            style="margin-top: -10px; font-size: 12px;">
-                                        <span langkey="map1-29" style="margin-left: -20px; margin-right: 20px">Discordo completamente</span>
-                                        <input type="radio" name="cee3"
-                                               value="1"> 1
+                                        <span langkey="map2-46"
+                                              style="margin-left: -20px; margin-right: 20px">Nunca</span>
+                                        <input type="radio" name="n3" value="1"> 1
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="cee3"
-                                               value="2"> 2
+                                        <input type="radio" name="n3" value="2">
+                                        2
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="cee3"
-                                               value="3"> 3
+                                        <input type="radio" name="n3" value="3">
+                                        3
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="cee3"
-                                               value="4"> 4
+                                        <input type="radio" name="n3" value="4">
+                                        4
                                     </label>
                                     <label class="radio-inline"
                                            style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                        <input type="radio" name="cee3"
-                                               value="5"> 5 <span langkey="map1-30">Concordo completamente</span>
+                                        <input type="radio" name="n3" value="5"> 5
+                                        <span langkey="map2-47">Todos os dias</span>
                                     </label>
                                 </div>
-                                <div class="no-float"></div>
-                                <h5 style="margin-bottom: 20px; padding-top: 0px">
-                                    <span langkey="map2-54">Participação do cidadão</span>
-                                </h5>
-                                <div class="no-float"></div>
+                            </div>
+                            <div class="no-float"></div>
+                            <h5 style="margin-bottom: 20px; padding-top: 0px">
+                                <span langkey="map2-50">Eficácia coletiva/empoderamento</span>
+                            </h5>
+                            <div class="no-float">
                                 <div>
                                     <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
-                                       id="cp1">
-                                        <span langkey="map2-55">Nos últimos 12 meses participou nalguma reunião do grupo <b>(Y)</b>?</span>
+                                       id="cee1"><span
+                                            langkey="map2-51">Penso que uma ação coletiva deste grupo <b>(Y)</b> aumentará as possibilidades de o governo alterar os seus planos?</span>
                                     </p>
                                     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
                                          style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
                                         <label class="radio-inline personal_radio"
                                                style="margin-top: -10px; font-size: 12px;">
+                                            <span langkey="map1-29" style="margin-left: -20px; margin-right: 20px">Discordo completamente</span>
+                                            <input type="radio" name="cee1"
+                                                   value="1"> 1
+                                        </label>
+                                        <label class="radio-inline"
+                                               style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                            <input type="radio" name="cee1"
+                                                   value="2"> 2
+                                        </label>
+                                        <label class="radio-inline"
+                                               style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                            <input type="radio" name="cee1"
+                                                   value="3"> 3
+                                        </label>
+                                        <label class="radio-inline"
+                                               style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                            <input type="radio" name="cee1"
+                                                   value="4"> 4
+                                        </label>
+                                        <label class="radio-inline"
+                                               style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                            <input type="radio" name="cee1"
+                                                   value="5"> 5 <span langkey="map1-30">Concordo completamente</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="no-float"></div>
+                                <div>
+                                    <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
+                                       id="cee2"><span langkey="map2-52">Penso que em conjunto podemos alterar um problema do grupo <b>(Y)</b>.</span>
+                                    </p>
+                                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
+                                         style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
+                                        <label class="radio-inline personal_radio"
+                                               style="margin-top: -10px; font-size: 12px;">
+                                            <span langkey="map1-29" style="margin-left: -20px; margin-right: 20px">Discordo completamente</span>
+                                            <input type="radio" name="cee2"
+                                                   value="1"> 1
+                                        </label>
+                                        <label class="radio-inline"
+                                               style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                            <input type="radio" name="cee2"
+                                                   value="2"> 2
+                                        </label>
+                                        <label class="radio-inline"
+                                               style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                            <input type="radio" name="cee2"
+                                                   value="3"> 3
+                                        </label>
+                                        <label class="radio-inline"
+                                               style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                            <input type="radio" name="cee2"
+                                                   value="4"> 4
+                                        </label>
+                                        <label class="radio-inline"
+                                               style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                            <input type="radio" name="cee2"
+                                                   value="5"> 5 <span langkey="map1-30">Concordo completamente</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="no-float"></div>
+                                <div>
+                                    <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
+                                       id="cee3"><span langkey="map2-53">Penso que é importante fazer com que as pessoas do grupo <b>(Y)</b> se entreajudem mais.</span>
+                                    </p>
+                                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
+                                         style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
+                                        <label class="radio-inline personal_radio"
+                                               style="margin-top: -10px; font-size: 12px;">
+                                            <span langkey="map1-29" style="margin-left: -20px; margin-right: 20px">Discordo completamente</span>
+                                            <input type="radio" name="cee3"
+                                                   value="1"> 1
+                                        </label>
+                                        <label class="radio-inline"
+                                               style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                            <input type="radio" name="cee3"
+                                                   value="2"> 2
+                                        </label>
+                                        <label class="radio-inline"
+                                               style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                            <input type="radio" name="cee3"
+                                                   value="3"> 3
+                                        </label>
+                                        <label class="radio-inline"
+                                               style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                            <input type="radio" name="cee3"
+                                                   value="4"> 4
+                                        </label>
+                                        <label class="radio-inline"
+                                               style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                            <input type="radio" name="cee3"
+                                                   value="5"> 5 <span langkey="map1-30">Concordo completamente</span>
+                                        </label>
+                                    </div>
+                                    <div class="no-float"></div>
+                                    <h5 style="margin-bottom: 20px; padding-top: 0px">
+                                        <span langkey="map2-54">Participação do cidadão</span>
+                                    </h5>
+                                    <div class="no-float"></div>
+                                    <div>
+                                        <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
+                                           id="cp1">
+                                            <span langkey="map2-55">Nos últimos 12 meses participou nalguma reunião do grupo <b>(Y)</b>?</span>
+                                        </p>
+                                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
+                                             style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
+                                            <label class="radio-inline personal_radio"
+                                                   style="margin-top: -10px; font-size: 12px;">
                                             <span langkey="map2-46"
                                                   style="margin-left: -20px; margin-right: 20px">Nunca</span>
-                                            <input type="radio" name="cp1"
-                                                   value="1"> 1
+                                                <input type="radio" name="cp1"
+                                                       value="1"> 1
+                                                <label class="radio-inline"
+                                                       style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                                    <input type="radio" name="cp1"
+                                                           value="2"> 2
+                                                </label>
+                                                <label class="radio-inline"
+                                                       style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                                    <input type="radio" name="cp1"
+                                                           value="3"> 3
+                                                </label>
+                                                <label class="radio-inline"
+                                                       style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                                    <input type="radio" name="cp1"
+                                                           value="4"> 4
+                                                </label>
+                                                <label class="radio-inline"
+                                                       style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                                    <input type="radio" name="cp1"
+                                                           value="5"> 5 <span langkey="map2-47">Todos os dias</span>
+                                                </label>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="no-float"></div>
+                                    <div>
+                                        <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
+                                           id="cp2">
+                                            <span langkey="map2-56">Com que frequência participou nas atividades do grupo <b>(Y)</b> nos últimos 12 meses?</span>
+                                        </p>
+                                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
+                                             style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
+                                            <label class="radio-inline personal_radio"
+                                                   style="margin-top: -10px; font-size: 12px;">
+                                            <span langkey="map2-46"
+                                                  style="margin-left: -20px; margin-right: 20px">Nunca</span>
+                                                <input type="radio" name="cp2"
+                                                       value="1"> 1
+                                            </label>
                                             <label class="radio-inline"
                                                    style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                                <input type="radio" name="cp1"
+                                                <input type="radio" name="cp2"
                                                        value="2"> 2
                                             </label>
                                             <label class="radio-inline"
                                                    style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                                <input type="radio" name="cp1"
+                                                <input type="radio" name="cp2"
                                                        value="3"> 3
                                             </label>
                                             <label class="radio-inline"
                                                    style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                                <input type="radio" name="cp1"
+                                                <input type="radio" name="cp2"
                                                        value="4"> 4
                                             </label>
                                             <label class="radio-inline"
                                                    style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                                <input type="radio" name="cp1"
+                                                <input type="radio" name="cp2"
                                                        value="5"> 5 <span langkey="map2-47">Todos os dias</span>
                                             </label>
-                                        </label>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="no-float"></div>
-                                <div>
-                                    <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
-                                       id="cp2">
-                                        <span langkey="map2-56">Com que frequência participou nas atividades do grupo <b>(Y)</b> nos últimos 12 meses?</span>
-                                    </p>
-                                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
-                                         style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
-                                        <label class="radio-inline personal_radio"
-                                               style="margin-top: -10px; font-size: 12px;">
+                                    <div class="no-float"></div>
+                                    <div>
+                                        <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
+                                           id="cp3">
+                                            <span langkey="map2-57">Até que ponto participou no processo de decisão do grupo <b>(Y)</b> nos últimos 12 meses?</span>
+                                        </p>
+                                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
+                                             style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
+                                            <label class="radio-inline personal_radio"
+                                                   style="margin-top: -10px; font-size: 12px;">
                                             <span langkey="map2-46"
                                                   style="margin-left: -20px; margin-right: 20px">Nunca</span>
-                                            <input type="radio" name="cp2"
-                                                   value="1"> 1
-                                        </label>
-                                        <label class="radio-inline"
-                                               style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                            <input type="radio" name="cp2"
-                                                   value="2"> 2
-                                        </label>
-                                        <label class="radio-inline"
-                                               style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                            <input type="radio" name="cp2"
-                                                   value="3"> 3
-                                        </label>
-                                        <label class="radio-inline"
-                                               style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                            <input type="radio" name="cp2"
-                                                   value="4"> 4
-                                        </label>
-                                        <label class="radio-inline"
-                                               style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                            <input type="radio" name="cp2"
-                                                   value="5"> 5 <span langkey="map2-47">Todos os dias</span>
-                                        </label>
+                                                <input type="radio" name="cp3"
+                                                       value="1"> 1
+                                            </label>
+                                            <label class="radio-inline"
+                                                   style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                                <input type="radio" name="cp3"
+                                                       value="2"> 2
+                                            </label>
+                                            <label class="radio-inline"
+                                                   style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                                <input type="radio" name="cp3"
+                                                       value="3"> 3
+                                            </label>
+                                            <label class="radio-inline"
+                                                   style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                                <input type="radio" name="cp3"
+                                                       value="4"> 4
+                                            </label>
+                                            <label class="radio-inline"
+                                                   style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                                <input type="radio" name="cp3"
+                                                       value="5"> 5 <span langkey="map2-47">Todos os dias</span>
+                                            </label>
+                                        </div>
+                                        <a type="button" id="questions-sc"
+                                           class="btn btn-primary float-right"><span langkey="index32">Terminado</span></a>
                                     </div>
                                 </div>
-                                <div class="no-float"></div>
-                                <div>
-                                    <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"
-                                       id="cp3">
-                                        <span langkey="map2-57">Até que ponto participou no processo de decisão do grupo <b>(Y)</b> nos últimos 12 meses?</span>
-                                    </p>
-                                    <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
-                                         style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
-                                        <label class="radio-inline personal_radio"
-                                               style="margin-top: -10px; font-size: 12px;">
-                                            <span langkey="map2-46"
-                                                  style="margin-left: -20px; margin-right: 20px">Nunca</span>
-                                            <input type="radio" name="cp3"
-                                                   value="1"> 1
-                                        </label>
-                                        <label class="radio-inline"
-                                               style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                            <input type="radio" name="cp3"
-                                                   value="2"> 2
-                                        </label>
-                                        <label class="radio-inline"
-                                               style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                            <input type="radio" name="cp3"
-                                                   value="3"> 3
-                                        </label>
-                                        <label class="radio-inline"
-                                               style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                            <input type="radio" name="cp3"
-                                                   value="4"> 4
-                                        </label>
-                                        <label class="radio-inline"
-                                               style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                            <input type="radio" name="cp3"
-                                                   value="5"> 5 <span langkey="map2-47">Todos os dias</span>
-                                        </label>
-                                    </div>
-                                    <a type="button" id="questions-sc"
-                                       class="btn btn-primary float-right"><span langkey="index32">Terminado</span></a>
-                                </div>
-                            </div>
-                        </div> <!-- /questions-panel-left  -->
-                        <!-- ------------------------------- End SC questions -------------------------------------------------- -->
-                    </div> <!-- .col-6 -->
-                </div> <!-- .panel-default -->
-            </div> <!-- .panel-body -->
-            <!-- ------------------------------- End Panel left ------------------------------------------------------------------------ -->
+                            </div> <!-- /questions-panel-left  -->
+                            <!-- ------------------------------- End SC questions -------------------------------------------------- -->
+                        </div> <!-- .col-6 -->
+                    </div> <!-- .panel-default -->
+                </div> <!-- .panel-body -->
+                <!-- ------------------------------- End Panel left ------------------------------------------------------------------------ -->
+            </div>
         </div>
     </div>
-</div>
 </div>
 <!-- ------------------------------- Map visible xs ---------------------------------------------------------------------------------- -->
 <div class="visible-xs col-xs-12 hidden" id="pepa" style="padding: 0px; padding-top: 30px">
@@ -1086,8 +1123,8 @@
                           <span class="glyphicon glyphicon-trash" aria-hidden="true"
                                 style="margin-right: 5px"></span> <span langkey="map1-2">Apagar área</span>
                         </button>
-                    <!-- </div>
-                    <div class="col-xs-12"> -->
+                        <!-- </div>
+                        <div class="col-xs-12"> -->
                     </div>
                 </div>
                 <!--<a type="button" class="btn btn-primary finish-map pop" data-toggle="popover"
@@ -1319,6 +1356,7 @@
                 if (zoommap != -100) {
                     map.setZoom(zoommap);
                 }
+                $("#help").removeClass("show").addClass("hidden");
 
 
                 /*$("#questions_done").removeClass().addClass("hidden");
@@ -1376,6 +1414,8 @@
                 $('#button-freguesia').prop('disabled', true);
                 $('#button-freguesiaxs').prop('disabled', true);
                 $("#finish_button").removeClass().addClass("hidden");
+                $("#help").removeClass("hidden").addClass("show");
+
 
                 $(document).keyup(function (e) {
                     if ((e.keyCode == 27) && ($('#draw').is(":visible"))) {
@@ -1383,12 +1423,18 @@
                         buttonDelete.prop('disabled', false);
                         $('#button-freguesia').prop('disabled', false);
                         $('#button-freguesiaxs').prop('disabled', false);
+                        $("#help").removeClass("show").addClass("hidden");
+
                     }
                     else if ((e.keyCode == 27) && ($('#another_draw').is(":visible"))) {
                         buttonDraw.prop('disabled', false);
                         buttonDelete.prop('disabled', false);
                         $('#button-freguesia').prop('disabled', false);
                         $('#button-freguesiaxs').prop('disabled', false);
+                        $("#help").removeClass("show").addClass("hidden");
+                        $("#finish_button").removeClass().addClass("show");
+
+
                     }
                 });
             });

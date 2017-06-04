@@ -107,6 +107,15 @@
   "map1-44l":"go directly to a certain freguesia using the button",
   "map1-46":"After to define the areas we are going to ask you about these areas.",
   "map1-48":"When you finished defining your different areas, to move on to the next activity press the button",
+
+  "map1-80":"To draw areas:",
+  "map1-82":"Plot the first point with a click where you want to start to draw on the map",
+  "map1-83":"Plot all the needed points to draw the area with a click for each one",
+  "map1-84":"To finish drawing an area, click on the first point again or doble-click in the last point defined of the area",
+  "map1-85":"* You can exit the drawing option by pressing the 'escape' key on your keyboard",
+
+
+
   "map1-95":"Please",
   "map1-96":"Think about a word that define one of these areas",
   "map1-97":"Write the word in the form below",

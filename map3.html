@@ -223,9 +223,10 @@
 
 
                     <div class="no-float"></div>
+                    <div class="show" id="no_ce">
                     <a type="button" class="btn btn-primary float-right display_questions  display_title"
                        id="no_ce_done"><span langkey="index9">Próximo </span></a>
-
+                    </div>
 
                 </div>
                 <!-- ------------------------------- Draw areas ce first end ----------------------------------------------------- -->
@@ -244,9 +245,11 @@
                         </label>
                     </div>
                 </div>
-                <!-- <hr style="width: 100%"> -->
                 <div class="hidden" id="another_draw_ce">
+<!--
                     <p style="margin-bottom: 20px"><b><h4><span langkey="map3-2">Great job!</span></h4></b></p>
+-->
+                    <br>
                     <div>
                         <p langkey="map3-3">para continuar.</p>
 
@@ -271,6 +274,8 @@
                     <a type="button" id="questions-ce" class="btn btn-primary finish-map float-right"><span
                             langkey="index9">Próximo</span></a>
                 </div>
+
+
                 <!-- ------------------------------- Draw areas ce next end ----------------------------------------------------- -->
                 <!-- ------------------------------- Questions ----------------------------------------------------- -->
                 <div class="show" id="questions_done">
@@ -377,6 +382,35 @@
                     </div>
                     <!-- -------------------------------  End questions ----------------------------------------------------- -->
                 </div> <!-- .panel-body -->
+
+                <div id="help" class="hidden" style="background-color: #e7e7e7; padding: 20px">
+
+                    <p><span langkey="map1-80"> Para dibujar las áreas:</span></p>
+                    <br>
+
+                    <ul style="list-style-type:decimal">
+
+                        <li>
+                            <p><span langkey="map1-82">Define el primer punto con un clic donde quieras empezar a dibujar en el mapa</span>
+                            </p>
+                        </li>
+                        <li>
+                            <p><span langkey="map1-83">Define todos los puntos necesarios para dibujar el área con un clic para cada uno</span>
+                            </p>
+                        </li>
+                        <li>
+                            <p><span langkey="map1-84">Para acabar de definir el área, clica en el primer punto que definiste o haz doble clic cuando definas el último punto</span>
+                            </p>
+                        </li>
+                    </ul>
+
+
+                    <p><span langkey="map1-85">* You can exit the drawing option by pressing the 'escape' key on your keyboard</span>
+                    </p>
+
+
+                </div>
+
             </div> <!-- .panel-default -->
         </div> <!-- .col-6 -->
         <div class="no-float"></div>
@@ -683,6 +717,9 @@
                     map.addLayer(drawnItems);
                     map.addLayer(polygonData.layer);
 
+                    $("#help").removeClass("show").addClass("hidden");
+
+
                 });
 
                 map.on('draw:edited', function (e) {
@@ -726,6 +763,28 @@
                     $('#button-freguesia').prop('disabled', true);
                     $('#button-freguesiaxs').prop('disabled', true);
                     buttonDelete.prop('disabled', true);
+                    $("#no_ce").removeClass().addClass("hidden");
+                    $("#help").removeClass("hidden").addClass("show");
+                    $("#finish_button").removeClass().addClass("hidden");
+                    $(document).keyup(function (e) {
+                        if ((e.keyCode == 27) && ($('#draw_ce').is(":visible"))) {
+                            $("#no_ce").removeClass().addClass("show");
+                            $("#help").removeClass("show").addClass("hidden");
+
+
+                        }
+                        else if ((e.keyCode == 27) && ($('#another_draw_ce').is(":visible"))) {
+                            $("#finish_button").removeClass().addClass("show");
+                            $("#help").removeClass("show").addClass("hidden");
+
+                        }
+                        else{
+                            $("#help").removeClass("show").addClass("hidden");
+
+                        }
+                    });
+
+
                 });
             }
         }
