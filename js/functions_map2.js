@@ -72,6 +72,7 @@ function startAll() {
         else {
             $("#continuar1").removeClass("show").addClass("hidden");
         }
+
     });
 
     $('#submit_name_group').click(function () {
@@ -97,19 +98,19 @@ function startAll() {
             // alert("Please, insert at least a group name");
             alert(  translator.getKeyLanguageValue("general7"));
         }
-
-
     });
 
 
     function namegroup() {
+        var tete2 = name_groups[number];
+
         $("#group_name_nature").html(translator.getKeyLanguageValue("map2-3"));
-        var replaced = $("#group_name_nature").html().replace('hola', name_groups[number]);
+        var replaced = $("#group_name_nature").html().replace('hola', '<b>' + tete2 + '</b>');
         $("#group_name_nature").html(replaced);
         $("#textchange").html(translator.getKeyLanguageValue("map2-5"));
         $("#textchange_nature").html(translator.getKeyLanguageValue("map2-4"));
-        var replaced1 = $("#textchange").html().replace('X', name_groups[number]);
-        var replaced2 = $("#textchange_nature").html().replace('X', name_groups[number]);
+        var replaced1 = $("#textchange").html().replace('X', '<b>' + tete2 + '</b>');
+        var replaced2 = $("#textchange_nature").html().replace('X', '<b>' + tete2 + '</b>');
         $("#textchange").html(replaced1);
         $("#textchange_nature").html(replaced2);
 
@@ -777,8 +778,8 @@ function counterAreasName() {
     $("#counting_areas").html(replaced2);
 
 
-    $("#change_name_group").html(translator.getKeyLanguageValue("map2-30"));
-    var replaced3 = $("#change_name_group").html().replace('X', name_groups[number]);
+    $("#change_name_group").html(translator.getKeyLanguageValue("map2-30a"));
+    var replaced3 = $("#change_name_group").html().replace('X', '<b>' + name_groups[number] + '</b>');
     $("#change_name_group").html(replaced3);
 
 }

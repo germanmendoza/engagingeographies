@@ -2,6 +2,7 @@ var map;
 var testGeoJson;
 var overPassOPs;
 var profession_new;
+var areasuser = [];
 
 function startAll(){
 
@@ -328,20 +329,29 @@ function areasLoading() {
         app.getSOP(id, function (SOPLayersGeoJson) {
             var geoJson = /*JSON.parse(*/SOPLayersGeoJson.geoJson/*)*/;
             SOPLayers = L.geoJson(geoJson, {style: SOPStyle}).addTo(map);
+            areasuser.push(SOPLayers);
 
             app.getSC(id, function (SCLayersGeoJson) {
                 var geoJson = /*JSON.parse(*/SCLayersGeoJson.geoJson/*)*/;
                 SCLayers = L.geoJson(geoJson, {style: SCStyle}).addTo(map);
+                areasuser.push(SCLayers);
+
 
                 app.getCE(id, function (CELayersGeoJson) {
                     var geoJson = /*JSON.parse(*/CELayersGeoJson.geoJson/*)*/;
                     CELayers = L.geoJson(geoJson, {style: CEStyle}).addTo(map);
+                    areasuser.push(CELayers);
                 });
             });
         });
+
     }
     catch (err){
         console.error(err.message);
     }
+
+    map.fitBounds(areasuser.getBounds(), null);
+
+
 }
 

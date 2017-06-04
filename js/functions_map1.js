@@ -124,17 +124,18 @@ function startAll() {
 
 
     function nameplace() {
+        var tete = name_places[number];
         $("#group_name_place").html(translator.getKeyLanguageValue("map1-11"));
-        var replaced = $("#group_name_place").html().replace('hola', name_places[number]);
+        var replaced = $("#group_name_place").html().replace('hola', '<b>' + tete + '</b>');
         $("#group_name_place").html(replaced);
         $("#draw_places").html(translator.getKeyLanguageValue("map1-12"));
-        var replaced1 = $("#draw_places").html().replace('hola', '<b>' + name_places[number] + '</b>');
+        var replaced1 = $("#draw_places").html().replace('hola', '<b>' + tete + '</b>');
         $("#draw_places").html(replaced1);
         $("#area_name_sliders").html(translator.getKeyLanguageValue("map1-11"));
-        var replaced2 = $("#area_name_sliders").html().replace('hola', name_places[number]);
+        var replaced2 = $("#area_name_sliders").html().replace('hola', '<b>' + tete + '</b>');
         $("#area_name_sliders").html(replaced2);
         $("#title_sliders_change").html(translator.getKeyLanguageValue("map1-20"));
-        var replaced3 = $("#title_sliders_change").html().replace('Y', name_places[number]);
+        var replaced3 = $("#title_sliders_change").html().replace('hola', '<b>' + tete + '</b>');
         $("#title_sliders_change").html(replaced3);
 
     };

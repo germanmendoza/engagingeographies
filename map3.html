@@ -3,11 +3,11 @@
 <head>
 
     <!--To load latest changes-->
-    <meta http-equiv="cache-control" content="max-age=0" />
-    <meta http-equiv="cache-control" content="no-cache" />
-    <meta http-equiv="expires" content="0" />
-    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
-    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="max-age=0"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
+    <meta http-equiv="pragma" content="no-cache"/>
     <!-- -------------------- -->
 
 
@@ -75,36 +75,43 @@
 </nav>
 <!-- ------------------------------- End Navbar ----------------------------------------------------------------------------- -->
 <div class="container-fluid">
-<!--  Progress bar -->
+    <!--  Progress bar -->
     <div class="">
-      <div class="progress" style="height: 15px; margin-top: 0px; margin-bottom: 5px">
-        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%; background-color: #6DBFCE; line-height:15px">60%</div>
-      </div>
+        <div class="progress" style="height: 15px; margin-top: 0px; margin-bottom: 5px">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                 style="width:60%; background-color: #6DBFCE; line-height:15px">60%
+            </div>
+        </div>
     </div>
     <!-- ------------------------------- Map visible lg md sm  -------------------------------------------------------------------- -->
-    <div id="pepe" class="col-lg-6 col-md-6 col-sm-6 visible-lg visible-md visible-sm hidden" style="position: fixed; right: 0px;">
+    <div id="pepe" class="col-lg-6 col-md-6 col-sm-6 visible-lg visible-md visible-sm hidden"
+         style="position: fixed; right: 0px;">
         <div class="panel panel-default">
             <div class="panel-body">
                 <div id="map" style="height:80vh; position: relative;">
-                    <div class="visible-lg visible-md visible-sm" style="position: absolute; top: 10px; left: 65px; z-index: 998">
-                      <div class="col-lg-12 col-md-12 col-sm-12 width-buttons-map">
-                        <button class="btn btn-default btn-md" id="draw_poly" style="margin-bottom: 3px" disabled>
+                    <div class="visible-lg visible-md visible-sm"
+                         style="position: absolute; top: 10px; left: 65px; z-index: 998">
+                        <div class="col-lg-12 col-md-12 col-sm-12 width-buttons-map">
+                            <button class="btn btn-default btn-md" id="draw_poly" style="margin-bottom: 3px" disabled>
                             <span class="glyphicon glyphicon-pencil" aria-hidden="true"
                                   style="margin-right: 5px"></span> <span langkey="map1-1">Comece a desenhar</span>
-                        </button>
-                        <button class="btn btn-default btn-md" id="delete_poly" style="margin-bottom: 3px" disabled>
-                            <span class="glyphicon glyphicon-trash" aria-hidden="true" style="margin-right: 5px"></span>
-                            <span langkey="map1-2">Apagar áreas</span>
-                        </button>
-                      </div>
-                      <div class="col-lg-12 col-md-12 col-sm-12" style="padding-left: 0px;">
+                            </button>
+                            <button class="btn btn-default btn-md" id="delete_poly" style="margin-bottom: 3px" disabled>
+                                <span class="glyphicon glyphicon-trash" aria-hidden="true"
+                                      style="margin-right: 5px"></span>
+                                <span langkey="map1-2">Apagar áreas</span>
+                            </button>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12" style="padding-left: 0px;">
                         <span class="dropdown" style="margin-right: 5px">
-                          <button class="btn btn-default dropdown-toggle" type="button" id="button-freguesia" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="button-freguesia"
+                                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                             <span langkey="map1-3">Freguesias</span>
                             <span class="caret"></span>
                           </button>
                           <div class="dropdown-menu" style="min-width: 250px;">
-                            <ul class="dropdown-map col-lg-6 col-md-6 col-sm-6 col-xs-6" aria-labelledby="dropdown-freguesias">
+                            <ul class="dropdown-map col-lg-6 col-md-6 col-sm-6 col-xs-6"
+                                aria-labelledby="dropdown-freguesias">
                               <li><a href="#" id="d-ajuda">Ajuda</a></li>
                               <li><a href="#" id="d-alcantara">Alcântara</a></li>
                               <li><a href="#" id="d-alvalade">Alvalade</a></li>
@@ -119,7 +126,8 @@
                               <li><a href="#" id="d-carnide">Carnide</a></li>
                               <li><a href="#" id="d-estrela">Estrela</a></li>
                             </ul>
-                            <ul class="col-lg-6 col-md-6 col-sm-6 col-xs-6 dropdown-map" aria-labelledby="dropdown-freguesias">
+                            <ul class="col-lg-6 col-md-6 col-sm-6 col-xs-6 dropdown-map"
+                                aria-labelledby="dropdown-freguesias">
                               <li><a href="#" id="d-lumiar">Lumiar</a></li>
                               <li><a href="#" id="d-marvila">Marvila</a></li>
                               <li><a href="#" id="d-misericordia">Misericórdia</a></li>
@@ -134,8 +142,8 @@
                             </ul>
                           </div>
                         </span>
-                      </div>
-                </div> <!-- /map -->
+                        </div>
+                    </div> <!-- /map -->
                     <!-- <div class="custom_buttons_leaflet visible-lg visible-md visible-sm">
                         <button class="btn btn-default btn-md" id="draw_poly" onclick="drawPolygon()" disabled>
                             <span class="glyphicon glyphicon-pencil" aria-hidden="true" style="margin-right: 5px"></span>
@@ -166,204 +174,240 @@
             <div class="panel-body">
                 <!-- ------------------------------- Draw areas ce first ----------------------------------------------------- -->
                 <div class="hidden" id="draw_ce">
-                    <p><span style="margin-bottom: 20px"><span langkey="map3-1">Pode por favor desenhar as áreas nas quais gostaria de participar em processos participativos</span></span></p>
-                        <br>
-                        <ul>
-                            <li>
-                                <p><span langkey="map1-12a">using the </span>
-                                    <button class="btn btn-default btn-xs" disabled>
+                    <p><span style="margin-bottom: 20px"><span langkey="map3-1">Pode por favor desenhar as áreas nas quais gostaria de participar em processos participativos</span></span>
+                    </p>
+                    <br>
+                    <ul>
+                        <li>
+                            <p><span langkey="map1-12a">using the </span>
+                                <button class="btn btn-default btn-xs" disabled>
                                     <span class="glyphicon glyphicon-pencil" aria-hidden="true"
                                           style="margin-right: 5px"></span>
-                                        <span langkey="map1-13"> Start drawing</span><br>
-                                        <h9 langkey="map1-14"></h9>
-                                    </button>
-                                </p>
-                            </li>
-                            <li>
-                                <p><span langkey="map1-15">Se necessitar, pode apagar a área pressionando o </span>
-                                    <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-trash"
-                                                                                          aria-hidden="true"
-                                                                                          style="margin-right: 5px"></span><span
-                                            langkey="map1-16"> Apagar áreas</span><br>
-                                        <h9 langkey="map1-14"></h9>
-                                    </button>
-                                </p>
+                                    <span langkey="map1-13"> Start drawing</span><br>
+                                    <h9 langkey="map1-14"></h9>
+                                </button>
+                            </p>
+                        </li>
+                        <li>
+                            <p><span langkey="map1-15">Se necessitar, pode apagar a área pressionando o </span>
+                                <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-trash"
+                                                                                      aria-hidden="true"
+                                                                                      style="margin-right: 5px"></span><span
+                                        langkey="map1-16"> Apagar áreas</span><br>
+                                    <h9 langkey="map1-14"></h9>
+                                </button>
+                            </p>
 
-                            </li>
+                        </li>
 
-                            <li>
-                                <p><span langkey="map1-17">Puedes ir a un barrio específico utilizando el botón</span>
-                                    <button
-                                            class="btn btn-default dropdown-toggle" type="button"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" disabled>
-                                        <span langkey="map1-3">Freguesias</span><br>
-                                        <h9 langkey="map1-14"></h9>
-                                        <span class="caret"></span>
-                                    </button>
-                                </p>
-
-
-                            </li>
+                        <li>
+                            <p><span langkey="map1-17">Puedes ir a un barrio específico utilizando el botón</span>
+                                <button
+                                        class="btn btn-default dropdown-toggle" type="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" disabled>
+                                    <span langkey="map1-3">Freguesias</span><br>
+                                    <h9 langkey="map1-14"></h9>
+                                    <span class="caret"></span>
+                                </button>
+                            </p>
 
 
-                        </ul>
-                        <br>
-                        <span style="margin-bottom: 20px" langkey="map3-1a">Pode por favor desenhar as áreas nas quais gostaria de participar em processos participativos.</span>
+                        </li>
+
+
+                    </ul>
+                    <br>
+                    <span style="margin-bottom: 20px" langkey="map3-1a">Pode por favor desenhar as áreas nas quais gostaria de participar em processos participativos.</span>
 
                     <div class="no-float"></div>
-                    <a type="button" class="btn btn-primary float-right display_questions  display_title" id="no_ce_done"><span langkey="index9">Próximo </span></a>
-
-
-
-
-
+                    <a type="button" class="btn btn-primary float-right display_questions  display_title"
+                       id="no_ce_done"><span langkey="index9">Próximo </span></a>
 
 
                 </div>
                 <!-- ------------------------------- Draw areas ce first end ----------------------------------------------------- -->
                 <!-- ------------------------------- Draw areas ce next ----------------------------------------------------- -->
-               <div class="hidden" id="live_area">
-                <h5 style="margin-top: 20px">
-                    <span langkey="map2-32">Reside nesta área?</span>
-                </h5>
-                <div>
-                    <label class="radio-inline">
-                        <input type="radio" name="live" value="true">  <span langkey="index5">Sim</span>
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio" name="live" value="false" checked="checked"> <span langkey="index6">Não</span>
-                    </label>
+                <div class="hidden" id="live_area">
+                    <h5 style="margin-top: 20px">
+                        <span langkey="map2-32">Reside nesta área?</span>
+                    </h5>
+                    <div>
+                        <label class="radio-inline">
+                            <input type="radio" name="live" value="true"> <span langkey="index5">Sim</span>
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="live" value="false" checked="checked"> <span
+                                langkey="index6">Não</span>
+                        </label>
+                    </div>
                 </div>
-               </div>
+                <hr style="width: 100%">
                 <div class="hidden" id="another_draw_ce">
                     <p style="margin-bottom: 20px"><b><h4><span langkey="map3-2">Great job!</span></h4></b></p>
-                    <div><span id="outra_area" langkey="map3-3">Pode agora desenhar outra área onde gostaria de estar envolvido em processos participativos,
-                        ou clique no botão</span>
-                        <button type="button" class="btn btn-primary btn-next" href="#" disabled><span langkey="index9">Próximo</span></button>
-                        <span langkey="map3-4">para continuar.</span>
+                    <div>
+                        <p langkey="map3-3">para continuar.</p>
+
+                        <ul>
+                            <li>
+                                    <span id="outra_area" langkey="map3-3a">Pode agora desenhar outra área onde gostaria de estar envolvido em processos participativos,
+                                    ou clique no botão</span>
+                            </li>
+                            <br>
+                            <li>
+                                <span langkey="map3-3b">para continuar.</span><span langkey="index9"></span>
+                                <span langkey="map3-4">para continuar.</span>
+                            </li>
+
+
+                        </ul>
                     </div>
 
                 </div>
                 <div id="finish_button" class="hidden" style="margin-top: 100px">
-                    <a type="button" id="questions-ce" class="btn btn-primary finish-map float-right"><span langkey="index9">Próximo</span></a>
+                    <a type="button" id="questions-ce" class="btn btn-primary finish-map float-right"><span
+                            langkey="index9">Próximo</span></a>
                 </div>
                 <!-- ------------------------------- Draw areas ce next end ----------------------------------------------------- -->
-            <!-- ------------------------------- Questions ----------------------------------------------------- -->
-            <div class="show" id="questions_done">
-                <h5><span langkey="map3-5">Estamos quase a terminar. Por favor responda às seguintes perguntas sobre a cidade de Lisboa.</span></h5>
-                <hr style="width: 100%">
-                <h5 style="margin-bottom: 20px; padding-top: 0px">
-                    <span langkey="map3-6">Comprometimento cívico.</span>
-                </h5>
-                <div class="no-float">
-                    <div>
-                        <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"><span langkey="map3-7">Nos últimos 12 meses, juntou-se com outros membros do grupo para tratar de um problema</span></p>
-                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
-                             style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
-                            <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
-                                <span langkey="map2-46" style="margin-left: -20px; margin-right: 20px">Nunca</span>
-                                <input type="radio" name="ce1" value="1"> 1
-                            </label>
-                            <label class="radio-inline"
-                                   style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                <input type="radio" name="ce1" value="2"> 2
-                            </label>
-                            <label class="radio-inline"
-                                   style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                <input type="radio" name="ce1" value="3"> 3
-                            </label>
-                            <label class="radio-inline"
-                                   style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                <input type="radio" name="ce1"  value="4"> 4
-                            </label>
-                            <label class="radio-inline"
-                                   style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                <input type="radio" name="ce1" value="5"> 5 <span langkey="map2-47">Todos os dias</span>
-                            </label>
+                <!-- ------------------------------- Questions ----------------------------------------------------- -->
+                <div class="show" id="questions_done">
+                    <h5><span langkey="map3-5">Estamos quase a terminar. Por favor responda às seguintes perguntas sobre a cidade de Lisboa.</span>
+                    </h5>
+                    <hr style="width: 100%">
+                    <h5 style="margin-bottom: 20px; padding-top: 0px">
+                        <span langkey="map3-6">Comprometimento cívico.</span>
+                    </h5>
+                    <div class="no-float">
+                        <div>
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"><span
+                                    langkey="map3-7">Nos últimos 12 meses, juntou-se com outros membros do grupo para tratar de um problema</span>
+                            </p>
+                            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
+                                 style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
+                                <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
+                                    <span langkey="map2-46" style="margin-left: -20px; margin-right: 20px">Nunca</span>
+                                    <input type="radio" name="ce1" value="1"> 1
+                                </label>
+                                <label class="radio-inline"
+                                       style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                    <input type="radio" name="ce1" value="2"> 2
+                                </label>
+                                <label class="radio-inline"
+                                       style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                    <input type="radio" name="ce1" value="3"> 3
+                                </label>
+                                <label class="radio-inline"
+                                       style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                    <input type="radio" name="ce1" value="4"> 4
+                                </label>
+                                <label class="radio-inline"
+                                       style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                    <input type="radio" name="ce1" value="5"> 5 <span
+                                        langkey="map2-47">Todos os dias</span>
+                                </label>
+                            </div>
                         </div>
-                    </div>
-                    <div class="no-float"></div>
-                    <div>
-                        <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"><span langkey="map3-8">Nos últimos 12 meses, interagiu com alguma autoridade local ou organização governamental sobre problemas comuns?</span></p>
-                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
-                             style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
-                            <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
-                                <span langkey="map2-46" style="margin-left: -20px; margin-right: 20px">Nunca</span>
-                                <input type="radio" name="ce2" value="1"> 1
-                            </label>
-                            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                <input type="radio" name="ce2" value="2"> 2
-                            </label>
-                            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                <input type="radio" name="ce2" value="3"> 3
-                            </label>
-                            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                <input type="radio" name="ce2" value="4"> 4
-                            </label>
-                            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                <input type="radio" name="ce2" value="5"> 5 <span langkey="map2-47">Todos os dias</span>
-                            </label>
+                        <div class="no-float"></div>
+                        <div>
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"><span
+                                    langkey="map3-8">Nos últimos 12 meses, interagiu com alguma autoridade local ou organização governamental sobre problemas comuns?</span>
+                            </p>
+                            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
+                                 style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
+                                <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
+                                    <span langkey="map2-46" style="margin-left: -20px; margin-right: 20px">Nunca</span>
+                                    <input type="radio" name="ce2" value="1"> 1
+                                </label>
+                                <label class="radio-inline"
+                                       style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                    <input type="radio" name="ce2" value="2"> 2
+                                </label>
+                                <label class="radio-inline"
+                                       style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                    <input type="radio" name="ce2" value="3"> 3
+                                </label>
+                                <label class="radio-inline"
+                                       style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                    <input type="radio" name="ce2" value="4"> 4
+                                </label>
+                                <label class="radio-inline"
+                                       style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                    <input type="radio" name="ce2" value="5"> 5 <span
+                                        langkey="map2-47">Todos os dias</span>
+                                </label>
+                            </div>
                         </div>
-                    </div>
-                    <div class="no-float"></div>
-                    <div>
-                        <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"><span langkey="map3-9">Nos últimos 12 meses, trabalho com alguma autoridade local ou organização governamental sobre problemas comuns?</span></p>
-                        <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
-                             style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
-                            <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
-                                <span langkey="map2-46" style="margin-left: -20px; margin-right: 20px">Nunca</span>
-                                <input type="radio" name="ce3" value="1"> 1
-                            </label>
-                            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                <input type="radio" name="ce3" value="2"> 2
-                            </label>
-                            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                <input type="radio" name="ce3" value="3"> 3
-                            </label>
-                            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                <input type="radio" name="ce3" value="4"> 4
-                            </label>
-                            <label class="radio-inline" style="margin-top: -10px; margin-left: 10px; font-size: 12px">
-                                <input type="radio" name="ce3" value="5"> 5 <span langkey="map2-47">Todos os dias</span>
-                            </label>
+                        <div class="no-float"></div>
+                        <div>
+                            <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left: 0px"><span
+                                    langkey="map3-9">Nos últimos 12 meses, trabalho com alguma autoridade local ou organização governamental sobre problemas comuns?</span>
+                            </p>
+                            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12"
+                                 style="padding-left: 5px; padding-right: 5px; margin-bottom: 20px">
+                                <label class="radio-inline personal_radio" style="margin-top: -10px; font-size: 12px;">
+                                    <span langkey="map2-46" style="margin-left: -20px; margin-right: 20px">Nunca</span>
+                                    <input type="radio" name="ce3" value="1"> 1
+                                </label>
+                                <label class="radio-inline"
+                                       style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                    <input type="radio" name="ce3" value="2"> 2
+                                </label>
+                                <label class="radio-inline"
+                                       style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                    <input type="radio" name="ce3" value="3"> 3
+                                </label>
+                                <label class="radio-inline"
+                                       style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                    <input type="radio" name="ce3" value="4"> 4
+                                </label>
+                                <label class="radio-inline"
+                                       style="margin-top: -10px; margin-left: 10px; font-size: 12px">
+                                    <input type="radio" name="ce3" value="5"> 5 <span
+                                        langkey="map2-47">Todos os dias</span>
+                                </label>
+                            </div>
                         </div>
+                        <div class="no-float"></div>
+                        <a type="button" class="btn btn-primary float-right display_questions  display_title"
+                           id="ce_done"
+                           onclick="changeclass();"><span langkey="index9">Próximo </span></a>
                     </div>
-                    <div class="no-float"></div>
-                    <a type="button" class="btn btn-primary float-right display_questions  display_title" id="ce_done"
-                       onclick="changeclass();"><span langkey="index9">Próximo </span></a>
-                </div>
-                <!-- -------------------------------  End questions ----------------------------------------------------- -->
-            </div> <!-- .panel-body -->
-        </div> <!-- .panel-default -->
-    </div> <!-- .col-6 -->
-    <div class="no-float"></div>
-    <!-- ------------------------------- End Panel left ------------------------------------------------------------------------ -->
+                    <!-- -------------------------------  End questions ----------------------------------------------------- -->
+                </div> <!-- .panel-body -->
+            </div> <!-- .panel-default -->
+        </div> <!-- .col-6 -->
+        <div class="no-float"></div>
+        <!-- ------------------------------- End Panel left ------------------------------------------------------------------------ -->
 
 
-    <!-- ------------------------------- Map visible xs ---------------------------------------------------------------------------------- -->
-    <div  id="pepa" class="visible-xs col-xs-12 hidden" style="padding: 0px; padding-top: 30px">
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <div id="map2" style="height:83vh; position: relative;">
-                    <div style="position: absolute; top: 10px; left: 40px; z-index: 998">
-                    <div class="col-xs-12">
-                      <button class="btn btn-default btn-xs" id="draw_polyxs" style="margin-bottom: 3px" disabled>
+        <!-- ------------------------------- Map visible xs ---------------------------------------------------------------------------------- -->
+        <div id="pepa" class="visible-xs col-xs-12 hidden" style="padding: 0px; padding-top: 30px">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div id="map2" style="height:83vh; position: relative;">
+                        <div style="position: absolute; top: 10px; left: 40px; z-index: 998">
+                            <div class="col-xs-12">
+                                <button class="btn btn-default btn-xs" id="draw_polyxs" style="margin-bottom: 3px"
+                                        disabled>
                           <span class="glyphicon glyphicon-pencil" aria-hidden="true"
                                 style="margin-right: 5px"></span> <span langkey="map1-1">Comece a desenhar</span>
-                      </button>
-                      <button class="btn btn-default btn-xs" id="delete_polyxs" style="margin-bottom: 3px" disabled>
+                                </button>
+                                <button class="btn btn-default btn-xs" id="delete_polyxs" style="margin-bottom: 3px"
+                                        disabled>
                           <span class="glyphicon glyphicon-trash" aria-hidden="true"
                                 style="margin-right: 5px"></span> <span langkey="map1-2">Apagar área</span>
-                      </button>
-                    </div>
-                    <div class="col-xs-12">
+                                </button>
+                            </div>
+                            <div class="col-xs-12">
                       <span class="dropdown" style="margin-right: 5px">
-                        <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="dropdown-freguesias" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" id="button-freguesiaxs">
+                        <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="dropdown-freguesias"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
+                                id="button-freguesiaxs">
                           <span langkey="map1-3">Freguesias</span>
                           <span class="caret"></span>
                         </button>
                         <div class="dropdown-menu" style="min-width: 180px; margin: 8px 0 0">
-                          <ul class="dropdown-map col-xs-6" aria-labelledby="dropdown-freguesias" style="margin: 0px; padding: 0px">
+                          <ul class="dropdown-map col-xs-6" aria-labelledby="dropdown-freguesias"
+                              style="margin: 0px; padding: 0px">
                                 <li><a href="#" id="d-ajuda-xs">Ajuda</a></li>
                                 <li><a href="#" id="d-alcantara-xs">Alcântara</a></li>
                                 <li><a href="#" id="d-alvalade-xs">Alvalade</a></li>
@@ -378,7 +422,8 @@
                                 <li><a href="#" id="d-carnide-xs">Carnide</a></li>
                                 <li><a href="#" id="d-estrela-xs">Estrela</a></li>
                             </ul>
-                            <ul class="col-xs-6 dropdown-map" aria-labelledby="dropdown-freguesias" style="margin: 0px; padding: 0px">
+                            <ul class="col-xs-6 dropdown-map" aria-labelledby="dropdown-freguesias"
+                                style="margin: 0px; padding: 0px">
                                 <li><a href="#" id="d-lumiar-xs">Lumiar</a></li>
                                 <li><a href="#" id="d-marvila-xs">Marvila</a></li>
                                 <li><a href="#" id="d-misericordia-xs">Misericórdia</a></li>
@@ -393,24 +438,24 @@
                             </ul>
                         </div>
                       </span>
+                            </div>
+                        </div>
+                        <!--<a type="button" class="btn btn-primary finish-map pop" data-toggle="popover"
+                           data-placement="top" title="Before finish"
+                           data-content="Areas that have drawn, choose the most important to you."
+                           onclick="toggler('secondimage');" disabled>Next</a>-->
                     </div>
-                  </div>
-                  <!--<a type="button" class="btn btn-primary finish-map pop" data-toggle="popover"
-                     data-placement="top" title="Before finish"
-                     data-content="Areas that have drawn, choose the most important to you."
-                     onclick="toggler('secondimage');" disabled>Next</a>-->
-              </div>
-          </div>
-      </div>
-  </div>
-    <!-- ------------------------------- End map ------------------------------------------------------------------------------ -->
-</div> <!-- .container fluid -->
-<!--  Progress bar -->
-<!-- <div style="position: absolute; bottom: 0px; width: 48%" class="visible-lg visible-sm visible-md">
-  <div class="progress">
-    <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%; background-color: #6DBFCE">75%</div>
-    </div>
-  </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- ------------------------------- End map ------------------------------------------------------------------------------ -->
+    </div> <!-- .container fluid -->
+    <!--  Progress bar -->
+    <!-- <div style="position: absolute; bottom: 0px; width: 48%" class="visible-lg visible-sm visible-md">
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%; background-color: #6DBFCE">75%</div>
+        </div>
+      </div> -->
 
 
     <!-- ------------------------------- Modal 3 Learn draw --------------------------------------------------------------------- -->
@@ -447,7 +492,9 @@
                     </p>
 
                     <p></p>
-                    <p><span langkey="map1-44a">You can "pan" the map or zoom in </span> <img src="img/mas.png" style="width: 30px; margin-bottom: 5px"> or <img src="img/menos.png" style="width: 30px;  margin-bottom: 5px"> <span langkey="map1-44c">using the map controls and go directly to a certain freguesia using the button</span>
+                    <p><span langkey="map1-44a">You can "pan" the map or zoom in </span> <img src="img/mas.png"
+                                                                                              style="width: 30px; margin-bottom: 5px">
+                        or <img src="img/menos.png" style="width: 30px;  margin-bottom: 5px"> <span langkey="map1-44c">using the map controls and go directly to a certain freguesia using the button</span>
                         <button class="btn btn-default btn-xs">
                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"
                                           style="margin-right: 5px"></span> <span langkey="map1-3">Apagar área</span>
@@ -477,209 +524,208 @@
     </div> <!--/.modal fade -->
 
 
-
     <script src="js/jquery-3.1.1.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/leaflet.js"></script>
-<script src="js/leaflet-src.js"></script>
-<script src="js/leaflet.draw.js"></script>
-<script src="js/bootstrap-slider.js"></script>
-<script src="js/functions_map3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/leaflet-src.js"></script>
+    <script src="js/leaflet.draw.js"></script>
+    <script src="js/bootstrap-slider.js"></script>
+    <script src="js/functions_map3.js"></script>
 
 
-<script src="src/edit/handler/Edit.Poly.js"></script>
-<script src="src/edit/handler/Edit.SimpleShape.js"></script>
-<script src="src/edit/handler/Edit.Circle.js"></script>
-<script src="src/edit/handler/Edit.Rectangle.js"></script>
+    <script src="src/edit/handler/Edit.Poly.js"></script>
+    <script src="src/edit/handler/Edit.SimpleShape.js"></script>
+    <script src="src/edit/handler/Edit.Circle.js"></script>
+    <script src="src/edit/handler/Edit.Rectangle.js"></script>
 
-<script src="src/draw/handler/Draw.Feature.js"></script>
-<script src="src/draw/handler/Draw.Polyline.js"></script>
-<script src="src/draw/handler/Draw.Polygon.js"></script>
-<script src="src/draw/handler/Draw.SimpleShape.js"></script>
-<script src="src/draw/handler/Draw.Rectangle.js"></script>
-<script src="src/draw/handler/Draw.Circle.js"></script>
-<script src="src/draw/handler/Draw.Marker.js"></script>
+    <script src="src/draw/handler/Draw.Feature.js"></script>
+    <script src="src/draw/handler/Draw.Polyline.js"></script>
+    <script src="src/draw/handler/Draw.Polygon.js"></script>
+    <script src="src/draw/handler/Draw.SimpleShape.js"></script>
+    <script src="src/draw/handler/Draw.Rectangle.js"></script>
+    <script src="src/draw/handler/Draw.Circle.js"></script>
+    <script src="src/draw/handler/Draw.Marker.js"></script>
 
-<script src="src/ext/TouchEvents.js"></script>
-<script src="src/ext/LatLngUtil.js"></script>
-<script src="src/ext/GeometryUtil.js"></script>
-<script src="src/ext/LineUtil.Intersect.js"></script>
-<script src="src/ext/Polyline.Intersect.js"></script>
-<script src="src/ext/Polygon.Intersect.js"></script>
+    <script src="src/ext/TouchEvents.js"></script>
+    <script src="src/ext/LatLngUtil.js"></script>
+    <script src="src/ext/GeometryUtil.js"></script>
+    <script src="src/ext/LineUtil.Intersect.js"></script>
+    <script src="src/ext/Polyline.Intersect.js"></script>
+    <script src="src/ext/Polygon.Intersect.js"></script>
 
-<script src="src/Control.Draw.js"></script>
-<script src="src/Tooltip.js"></script>
-<script src="src/Toolbar.js"></script>
+    <script src="src/Control.Draw.js"></script>
+    <script src="src/Tooltip.js"></script>
+    <script src="src/Toolbar.js"></script>
 
-<script src="src/draw/DrawToolbar.js"></script>
-<script src="src/edit/EditToolbar.js"></script>
-<script src="src/edit/handler/EditToolbar.Edit.js"></script>
-<script src="src/edit/handler/EditToolbar.Delete.js"></script>
+    <script src="src/draw/DrawToolbar.js"></script>
+    <script src="src/edit/EditToolbar.js"></script>
+    <script src="src/edit/handler/EditToolbar.Edit.js"></script>
+    <script src="src/edit/handler/EditToolbar.Delete.js"></script>
 
-<script src="js/API/lib.js"></script>
+    <script src="js/API/lib.js"></script>
 
-<script>
-    $(document).ready(function () {
-        var id = util.getFromLocalStorage(util.interPageDataKey);
-        if(!id){
-            //window.location.href = "index.html";
-        }
-        //startMapComponents();
-        startAll();
-    });
-</script>
-
-
-<script>
-    var map, drawnItems, drawControl;
-    var buttonDraw, buttonDelete;
-
-    function startMapComponents() {
-        zoommap = -100;
-
-        function isElementInViewport(el) {
-            if (typeof jQuery === "function" && el instanceof jQuery) {
-                el = el[0];
+    <script>
+        $(document).ready(function () {
+            var id = util.getFromLocalStorage(util.interPageDataKey);
+            if (!id) {
+                //window.location.href = "index.html";
             }
-            var rect = el.getBoundingClientRect();
-            return !((rect.top == 0) && (rect.left == 0) && (rect.bottom == 0) && (rect.right == 0));
-        }
-
-
-        // Big Map
-        var map1 = L.map('map', {
-            scrollWheelZoom: false,
+            //startMapComponents();
+            startAll();
         });
-        map1.on('load', function (e) {
-            if (isElementInViewport($('#map'))) {
-                createAll(map1, $("#draw_poly"), $("#delete_poly"));
+    </script>
+
+
+    <script>
+        var map, drawnItems, drawControl;
+        var buttonDraw, buttonDelete;
+
+        function startMapComponents() {
+            zoommap = -100;
+
+            function isElementInViewport(el) {
+                if (typeof jQuery === "function" && el instanceof jQuery) {
+                    el = el[0];
+                }
+                var rect = el.getBoundingClientRect();
+                return !((rect.top == 0) && (rect.left == 0) && (rect.bottom == 0) && (rect.right == 0));
             }
-        });
-        map1.setView([38.7500, -9.1500], 12);
 
-        // Small Map
-        var mapxs = L.map('map2');
-        mapxs.on('load', function (e) {
-            if (isElementInViewport($('#map2'))) {
-                createAll(mapxs, $("#draw_polyxs"), $("#delete_polyxs"));
-            }
-        });
-        mapxs.setView([38.7500, -9.1500], 12);
 
-        function createAll(rmap, bdraw, bdelete) {
-            map = rmap;
-            buttonDraw = bdraw;
-            buttonDelete = bdelete;
-            // add an OpenStreetMap tile layer
-            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-                // attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-            // Customize button draw polygon - personal contribution
-            var polygonDrawer = new L.Draw.Polyline(map);
-
-            // Initialise the FeatureGroup to store editable layers
-            drawnItems = new L.FeatureGroup();
-            map.addLayer(drawnItems);
-
-            // Initialise the draw control and pass it the FeatureGroup of editable layers
-            drawControl = new L.Control.Draw({
-                //position: 'topright',
-                draw: {
-                    polyline: false,
-                    polygon: false,
-                    rectangle: false,
-                    circle: false,
-                    marker: false
-                },
-                edit: {
-                    featureGroup: drawnItems,
-                    // Customize button delete polygon - personal contribution
-                    remove: false,
-                    // Edit polygon when you draw it - personal contribution
-                    edit: false
+            // Big Map
+            var map1 = L.map('map', {
+                scrollWheelZoom: false,
+            });
+            map1.on('load', function (e) {
+                if (isElementInViewport($('#map'))) {
+                    createAll(map1, $("#draw_poly"), $("#delete_poly"));
                 }
             });
-            map.addControl(drawControl);
+            map1.setView([38.7500, -9.1500], 12);
 
-            map.on('draw:created', function (e) {
-                var type = e.layerType, layer = e.layer;
-                if (type === 'marker') {
-                    layer.bindPopup('A popup!');
+            // Small Map
+            var mapxs = L.map('map2');
+            mapxs.on('load', function (e) {
+                if (isElementInViewport($('#map2'))) {
+                    createAll(mapxs, $("#draw_polyxs"), $("#delete_polyxs"));
                 }
-                // Edit polygon when you draw it - personal contribution
-                e.layer.editing.enable();
-                drawnItems.addLayer(layer);
-                drawnItems.setStyle({color: '#00ff00'})
-//                zoommap = map.getZoom();
-//                map.fitBounds(drawnItems.getBounds(), null);
-                $("#another_draw_ce").removeClass().addClass("show");
-                $("#questions-ce").removeClass("hidden").addClass("show");
-                $("#draw_ce").removeClass().addClass("hidden");
-                $("#live_area").removeClass().addClass("show");
-                buttonDelete.prop('disabled', false);
-                $("#finish_button").removeClass().addClass("show");
-                $('#button-freguesia').prop('disabled', false);
-                $('#button-freguesiaxs').prop('disabled', false);
-                var polygonData = {
-                    type:"cea",
-                    layer: L.geoJson(drawnItems.toGeoJSON()),
-                    //,livingIn = input...
-                };
+            });
+            mapxs.setView([38.7500, -9.1500], 12);
 
-                CE.push(polygonData);
+            function createAll(rmap, bdraw, bdelete) {
+                map = rmap;
+                buttonDraw = bdraw;
+                buttonDelete = bdelete;
+                // add an OpenStreetMap tile layer
+                L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                    // attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+                // Customize button draw polygon - personal contribution
+                var polygonDrawer = new L.Draw.Polyline(map);
 
-                map.removeLayer(drawnItems);
+                // Initialise the FeatureGroup to store editable layers
                 drawnItems = new L.FeatureGroup();
                 map.addLayer(drawnItems);
-                map.addLayer(polygonData.layer);
 
-            });
-
-            map.on('draw:edited', function (e) {
-                var layers = e.layers;
-                var countOfEditedLayers = 0;
-                layers.eachLayer(function (layer) {
-                    countOfEditedLayers++;
+                // Initialise the draw control and pass it the FeatureGroup of editable layers
+                drawControl = new L.Control.Draw({
+                    //position: 'topright',
+                    draw: {
+                        polyline: false,
+                        polygon: false,
+                        rectangle: false,
+                        circle: false,
+                        marker: false
+                    },
+                    edit: {
+                        featureGroup: drawnItems,
+                        // Customize button delete polygon - personal contribution
+                        remove: false,
+                        // Edit polygon when you draw it - personal contribution
+                        edit: false
+                    }
                 });
-                console.log("Edited " + countOfEditedLayers + " layers");
-                //map.fitBounds(drawnItems.getBounds(), null);
-            });
+                map.addControl(drawControl);
 
-            // Customize button delete polygon - personal contribution
-            buttonDelete.on('click', function () {
-                drawnItems.clearLayers();
-                $("#draw_ce").removeClass().addClass("show");
-                $("#another_draw_ce").removeClass().addClass("hidden");
-                $("#live_area").removeClass().addClass("hidden");
-                if (CE.length > 1){
-                    map.removeLayer(CE[CE.length-1].layer);
-                    CE.pop();
+                map.on('draw:created', function (e) {
+                    var type = e.layerType, layer = e.layer;
+                    if (type === 'marker') {
+                        layer.bindPopup('A popup!');
+                    }
+                    // Edit polygon when you draw it - personal contribution
+                    e.layer.editing.enable();
+                    drawnItems.addLayer(layer);
+                    drawnItems.setStyle({color: '#00ff00'})
+//                zoommap = map.getZoom();
+//                map.fitBounds(drawnItems.getBounds(), null);
+                    $("#another_draw_ce").removeClass().addClass("show");
                     $("#questions-ce").removeClass("hidden").addClass("show");
+                    $("#draw_ce").removeClass().addClass("hidden");
+                    $("#live_area").removeClass().addClass("show");
+                    buttonDelete.prop('disabled', false);
+                    $("#finish_button").removeClass().addClass("show");
+                    $('#button-freguesia').prop('disabled', false);
+                    $('#button-freguesiaxs').prop('disabled', false);
+                    var polygonData = {
+                        type: "cea",
+                        layer: L.geoJson(drawnItems.toGeoJSON()),
+                        //,livingIn = input...
+                    };
 
-                }
-                else if (CE.length == 1){
-                    map.removeLayer(CE[CE.length-1].layer);
-                    CE.pop();
+                    CE.push(polygonData);
+
+                    map.removeLayer(drawnItems);
+                    drawnItems = new L.FeatureGroup();
+                    map.addLayer(drawnItems);
+                    map.addLayer(polygonData.layer);
+
+                });
+
+                map.on('draw:edited', function (e) {
+                    var layers = e.layers;
+                    var countOfEditedLayers = 0;
+                    layers.eachLayer(function (layer) {
+                        countOfEditedLayers++;
+                    });
+                    console.log("Edited " + countOfEditedLayers + " layers");
+                    //map.fitBounds(drawnItems.getBounds(), null);
+                });
+
+                // Customize button delete polygon - personal contribution
+                buttonDelete.on('click', function () {
+                    drawnItems.clearLayers();
+                    $("#draw_ce").removeClass().addClass("show");
+                    $("#another_draw_ce").removeClass().addClass("hidden");
+                    $("#live_area").removeClass().addClass("hidden");
+                    if (CE.length > 1) {
+                        map.removeLayer(CE[CE.length - 1].layer);
+                        CE.pop();
+                        $("#questions-ce").removeClass("hidden").addClass("show");
+
+                    }
+                    else if (CE.length == 1) {
+                        map.removeLayer(CE[CE.length - 1].layer);
+                        CE.pop();
+                        buttonDelete.prop('disabled', true);
+                        $("#questions-ce").removeClass("show").addClass("hidden");
+
+                    }
+                });
+
+                buttonDraw.on('click', function () {
+                    if ($("#live_area").is(":visible")) {
+                        CE[CE.length - 1].livingIn = (($("input[name=live]:checked").val()) === 'true');
+                    }
+                    var polygonDrawer = new L.Draw.Polygon(map, drawControl);
+                    polygonDrawer.enable();
+                    $("#live_area").removeClass().addClass("hidden");
+                    $('#button-freguesia').prop('disabled', true);
+                    $('#button-freguesiaxs').prop('disabled', true);
                     buttonDelete.prop('disabled', true);
-                    $("#questions-ce").removeClass("show").addClass("hidden");
-
-                }
-            });
-
-            buttonDraw.on('click', function () {
-                if ($("#live_area").is(":visible")){
-                    CE[CE.length-1].livingIn = (($("input[name=live]:checked").val()) === 'true');
-                }
-                var polygonDrawer = new L.Draw.Polygon(map, drawControl);
-                polygonDrawer.enable();
-                $("#live_area").removeClass().addClass("hidden");
-                $('#button-freguesia').prop('disabled', true);
-                $('#button-freguesiaxs').prop('disabled', true);
-                buttonDelete.prop('disabled', true);
-            });
+                });
+            }
         }
-    }
-</script>
+    </script>
 
 </body>
 </html>

@@ -43,9 +43,9 @@ L.drawLocal = {
 			},
 			polygon: {
 				tooltip: {
-					start: 'Click to start drawing shape.',
-					cont: 'Click to continue drawing shape.',
-					end: 'Click first point to close this shape.'
+					start: 'Clique para começar a desenhar uma área.',
+					cont: 'Clique para continuar a desenhar a área.',
+					end: 'Clique no primeiro ponto para fechar esta área.'
 				}
 			},
 			polyline: {
