@@ -350,7 +350,7 @@ function areasLoading() {
         console.error(err.message);
     }
 
-    map.fitBounds(areasuser.getBounds(), null);
+    //map.fitBounds(areasuser.getBounds(), null);
 
 
 }

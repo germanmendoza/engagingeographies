@@ -1,9 +1,9 @@
 {
   "index1": "Este questionário é parte integrante de um projeto de investigação da Nova Information Management School (NOVA IMS) da Universidade Nova de Lisboa. O objetivo principal é perceber a forma como a perceção do local e as relações sociais do cidadão influenciam a sua participação numa dada área urbana.",
   "index2": "O preenchimento do questionário demora cerca de 5 minutos e a atividade de mapeamento cerca de 10 minutos, dependendo do número de áreas que se pretenderem assinalar.",
-  "index2a": "Às submissões nº 100, nº 200, nº 500 e nº 1000, serão oferecidas um cartão oferta no montante de 50,00€. Para se habilitar a esta oferta tem de fornecer o seu email e/ou twitter username no campo disponível ao final do inquérito.",
+  "index2a": "Às submissões nº 100, nº 200, nº 500 e nº 1000, será oferecido um cartão oferta no montante de 50,00€. Para se habilitar a esta oferta tem de fornecer o seu email e/ou twitter username no campo disponível no final do inquérito.",
   "index3": "A sua contribuição apoia os processos participativos da cidade de Lisboa.",
-  "index3a": "Por favor, faça o inquerito no computador portátil (laptop) ou computador (desktop).",
+  "index3a": "Por favor, responda ao inquérito num computador portátil  ou num computador de secretária, dado que algumas funções não funcionam bem em telemóveis e outros dispositivos semelhantes",
   "index4": "Reside em Lisboa?",
   "index4a": "Reside em Portugal?",
   "index5": "Sim",
@@ -79,7 +79,7 @@
   "map1-23":"Conforto e imagem (limpo, “verde”, espiritual, atrativo, etc)",
   "map1-24":"Acesso e ligação (continuidade, caminhável, acessível, proximidade, etc)",
   "map1-25":"Escolha a área mais importante para si e em seguida, clique no botão 'Próximo'.",
-  "map1-26":"Responda por favor às perguntas que se seguem em relação à área escolhida (X).",
+  "map1-26":"Responda por favor às perguntas que se seguem em relação à sua área escolhida X.",
   "map1-27":"Identidade do local",
   "map1-28":"Tudo sobre esta área (Y) é um reflexo de mim",
   "map1-29":"Discordo completamente",
@@ -99,9 +99,9 @@
 
   "map1-41":"Vamos começar! Leia por favor com atenção as instruções que se seguem",
   "map1-42":"We invite you to draw the areas that you though on the map freely.",
-  "map1-43":"Para empezar, pressione o botão",
-  "map1-44":"then click on the map to plot your first point, and as many points as you need to define your area",
-  "map1-44ll":"to finish drawing an area, click on the first point again or doble-click in the last point defined of the area",
+  "map1-43":"Para empezar a disenhar, pressione o botão",
+  "map1-44":"de seguida clique no mapa para desenhar o seu primeiro ponto, e todos os pontos que precisar para definir a sua área",
+  "map1-44ll":"para terminar de desenhar a área, volte a clicar no primeiro ponto ou, em alternativa, clique duas vezes no último ponto desenhado.",
   "map1-44g":"Pode:",
   "map1-44h":"fazer alterações na forma do polígono movendo qualquer um dos pontos:",
   "map1-44i":"apagar o área clicando o botão",
@@ -113,20 +113,20 @@
   "map1-48":"Quando terminar de definir as suas áreas pode passar à próxima atividade, pressionando o botão ",
 
   "map1-80":"Para disenhar as áreas:",
-  "map1-82":"Plot the first point with a click where you want to start to draw on the map",
-  "map1-83":"Plot all the needed points to draw the area with a click for each one",
-  "map1-84":"To finish drawing an area, click on the first point again or doble-click in the last point defined of the area",
-  "map1-85":"* You can exit the drawing option by pressing the 'escape' key on your keyboard",
+  "map1-82":"Desenhe o primeiro ponto clicando no local sobre o mapa onde deseja iniciar",
+  "map1-83":"Desenhe todos os pontos necessários para desenhar uma áreas clicando em cada um deles",
+  "map1-84":"para terminar de desenhar a área, volte a clicar no primeiro ponto ou, em alternativa, clique duas vezes no último ponto desenhado",
+  "map1-85":"* Pode abandonar a opção de desenho clicando e tecla “esc” no seu teclado.",
 
 
 
 
   "map1-95":"Por favor",
-  "map1-96":"Pense numa determinada palavra que defina uma das áreas",
-  "map1-97":"Escreva no espaço abaixo a palavra",
-  "map1-98":"Clique em",
-  "map1-99":"You can add as many areas as you want. When you finish to add them, click in button.",
-  "map1-100":"Add another word that define another area",
+  "map1-96":"Pense numa palavra que defina uma destas áreas",
+  "map1-97":"Escreva essa palavra no formulário abaixo",
+  "map1-98":"Clique no botão ",
+  "map1-99":"Pode adicionar todas as áreas que quiser. Quando terminar clique no botão",
+  "map1-100":"Adicione mais uma palavra para definir uma área",
 
 
 
@@ -162,8 +162,8 @@
   "map2-28":"por cima do mapa.",
   "map2-29":"Muito obrigado",
   "map2-30":"Pode agora:",
-  "map2-30a":"draw another area that defines the group X clicking the button",
-  "map2-31":"to define the next group or to go to the next activity clicking the button ",
+  "map2-30a":"desenhe outra área que defina o grupo X clicando no botão “WHAT BUTTON”",
+  "map2-31":"para definir o próximo grupo e para passar à próxima atividade clique no botão ",
   "map2-32a":"Já definiu: L área/s.",
   "map2-32":"Reside nesta área?",
   "map2-33":"Em relação à área que acabou de desenhar, responda por favor às perguntas seguintes",
@@ -172,7 +172,7 @@
   "map2-36":"A interação com as pessoas deste grupo leva a que me interesse sobre aquilo que pessoas diferentes de mim pensam.",
   "map2-37":"A interação com pessoas deste grupo disponibiliza-me novas pessoas com quem falar.",
   "map2-38":"Por favor escolha o grupo com que melhor se identifica socialmente.",
-  "map2-39":"Responda por favor às perguntas que se seguem em relação ao grupo X.",
+  "map2-39":"Responda por favor às perguntas que se seguem em relação no seu grupo X.",
   "map2-40":"Sentido de comunidade",
   "map2-41":"Sinto-me parte do grupo Y",
   "map2-42":"Pertenço ao grupo Y",
@@ -198,14 +198,14 @@
   "map2-95":"Por favor:",
   "map2-96":"Pense numa determinada palavra que defina umo dos grupos",
   "map2-97":"Escreva no espaço abaixo a palavra",
-  "map2-98":"Clique em",
-  "map2-99":"You can add as many groups as you want. When you finish to add them, click in button.",
-  "map2-100":"Add another word that define another group",
+  "map2-98":"Clique em no botão",
+  "map2-99":"Pode adicionar todos os grupos que desejar. Quando terminar clique no botão",
+  "map2-100":"Adicione outra palavra que defina o grupo X clicando no botão",
 
 
 
   "map3-1":"Pode por favor desenhar as área/s nas quais gostaria de participar em processos participativos.",
-  "map3-1a":"If you don't want to define an area, please press the botton",
+  "map3-1a":"Se não desejar definir uma área, por favor clique no botão ",
   "map3-2":"Muito obrigado",
   "map3-3":"Pode agora:",
   "map3-3a":"desenhar outra área onde gostaria de estar envolvido em processos participativos",
@@ -269,13 +269,13 @@
   "global11":"Se quiser pode escrever alguns comentários de forma a melhorar a aplicação.",
   "global12":"Nada",
   "global13":"Completamente",
-  "global14":"These are the important areas of your fellow citizens!",
+  "global14":"Estas são as áreas mais importantes para os seus concidadãos.",
 
 
 
   "general1":"Há um problema de conexão; por favor, tente novamente mais tarde.",
   "general2":"Por favor, escreva o código postal certo",
-  "general3":"Indique por favor o seu código postal",
+  "general3":"Este código postal não pertence à cidade de Lisboa. Por favor indique o seu código postal.",
   "general4":"Por favor, insira pelo menos um nome de area.",
   "general5":"Por favor responda a todas as perguntas",
   "general6":"Por favor, escolha uma área",
