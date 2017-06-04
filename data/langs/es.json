@@ -1,6 +1,7 @@
 {
   "index1": "Este cuestionario es parte de un proyecto de investigación de la universidad NOVA (Lisboa). El principal objetivo del estudio es comprender como las percepciones de los ciudadanos y sus relaciones sociales, influyen en la participación pública en un contexto urbano.",
   "index2": "Responder el cuestionario se demora menos de 5 minutos y la actividad de dibujo le lleva a la mayoría de la gente unos 10 minutos, depende del número de áreas a definir.",
+  "index2a": "Las respuestas nº 100, nº 200, nº 500 e nº 1000, serán premiadas con un vale regalo de 50,00€. Para poder disfrutar el vale debe darnos su mail y/o usuario twitter en el campo disponible al final de la encuesta.",
   "index3": "Con tu contribución, vamos a mejorar los procesos participativos de Lisboa.",
   "index3a": "Por favor, haga el cuestionario en un ordenador portátil o de escritorio.",
   "index4": "Vives en Lisboa?",
@@ -147,7 +148,7 @@
   "map2-29":"Buen trabajo!",
   "map2-30":"Ahora puedes:",
   "map2-30a":"dibujar otra área que pertenezca al grupo X con el boton",
-  "map2-31":"definir el siguiente grupo o ir a la siguiente actividad clicando al botón siguiente.",
+  "map2-31":"definir el siguiente grupo o ir a la siguiente actividad clicando al botón ",
   "map2-32a":"Has definido: L área/s.",
   "map2-32":"Vives en esta área?",
   "map2-33":"Por favor, responde las siguientes preguntas acerca del ",
@@ -189,7 +190,7 @@
 
 
   "map3-1":"Por favor, puedes dibujar las área/s en las cuales quieres participar en los procesos participativos.",
-  "map3-1a":"Si no quieres definir ninguna área, por favor clica en el siguiente botón.",
+  "map3-1a":"Si no quieres definir ninguna área, por favor clica en el botón",
   "map3-2":"Buen trabajo!",
   "map3-3":"Ahora puedes:",
   "map3-3a":"dibujar más áreas donde quieres estar envuelto en procesos participativos ",

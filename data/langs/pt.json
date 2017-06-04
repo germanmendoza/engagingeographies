@@ -1,6 +1,7 @@
 {
   "index1": "Este questionário é parte integrante de um projeto de investigação da Nova Information Management School (NOVA IMS) da Universidade Nova de Lisboa. O objetivo principal é perceber a forma como a perceção do local e as relações sociais do cidadão influenciam a sua participação numa dada área urbana.",
   "index2": "O preenchimento do questionário demora cerca de 5 minutos e a atividade de mapeamento cerca de 10 minutos, dependendo do número de áreas que se pretenderem assinalar.",
+  "index2a": "Às submissões nº 100, nº 200, nº 500 e nº 1000, serão oferecidas um cartão oferta no montante de 50,00€. Para se habilitar a esta oferta tem de fornecer o seu email e/ou twitter username no campo disponível ao final do inquérito.",
   "index3": "A sua contribuição apoia os processos participativos da cidade de Lisboa.",
   "index3a": "Por favor, faça o inquerito no computador portátil (laptop) ou computador (desktop).",
   "index4": "Reside em Lisboa?",
@@ -150,8 +151,9 @@
   "map2-27":"Pode apagar a área clicando no botão ",
   "map2-28":"por cima do mapa.",
   "map2-29":"Muito obrigado",
-  "map2-30":"Pode agora desenhar outra área X ou, clicar no botão",
-  "map2-31":"para definir o próximo grupo",
+  "map2-30":"Pode agora:",
+  "map2-30a":"draw another area that defines the group X clicking the button",
+  "map2-31":"to define the next group or to go to the next activity clicking the button ",
   "map2-32a":"Já definiu: L área/s.",
   "map2-32":"Reside nesta área?",
   "map2-33":"Em relação à área que acabou de desenhar, responda por favor às perguntas seguintes",
@@ -193,9 +195,11 @@
 
 
   "map3-1":"Pode por favor desenhar as área/s nas quais gostaria de participar em processos participativos.",
-  "map3-1a":"Se não quiser definir uma área, pressione o botão a seguir.",
+  "map3-1a":"If you don't want to define an area, please press the botton",
   "map3-2":"Muito obrigado",
-  "map3-3":"Pode agora desenhar outra área onde gostaria de estar envolvido em processos participativos, ou clique no botão",
+  "map3-3":"Pode agora:",
+  "map3-3a":"desenhar outra área onde gostaria de estar envolvido em processos participativos",
+  "map3-3b":"clique no botão ",
   "map3-4":"para continuar",
   "map3-5":"Estamos quase a terminar. Por favor responda às seguintes perguntas sobre a cidade ONDE MORA.",
   "map3-6":"Comprometimento cívico.",

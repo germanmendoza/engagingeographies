@@ -1,6 +1,7 @@
 {
   "index1": "The following web-map survey is part of a research project at NOVA IMS (Lisbon). Its primary objective is to understand how citizens' place perceptions, and their relationships, influence participation in a given urban area.",
   "index2": "The questionnaire will take less than 5 minutes, and the mapping activity takes most people around 10 minutes, depending on how many areas you define.",
+  "index2a": "Answers nº 100, nº 200, nº 500 e nº 1000, will be provided with a gift card of 50,00€. In order to contact you, you should provide your mail and/or twitter username in the place available at the end of the survey.",
   "index3": "With your contribution, you will support the improvement of Lisbon municipality participation processes.",
   "index3a": "Please, do the survey with the laptop or desktop computer.",
   "index4": "Do you live in Lisbon?",
@@ -148,8 +149,9 @@
   "map2-27":"and you can delete the area clicking button",
   "map2-28":"on the map.",
   "map2-29":"Great job!",
-  "map2-30":"Now you can draw another area that defines the group X, or click the button ",
-  "map2-31":"to define the next group or to go to the next activity.",
+  "map2-30":"Now, you can:",
+  "map2-30a":"draw another area that defines the group X clicking the button",
+  "map2-31":"to define the next group or to go to the next activity clicking the button ",
   "map2-32a":"You have already defined: L area/s.",
   "map2-32":"Do you live in that area?",
   "map2-33":"Please, answer the following questions about the area just drawn.",
@@ -191,9 +193,11 @@
 
 
   "map3-1":"Please, can you draw the area/s in which you want to participate in city participatory processes.",
-  "map3-1a":"If you don't want to define an area, please press the following botton.",
+  "map3-1a":"If you don't want to define an area, please press the botton",
   "map3-2":"Great job!",
-  "map3-3":"Now you can draw another area where you want to be involved in participatory processes, or click the button ",
+  "map3-3":"Now you can:",
+  "map3-3a":"draw another area where you want to be involved in participatory processes",
+  "map3-3b":"click the button ",
   "map3-4":"to continue.",
   "map3-5":"We are almost finished. Please, answer the following questions regarding the city where you live.",
   "map3-6":"Civic engagement",
