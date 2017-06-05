@@ -189,7 +189,7 @@ function startAll() {
                             groups: SC
                         };
 
-                        app.setSC(data2, function (response) {
+                        app.setSC(id, data2, function (response) {
                             if (response === false) {
                                 // alert("There is a connection problem; please, try again later");
                                 alert(translator.getKeyLanguageValue("general1"));
@@ -203,9 +203,11 @@ function startAll() {
                         });
 
 
+
+
                     }
                 }
-                else if (name_groups.length == 1) {
+               /* else if (name_groups.length == 1) {
 
                     var id = util.getFromLocalStorage(util.interPageDataKey);
 
@@ -227,7 +229,7 @@ function startAll() {
                             });
                         }
                     });
-                }
+                }*/
                 else {
                     number = number + 1;
                     namegroup();

@@ -341,6 +341,22 @@ function areasLoading() {
                     var geoJson = /*JSON.parse(*/CELayersGeoJson.geoJson/*)*/;
                     CELayers = L.geoJson(geoJson, {style: CEStyle}).addTo(map);
                     areasuser.push(CELayers);
+
+                    var group = new L.featureGroup();
+
+                    for (var i = 0; i < areasuser.length; i++) {
+                        //group.addLayer(areasuser.layer[i]);
+                    }
+
+                    /*for (var j = 0; j < highlightedGroup.areas.length; j++) {
+                        highlightedGroup.areas[j].layer.setStyle({color: '#FF0000'});
+                        group.addLayer(highlightedGroup.areas[j].layer);
+                        map.addLayer(highlightedGroup.areas[j].layer);
+                    }*/
+
+
+                    //map.fitBounds(group.getBounds(), null);
+
                 });
             });
         });
@@ -350,7 +366,8 @@ function areasLoading() {
         console.error(err.message);
     }
 
-    //map.fitBounds(areasuser.getBounds(), null);
+
+
 
 
 }
