@@ -326,37 +326,27 @@ function areasLoading() {
             return {color: "#00ff00"};
         };
 
+        var group = new L.featureGroup();
+
         app.getSOP(id, function (SOPLayersGeoJson) {
             var geoJson = /*JSON.parse(*/SOPLayersGeoJson.geoJson/*)*/;
-            SOPLayers = L.geoJson(geoJson, {style: SOPStyle}).addTo(map);
-            areasuser.push(SOPLayers);
+            var sopLayer = L.geoJson(geoJson, {style: SOPStyle});
+            sopLayer.addTo(map);
+            group.addLayer(sopLayer);
 
             app.getSC(id, function (SCLayersGeoJson) {
                 var geoJson = /*JSON.parse(*/SCLayersGeoJson.geoJson/*)*/;
-                SCLayers = L.geoJson(geoJson, {style: SCStyle}).addTo(map);
-                areasuser.push(SCLayers);
-
+                var scLayer = L.geoJson(geoJson, {style: SCStyle});
+                scLayer.addTo(map);
+                group.addLayer(scLayer);
 
                 app.getCE(id, function (CELayersGeoJson) {
                     var geoJson = /*JSON.parse(*/CELayersGeoJson.geoJson/*)*/;
-                    CELayers = L.geoJson(geoJson, {style: CEStyle}).addTo(map);
-                    areasuser.push(CELayers);
+                    var ceLayer = L.geoJson(geoJson, {style: CEStyle});
+                    ceLayer.addTo(map);
+                    group.addLayer(ceLayer);
 
-                    var group = new L.featureGroup();
-
-                    for (var i = 0; i < areasuser.length; i++) {
-                        //group.addLayer(areasuser.layer[i]);
-                    }
-
-                    /*for (var j = 0; j < highlightedGroup.areas.length; j++) {
-                        highlightedGroup.areas[j].layer.setStyle({color: '#FF0000'});
-                        group.addLayer(highlightedGroup.areas[j].layer);
-                        map.addLayer(highlightedGroup.areas[j].layer);
-                    }*/
-
-
-                    //map.fitBounds(group.getBounds(), null);
-
+                    map.fitBounds(group.getBounds(), null);
                 });
             });
         });

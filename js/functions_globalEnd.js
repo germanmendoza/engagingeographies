@@ -130,21 +130,31 @@ function areasLoading() {
             return {color: "#00ff00", weight: 1};
         };
 
+        // var group = new L.featureGroup();
+
         app.getSOPA(function (SOPLayersGeoJson) {
             if ((SOPLayersGeoJson.geoJson) && (SOPLayersGeoJson.geoJson !== "")) {
                 //var geoJson = JSON.parse(SOPLayersGeoJson.geoJson);
-                SOPLayers = L.geoJson(SOPLayersGeoJson.geoJson, {style: SOPStyle}).addTo(map);
+                var sopLayer = L.geoJson(SOPLayersGeoJson.geoJson, {style: SOPStyle});
+                sopLayer.addTo(map);
+                // group.addLayer(sopLayer);
 
                 app.getSCA(function (SCLayersGeoJson) {
                     if ((SCLayersGeoJson.geoJson) && (SCLayersGeoJson.geoJson !== "")) {
                         //var geoJson = JSON.parse(SCLayersGeoJson.geoJson);
-                        SCLayers = L.geoJson(SCLayersGeoJson.geoJson, {style: SCStyle}).addTo(map);
+                        var scLayer = L.geoJson(SCLayersGeoJson.geoJson, {style: SCStyle});
+                        scLayer.addTo(map);
+                        // group.addLayer(scLayer);
 
                         app.getCEA(function (CELayersGeoJson) {
                             if ((CELayersGeoJson.geoJson) && (CELayersGeoJson.geoJson !== "")) {
                                 //var geoJson = JSON.parse(CELayersGeoJson.geoJson);
-                                CELayers = L.geoJson(CELayersGeoJson.geoJson, {style: CEStyle}).addTo(map);
+                                var ceLayer = L.geoJson(CELayersGeoJson.geoJson, {style: CEStyle});
+                                ceLayer.addTo(map);
+                                // group.addLayer(ceLayer);
                             }
+
+                            // map.fitBounds(group.getBounds(), null);
                         });
                     }
                 });
