@@ -22,7 +22,7 @@
   "index17": "Mais do que 6 anos",
   "index18": "Indique por favor o código postal da sua residência",
   "index19": "Se não desejar indicar o seu código postal, selecione por favor na caixa",
-  "index20": "Selecione por favor, se for necessário, as questões menos positivo da sua freguesia (máximo 3)",
+  "index20": "Selecione por favor aspetos menos positivos da sua freguesia (máximo 3)",
   "index21": "Abastecimiento e Mercados",
   "index22": "Cultura",
   "index23": "Desporto",
@@ -98,8 +98,8 @@
 
 
   "map1-41":"Vamos começar! Leia por favor com atenção as instruções que se seguem",
-  "map1-42":"We invite you to draw the areas that you though on the map freely.",
-  "map1-43":"Para empezar a disenhar, pressione o botão",
+  "map1-42":"Convidamo-la(o) a desenhar as áreas, que definiu com palavras, no mapa.",
+  "map1-43":"Para começar a disenhar, pressione o botão",
   "map1-44":"de seguida clique no mapa para desenhar o seu primeiro ponto, e todos os pontos que precisar para definir a sua área",
   "map1-44ll":"para terminar de desenhar a área, volte a clicar no primeiro ponto ou, em alternativa, clique duas vezes no último ponto desenhado.",
   "map1-44g":"Pode:",
@@ -126,7 +126,7 @@
   "map1-97":"Escreva essa palavra no formulário abaixo",
   "map1-98":"Clique no botão ",
   "map1-99":"Pode adicionar todas as áreas que quiser. Quando terminar clique no botão",
-  "map1-100":"Adicione mais uma palavra para definir uma área",
+  "map1-100":"Adicione mais uma palavra para definir outra área",
 
 
 
@@ -200,7 +200,8 @@
   "map2-97":"Escreva no espaço abaixo a palavra",
   "map2-98":"Clique em no botão",
   "map2-99":"Pode adicionar todos os grupos que desejar. Quando terminar clique no botão",
-  "map2-100":"Adicione outra palavra que defina o grupo X clicando no botão",
+  "map2-100":"Adicione mais uma palavra para definir outro grupo",
+
 
 
 
@@ -263,12 +264,12 @@
   "global5":"Tweetar",
   "global6":"Até à próxima :)",
   "global7":"A sua opinião é importante!",
-  "global8":"Por favor dê a sua opinião sobre os assuntos que se seguem. (em que 0 é nada e 5 é completamente)",
+  "global8":"Por favor dê a sua opinião sobre os assuntos que se seguem. (em que 0 é nenhuma e 5 é muita)",
   "global9":"Qual foi o grau de dificuldade da resposta às perguntas?",
   "global10":"Qual foi o grau de dificuldade do processo de mapeamento?",
   "global11":"Se quiser pode escrever alguns comentários de forma a melhorar a aplicação.",
-  "global12":"Nada",
-  "global13":"Completamente",
+  "global12":"Nenhuma",
+  "global13":"Muita",
   "global14":"Estas são as áreas mais importantes para os seus concidadãos.",
 
 
