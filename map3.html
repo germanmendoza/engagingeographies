@@ -770,16 +770,28 @@
                         if ((e.keyCode == 27) && ($('#draw_ce').is(":visible"))) {
                             $("#no_ce").removeClass().addClass("show");
                             $("#help").removeClass("show").addClass("hidden");
+                            $('#button-freguesia').prop('disabled', false);
+                            $('#button-freguesiaxs').prop('disabled', false);
+                            buttonDelete.prop('disabled', false);
+
 
 
                         }
                         else if ((e.keyCode == 27) && ($('#another_draw_ce').is(":visible"))) {
                             $("#finish_button").removeClass().addClass("show");
                             $("#help").removeClass("show").addClass("hidden");
+                            $('#button-freguesia').prop('disabled', false);
+                            $('#button-freguesiaxs').prop('disabled', false);
+                            buttonDelete.prop('disabled', false);
+
 
                         }
                         else{
                             $("#help").removeClass("show").addClass("hidden");
+                            $('#button-freguesia').prop('disabled', false);
+                            $('#button-freguesiaxs').prop('disabled', false);
+                            buttonDelete.prop('disabled', false);
+
 
                         }
                     });
