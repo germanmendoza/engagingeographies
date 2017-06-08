@@ -22,7 +22,7 @@
   "index17": "más de 6 años",
   "index18": "Indica por favor el código postal donde se encuentra su casa",
   "index19": "Si no quieres dar tu código postal, por favor marca el cuadro.",
-  "index20": "Por favor selecciona, si es necesario, los temas menos positivo de tu barrio (Máx. 3)",
+  "index20": "Por favor selecciona los temas menos positivo de tu barrio (Máximo 3) si es necesario",
   "index21": "Abastecimiento y mercado",
   "index22": "Cultura",
   "index23": "Deporte",
@@ -55,7 +55,7 @@
   "map1-1":"Comenzar a dibujar",
   "map1-2":"Borrar área",
   "map1-3":"Barrios",
-  "map1-4":"Queremos saber dónde se encuentran los lugares que, por alguna razón/es, son significativos para ti.",
+  "map1-4":"Queremos saber dónde se encuentran los lugares que son significativos para ti por alguna razón/es.",
   "map1-5":"Por favor piensa en los lugares en los cuáles tu:",
   "map1-6":"te identificas más (p.ej., este lugar me representa)",
   "map1-7":"y/o sientes más apego (p.ej., me encanta este lugar)",
@@ -65,11 +65,15 @@
   "map1-11":"Área hola",
   "map1-13":"Comenzar a dibujar",
   "map1-12":"Por favor dibuja en el mapa tu área hola:",
-  "map1-12a":"usando el botón",
+  "map1-12a":"usando el botón ",
+  "map1-12b":"'Comenzar a dibujar' ",
+  "map1-12c":"que se encuentra en el mapa.",
   "map1-14":"botón en el mapa",
-  "map1-15":"puedes borrar el área clicando el botón",
+  "map1-15":"puedes borrar el área clicando el botón ",
+  "map1-15a":"'Borrar área' ",
   "map1-16":"Borrar área",
-  "map1-17":"puedes ir a un barrio específico utilizando el botón",
+  "map1-17":"puedes ir a un barrio específico utilizando el botón ",
+  "map1-17a":"'Barrios' ",
   "map1-18":"Área hola",
   "map1-19":"Vives en esta área?",
   "map1-20":"Por favor clasifica el área hola de acuerdo con los siguientes criterios: (En una escala de 0 a 5, donde 0 es nada y 5 es todo)",
@@ -152,7 +156,7 @@
   "map2-24":"Otro",
   "map2-25":"Puede estar relacionado con algun lugar?",
   "map2-26":"Vamos a dibujar el grupo X!",
-  "map2-26a":"Por favor, dibuja todas las áreas que definen el grupo X",
+  "map2-26a":"Por favor, dibuja el primer área que define el grupo X ",
   "map2-26b":"utilizando el botón",
   "map2-27":"Puedes borrar el grupo clicando el botón",
   "map2-28":"en el mapa.",
@@ -285,6 +289,13 @@
   "general17":"Añadir palabra",
   "general18":"Área",
   "general19":"Grupo",
+  "general20":"o",
+
+
+
+
+
+
 
   "general120": "Clique para comenzar a dibujar el área.",
   "general121": "Clique para continuar dibujando el área.",

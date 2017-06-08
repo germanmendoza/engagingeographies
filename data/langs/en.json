@@ -78,7 +78,7 @@
   "map1-23":"Comfort & Image (clean, 'green', spiritual, attractive, etc.)",
   "map1-24":"Access & Linkage (continuity, walkable, accessible, proximity, etc.)",
   "map1-25":"Please, choose the most important area to you and click the 'Next' botton",
-  "map1-26":"Please, answer the following questions regarding your area X.",
+  "map1-26":"Please, answer the following questions regarding your area X .",
   "map1-27":"Place Identity",
   "map1-28":"Everything about this area (Y) is a reflection of me.",
   "map1-29":"Strongly disagree",
@@ -154,7 +154,7 @@
   "map2-24":"Other",
   "map2-25":"Can it be related with some place?",
   "map2-26":"Let’s draw the group X!",
-  "map2-26a":"Please, draw all the areas that define the group X",
+  "map2-26a":"Please, draw the first area that defines the group X",
   "map2-27":"and you can delete the area clicking button",
   "map2-28":"on the map.",
   "map2-29":"Great job!",
@@ -291,6 +291,8 @@
   "general17":"Add word",
   "general18":"Area",
   "general19":"Group",
+  "general20":"or",
+
 
 
   "general120": "Click to start drawing the area.",

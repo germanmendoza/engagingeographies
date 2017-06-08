@@ -65,6 +65,8 @@
   "map1-10":"Nota: separe por favor as palavras por vírgulas",
   "map1-11":"Área hola",
   "map1-12":"Por favor desenhe sua área hola",
+  "map1-12b":"'Comece a desenhar' ",
+  "map1-12c":"no mapa.",
   "map1-12a":"usando o botão",
   "map1-13":"Comece a desenhar",
   "map1-14":"botão no mapa.",
@@ -157,7 +159,7 @@
   "map2-24":"Outro",
   "map2-25":"Pode estar relacionado com um local?",
   "map2-26":"Vamos desenhar o grupo X!",
-  "map2-26a":"Desenhe, por favor, todas as áreas que definem o grupo X",
+  "map2-26a":"Desenhe, por favor, a primeira área que define o grupo X",
   "map2-27":"Pode apagar a área clicando no botão ",
   "map2-28":"por cima do mapa.",
   "map2-29":"Muito obrigado",
@@ -293,6 +295,8 @@
   "general17":"Adicionar palavra",
   "general18":"Área",
   "general19":"Grupo",
+  "general20":"ou",
+
 
   "general120": "Clique para começar a desenhar uma área.",
   "general121": "Clique para continuar a desenhar a área.",
