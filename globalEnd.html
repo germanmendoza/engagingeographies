@@ -121,28 +121,67 @@
         <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%; background-color: #6DBFCE; line-height:15px">100%</div>
       </div>
     </div>
+    <!-- ------------------------------- Header  -------------------------------------------------------------------- -->
     <div class="show col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <h3 style="margin-top: 25px; text-align: center;"><span langkey="global1"></span></h3>
+        <h3 style="margin-top: 15px; text-align: center;"><span langkey="global1"></span></h3>
     </div>
     <div class="no-float"></div>
+    <h4 langkey="global14" style="text-align: center">Estas são as suas áreas importantes!</h4>
     <!-- ------------------------------- Map visible lg md sm  -------------------------------------------------------------------- -->
     <div id="pepe" class="col-lg-6 col-md-6 col-sm-6 visible-lg visible-md visible-sm" style="position: fixed; right: 0px;">
     <div class="panel panel-default">
         <div class="panel-body">
             <div id="map" style="height:70vh; position: relative;">
-                <div style="position: absolute; top: 10px; left: 80px; z-index: 998; background-color: #fff; padding-left: 3px; padding-right: 3px">
-                  <h4><span langkey="global14">Estas são as suas áreas importantes!</span></h4>
+                <div style="position: absolute; top: 10px; left: 65px; z-index: 998">
+                    <span class="dropdown" style="margin-right: 5px">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="button-freguesia" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <span langkey="map1-3">Freguesias</span>
+                            <span class="caret"></span>
+                        </button>
+                        <div class="dropdown-menu" style="min-width: 250px; margin: 12px 0 0">
+                            <ul class="dropdown-map col-lg-6 col-md-6 col-sm-6 col-xs-6"
+                            aria-labelledby="dropdown-freguesias">
+                                <li><a href="#" id="d-ajuda">Ajuda</a></li>
+                                <li><a href="#" id="d-alcantara">Alcântara</a></li>
+                                <li><a href="#" id="d-alvalade">Alvalade</a></li>
+                                <li><a href="#" id="d-areeiro">Areeiro</a></li>
+                                <li><a href="#" id="d-arroios">Arroios</a></li>
+                                <li><a href="#" id="d-avenidas">Avenidas Novas</a></li>
+                                <li><a href="#" id="d-beato">Beato</a></li>
+                                <li><a href="#" id="d-belem">Belém</a></li>
+                                <li><a href="#" id="d-benfica">Benfica</a></li>
+                                <li><a href="#" id="d-campo">Campo de Ourique</a></li>
+                                <li><a href="#" id="d-campolide">Campolide</a></li>
+                                <li><a href="#" id="d-carnide">Carnide</a></li>
+                                <li><a href="#" id="d-estrela">Estrela</a></li>
+                            </ul>
+                            <ul class="col-lg-6 col-md-6 col-sm-6 col-xs-6 dropdown-map"
+                            aria-labelledby="dropdown-freguesias">
+                                <li><a href="#" id="d-lumiar">Lumiar</a></li>
+                                <li><a href="#" id="d-marvila">Marvila</a></li>
+                                <li><a href="#" id="d-misericordia">Misericórdia</a></li>
+                                <li><a href="#" id="d-olivais">Olivais</a></li>
+                                <li><a href="#" id="d-parque">Parque das Nações</a></li>
+                                <li><a href="#" id="d-penha">Penha de França</a></li>
+                                <li><a href="#" id="d-santa">Santa Clara</a></li>
+                                <li><a href="#" id="d-santamaria">Santa Maria Maior</a></li>
+                                <li><a href="#" id="d-santo">Santo António</a></li>
+                                <li><a href="#" id="d-sao">São Domingos de Benfica </a></li>
+                                <li><a href="#" id="d-saovicente">São Vicente</a></li>
+                            </ul>
+                        </div>
+                    </span>
                 </div>
                 <div  class="legend" style="position: absolute; bottom: 5px; left: 10px; z-index: 998">
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="float: left; margin: 0px; padding: 0px">
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" style="float: left; margin: 0px; padding: 0px">
                         <div class="foo blue"></div>
                         <div class="legend-name" style="margin-right: 20px"> <span langkey="finish2">Sentido do local</span></div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="float: left;margin: 0px; padding: 0px">
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" style="float: left;margin: 0px; padding: 0px">
                         <div class="foo purple"></div>
                         <div class="legend-name" style="margin-right: 20px"><span langkey="finish3"> Capital social</span></div>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="float: left; margin: 0px; padding: 0px">
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" style="float: left; margin: 0px; padding: 0px">
                         <div class="foo wine"></div>
                         <div class="legend-name"> <span langkey="finish4">Comprometimento cívico </span></div>
                     </div>
