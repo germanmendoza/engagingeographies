@@ -52,13 +52,42 @@ function startOthers() {
                 if (!$("#other_prof").val()) {
                     //alert("Please, introduce a profession.")
                     alert(translator.getKeyLanguageValue("general11"));
+
+
                 }
                 else {
                     profession_new = parseInt($("#other_prof").val())
+
+
+                    var id = util.getFromLocalStorage(util.interPageDataKey);
+
+                    var data = {
+                        gender: parseInt($("input[name=gender]:checked").val()),
+                        age: parseInt($("#age").val()),
+                        country: $("#country").val(),
+                        study: parseInt($("#study").val()),
+                        profession: profession_new,
+                        income: parseInt($("#income").val())
+                    };
+
+                    app.finish(id, data, function (response) {
+                        if (response === false) {
+                            // alert("There is a connection problem; please, try again later.");
+                            alert(translator.getKeyLanguageValue("general1"));
+                        }
+                        else {
+                            util.redirectToPage({
+                                url: "globalEnd.html",
+                                payload: response.id
+                            });
+                        }
+                    })
                 }
             }
-            else {
+            if ($("#profession").val() != "6") {
+
                 profession_new = parseInt($("#profession").val())
+
 
                 var id = util.getFromLocalStorage(util.interPageDataKey);
 
@@ -84,6 +113,7 @@ function startOthers() {
                     }
                 })
             }
+
 
         });
     }

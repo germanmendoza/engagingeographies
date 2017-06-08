@@ -4,7 +4,7 @@
 
 
 
-function startAll () {
+function startAll() {
     startMapComponents();
     areasLoading();
     translator.applyPreviousLanguage(function () {
@@ -14,34 +14,106 @@ function startAll () {
     $('#finishBtn').click(function () {
 
         var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
-        var mail = $("#mail_user" ).val();
+        var mail = $("#mail_user").val();
         var testtwitter = /^@?(\w){1,15}$/;
-        var twitter = $("#twitter_name" ).val();
+        var twitter = $("#twitter_name").val();
         var id = util.getFromLocalStorage(util.interPageDataKey);
 
-        if (mail != "" & twitter != "") {
-            if (testEmail.test(mail) & testtwitter.test(twitter)){
-                var data = {
-                    mailUser : mail,
-                    twitterName : twitter
-                };
-                app.finishA(id, data,function (response) {
-                    if (response === false) {
-                        //alert("There is a connection problem; please, try again later");
-                        alert(translator.getKeyLanguageValue("general1"));
-                    }
-                    else {
-                        // alert("Thanks");
-                        alert(translator.getKeyLanguageValue("general13"));
-                        $('#myModalsatisfaction').modal('show');
-                    }
-                });
+        if (mail != "" || twitter != "") {
+            if (mail != "" & testEmail.test(mail)) {
+                if (twitter != "" & testtwitter.test(twitter)) {
+                    alert("si si")
+                    var data = {
+                        mailUser: mail,
+                        twitterName: twitter
+                    };
+                    app.finishA(id, data, function (response) {
+                        if (response === false) {
+                            //alert("There is a connection problem; please, try again later");
+                            alert(translator.getKeyLanguageValue("general1"));
+                        }
+                        else {
+                            // alert("Thanks");
+                            alert(translator.getKeyLanguageValue("general13"));
+                            //$('#myModalsatisfaction').modal('show');
+                        }
+                    });
+                    $("#mailtwitter").removeClass().addClass("hidden");
+                }
+
+                else {
+                    alert("si no")
+
+                    var data = {
+                        mailUser: mail,
+                    };
+                    app.finishA(id, data, function (response) {
+                        if (response === false) {
+                            //alert("There is a connection problem; please, try again later");
+                            alert(translator.getKeyLanguageValue("general1"));
+                        }
+                        else {
+                            // alert("Thanks");
+                            alert(translator.getKeyLanguageValue("general13"));
+                            //$('#myModalsatisfaction').modal('show');
+                        }
+                    });
+                    $("#mailtwitter").removeClass().addClass("hidden");
+                }
+
             }
-            else{
-               // alert("Please introduce a mail and/or twitter username valid structure");
+            else if (twitter != "" & testtwitter.test(twitter)) {
+                if ((mail != "" & testEmail.test(mail))) {
+                    alert("si si")
+                    var data = {
+                        mailUser: mail,
+                        twitterName: twitter
+                    };
+                    app.finishA(id, data, function (response) {
+                        if (response === false) {
+                            //alert("There is a connection problem; please, try again later");
+                            alert(translator.getKeyLanguageValue("general1"));
+                        }
+                        else {
+                            // alert("Thanks");
+                            alert(translator.getKeyLanguageValue("general13"));
+                            //$('#myModalsatisfaction').modal('show');
+                        }
+                    });
+                    $("#mailtwitter").removeClass().addClass("hidden");
+
+                }
+                else {
+                    alert("no si")
+
+
+                    var data = {
+                        twitterName: twitter
+                    };
+                    app.finishA(id, data, function (response) {
+                        if (response === false) {
+                            //alert("There is a connection problem; please, try again later");
+                            alert(translator.getKeyLanguageValue("general1"));
+                        }
+                        else {
+                            // alert("Thanks");
+                            alert(translator.getKeyLanguageValue("general13"));
+                            //$('#myModalsatisfaction').modal('show');
+                        }
+                    });
+                    $("#mailtwitter").removeClass().addClass("hidden");
+
+                }
+
+            }
+
+            else {
+                // alert("Please introduce a mail and/or twitter username valid structure");
                 alert(translator.getKeyLanguageValue("general14"));
             }
         }
+
+
     });
 
     $('#finishglobalend').click(function () {
@@ -65,9 +137,9 @@ function startAll () {
 
 }
 
-function startMapComponents(){
+function startMapComponents() {
 
-    function createAll(rmap){
+    function createAll(rmap) {
         map = rmap;
         // add an OpenStreetMap tile layer
         L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
@@ -75,12 +147,12 @@ function startMapComponents(){
         }).addTo(map);
     }
 
-    function isElementInViewport (el) {
+    function isElementInViewport(el) {
         if (typeof jQuery === "function" && el instanceof jQuery) {
             el = el[0];
         }
         var rect = el.getBoundingClientRect();
-        return !((rect.top==0)&&(rect.left==0)&&(rect.bottom==0)&&(rect.right==0));
+        return !((rect.top == 0) && (rect.left == 0) && (rect.bottom == 0) && (rect.right == 0));
     }
 
 
@@ -202,7 +274,7 @@ function startMapComponents(){
     }
 
 
-    catch (err){
+    catch (err) {
         console.error(err.message)
     }
 }
@@ -262,7 +334,7 @@ function areasLoading() {
             }
         });
     }
-    catch (err){
+    catch (err) {
         console.error(err.message)
     }
 }
