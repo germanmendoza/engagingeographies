@@ -153,7 +153,7 @@ function startAll() {
             if ($("input[name=spatial]:checked").val() == "true") {
 
                 $("#title_let_draw").html(translator.getKeyLanguageValue("map2-26"));
-                var replacetitle = $("#title_let_draw").html().replace('X', name_groups[number]);
+                var replacetitle = $("#title_let_draw").html().replace('X', '<b>' + name_groups[number] + '</b>');
                 $("#title_let_draw").html(replacetitle);
                 $("#let_draw").html(translator.getKeyLanguageValue("map2-26a"));
                 var replaceddraw = $("#let_draw").html().replace('X', '<b>' + name_groups[number] + '</b>');

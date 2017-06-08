@@ -22,7 +22,6 @@ function startAll() {
         if (mail != "" || twitter != "") {
             if (mail != "" & testEmail.test(mail)) {
                 if (twitter != "" & testtwitter.test(twitter)) {
-                    alert("si si")
                     var data = {
                         mailUser: mail,
                         twitterName: twitter
@@ -42,7 +41,6 @@ function startAll() {
                 }
 
                 else {
-                    alert("si no")
 
                     var data = {
                         mailUser: mail,
@@ -64,7 +62,6 @@ function startAll() {
             }
             else if (twitter != "" & testtwitter.test(twitter)) {
                 if ((mail != "" & testEmail.test(mail))) {
-                    alert("si si")
                     var data = {
                         mailUser: mail,
                         twitterName: twitter
@@ -84,8 +81,6 @@ function startAll() {
 
                 }
                 else {
-                    alert("no si")
-
 
                     var data = {
                         twitterName: twitter
