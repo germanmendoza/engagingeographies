@@ -61,6 +61,8 @@ function startAll () {
             }
         });
     });
+
+
 }
 
 function startMapComponents(){
@@ -68,7 +70,7 @@ function startMapComponents(){
     function createAll(rmap){
         map = rmap;
         // add an OpenStreetMap tile layer
-        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
             // attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
     }
@@ -80,6 +82,103 @@ function startMapComponents(){
         var rect = el.getBoundingClientRect();
         return !((rect.top==0)&&(rect.left==0)&&(rect.bottom==0)&&(rect.right==0));
     }
+
+
+    $('#d-ajuda').click(function () {
+        map.setView([38.711402, -9.199039], 15);
+    });
+
+    $('#d-alcantara').click(function () {
+        map.setView([38.710676, -9.182990], 15);
+    });
+
+    $('#d-alvalade').click(function () {
+        map.setView([38.753182, -9.151691], 15);
+    });
+
+    $('#d-areeiro').click(function () {
+        map.setView([38.742261, -9.133480], 15);
+    });
+
+    $('#d-arroios').click(function () {
+        map.setView([38.727819, -9.140717], 15);
+    });
+
+    $('#d-avenidas').click(function () {
+        map.setView([38.739568, -9.149152], 15);
+    });
+
+    $('#d-beato').click(function () {
+        map.setView([38.733268, -9.113798], 15);
+    });
+
+    $('#d-belem').click(function () {
+        map.setView([38.702305, -9.215116], 15);
+    });
+
+    $('#d-benfica').click(function () {
+        map.setView([38.737770, -9.196060], 15);
+    });
+
+
+    $('#d-campo').click(function () {
+        map.setView([38.719247, -9.166428], 15);
+    });
+
+    $('#d-campolide').click(function () {
+        map.setView([38.731470, -9.165880], 15);
+    });
+
+    $('#d-carnide').click(function () {
+        map.setView([38.763229, -9.188106], 15);
+    });
+    $('#d-estrela').click(function () {
+        map.setView([38.710837, -9.153887], 15);
+    });
+
+    $('#d-lumiar').click(function () {
+        map.setView([38.770204, -9.160321], 15);
+    });
+
+    $('#d-marvila').click(function () {
+        map.setView([38.750852, -9.116730], 15);
+    });
+
+    $('#d-misericordia').click(function () {
+        map.setView([38.711113, -9.147195], 15);
+    });
+
+    $('#d-olivais').click(function () {
+        map.setView([38.772473, -9.126950], 15);
+    });
+
+    $('#d-parque').click(function () {
+        map.setView([38.765502, -9.099971], 15);
+    });
+
+    $('#d-penha').click(function () {
+        map.setView([38.725873, -9.124024], 15);
+    });
+
+    $('#d-santa').click(function () {
+        map.setView([38.785799, -9.155323], 15);
+    });
+
+    $('#d-santamaria').click(function () {
+        map.setView([38.711168, -9.137130], 15);
+    });
+
+    $('#d-santo').click(function () {
+        map.setView([38.718769, -9.149313], 15);
+    });
+
+    $('#d-sao').click(function () {
+        map.setView([38.752111, -9.177416], 15);
+    });
+
+    $('#d-saovicente').click(function () {
+        map.setView([38.718305, -9.130119], 15);
+    });
 
     try {
 
@@ -101,6 +200,8 @@ function startMapComponents(){
         });
         mapxs.setView([38.7500, -9.1500], 12);
     }
+
+
     catch (err){
         console.error(err.message)
     }
