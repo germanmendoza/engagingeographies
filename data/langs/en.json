@@ -76,7 +76,7 @@
   "map1-17a":"'Parishes' ",
   "map1-18":"Area hola",
   "map1-19":"Do you live in that area?",
-  "map1-20":"Please rate the area hola according to the following criteria: (On a scale of 0 to 5, where 0 is nothing and 5 is totally)",
+  "map1-20":"Please rate the area hola :",
   "map1-21":"Sociability (neighborly, friendly, interactive, welcoming, etc.)",
   "map1-22":"Uses & Activities (fun, active, vital, useful. etc.)",
   "map1-23":"Comfort & Image (clean, 'green', spiritual, attractive, etc.)",
@@ -296,6 +296,8 @@
   "general18":"Area",
   "general19":"Group",
   "general20":"or",
+  "general21":"Understood",
+
 
 
 

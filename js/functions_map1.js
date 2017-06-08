@@ -135,7 +135,7 @@ function startAll() {
         var replaced2 = $("#area_name_sliders").html().replace('hola', '<b>' + tete + '</b>');
         $("#area_name_sliders").html(replaced2);
         $("#title_sliders_change").html(translator.getKeyLanguageValue("map1-20"));
-        var replaced3 = $("#title_sliders_change").html().replace('hola', '<b>' + tete + '</b>');
+        var replaced3 = $("#title_sliders_change").html().replace('hola', '<b style="font-size: 18px">' + tete + '</b>');
         $("#title_sliders_change").html(replaced3);
 
     };
