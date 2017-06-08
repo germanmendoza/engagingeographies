@@ -751,6 +751,9 @@ function startAll() {
 
     translator.applyPreviousLanguage(function () {
         // Nothing yet to do
+        L.drawLocal.draw.handlers.polygon.tooltip.start = translator.getKeyLanguageValue("general120");
+        // L.drawLocal.draw.handlers.polygon.tooltip.cont = translator.getKeyLanguageValue("general121");
+        // L.drawLocal.draw.handlers.polygon.tooltip.end = translator.getKeyLanguageValue("general122");
     });
 }
 
