@@ -167,7 +167,7 @@
   "map2-35":"Conozco genete en este grupo bastante bien para confiarles cualquier cosa importante.",
   "map2-36":"Interactuar con gente de este grupo me hace interesarme con lo que gente diferente a mi piensa.",
   "map2-37":"Interactuar con gente de este grupo me permite hablar con nueva gente.",
-  "map2-38":"Por favor, escoge el grupo con el que mejor te identifiques socialmente.",
+  "map2-38":"Por favor, escoge el grupo con el que mejor te identifiques socialmente y clica en el botón 'Siguiente'.",
   "map2-39":"Por favor, reponde las siguientes preguntas en relación a tu grupo X.",
   "map2-40":"Sentido de comunidad",
   "map2-41":"Me siento como un miembro del grupo Y.",
@@ -286,7 +286,9 @@
   "general18":"Área",
   "general19":"Grupo",
 
-  "general120": "Haga click para comenzar a dibujar un área."
+  "general120": "Clique para comenzar a dibujar el área.",
+  "general121": "Clique para continuar dibujando el área.",
+  "general122": "Clique en el primer punto para cerrar el área."
 
 
 

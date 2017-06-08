@@ -1,7 +1,7 @@
 {
   "index1": "The following web-map survey is part of a research project at NOVA IMS (Lisbon). Its primary objective is to understand how citizens' place perceptions, and their relationships, influence participation in a given urban area.",
   "index2": "The questionnaire will take less than 5 minutes, and the mapping activity takes most people around 10 minutes, depending on how many areas you define.",
-  "index2a": "Answers nº 100, nº 200, nº 500 e nº 1000, will be provided with a gift card of 50,00€. In order to contact you, you should provide your mail and/or twitter username in the place available at the end of the survey.",
+  "index2a": "Answers nº 100, nº 200, nº 500 e nº 1000, will be provided with a gift card of 50,00€. If you want to be eligible for a prize, you should provide your email at the end of the survey, so we can contact you in case you won.",
   "index3": "With your contribution, you will support the improvement of Lisbon municipality participation processes.",
   "index3a": "Please, do the survey with the laptop or desktop computer, since some functions do not work properly in smartphones and other similar devices.",
   "index4": "Do you live in Lisbon?",
@@ -56,7 +56,7 @@
   "map1-2":"Delete area",
   "map1-3":"Parishes",
   "map1-4":"We want to know where are the areas that, for some reason/s, are significant for you. ",
-  "map1-5":"Please, think about the area/s in which you:",
+  "map1-5":"Please, think about the area/s which you:",
   "map1-6":"identify the most with (e.g., this place represents me)",
   "map1-7":"and/or feel attached to (e.g., I love this place)",
   "map1-8":"and/or depend on (e.g., it is the most suitable place for doing the things that I enjoy the most)",
@@ -99,13 +99,13 @@
   "map1-42":"We invite you to draw the areas that you have defined with words on the map freely.",
   "map1-43":"To start to draw, press the button",
   "map1-44":"then click on the map to plot your first point, and as many points as you need to define your area",
-  "map1-44ll":"to finish drawing an area, click on the first point again or doble-click in the last point defined of the area",
+  "map1-44ll":"to finish drawing an area, click on the first point again or doble-click in the last point",
   "map1-44g":"You can:",
   "map1-44h":"edit the area moving any point at any time",
   "map1-44i":"delete it pressing the button",
   "map1-44j":"You can 'pan' the map or zoom using the map controls",
-  "map1-44l":"go directly to a certain freguesia using the button",
-  "map1-46":"After to define the areas we are going to ask you about these areas.",
+  "map1-44l":"go directly to a certain parish using the button",
+  "map1-46":"After defining the areas we are going to ask you about these areas.",
   "map1-48":"When you finished defining your different areas, to move on to the next activity press the button",
 
   "map1-80":"To draw areas:",
@@ -128,7 +128,7 @@
 
 
 
-  "map2-1":"We would like also to ask you about the groups of people or organizations, networks, associations to which you belong. These could be formally organized groups (religious groups, familiar groups, sports teams, workplace groups…) or just groups of people who get together regularly to do an activity or talk about things.",
+  "map2-1":"We would also like to ask you about the groups of people or organizations, networks, associations to which you belong. These could be formally organized groups (religious groups, familiar groups, sports teams, workplace groups…) or just groups of people who get together regularly to do an activity or talk about things.",
   "map2-2":"Can you write (one or more) words that define each group? Please think of a group, and write, in the textbox below, one or more words that define that group, and click “Add group”. You can add as many groups as you want. Take your time :)",
   "map2-3":"Group hola",
   "map2-4":"Please, select the nature of this social group (X):",
@@ -168,10 +168,10 @@
   "map2-35":"I know people in that group well enough to get them to do anything important.",
   "map2-36":"Interacting with people in that group makes me interested in what people unlike me are thinking.",
   "map2-37":"Interacting with people in that group gives me new people to talk to.",
-  "map2-38":"Please, choose the group that you better socially identify with.",
+  "map2-38":"Please, choose the group that you better socially identify with and click the 'Next' botton.",
   "map2-39":"Please, answer the following questions regarding your group X.",
   "map2-40":"Sense of community",
-  "map2-41":"I feel like a member of group Y.",
+  "map2-41":"I feel like a member of the group Y.",
   "map2-42":"I belong to the group Y.",
   "map2-43":"I feel connected to the group Y.",
   "map2-44":"Group members might do the following three actions for each other. On average, how many times do you…",
@@ -182,19 +182,19 @@
   "map2-49":"Discuss a problem with a group (Y) member.",
   "map2-50":"Collective efficacy/empowerment",
   "map2-51":"I think that a collective action from this group (Y) will increase chances of the local government changing their plans?",
-  "map2-52":"I think that together (group(Y) members) we can change an issue.",
+  "map2-52":"I think that together (group (Y) members) we can change an issue.",
   "map2-53":"I think that it is important to get group (Y) people in the group to help each other more.",
   "map2-54":"Citizen participation",
   "map2-55":"Have you attended a group (Y) meeting in the last 12 months?",
-  "map2-56":"How often do you participate in the activities of a group Y in the last 12 months?",
-  "map2-57":"To what extent do you participate in group (Y) decision-making in the last 12 months?",
+  "map2-56":"How often do you participate in the activities of the group Y in the last 12 months?",
+  "map2-57":"To what extent did you participate in group (Y) decision-making in the last 12 months?",
 
 
   "map2-95":"Please:",
-  "map2-96":"Think about a word that define one of these groups",
+  "map2-96":"Think about a word that defines one of these groups",
   "map2-97":"Write the word in the form below",
   "map2-98":"Click on button",
-  "map2-99":"You can add as many groups as you want. When you finish to add them, click on button.",
+  "map2-99":"You can add as many groups as you want. After you finished adding them, click on button ",
   "map2-100":"Add another word that define another group",
 
 
@@ -235,7 +235,7 @@
   "finish17":"Freelance",
   "finish18":"Other",
   "finish19":"Please indicate the monthly salary of your household in Euros",
-  "finish20":"NR",
+  "finish20":"Prefer not to say",
   "finish21":"Less than 1000",
   "finish22":"1000 - 1499",
   "finish23":"1500 - 1999",
@@ -248,7 +248,7 @@
   "finish30":"Postgraduate certificate",
   "finish31":"Master degree",
   "finish32":"Doctorate degree",
-  "finish33":"NR",
+  "finish33":"Prefer not to say",
   "finish34":"None of them",
 
 
@@ -256,16 +256,16 @@
 
 
   "global1":"Thank you, we appreciate your effort.",
-  "global2":"We are going to create dynamic areas to connect you with people that share your places and groups. In case you are interested to know more about the study and the chosen areas by other peoplere, please provide us with your email and/or twitter username. Together, we are going to improve Lisbon participation! ",
+  "global2":"We are going to create dynamic areas to connect you with people that share your places and groups. In case you are interested to know more about the study and the chosen areas by other people, please provide us with your email and/or twitter username. Together, we are going to improve Lisbon participation! ",
   "global3":"Twitter username",
   "global4":"Submit",
   "global5":"Tweet",
   "global6":"Until next time",
   "global7":"Your opinion is important!",
   "global8":"Please give us your opinion about the following issues. (where 0 is nothing and 5 is completely)",
-  "global9":"How difficult have you found to answer the questions?",
-  "global10":"How difficult have you found the mapping process?",
-  "global11":"Please, if you want put some comment to improve the application.",
+  "global9":"How difficult did you find answering the questions?",
+  "global10":"How difficult did you find the mapping process?",
+  "global11":"Please, any feedback to improve the application is welcome:",
   "global12":"Nothing",
   "global13":"Completely",
   "global14":"These are the important areas of your fellow citizens!",
@@ -293,7 +293,8 @@
   "general19":"Group",
 
 
-  "general120": "Click to start drawing an area."
-
+  "general120": "Click to start drawing the area.",
+  "general121": "Click to continue drawing the area.",
+  "general122": "Click on the first point to close the area."
 
 }

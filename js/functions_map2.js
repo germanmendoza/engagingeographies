@@ -415,7 +415,7 @@ function startAll() {
             // Add to radio
 
             if (cGroup.areas.length != 0) {
-                $('#radios').append('<div class="radio"><label><input type="radio" name="sc_groups" value="' + i + '"/>Grupo ' + cGroup.name + '</label></div>');
+                $('#radios').append('<div class="radio"><label><input type="radio" name="sc_groups" value="' + i + '"/><span langkey=translator.getKeyLanguageValue("general19")></span> ' + cGroup.name + '</label></div>');
             }
         }
 
@@ -752,8 +752,8 @@ function startAll() {
     translator.applyPreviousLanguage(function () {
         // Nothing yet to do
         L.drawLocal.draw.handlers.polygon.tooltip.start = translator.getKeyLanguageValue("general120");
-        // L.drawLocal.draw.handlers.polygon.tooltip.cont = translator.getKeyLanguageValue("general121");
-        // L.drawLocal.draw.handlers.polygon.tooltip.end = translator.getKeyLanguageValue("general122");
+        L.drawLocal.draw.handlers.polygon.tooltip.cont = translator.getKeyLanguageValue("general121");
+        L.drawLocal.draw.handlers.polygon.tooltip.end = translator.getKeyLanguageValue("general122");
     });
 }
 
