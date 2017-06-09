@@ -171,8 +171,8 @@
   "map2-35":"Conozco genete en este grupo bastante bien para confiarles cualquier cosa importante.",
   "map2-36":"Interactuar con gente de este grupo me hace interesarme con lo que gente diferente a mi piensa.",
   "map2-37":"Interactuar con gente de este grupo me permite hablar con nueva gente.",
-  "map2-38":"Por favor, escoge el grupo con el que mejor te identifiques socialmente y clica en el botón 'Siguiente'.",
-  "map2-39":"Por favor, reponde las siguientes preguntas en relación a tu grupo X.",
+  "map2-38":"Por favor, escoge el grupo con el que mejor te identifiques socialmente y clica en el botón 'Siguiente'",
+  "map2-39":"Por favor, reponde las siguientes preguntas en relación a tu grupo X",
   "map2-40":"Sentido de comunidad",
   "map2-41":"Me siento como un miembro del grupo Y.",
   "map2-42":"Pertenezco al grupo Y.",
@@ -184,7 +184,7 @@
   "map2-48":"Ofreces un consejo para un problema personal a un miembro del grupo Y.",
   "map2-49":"Discutes un problema con un miembro del grupo.",
   "map2-50":"Eficacia colectiva/empoderamiento",
-  "map2-51":"Pienso que una acción colectiva de este grupo Y aumentará las posibilidades del gobierno local alterar sus planes",
+  "map2-51":"Pienso que una acción colectiva de este grupo Y aumentará las posibilidades del gobierno local alterar sus planes.",
   "map2-52":"Pienso que juntos podemos solucionar un problema.",
   "map2-53":"Pienso que es importante que los miembros del grupo Y se ayuden entre ellos más.",
   "map2-54":"Participación ciudadana",
@@ -291,11 +291,7 @@
   "general19":"Grupo",
   "general20":"o",
 
-
-
-
-
-
+  
 
   "general120": "Clique para comenzar a dibujar el área.",
   "general121": "Clique para continuar dibujando el área.",
