@@ -1,7 +1,7 @@
 {
   "index1": "Este questionário é parte integrante de um projeto de investigação da Nova Information Management School (NOVA IMS) da Universidade Nova de Lisboa. O objetivo principal é perceber a forma como a perceção do local e as relações sociais do cidadão influenciam a sua participação numa dada área urbana.",
   "index2": "O preenchimento do questionário demora cerca de 5 minutos e a atividade de mapeamento cerca de 10 minutos, dependendo do número de áreas que se pretenderem assinalar.",
-  "index2a": "Às submissões nº 100, nº 200, nº 500 e nº 1000, será oferecido um cartão oferta no montante de 50,00€. Para se habilitar a esta oferta tem de fornecer o seu email no campo disponível no final do inquérito.",
+  "index2a": "Às submissões nº 10, nº 50, nº 100, nº 200, nº 500 e nº 1000 será oferecido um cartão oferta no montante de 50,00€. Para se habilitar a esta oferta tem de fornecer o seu email no campo disponível no final do inquérito.",
   "index3": "A sua contribuição apoia os processos participativos da cidade de Lisboa.",
   "index3a": "Por favor, responda ao inquérito num computador portátil  ou num computador de secretária, dado que algumas funções não funcionam bem em telemóveis e outros dispositivos semelhantes",
   "index4": "Reside em Lisboa?",
@@ -67,13 +67,13 @@
   "map1-12":"Por favor desenhe sua área hola ",
   "map1-12b":"'Comece a desenhar' ",
   "map1-12c":"no mapa.",
-  "map1-12a":"usando o botão",
+  "map1-12a":"usando o botão ",
   "map1-13":"Comece a desenhar",
   "map1-14":"botão no mapa.",
-  "map1-15":"se necessitar, pode apagar a área pressionando o botão",
+  "map1-15":"se necessitar, pode apagar a área pressionando o botão ",
   "map1-15a":"'Apagar área' ",
   "map1-16":"Apagar área",
-  "map1-17":"pode ir diretamente para uma dada freguesia utilizando o botão",
+  "map1-17":"pode ir diretamente para uma dada freguesia utilizando o botão ",
   "map1-17a":"'Freguesias' ",
   "map1-18":"Área hola",
   "map1-19":"Reside nesta área?",
@@ -107,7 +107,7 @@
   "map1-44":"de seguida clique no mapa para desenhar o seu primeiro ponto, e todos os pontos que precisar para definir a sua área",
   "map1-44ll":"para terminar de desenhar a área, volte a clicar no primeiro ponto ou, em alternativa, clique duas vezes no último ponto desenhado.",
   "map1-44g":"Pode:",
-  "map1-44h":"fazer alterações na forma do polígono movendo qualquer um dos pontos:",
+  "map1-44h":"fazer alterações na forma do polígono movendo qualquer um dos pontos",
   "map1-44i":"apagar o área clicando o botão",
   "map1-44j":"mover o mapa e aproximar e afastar utilizando os controlos do mapa",
   "map1-44l":"ir diretamente para uma dada freguesia utilizando o botão",
@@ -118,7 +118,7 @@
 
   "map1-80":"Para disenhar as áreas:",
   "map1-82":"Desenhe o primeiro ponto clicando no local sobre o mapa onde deseja iniciar",
-  "map1-83":"Desenhe todos os pontos necessários para desenhar uma áreas clicando em cada um deles",
+  "map1-83":"Desenhe todos os pontos necessários para desenhar uma área clicando em cada um deles",
   "map1-84":"para terminar de desenhar a área, volte a clicar no primeiro ponto ou, em alternativa, clique duas vezes no último ponto desenhado",
   "map1-85":"* Pode abandonar a opção de desenho clicando e tecla “esc” no seu teclado.",
 
@@ -216,11 +216,13 @@
   "map3-3a":"desenhar outra área onde gostaria de estar envolvido em processos participativos",
   "map3-3b":"clique no botão ",
   "map3-4":"para continuar",
-  "map3-5":"Estamos quase a terminar. Por favor responda às seguintes perguntas sobre a cidade ONDE MORA.",
+  "map3-5":"Estamos quase a terminar. Por favor responda às seguintes perguntas sobre a cidade onde mora.",
   "map3-6":"Comprometimento cívico.",
-  "map3-7":"Nos últimos 12 meses, juntou-se com outros membros do grupo para tratar de um problema da comunidade, autoridade local ou problemas de organização governamental?",
+  "map3-7":"Nos últimos 12 meses, juntou-se com outras pessoas para tratar de um problema da comunidade, autoridade local ou problemas de organização governamental?",
   "map3-8":"Nos últimos 12 meses, interagiu com uma comunidade, autoridade local ou organização governamental sobre problemas comuns?",
   "map3-9":"Nos últimos 12 meses, trabalho com uma comunidade, autoridade local ou organização governamental sobre problemas comuns?",
+
+
 
 
   "finish1":"Estas são as suas áreas mais importantes!!",

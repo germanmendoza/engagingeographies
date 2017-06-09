@@ -153,7 +153,7 @@ function startAll() {
             if ($("input[name=spatial]:checked").val() == "true") {
 
                 $("#title_let_draw").html(translator.getKeyLanguageValue("map2-26"));
-                var replacetitle = $("#title_let_draw").html().replace('X', '<b>' + name_groups[number] + '</b>');
+                var replacetitle = $("#title_let_draw").html().replace('X', name_groups[number]);
                 $("#title_let_draw").html(replacetitle);
                 $("#let_draw").html(translator.getKeyLanguageValue("map2-26a"));
                 var replaceddraw = $("#let_draw").html().replace('X', '<b>' + name_groups[number] + '</b>');
@@ -415,7 +415,7 @@ function startAll() {
             // Add to radio
 
             if (cGroup.areas.length != 0) {
-                $('#radios').append('<div class="radio"><label><input type="radio" name="sc_groups" value="' + i + '"/><span langkey=translator.getKeyLanguageValue("general19")></span> ' + cGroup.name + '</label></div>');
+                $('#radios').append('<div class="radio"><label><input type="radio" name="sc_groups" value="' + i + '"/>' + translator.getKeyLanguageValue("general19") + ": " + cGroup.name + '</label></div>');
             }
         }
 
