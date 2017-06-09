@@ -109,7 +109,7 @@ function startAll() {
         $("#group_name_nature").html(replaced);
         $("#textchange").html(translator.getKeyLanguageValue("map2-5"));
         $("#textchange_nature").html(translator.getKeyLanguageValue("map2-4"));
-        var replaced1 = $("#textchange").html().replace('X', '<b>' + tete2 + '</b>');
+        var replaced1 = $("#textchange").html().replace('X', '<b style="font-size: 18px">' + tete2 + '</b>');
         var replaced2 = $("#textchange_nature").html().replace('X', '<b>' + tete2 + '</b>');
         $("#textchange").html(replaced1);
         $("#textchange_nature").html(replaced2);
@@ -153,7 +153,7 @@ function startAll() {
             if ($("input[name=spatial]:checked").val() == "true") {
 
                 $("#title_let_draw").html(translator.getKeyLanguageValue("map2-26"));
-                var replacetitle = $("#title_let_draw").html().replace('X', name_groups[number]);
+                var replacetitle = $("#title_let_draw").html().replace('X', '<b>' + name_groups[number] + '</b>');
                 $("#title_let_draw").html(replacetitle);
                 $("#let_draw").html(translator.getKeyLanguageValue("map2-26a"));
                 var replaceddraw = $("#let_draw").html().replace('X', '<b>' + name_groups[number] + '</b>');
