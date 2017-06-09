@@ -492,7 +492,7 @@ function startAll() {
             }
             else {
                 // alert("Please choose one group");
-                alert(translator.getKeyLanguageValue("general5"));
+                alert(translator.getKeyLanguageValue("general15"));
             }
 
         });
@@ -505,7 +505,7 @@ function startAll() {
         var scvalidation = $('[name=soc1]:checked,[name=soc2]:checked,[name=soc3]:checked,[name=n1]:checked,[name=n2]:checked,[name=n3]:checked,[name=cee1]:checked,[name=cee2]:checked,[name=cee3]:checked,[name=cp1]:checked,[name=cp2]:checked,[name=cp3]:checked');
         if (scvalidation.length < 12) {
             // alert("Please, answer all the questions");
-            alert(translator.getKeyLanguageValue("general15"));
+            alert(translator.getKeyLanguageValue("general5"));
             return;
         }
 

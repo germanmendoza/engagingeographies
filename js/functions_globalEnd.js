@@ -40,7 +40,7 @@ function startAll() {
                     $("#mailtwitter").removeClass().addClass("hidden");
                 }
 
-                else {
+                else if (twitter == "") {
 
                     var data = {
                         mailUser: mail,
@@ -57,6 +57,9 @@ function startAll() {
                         }
                     });
                     $("#mailtwitter").removeClass().addClass("hidden");
+                }
+                else {
+                    alert(translator.getKeyLanguageValue("general14"));
                 }
 
             }
@@ -80,7 +83,7 @@ function startAll() {
                     $("#mailtwitter").removeClass().addClass("hidden");
 
                 }
-                else {
+                else if (mail =="") {
 
                     var data = {
                         twitterName: twitter
@@ -99,6 +102,9 @@ function startAll() {
                     $("#mailtwitter").removeClass().addClass("hidden");
 
                 }
+                else{
+                    alert(translator.getKeyLanguageValue("general14"));
+                }
 
             }
 
@@ -107,6 +113,7 @@ function startAll() {
                 alert(translator.getKeyLanguageValue("general14"));
             }
         }
+
 
 
     });
