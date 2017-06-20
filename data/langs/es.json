@@ -203,7 +203,7 @@
 
 
 
-  "map3-1":"Por favor, puedes dibujar las área/s en las cuales quieres participar en los procesos participativos.",
+  "map3-1":"Por favor, puedes dibujar las área/s en las cuales quieres participar en los procesos participativos ",
   "map3-1a":"Si no quieres definir ninguna área, por favor clica en el botón",
   "map3-2":"¡Buen trabajo!",
   "map3-3":"Ahora puedes:",
@@ -295,7 +295,10 @@
 
   "general120": "Clique para comenzar a dibujar el área.",
   "general121": "Clique para continuar dibujando el área.",
-  "general122": "Clique en el primer punto para cerrar el área."
+  "general122": "Clique en el primer punto para cerrar el área.",
+
+
+  "general150": "¿Quieres participar en los próximos procesos participativos de tu ciudad?"
 
 
 

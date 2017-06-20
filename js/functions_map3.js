@@ -219,19 +219,62 @@
              alert("Please, answer all the questions");
              return;
          }*/
-         $("#pepe").toggleClass("hidden show");
-         $("#pepa").toggleClass("hidden show");
-         startMapComponents();
-         buttonDraw.prop('disabled', false);
-         //buttonDelete.prop('disabled', false);
-         //$(".finish-map").attr('disabled', false);
-
          $("#questions_done").toggleClass("hidden show");
-         $("#draw_ce").toggleClass("hidden show");
+
+         $("#yesno").toggleClass("hidden show");
+     });
 
 
-         drawnItems = new L.FeatureGroup();
-         map.addLayer(drawnItems);
+     $('#participate_button').click(function () {
+
+
+         if ($('input[name=participate]:checked').val() == "true") {
+             $("#yesno").toggleClass("hidden show");
+
+             $("#pepe").toggleClass("hidden show");
+             $("#pepa").toggleClass("hidden show");
+             startMapComponents();
+             buttonDraw.prop('disabled', false);
+             //buttonDelete.prop('disabled', false);
+             //$(".finish-map").attr('disabled', false);
+
+             $("#draw_ce").toggleClass("hidden show");
+
+
+             drawnItems = new L.FeatureGroup();
+             map.addLayer(drawnItems);
+
+         }
+         else {
+             var id = util.getFromLocalStorage(util.interPageDataKey);
+
+             var data = {
+                 type:"ce",
+                 civicEngagement: {
+                     ce1: parseInt($("input[name=ce1]:checked").val()),
+                     ce2: parseInt($("input[name=ce2]:checked").val()),
+                     ce3: parseInt($("input[name=ce3]:checked").val())
+                 },
+             };
+
+
+             app.setCE(id, data, function (response) {
+                 if (response === false) {
+                     // alert("There is a connection problem; please, try again later");
+                     alert(translator.getKeyLanguageValue("general1"));
+                 }
+                 else {
+                     util.redirectToPage({
+                         url:"finish.html",
+                         payload:response.id
+                     });
+                 }
+             });
+
+         }
+
+
+
      });
 
 
@@ -277,7 +320,7 @@
          });
      });
 
-     $('#no_ce_done').click(function () {
+     /*$('#no_ce_done').click(function () {
          var id = util.getFromLocalStorage(util.interPageDataKey);
 
          var data = {
@@ -302,7 +345,7 @@
                  });
              }
          });
-     });
+     });*/
 
 
          //$("#draw_poly").prop('disabled', true);

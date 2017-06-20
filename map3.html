@@ -90,11 +90,13 @@
         <div class="panel panel-default">
             <div class="panel-body">
                 <div id="map" style="height:80vh; position: relative;">
-                    <div class="visible-lg visible-md visible-sm" style="position: absolute; top: 10px; left: 65px; z-index: 998">
+                    <div class="visible-lg visible-md visible-sm"
+                         style="position: absolute; top: 10px; left: 65px; z-index: 998">
                         <div class="col-lg-12 col-md-12 col-sm-12 width-buttons-map">
                             <span class="dropdown" style="margin-right: 5px">
                               <button class="btn btn-default dropdown-toggle" type="button" id="button-freguesia"
-                                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="margin-bottom: 5px">
+                                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"
+                                      style="margin-bottom: 5px">
                                 <i class="fa fa-institution" aria-hidden="true"></i>
                                 <span langkey="map1-3">Freguesias</span>
                                 <span class="caret"></span>
@@ -141,8 +143,8 @@
                                       style="margin-right: 5px"></span>
                                 <span langkey="map1-2">Apagar áreas</span>
                             </button>
-                        <!-- </div> -->
-                        <!-- <div class="col-lg-12 col-md-12 col-sm-12" style="padding-left: 0px;"> -->
+                            <!-- </div> -->
+                            <!-- <div class="col-lg-12 col-md-12 col-sm-12" style="padding-left: 0px;"> -->
                         </div>
                     </div> <!-- /map -->
                     <!-- <div class="custom_buttons_leaflet visible-lg visible-md visible-sm">
@@ -175,7 +177,9 @@
             <div class="panel-body">
                 <!-- ------------------------------- Draw areas ce first ----------------------------------------------------- -->
                 <div class="hidden" id="draw_ce">
-                    <p><span style="margin-bottom: 20px" langkey="map3-1">Pode por favor desenhar as áreas nas quais gostaria de participar em processos participativos</span><span langkey="map1-12a"></span><b langkey="map1-12b">using the </b><span langkey="map1-12c">using the </span></p>
+                    <p><span style="margin-bottom: 20px" langkey="map3-1">Pode por favor desenhar as áreas nas quais gostaria de participar em processos participativos</span><span
+                            langkey="map1-12a"></span><b langkey="map1-12b">using the </b><span langkey="map1-12c">using the </span>
+                    </p>
 
                     <br>
                     <ul>
@@ -192,7 +196,8 @@
 
 
                         <li>
-                            <p><span langkey="map1-17">Puedes ir a un barrio específico utilizando el botón</span><b langkey="map1-17a"></b><span langkey="map1-12c">using the </span></p>
+                            <p><span langkey="map1-17">Puedes ir a un barrio específico utilizando el botón</span><b
+                                    langkey="map1-17a"></b><span langkey="map1-12c">using the </span></p>
                             <!-- <button
                                      class="btn btn-default dropdown-toggle btn-xs" type="button"
                                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" disabled>
@@ -205,7 +210,8 @@
 
                         </li>
                         <li>
-                            <p><span langkey="map1-15">Se necessitar, pode apagar a área pressionando o </span><b langkey="map1-15a"></b><span langkey="map1-12c">using the </span></p>
+                            <p><span langkey="map1-15">Se necessitar, pode apagar a área pressionando o </span><b
+                                    langkey="map1-15a"></b><span langkey="map1-12c">using the </span></p>
 
 
                             <!-- <button class="btn btn-default btn-xs" disabled><span class="glyphicon glyphicon-trash"
@@ -220,16 +226,16 @@
 
 
                     </ul>
-                    <br>
+                   <!-- <br>
                     <span style="margin-bottom: 20px" langkey="map3-1a"></span>
-                    <b style="margin-bottom: 20px" langkey="index9"></b>
+                    <b style="margin-bottom: 20px" langkey="index9"></b>-->
 
 
-                    <div class="no-float"></div>
+                    <!--<div class="no-float"></div>
                     <div class="show" id="no_ce">
-                    <a type="button" class="btn btn-primary float-right display_questions  display_title"
-                       id="no_ce_done"><span langkey="index9">Próximo </span></a>
-                    </div>
+                        <a type="button" class="btn btn-primary float-right display_questions  display_title"
+                           id="no_ce_done"><span langkey="index9">Próximo </span></a>
+                    </div>-->
 
                 </div>
                 <!-- ------------------------------- Draw areas ce first end ----------------------------------------------------- -->
@@ -249,9 +255,9 @@
                     </div>
                 </div>
                 <div class="hidden" id="another_draw_ce">
-<!--
-                    <p style="margin-bottom: 20px"><b><h4><span langkey="map3-2">Great job!</span></h4></b></p>
--->
+                    <!--
+                                        <p style="margin-bottom: 20px"><b><h4><span langkey="map3-2">Great job!</span></h4></b></p>
+                    -->
                     <br>
                     <div>
                         <p langkey="map3-3">para continuar.</p>
@@ -414,9 +420,32 @@
 
                 </div>
 
+
+                <!-- ------------------------------- YES/NO ------------------------------------------------------------------------ -->
+                <div id="yesno" class="hidden">
+                    <p style="text-align: center; margin-top: 30px; font-weight: bold" langkey="general150">
+                    </p>
+                    <div style="text-align: center; margin-bottom: 40px">
+                        <label class="radio-inline">
+                            <input type="radio" name="participate" value="true" checked="checked"> <span
+                                langkey="index5"> Sim </span>
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="participate" langkey="index5" value="false"> <span
+                                langkey="index6"> Não</span>
+                        </label>
+                    </div>
+                    <div class="float-right">
+                        <button type="button" class="btn btn-primary btn-next" data-dismiss="modal" aria-label="Close"
+                                href="#" langkey="index9" id="participate_button">Próximo
+                        </button>
+                    </div>
+                </div>
+
             </div> <!-- .panel-default -->
         </div> <!-- .col-6 -->
         <div class="no-float"></div>
+
         <!-- ------------------------------- End Panel left ------------------------------------------------------------------------ -->
 
 
@@ -477,8 +506,8 @@
                           <span class="glyphicon glyphicon-trash" aria-hidden="true"
                                 style="margin-right: 5px"></span> <span langkey="map1-2">Apagar área</span>
                                 </button>
-                            <!-- </div>
-                            <div class="col-xs-12"> -->
+                                <!-- </div>
+                                <div class="col-xs-12"> -->
                             </div>
                         </div>
                         <!--<a type="button" class="btn btn-primary finish-map pop" data-toggle="popover"
@@ -608,9 +637,9 @@
     <script>
         $(document).ready(function () {
             var id = util.getFromLocalStorage(util.interPageDataKey);
-            if (!id) {
-                window.location.href = "index.html";
-            }
+            /*if (!id) {
+             window.location.href = "index.html";
+             }*/
             //startMapComponents();
             startAll();
         });
@@ -778,7 +807,6 @@
                             buttonDelete.prop('disabled', false);
 
 
-
                         }
                         else if ((e.keyCode == 27) && ($('#another_draw_ce').is(":visible"))) {
                             $("#finish_button").removeClass().addClass("show");
@@ -789,7 +817,7 @@
 
 
                         }
-                        else{
+                        else {
                             $("#help").removeClass("show").addClass("hidden");
                             $('#button-freguesia').prop('disabled', false);
                             $('#button-freguesiaxs').prop('disabled', false);
