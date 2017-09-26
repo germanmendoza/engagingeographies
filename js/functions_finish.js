@@ -2,7 +2,6 @@ var map;
 var testGeoJson;
 var overPassOPs;
 var profession_new;
-var areasuser = [];
 
 function startAll(){
 
@@ -28,6 +27,7 @@ function startAll(){
     // startOverpassComponents();
     // gatherAndShowOverpassData();
 }
+
 
 function startOthers() {
     try {
