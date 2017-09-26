@@ -140,62 +140,6 @@ function startAll() {
 
     };
 
-
-    /*// SLIDER
-     $("#ex1").slider();
-     $("#ex1").on("slide", function (slideEvt) {
-     $("#ex1SliderVal").text(slideEvt.value);
-     });
-     $("#ex2").slider();
-     $("#ex2").on("slide", function (slideEvt) {
-     $("#ex2SliderVal").text(slideEvt.value);
-     });
-     $("#ex3").slider();
-     $("#ex3").on("slide", function (slideEvt) {
-     $("#ex3SliderVal").text(slideEvt.value);
-     });
-     $("#ex4").slider();
-     $("#ex4").on("slide", function (slideEvt) {
-     $("#ex4SliderVal").text(slideEvt.value);
-     });
-     $("#ex5").slider();
-     $("#ex5").on("slide", function (slideEvt) {
-     $("#ex5SliderVal").text(slideEvt.value);
-     });
-     $("#ex6").slider();
-     $("#ex6").on("slide", function (slideEvt) {
-     $("#ex6SliderVal").text(slideEvt.value);
-     });
-     $("#ex7").slider();
-     $("#ex7").on("slide", function (slideEvt) {
-     $("#ex7SliderVal").text(slideEvt.value);
-     });
-     $("#ex8").slider();
-     $("#ex8").on("slide", function (slideEvt) {
-     $("#ex8SliderVal").text(slideEvt.value);
-     });
-     $("#ex9").slider();
-     $("#ex9").on("slide", function (slideEvt) {
-     $("#ex9SliderVal").text(slideEvt.value);
-     });*/
-
-
-    /*var namearea;
-
-     $('#name_area').click(function () {
-     if (!$("#text_area").val()) {
-     alert("tonto")
-     }
-     else {
-     namearea = $("#text_area").val();
-     $("#area_done").toggleClass("hidden show");
-     $("#questions_done").toggleClass("hidden show");
-     var replaced = $("#change").html().replace('X', namearea);
-     $("#change").html(replaced);
-     }
-     });*/
-
-
     $('#sliders_done_button').click(function () {
 
         var naturevalidation = $('[name=na1]:checked,[name=na2]:checked,[name=na3]:checked,[name=na4]:checked');
@@ -293,7 +237,7 @@ function startAll() {
 
     });
 
-    var AreaSelected;
+    //var AreaSelected;
     var group = new L.featureGroup();
 
     var highlightedArea = null;
@@ -309,18 +253,7 @@ function startAll() {
             group.addLayer(SOP[i].layer);
             map.addLayer(SOP[i].layer);
             var sopi = SOP[i];
-            /*SOP[i].layer.on('click', function (e) {
-             L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {}).addTo(map);
-             map.fitBounds(e.layer.getBounds(), null);
-             $("#title2_done").toggleClass("hidden show");
-             $("#area_done").toggleClass("hidden show");
-             $("input:radio[name=live]:first").attr('checked', true);
-             $('#name_area').attr('disabled', false);
-             AreaSelected = sopi;
-             });*/
             $('#radios').append('<div class="radio"><label><input type="radio" name="sc_areas" value="' + i + '"/>Area ' + SOP[i].name + '</label></div>');
-
-
         }
 
         $("input[name='sc_areas']").change(function () {
@@ -387,36 +320,6 @@ function startAll() {
 
     }
 
-
-    //------
-
-
-    /*$('.finish-map').click(function () {
-     map.removeLayer(drawnItems);
-     $(".finish-map").attr('disabled', true);
-     buttonDraw.prop('disabled', true);
-     buttonDelete.prop('disabled', true);
-     for (i = 0; i < SOP.length; i++) {
-     group.addLayer(SOP[i].layer);
-     map.addLayer(SOP[i].layer);
-     var sopi = SOP[i];
-     /!*SOP[i].layer.on('click', function (e) {
-     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {}).addTo(map);
-     map.fitBounds(e.layer.getBounds(), null);
-     $("#title2_done").toggleClass("hidden show");
-     $("#area_done").toggleClass("hidden show");
-     $("input:radio[name=live]:first").attr('checked', true);
-     $('#name_area').attr('disabled', false);
-     AreaSelected = sopi;
-     });*!/
-     $('#radios').append('<div class="radio"><label><input type="radio" name="sc_groups" value="' + i + '"/>Area ' + cGroup.name + '</label></div>');
-
-
-     }
-     map.fitBounds(group.getBounds(), null);
-     });*/
-
-
     $('#questions-sop').click(function () {
 
         // validate
@@ -469,8 +372,6 @@ function startAll() {
 
     });
 
-    // TRANSLATIONS
-    //$("#title_done1").html(languages('en','title_done1'));
 
     //Freguesia buttons
     $('#d-ajuda').click(function () {

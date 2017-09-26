@@ -2,9 +2,6 @@
 
 // Modal when load page
 
-// $('#myModal13').modal('show');
-
-// POPOVER
 
 var SC = [];
 var currGroup;
@@ -16,10 +13,6 @@ var spatialyes = 0;
 var contador = 0;
 
 function startAll() {
-    /*buttonDelete.prop('disabled', true);
-    buttonDraw.prop('disabled', true);
-    $('#button-freguesia').prop('disabled', true);*/
-
 
     $("#name_actual_group").select2({
         tags: [],
@@ -95,7 +88,6 @@ function startAll() {
             startMapComponents();
         }
         else {
-            // alert("Please, insert at least a group name");
             alert(  translator.getKeyLanguageValue("general7"));
         }
     });
@@ -124,7 +116,6 @@ function startAll() {
 
 
         if ($("#nature").val() == "0") {
-            // alert("Please, choose a kind of group");
             alert(translator.getKeyLanguageValue("general8"));
         }
 
@@ -135,7 +126,6 @@ function startAll() {
         }
         else {
             if (!$("#other").val()) {
-                // alert("Please, introduce the nature of the group.")
                 alert(translator.getKeyLanguageValue("general9"));
             }
             else {
@@ -162,7 +152,6 @@ function startAll() {
                 buttonDraw.prop('disabled', false);
                 $('#button-freguesia').prop('disabled', false);
                 $('#button-freguesiaxs').prop('disabled', false);
-                //buttonDelete.prop('disabled', false);
 
 
                 $("#SC_group").toggleClass("hidden show");
@@ -191,7 +180,6 @@ function startAll() {
 
                         app.setSC(id, data2, function (response) {
                             if (response === false) {
-                                // alert("There is a connection problem; please, try again later");
                                 alert(translator.getKeyLanguageValue("general1"));
                             }
                             else {
@@ -207,29 +195,6 @@ function startAll() {
 
                     }
                 }
-               /* else if (name_groups.length == 1) {
-
-                    var id = util.getFromLocalStorage(util.interPageDataKey);
-
-                    var data2 = {
-                        type: "sc",
-                        id: id,
-                        groups: SC
-                    };
-
-                    app.setSC(data2, function (response) {
-                        if (response === false) {
-                            // alert("There is a connection problem; please, try again later");
-                            alert(translator.getKeyLanguageValue("general1"));
-                        }
-                        else {
-                            util.redirectToPage({
-                                url: "map3.html",
-                                payload: response.id
-                            });
-                        }
-                    });
-                }*/
                 else {
                     number = number + 1;
                     namegroup();
@@ -289,29 +254,11 @@ function startAll() {
         }
     });
 
-
-    /*$('#specifications_done').click(function () {
-     if ($("#nature").val() != "0") {
-
-     $("#draw").toggleClass("hidden show");
-     $("#specifications").toggleClass("hidden show");
-     buttonDraw.prop('disabled', false);
-     buttonDelete.prop('disabled', false);
-     $("#nature").val("0");
-
-     }
-     else {
-     alert("Please, choose a kind of group");
-     }
-     });*/
-
-
     $('#bonding_bridging_done').click(function () {
 
 
         var scvalidationbondingbridging = $('[name=bosc1]:checked,[name=bosc2]:checked,[name=brsc1]:checked,[name=brsc2]:checked');
         if (scvalidationbondingbridging.length < 4) {
-            // alert("Please, answer all the questions");
             alert(translator.getKeyLanguageValue("general5"));
             return;
         }
@@ -491,7 +438,6 @@ function startAll() {
                 $("#cp3").html(cp3re);
             }
             else {
-                // alert("Please choose one group");
                 alert(translator.getKeyLanguageValue("general15"));
             }
 
@@ -542,7 +488,6 @@ function startAll() {
 
         app.setSC(id, data2, function (response) {
             if (response === false) {
-                // alert("There is a connection problem; please, try again later");
                 alert(translator.getKeyLanguageValue("general1"));
             }
             else {

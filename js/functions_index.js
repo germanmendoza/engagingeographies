@@ -52,38 +52,7 @@ function startall() {
 
 
     });
-
-
-   /* $('#home_button_out').click(function () {
-
-
-        if ($('input[name=portugal_home]:checked').val() == "true") {
-            $("#information_home").removeClass().addClass("show");
-
-        }
-        else {
-            var data = {
-                home: false
-            };
-            app.setHome(data, function (response) {
-                if (response === false) {
-                    // alert("There is a connection problem; please, try again later");
-                    alert(translator.getKeyLanguageValue("general1"));
-                }
-                else {
-                    util.redirectToPage({
-                        url: "map1.html",
-                        payload: response.id
-                    });
-                }
-            });
-        }
-
-
-    });*/
-
-
-
+    
     $("input[name='portugal_home']").change(function () {
 
         if ($('input[name=portugal_home]:checked').val() == "false") {
@@ -275,67 +244,3 @@ function startall() {
     $("#draw_places").html(replaced1);
 
 }
-
-
-/*$('#myModal9').modal('show');
- $('#home_button').click(function () {
- alert("rr");
- $("#myModalx").show();
- //$("#myModal9").hide();
- });
-
-
-
- function showsliders(bool) {
- if (bool) {
- $("#sliders_done").addClass("show");
- $("#sliders_done").toggleClass("hidden");
- $("#title_done").toggleClass("show");
- $("#title_done").addClass("hidden");
- }else {
- $("#sliders_done").addClass("hidden");
- $("#sliders_done").toggleClass("show");
- $("#title_done").addClass("show");
- $("#title_done").toggleClass("hidden");
- }
- }
- */
-
-
-// MODAL prev and next
-/*
- $("div[id^='myModal']").each(function(){
-
- var currentModal = $(this);
-
- //click next
- currentModal.find('.btn-next').click(function(){
- currentModal.modal('hide');
- currentModal.closest("div[id^='myModal']").nextAll("div[id^='myModal']").first().modal('show');
- });
-
- //click prev
- currentModal.find('.btn-prev').click(function(){
- currentModal.modal('hide');
- currentModal.closest("div[id^='myModal']").prevAll("div[id^='myModal']").first().modal('show');
- });
-
- });
-
- // SLIDER
- $('#ex1').slider({
- formatter: function(value) {
- return 'Current value: ' + value;
- }
- });
- $('#ex2').slider({
- formatter: function(value) {
- return 'Current value: ' + value;
- }
- });
- $('#ex3').slider({
- formatter: function(value) {
- return 'Current value: ' + value;
- }
- });
- */

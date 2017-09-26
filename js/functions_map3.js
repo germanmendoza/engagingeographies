@@ -5,9 +5,6 @@
 
  function startAll() {
 
-     //buttonDraw.prop('disabled', true);
-     //buttonDelete.prop('disabled', true);
-
  //Freguesia buttons
     $('#d-ajuda').click(function () {
         map.setView([38.711402, -9.199039], 15);
@@ -280,15 +277,6 @@
 
      $('#questions-ce').click(function () {
 
-         // var polygondata = {
-         //     type:"cea",
-         //     layer: drawnItems
-         //     //,livingIn = input...
-         // };
-         //
-         // CE.push(polygondata);
-         // map.removeLayer(drawnItems);
-
          for (i = 0; i < CE.length; i++) {
              CE[i].layer = /*JSON.stringify(*/CE[i].layer.toGeoJSON()/*)*/;
          }
@@ -319,37 +307,7 @@
              }
          });
      });
-
-     /*$('#no_ce_done').click(function () {
-         var id = util.getFromLocalStorage(util.interPageDataKey);
-
-         var data = {
-             type:"ce",
-             civicEngagement: {
-                 ce1: parseInt($("input[name=ce1]:checked").val()),
-                 ce2: parseInt($("input[name=ce2]:checked").val()),
-                 ce3: parseInt($("input[name=ce3]:checked").val())
-             },
-         };
-
-
-         app.setCE(id, data, function (response) {
-             if (response === false) {
-                 // alert("There is a connection problem; please, try again later");
-                 alert(translator.getKeyLanguageValue("general1"));
-             }
-             else {
-                 util.redirectToPage({
-                     url:"finish.html",
-                     payload:response.id
-                 });
-             }
-         });
-     });*/
-
-
-         //$("#draw_poly").prop('disabled', true);
-
+     
    $('#myModal15').modal('show');
 
 // POPOVER
