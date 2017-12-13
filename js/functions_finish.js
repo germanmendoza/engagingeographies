@@ -59,7 +59,7 @@ function startOthers() {
                     profession_new = parseInt($("#other_prof").val())
 
 
-                    var id = util.getFromLocalStorage(util.interPageDataKey);
+                    // var id = util.getFromLocalStorage(util.interPageDataKey);
 
                     var data = {
                         gender: parseInt($("input[name=gender]:checked").val()),
@@ -78,7 +78,7 @@ function startOthers() {
                         else {
                             util.redirectToPage({
                                 url: "globalEnd.html",
-                                payload: response.id
+                                payload: {id:response.id}
                             });
                         }
                     })
@@ -89,7 +89,7 @@ function startOthers() {
                 profession_new = parseInt($("#profession").val())
 
 
-                var id = util.getFromLocalStorage(util.interPageDataKey);
+                // var id = util.getFromLocalStorage(util.interPageDataKey);
 
                 var data = {
                     gender: parseInt($("input[name=gender]:checked").val()),
@@ -108,7 +108,7 @@ function startOthers() {
                     else {
                         util.redirectToPage({
                             url: "globalEnd.html",
-                            payload: response.id
+                            payload: {id:response.id}
                         });
                     }
                 })
@@ -335,7 +335,7 @@ function startOverpassComponents() {
 
 function areasLoading() {
     try {
-        var id = util.getFromLocalStorage(util.interPageDataKey);
+        // var id = util.getFromLocalStorage(util.interPageDataKey);
         //var id = "589888c01c0856701818e512";
         var SOPLayers, SCLayers, CELayers;
 

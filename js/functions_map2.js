@@ -14,6 +14,7 @@ var contador = 0;
 
 function startAll() {
 
+
     $("#name_actual_group").select2({
         tags: [],
         tokenSeparators: [","]
@@ -170,7 +171,7 @@ function startAll() {
                     }
                     else {
 
-                        var id = util.getFromLocalStorage(util.interPageDataKey);
+                        // var id = util.getFromLocalStorage(util.interPageDataKey);
 
                         var data2 = {
                             type: "sc",
@@ -185,7 +186,7 @@ function startAll() {
                             else {
                                 util.redirectToPage({
                                     url: "map3.html",
-                                    payload: response.id
+                                    payload: {id:response.id, center: mapCenter}
                                 });
                             }
                         });
@@ -478,7 +479,7 @@ function startAll() {
             }
         }
 
-        var id = util.getFromLocalStorage(util.interPageDataKey);
+        // var id = util.getFromLocalStorage(util.interPageDataKey);
 
         var data2 = {
             type: "sc",
@@ -493,7 +494,7 @@ function startAll() {
             else {
                 util.redirectToPage({
                     url: "map3.html",
-                    payload: response.id
+                    payload: {id:response.id, center: mapCenter}
                 });
             }
         });
