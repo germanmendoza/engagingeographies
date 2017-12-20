@@ -832,13 +832,40 @@
     <script src="js/API/lib.js"></script>
 
     <script>
+        var mapCenter;
         $(document).ready(function () {
-            var id = util.getFromLocalStorage(util.interPageDataKey);
+            var savedStrData = util.getFromLocalStorage(util.interPageDataKey);
+            id = savedStrData.id;
             if (!id) {
-                 window.location.href = "index.html";
+                window.location.href = "index.html";
             }
+
             //startMapComponents();
-            startAll();
+
+            $.ajax({
+                url: 'http://ip-api.com/json',
+                dataType: "json",
+                cache:true,
+                method:'GET',
+                success:function (response) {
+                    doIPCentering(response);
+                }.bind(this),
+                error:function (response) {
+                    doDefaultCentering();
+                    return false;
+                }.bind(this)
+            });
+
+            function doDefaultCentering(){
+                mapCenter =[38.7500, -9.1500];
+                startAll();
+            }
+
+            function doIPCentering(data){
+                if (data && data.lat && data.lon)
+                    mapCenter = [data.lat,data.lon];
+                startAll();
+            }
         });
     </script>
 
@@ -867,7 +894,7 @@
                     createAll(map1, $("#draw_poly"), $("#delete_poly"));
                 }
             });
-            map1.setView([38.7500, -9.1500], 12);
+            map1.setView(mapCenter, 12);
 
             // Small Map
             var mapxs = L.map('map2');
@@ -876,7 +903,7 @@
                     createAll(mapxs, $("#draw_polyxs"), $("#delete_polyxs"));
                 }
             });
-            mapxs.setView([38.7500, -9.1500], 12);
+            mapxs.setView(mapCenter, 12);
 
 
             function createAll(rmap, bdraw, bdelete) {

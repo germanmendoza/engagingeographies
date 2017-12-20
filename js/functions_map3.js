@@ -243,7 +243,6 @@
 
          }
          else {
-             var id = util.getFromLocalStorage(util.interPageDataKey);
 
              var data = {
                  type:"ce",
@@ -263,7 +262,7 @@
                  else {
                      util.redirectToPage({
                          url:"finish.html",
-                         payload:response.id
+                         payload:{id:response.id, center: mapCenter}
                      });
                  }
              });
@@ -280,8 +279,6 @@
          for (i = 0; i < CE.length; i++) {
              CE[i].layer = /*JSON.stringify(*/CE[i].layer.toGeoJSON()/*)*/;
          }
-
-         var id = util.getFromLocalStorage(util.interPageDataKey);
 
          var data = {
              type:"ce",
@@ -302,7 +299,7 @@
              else {
                  util.redirectToPage({
                      url:"finish.html",
-                     payload:response.id
+                     payload:{id:response.id, center: mapCenter}
                  });
              }
          });

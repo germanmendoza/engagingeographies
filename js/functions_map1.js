@@ -349,8 +349,6 @@ function startAll() {
             SOP[i].layer = /*JSON.stringify(*/SOP[i].layer.toGeoJSON()/*)*/;
         }
 
-        var id = util.getFromLocalStorage(util.interPageDataKey);
-
         var data2 = {
             type: "sop",
             areas: SOP
@@ -364,7 +362,7 @@ function startAll() {
             else {
                 util.redirectToPage({
                     url: "map2.html",
-                    payload: response.id
+                    payload:  {id:response.id, center: mapCenter}
                 });
             }
         });

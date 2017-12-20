@@ -1,5 +1,15 @@
 // JavaScript Document "index"
 
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
 
 function startall() {
 
@@ -127,12 +137,14 @@ function startall() {
                 var portugal = ($("input[name=portugal_home]:checked").val());
                 var howlong = parseInt($("input[name=howlong_no]:checked").val());
                 var zip = $("#zip_no").val();
+                var experiment = getParameterByName('exp');
 
                 var data = {
                     home: home,
                     portugal: portugal,
                     howlong: howlong,
                     zip: zip,
+                    experiment: experiment
                 };
                 app.setHome(data, function (response) {
                     if (response === false) {
@@ -142,7 +154,7 @@ function startall() {
                     else {
                         util.redirectToPage({
                             url: "map1.html",
-                            payload: response.id
+                            payload: {id:response.id}
                         });
                     }
                 });
@@ -162,7 +174,7 @@ function startall() {
                 else {
                     util.redirectToPage({
                         url: "map1.html",
-                        payload: response.id
+                        payload: {id:response.id}
                     });
                 }
             });
@@ -193,12 +205,14 @@ function startall() {
         $("input[name=problem]:checked").each(function () {
             problem.push(parseInt($(this).val()));
         });
+        var experiment = getParameterByName('exp');
         var data = {
             home: home,
             freguesia: freguesia,
             howlong: howlong,
             zip: zip,
-            problem: problem
+            problem: problem,
+            experiment: experiment
         };
         app.setHome(data, function (response) {
             if (response === false) {
@@ -208,7 +222,7 @@ function startall() {
             else {
                 util.redirectToPage({
                     url: "map1.html",
-                    payload: response.id
+                    payload: {id:response.id}
                 });
             }
         });

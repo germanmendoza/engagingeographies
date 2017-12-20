@@ -17,7 +17,7 @@ function startAll() {
         var mail = $("#mail_user").val();
         var testtwitter = /^@(\w){1,15}$/;
         var twitter = $("#twitter_name").val();
-        var id = util.getFromLocalStorage(util.interPageDataKey);
+        // var id = util.getFromLocalStorage(util.interPageDataKey);
 
         if (mail != "" || twitter != "") {
             if (mail != "" & testEmail.test(mail)) {
@@ -119,7 +119,7 @@ function startAll() {
     });
 
     $('#finishglobalend').click(function () {
-        var id = util.getFromLocalStorage(util.interPageDataKey);
+        // var id = util.getFromLocalStorage(util.interPageDataKey);
 
         var finalComments = {
             di1: parseInt($("input[name=di1]:checked").val()),
