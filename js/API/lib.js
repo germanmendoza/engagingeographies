@@ -1,6 +1,6 @@
 /**
  * Created by albertacedosanchez on 18/1/17.
- * Updated by Germán many several times :D
+ * Updated by Germán Mendoza many several times :D
  */
 
 //------------------------------------------------------
