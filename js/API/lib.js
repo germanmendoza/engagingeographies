@@ -103,14 +103,14 @@ uiCoreAPI = {
 //------------------------------------------------------
 
 uiCoreWS = {
-    home : 'home/lisbon_citizen/',
-    home2 : 'home/',
-    SOP: 'home/SOP_data/',
-    SC: 'home/SC_data/',
-    CE: 'home/CE_data/',
-    finish: 'home/finish/',
-    globalEnd: 'home/final_details/',
-    comments: 'home/comments/'
+    home : 'esri/lisbon_citizen/',
+    home2 : 'esri/',
+    SOP: 'esri/SOP_data/',
+    SC: 'esri/SC_data/',
+    CE: 'esri/CE_data/',
+    finish: 'esri/finish/',
+    globalEnd: 'esri/final_details/',
+    comments: 'esri/comments/'
 };
 
 //------------------------------------------------------
