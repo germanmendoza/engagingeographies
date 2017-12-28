@@ -29,8 +29,8 @@ util = {
 
 uiCoreAPI = {
     //instanceUrl: "http://localhost:8080/",
-    instanceUrl: "/enggeowstest/",
-    // instanceUrl: "http://ec2-34-242-113-148.eu-west-1.compute.amazonaws.com:8080/enggeows/",
+    // instanceUrl: "/enggeows/",
+    instanceUrl: "http://ec2-34-242-113-148.eu-west-1.compute.amazonaws.com:8080/enggeows",
 
     _getRequest: function (url, callback) {
         $.ajax({
