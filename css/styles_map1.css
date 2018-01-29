@@ -135,7 +135,7 @@
 /* End images logos*/
 
 /* MEDIAS */
-
+	
 @media (max-width:360px){
 	
 	#image_draw{
@@ -152,9 +152,19 @@
 	}
 }
 
+
 @media (max-width:768px){
 	.personal_modal{
 		width: auto;
+	}
+	.radio-mobile{
+		width: 100%;
+	}
+	.radio-visible{
+		display: inline !important;
+	}
+	.radio-novisible{
+		display: none;
 	}
 
 }

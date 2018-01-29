@@ -103,5 +103,14 @@
 	.personal_modal{
 		width: auto;
 	}
+	.radio-mobile{
+		width: 100%;
+	}
+	.radio-visible{
+		display: inline !important;
+	}
+	.radio-novisible{
+		display: none;
+	}
 
 }
